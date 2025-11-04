@@ -43,7 +43,7 @@ import logo from '~/assets/company_logo.png'
 const route = useRoute()
 
 const navItems = [
-  { name: 'Home', href: '/home', icon: 'tabler:home' },
+  { name: 'Home', href: '/', icon: 'tabler:home' },
   { name: 'Solutions', href: '/solutions', icon: 'tabler:affiliate' },
   { name: 'About', href: '/about', icon: 'tabler:user' },
   { name: 'Contact', href: '/contact', icon: 'tabler:info-circle' }
