@@ -1,7 +1,8 @@
 <template>
 <div class="bg-green-800">
   <Header />
-  <main>
+  <SideNav class="w-64 float-left" />
+  <main class="flex-1">
     <slot />
   </main>
   <Footer />
@@ -9,8 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import Header from "../app/components/Header.vue";
-import Footer from "../app/components/Footer.vue";
+
 
 </script>
 
