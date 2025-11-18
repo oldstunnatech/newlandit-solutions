@@ -1,9 +1,8 @@
 <template>
-  <aside class="w-72 min-h-screen bg-[#fbf6da] border-r border-slate-200 p-8 hidden md:block" aria-label="Hoofd navigatie">
-    <div class="flex flex-col h-full">
+  <aside class="w-72 min-h-screen bg-[#fbf6da] border-r border-slate-200 p-8 hidden md:flex md:flex-col" aria-label="Hoofd navigatie">
+    <div class="flex flex-col flex-1">
       <!-- logo / brand area -->
       <div class="mb-8">
-
         <img :src="logo" alt="Newland IT-Solutions" class="w-40 object-contain">
       </div>
 
@@ -27,8 +26,8 @@
        </nav>
 
        <!-- footer small -->
-       <div class="mt-8 text-slate-600 text-sm">
-         © {{ year }} Newland IT-Solutions
+       <div class="mt-auto text-slate-600 text-sm">
+         © {{ year }} Newland IT-Solutions. All rights reserved.
        </div>
      </div>
    </aside>
