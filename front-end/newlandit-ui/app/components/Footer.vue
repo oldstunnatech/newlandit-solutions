@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-[#04271f] text-slate-100 py-12" role="contentinfo" aria-label="Site footer">
+  <footer class="bg-[#04271f] text-slate-100 py-12 mt-250" role="contentinfo" aria-label="Site footer">
     <div class="max-w-6xl mx-auto px-6">
       <!-- inset panel similar to screenshot -->
       <div class="bg-[#103826] p-8 rounded-sm shadow-inner border border-black/10">

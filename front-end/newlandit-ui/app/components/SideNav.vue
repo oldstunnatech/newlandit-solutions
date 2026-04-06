@@ -3,7 +3,7 @@
     <div class="flex flex-col flex-1">
       <!-- logo / brand area -->
       <div class="mb-8">
-        <img :src="logo" alt="Newland IT-Solutions" class="w-40 object-contain">
+        <img :src="logo" alt="Newland IT-Solutions" class="w-70 object-contain">
       </div>
 
       <!-- navigation -->
@@ -12,7 +12,7 @@
           <li v-for="nav in navItems" :key="nav.name">
             <NuxtLink
               :to="nav.href"
-              class="flex items-center gap-4 text-slate-800 hover:text-emerald-800 transition-colors"
+              class="flex items-center gap-10 text-slate-800 hover:text-emerald-800 transition-colors"
               :class="{ 'opacity-100': isActive(nav.href), 'opacity-85': !isActive(nav.href) }"
               :aria-current="isActive(nav.href) ? 'page' : false"
             >
@@ -26,9 +26,9 @@
        </nav>
 
        <!-- footer small -->
-       <div class="mt-auto text-slate-600 text-sm">
+       <!-- <div class="mt-auto text-slate-600 text-sm">
          © {{ year }} Newland IT-Solutions. All rights reserved.
-       </div>
+       </div> -->
      </div>
    </aside>
  </template>
