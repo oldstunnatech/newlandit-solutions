@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@nuxtjs/tailwindcss": "^6.14.0",
-    "animate.css": "^4.1.1"
-  }
-}

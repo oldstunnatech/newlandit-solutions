@@ -2,14 +2,15 @@
   <section
       class="relative h-screen flex flex-col justify-center items-center bg-gradient-to-br from-green-900 to-emerald-600 text-white">
 
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center mt-250 leading-tight">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center mt-[650px] leading-tight">
   Newland IT Solutions
 </h1>
     
       
     <p class="mt-4 text-base sm:text-lg max-w-2xl text-center text-white/90">Your bridge to tomorrows technology</p>
-    <button class="mt-10 px-6 py-3 bg-white text-green-900 rounded-lg shadow-lg hover:scale-105 transition"><a href="">Plan een kennismaking</a>
-    </button>
+   <button class="mt-10 px-6 py-3 ...">
+  Plan een kennismaking
+</button>
 
     <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold mt-16 text-center">Smart IT solutions for growing businesses</h2>
     <p class="mt-4 text-base sm:text-lg max-w-2xl text-center text-white/90">We help freelancers, small businesses and organizations with reliable IT support, custom software and professional websites, without complicated technical language.</p>
@@ -18,35 +19,27 @@
     <p class="mt-4 text-base sm:text-lg max-w-2xl text-center text-white/90">From local organizations to national institutions — these customers rely on our expertise in software development, IT strategy and project management. What binds them? The need for a partner who thinks along, switches quickly and provides solutions that really work.</p>
     
 <div class="p-8">
-    <UCarousel
-      :items="items"
-        :ui="{ item: 'basis-1/6 px-3' }"
-      class="w-full max-w-7xl mx-auto overflow-hidden"
-      dots
-      autoplay
+  <UCarousel
+    :items="items"
+    :ui="{ item: 'basis-1/6 px-3' }"
+    class="w-full max-w-7xl mx-auto overflow-hidden"
+    dots
+    autoplay
+  >
+    <template #default="slotProps">
+  <div v-if="slotProps?.item" class="p-6 bg-gray-100 rounded-2xl text-center mt-40">
+    <img
+      :src="slotProps.item.image"
+      class="w-full h-30 object-cover rounded-xl mb-4"
+    />
+    <h2 class="text-xl font-bold">
+      {{ slotProps.item.title }}
+    </h2>
+  </div>
+</template>
+  </UCarousel>
+</div>
       
-    >
-      <template #default="{ item }">
-        <div class="p-6 bg-gray-100 rounded-2xl text-center mt-40">
-          <img :src="item.image" class="w-100p h-30 object-cover rounded-xl mb-4" />
-          <h2 class="text-xl font-bold">{{ item.title }}</h2>
-        </div>
-
-        <div v-for="item in items" :key="item.image">
-    <!-- <NuxtImg
-      :src="item.image"
-      width="300"
-      height="200"
-      format="webp"
-      quality="70"
-    /> -->
-  </div>
-
-
-
-      </template>
-    </UCarousel>
-  </div>
        
 
 
@@ -124,8 +117,9 @@
 
 
 
-<button class="mt-0 px-6 py-3 bg-white text-green-900 rounded-lg shadow-lg hover:scale-105 transition"><a href="">View all our services</a>
-</button>
+<a href="" class="mt-0 px-6 py-3 bg-white text-green-900 rounded-lg shadow-lg hover:scale-105 transition">
+  View all our services
+</a>
 
 
 
