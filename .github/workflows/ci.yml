@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'front-end/newlandit-ui/**'
+      - '.github/workflows/ci.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'front-end/newlandit-ui/**'
+      - '.github/workflows/ci.yml'
+
+defaults:
+  run:
+    working-directory: front-end/newlandit-ui
+
+jobs:
+  ci:
+    name: Typecheck, audit & build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: front-end/newlandit-ui/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npx vue-tsc --noEmit
+
+      - name: Security audit (high/critical)
+        run: npm audit --audit-level=high
+
+      - name: Build
+        run: npm run build
+        env:
+          SANITY_API_TOKEN: ci-placeholder-token
+          SANITY_PROJECT_ID: ci-placeholder-project
+          SANITY_DATASET: production
+          RESEND_API_KEY: ci-placeholder-key
+          CONTACT_NOTIFICATION_FROM: ci@example.com
+          CONTACT_NOTIFICATION_TO: ci@example.com
