@@ -8,5 +8,19 @@ export interface ContactInfo {
   kvk: string
   btw: string
   startYear: number
+  address: CompanyAddress
+  openingHours: OpeningHoursEntry[]
+  closedHolidays: string
 }
 
+export interface CompanyAddress {
+  street: string
+  postalCode: string
+  city: string
+  mapEmbedUrl: string
+}
+
+export interface OpeningHoursEntry {
+  label: string
+  hours: string
+}
