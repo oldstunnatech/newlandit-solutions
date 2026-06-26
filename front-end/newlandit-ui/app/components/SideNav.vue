@@ -1,5 +1,5 @@
 <template>
-  <aside class="w-72 min-h-screen bg-[#fbf6da] border-r border-slate-200 p-8 hidden md:flex md:flex-col" aria-label="Hoofd navigatie">
+  <aside class="w-72 h-screen sticky top-0 bg-[#fbf6da] border-r border-slate-200 p-8 hidden md:flex md:flex-col" aria-label="Hoofd navigatie">
     <div class="flex flex-col flex-1">
       <!-- logo / brand area -->
       <div class="mb-8">

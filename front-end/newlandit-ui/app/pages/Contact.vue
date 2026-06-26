@@ -309,7 +309,7 @@ const {
 
 <style scoped>
 .contact-page {
-  background: linear-gradient(160deg, #064e3b 0%, #065f46 40%, #047857 100%);
+  background: linear-gradient(160deg, #0d4226 0%, #156534 40%, #1d8044 100%);
 }
 
 .blob {
@@ -322,14 +322,14 @@ const {
 .blob-1 {
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, #10b981, #064e3b);
+  background: radial-gradient(circle, #1d8044, #0d4226);
   top: -120px;
   right: -100px;
 }
 .blob-2 {
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle, #34d399, #065f46);
+  background: radial-gradient(circle, #22c55e, #156534);
   bottom: -100px;
   left: -80px;
   animation-delay: 3s;
@@ -384,7 +384,7 @@ const {
 }
 .field input:focus,
 .field textarea:focus {
-  border-color: #34d399;
+  border-color: #22c55e;
   background: rgba(0, 0, 0, 0.25);
 }
 .field input.has-error,
@@ -418,7 +418,7 @@ const {
   transition: border-color 0.2s, background 0.2s;
 }
 .file-drop:hover {
-  border-color: #34d399;
+  border-color: #22c55e;
   background: rgba(255, 255, 255, 0.04);
 }
 .file-drop-icon {
@@ -464,7 +464,7 @@ const {
   display: inline-block;
   padding: 0.75rem 2rem;
   background: white;
-  color: #064e3b;
+  color: #0d4226;
   font-weight: 700;
   border-radius: 0.75rem;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
@@ -504,7 +504,7 @@ const {
   width: 14px;
   height: 14px;
   border: 2px solid rgba(6, 78, 59, 0.3);
-  border-top-color: #064e3b;
+  border-top-color: #0d4226;
   border-radius: 50%;
   animation: spin 0.6s linear infinite;
 }
@@ -525,7 +525,7 @@ const {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: #34d399;
+  color: #22c55e;
 }
 
 .info-row {
@@ -539,7 +539,7 @@ const {
   transition: color 0.2s;
 }
 .info-row:hover {
-  color: #6ee7b7;
+  color: #4ade80;
 }
 .info-icon {
   font-size: 1rem;
@@ -573,7 +573,7 @@ const {
 }
 
 .contact-page {
-  background: linear-gradient(160deg, #064e3b 0%, #065f46 40%, #047857 100%);
+  background: linear-gradient(160deg, #0d4226 0%, #156534 40%, #1d8044 100%);
 }
 
 
@@ -583,7 +583,7 @@ const {
   letter-spacing: 0.15em;
   font-size: 0.95rem;
   font-weight: 700;
-  color: #6ee7b7;
+  color: #4ade80;
   background: rgba(52, 211, 153, 0.12);
   border: 1px solid rgba(52, 211, 153, 0.3);
   border-radius: 9999px;

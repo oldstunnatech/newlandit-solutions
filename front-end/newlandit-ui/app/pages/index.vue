@@ -193,7 +193,7 @@
       <span class="whatsapp-label">Chat with us</span>
     </a>
 
-    <Footer />
+    
   </div>
 </template>
 
@@ -281,7 +281,7 @@ onMounted(() => {
         s.className = 'hero-char'
         s.textContent = ch === ' ' ? '\u00a0' : ch
         if (gradient) {
-          s.style.background = 'linear-gradient(90deg, #34d399, #6ee7b7)'
+          s.style.background = 'linear-gradient(90deg, #22c55e, #4ade80)'
           s.style.webkitBackgroundClip = 'text'
           s.style.webkitTextFillColor = 'transparent'
           s.style.backgroundClip = 'text'
@@ -356,15 +356,15 @@ onMounted(() => {
 
 <style scoped>
 .page-root {
-  background: linear-gradient(160deg, #064e3b 0%, #065f46 40%, #047857 100%);
+  background: linear-gradient(160deg, #0d4226 0%, #156534 40%, #1d8044 100%);
   min-height: 100vh;
 }
 
 /* ── Blobs ── */
 .blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.35; animation: blobFloat 8s ease-in-out infinite; }
-.blob-1 { width: 500px; height: 500px; background: radial-gradient(circle, #10b981, #064e3b); top: -100px; left: -100px; }
-.blob-2 { width: 400px; height: 400px; background: radial-gradient(circle, #34d399, #065f46); top: 200px; right: -80px; animation-delay: 3s; }
-.blob-3 { width: 300px; height: 300px; background: radial-gradient(circle, #6ee7b7, #047857); bottom: 50px; left: 40%; animation-delay: 5s; }
+.blob-1 { width: 500px; height: 500px; background: radial-gradient(circle, #1d8044, #0d4226); top: -100px; left: -100px; }
+.blob-2 { width: 400px; height: 400px; background: radial-gradient(circle, #22c55e, #156534); top: 200px; right: -80px; animation-delay: 3s; }
+.blob-3 { width: 300px; height: 300px; background: radial-gradient(circle, #4ade80, #1d8044); bottom: 50px; left: 40%; animation-delay: 5s; }
 @keyframes blobFloat {
   0%,100% { transform: translate(0,0) scale(1); }
   33%      { transform: translate(30px,-30px) scale(1.05); }
@@ -378,7 +378,7 @@ onMounted(() => {
   letter-spacing: 0.15em;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #6ee7b7;
+  color: #4ade80;
   background: rgba(52,211,153,0.12);
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
@@ -422,7 +422,7 @@ onMounted(() => {
 .hero-cursor {
   display: inline-block;
   width: 4px; height: 0.85em;
-  background: #34d399;
+  background: #22c55e;
   margin-left: 3px;
   vertical-align: middle;
   border-radius: 2px;
@@ -479,7 +479,7 @@ onMounted(() => {
   justify-content: center;
   margin: 0 auto;
 }
-.step-number { font-size: 0.7rem; font-weight: 700; color: #34d399; letter-spacing: 0.15em; margin-top: 0.75rem; }
+.step-number { font-size: 0.7rem; font-weight: 700; color: #22c55e; letter-spacing: 0.15em; margin-top: 0.75rem; }
 
 /* ── Feature cards ── */
 .feature-card {
@@ -537,7 +537,7 @@ onMounted(() => {
 .avatar {
   width: 40px; height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #34d399, #059669);
+  background: linear-gradient(135deg, #22c55e, #059669);
   display: flex; align-items: center; justify-content: center;
   font-weight: 700; font-size: 1rem; color: white; flex-shrink: 0;
 }
@@ -549,7 +549,7 @@ onMounted(() => {
 .btn-primary {
   display: inline-block;
   padding: 0.75rem 2rem;
-  background: white; color: #064e3b; font-weight: 700;
+  background: white; color: #0d4226; font-weight: 700;
   border-radius: 0.75rem;
   box-shadow: 0 4px 24px rgba(0,0,0,0.2);
   transition: transform 0.2s, box-shadow 0.2s;
