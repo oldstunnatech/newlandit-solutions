@@ -383,6 +383,7 @@ onMounted(() => {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
+  
 }
 
 /* ── Hero headline animation ── */

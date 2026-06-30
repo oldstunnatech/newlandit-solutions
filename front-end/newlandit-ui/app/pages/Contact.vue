@@ -110,7 +110,7 @@
               <label for="attachment">Attachment (optional)</label>
 
               <label v-if="!attachment" for="attachment" class="file-drop">
-                <span class="file-drop-icon">📎</span>
+                <span class="file-drop-icon"><PaperclipIcon :size="22" :stroke-width="1.5" /></span>
                 <span class="text-sm text-white/70">
                   Click to attach a brief, RFP, or document
                 </span>
@@ -134,7 +134,7 @@
                   @click="clearAttachment"
                   aria-label="Remove attachment"
                 >
-                  ✕
+                  <XIcon :size="16" />
                 </button>
               </div>
               <span v-if="attachmentError" class="field-error">{{
@@ -168,7 +168,7 @@
           </form>
 
           <div v-else class="contact-form-card text-center py-16">
-            <div class="success-icon">✓</div>
+            <div class="success-icon"><CheckIcon :size="28" :stroke-width="2.5" /></div>
             <h2 class="text-2xl font-bold mt-6 mb-2">Message sent</h2>
             <p class="text-white/70 max-w-sm mx-auto mb-8">{{ statusMessage }}</p>
             <button type="button" class="btn-secondary" @click="reset">
@@ -185,16 +185,16 @@
               Direct contact
             </p>
 
-            <a :href="CONTACT.phoneHref" class="info-row">
-              <span class="info-icon">📞</span>
+           <a :href="CONTACT.phoneHref" class="info-row">
+              <span class="info-icon"><PhoneIcon :size="16" /></span>
               <span>{{ CONTACT.phone }}</span>
             </a>
             <a :href="CONTACT.emailHref" class="info-row">
-              <span class="info-icon">✉️</span>
+              <span class="info-icon"><MailIcon :size="16" /></span>
               <span>{{ CONTACT.email }}</span>
             </a>
             <a :href="CONTACT.website" target="_blank" rel="noopener" class="info-row">
-              <span class="info-icon">🌐</span>
+              <span class="info-icon"><GlobeIcon :size="16" /></span>
               <span>{{ CONTACT.websiteDisplay }}</span>
             </a>
 
@@ -288,6 +288,7 @@
 
 <script setup lang="ts">
 import { CONTACT } from "~~/shared/utils/contact";
+import { PaperclipIcon, XIcon, CheckIcon, PhoneIcon, MailIcon, GlobeIcon } from "@lucide/vue";
 
 definePageMeta({
   layout: "default",
@@ -422,9 +423,12 @@ const {
   background: rgba(255, 255, 255, 0.04);
 }
 .file-drop-icon {
-  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 0.4rem;
 }
+
 .file-chip {
   display: flex;
   align-items: center;
@@ -542,11 +546,13 @@ const {
   color: #4ade80;
 }
 .info-icon {
-  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 1.5rem;
-  text-align: center;
   flex-shrink: 0;
 }
+
 .info-divider {
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
