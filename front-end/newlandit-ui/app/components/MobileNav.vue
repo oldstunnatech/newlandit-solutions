@@ -22,36 +22,44 @@
           <li v-for="nav in navItems" :key="nav.name" class="nav-item">
             <!-- item with children: tap toggles submenu -->
             <template v-if="nav.children">
-              <button
-                class="flex items-center justify-between w-full gap-4 text-slate-800 hover:text-emerald-800 transition-colors"
+              <div class="flex items-center justify-between w-full">
+                <!-- navigates to solutions.vue -->
+                <NuxtLink
+                :to="nav.href"
+                class="flex items-center gap-4 text-slate-800 hover:text-emerald-800 transition-colors flex-1"
                 :class="{ 'text-emerald-800 font-bold': isActive(nav.href) }"
-                @click="openMenu = openMenu === nav.name ? null : nav.name"
+                :aria-current="isActive(nav.href) ? 'page' : false"
+                @click="$emit('close')"
+                >
+                <Icon :name="nav.icon" class="w-6 h-6 shrink-0" aria-hidden="true" />
+                <span class="text-lg font-semibold">{{ nav.name }}</span>
+                </NuxtLink>
+                
+                <!-- arrow only toggles submenu -->
+                <button class="p-1 rounded text-slate-500 hover:text-emerald-800 transition-colors shrink-0" @click.stop="openMenu = openMenu === nav.name ? null : nav.name"
                 :aria-expanded="openMenu === nav.name"
-              >
-                <span class="flex items-center gap-4">
-                  <Icon :name="nav.icon" class="w-6 h-6 shrink-0" aria-hidden="true" />
-                  <span class="text-lg font-semibold">{{ nav.name }}</span>
-                </span>
+                :aria-label="`Toggle ${nav.name} submenu`"
+                >
                 <Icon
-                  name="lucide:chevron-right"
-                  class="w-4 h-4 shrink-0 text-slate-500 transition-transform duration-200"
-                  :class="{ 'rotate-90': openMenu === nav.name }"
-                  aria-hidden="true"
+                name="lucide:chevron-right"
+                class="w-4 h-4 transition-transform duration-200"
+                :class="{ 'rotate-90': openMenu === nav.name }"
+                aria-hidden="true"
                 />
-              </button>
-
-              <!-- submenu -->
-              <ul v-show="openMenu === nav.name" class="submenu">
-                <li v-for="child in nav.children" :key="child.name">
-                  <NuxtLink
-                    :to="child.href"
-                    class="submenu-link"
-                    @click="$emit('close')"
-                  >
-                    {{ child.name }}
-                  </NuxtLink>
-                </li>
-              </ul>
+                </button>
+                </div>
+                  
+                  <!-- submenu -->
+                  <ul v-show="openMenu === nav.name" class="submenu">
+                    <li v-for="child in nav.children" :key="child.name">
+                      <NuxtLink
+                      :to="child.href"
+                      class="submenu-link"
+                      @click="$emit('close')" >
+                      {{ child.name }}
+                      </NuxtLink>
+                      </li>
+                      </ul>
             </template>
 
             <!-- simple link -->

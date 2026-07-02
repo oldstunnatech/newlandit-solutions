@@ -12,7 +12,7 @@
       </div>
 
       <div class="detail-card">
-        <p class="text-white/80 text-lg leading-relaxed mb-8">
+        <p class="text-lg leading-relaxed mb-8">
           From custom applications to CMS websites: we build digital solutions that perfectly align with your organization. We guide the entire development process, from strategy to implementation.
         </p>
 
@@ -91,7 +91,7 @@ const offers = [
 .offer-list li {
   position: relative;
   padding-left: 1.5rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: #FBF6DA;
   font-weight: 500;
 }
 .offer-list li::before {
@@ -107,7 +107,7 @@ const offers = [
 .btn-primary {
   display: inline-block;
   padding: 0.75rem 2rem;
-  background: white;
+  background: #fbf6da;
   color: #0d4226;
   font-weight: 700;
   border-radius: 0.75rem;
@@ -115,6 +115,16 @@ const offers = [
   transition: transform 0.2s, box-shadow 0.2s;
   text-decoration: none;
 }
+
+.text-4xl{
+  color: #FBF6DA;
+}
+
+.text-white{
+  color: #FBF6DA;
+  
+}
+
 .btn-primary:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); }
 @media (prefers-reduced-motion: reduce) {
   .blob { animation: none; }

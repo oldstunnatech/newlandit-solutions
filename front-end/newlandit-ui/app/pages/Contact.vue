@@ -11,7 +11,7 @@
         <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">
           Let's talk about your project
         </h1>
-        <p class="text-white/70">
+        <p class="hours">
           Tell us what you're working on and we'll get back to you within one business
           day.
         </p>
@@ -213,7 +213,7 @@
               Response time
             </p>
             <div class="flex items-baseline gap-2 mb-1">
-              <span class="text-3xl font-extrabold text-white">24hr</span>
+              <span class="text-3xl font-extrabold">24hr</span>
               <span class="text-white/60 text-sm">typical reply</span>
             </div>
             <p class="text-white/60 text-sm mt-2">
@@ -262,7 +262,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div class="info-card">
             <p class="uppercase tracking-widest text-green-300 text-xs font-semibold mb-4">Address</p>
-            <p class="text-white/85 text-sm leading-relaxed">
+            <p class="text-sm leading-relaxed">
               {{ CONTACT.address.street }}<br />
               {{ CONTACT.address.postalCode }} {{ CONTACT.address.city }}
             </p>
@@ -270,14 +270,14 @@
             <div class="info-divider" />
 
             <p class="uppercase tracking-widest text-green-300 text-xs font-semibold mb-2">Closed on public holidays</p>
-            <p class="text-white/60 text-xs leading-relaxed">{{ CONTACT.closedHolidays }}</p>
+            <p class="text-xs leading-relaxed">{{ CONTACT.closedHolidays }}</p>
           </div>
 
           <div class="info-card">
             <p class="uppercase tracking-widest text-green-300 text-xs font-semibold mb-4">Opening hours</p>
             <div class="hours-row" v-for="entry in CONTACT.openingHours" :key="entry.label">
-              <span class="text-white/70">{{ entry.label }}</span>
-              <span class="text-white/90 font-medium">{{ entry.hours }}</span>
+              <span class="hours">{{ entry.label }}</span>
+              <span class="hours font-medium">{{ entry.hours }}</span>
             </div>
           </div>
         </div> 
@@ -360,11 +360,12 @@ const {
 .field {
   display: flex;
   flex-direction: column;
+
 }
 .field label {
   font-size: 0.8rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  color: #fbf6da;
   margin-bottom: 0.4rem;
 }
 .field input,
@@ -467,7 +468,7 @@ const {
 .btn-primary {
   display: inline-block;
   padding: 0.75rem 2rem;
-  background: white;
+  background: #fbf6da;
   color: #0d4226;
   font-weight: 700;
   border-radius: 0.75rem;
@@ -491,7 +492,7 @@ const {
   display: inline-block;
   padding: 0.65rem 1.5rem;
   border: 2px solid rgba(255, 255, 255, 0.4);
-  color: white;
+  color: #fbf6da;
   font-weight: 600;
   border-radius: 0.75rem;
   transition: background 0.2s, border-color 0.2s;
@@ -537,7 +538,7 @@ const {
   align-items: center;
   gap: 0.75rem;
   padding: 0.6rem 0;
-  color: rgba(255, 255, 255, 0.85);
+  color: #fbf6da;
   font-size: 0.9rem;
   text-decoration: none;
   transition: color 0.2s;
@@ -596,6 +597,22 @@ const {
   padding: 0.4rem 1.1rem;
 }
 
+.text-4xl{
+  color: #fbf6da;
+}
+.text-3xl{
+  color: #fbf6da;
+}
+
+.text-sm{
+  color: #fbf6da;
+}
+.hours{
+  color: #fbf6da;
+}
+.text-xs{
+  color: #fbf6da;
+}
 @media (prefers-reduced-motion: reduce) {
   .blob,
   .spinner {

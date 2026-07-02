@@ -93,7 +93,7 @@
     <!-- ============================================================
          WHY US + SERVICES
     ============================================================ -->
-    <section id="services" class="why-services-section py-20 px-6 text-white" data-observe>
+    <section id="services" class="why-services-section py-20 px-6" data-observe>
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col lg:flex-row gap-16">
 
@@ -391,7 +391,7 @@ onMounted(() => {
 .hero-headline {
   font-size: clamp(3.5rem, 10vw, 7rem);
   font-weight: 900;
-  color: white;
+  color: #FBF6DA;
   line-height: 1.05;
   margin: 0;
   letter-spacing: -0.03em;
@@ -459,6 +459,10 @@ onMounted(() => {
 .carousel-logo-card { display: flex; align-items: center; justify-content: center; padding: 1rem; height: 80px; width: 140px; flex-shrink: 0; }
 
 /* ── Process cards ── */
+
+.process-section{
+  color: #FBF6DA;
+}
 .process-card {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
@@ -482,9 +486,16 @@ onMounted(() => {
 }
 .step-number { font-size: 0.7rem; font-weight: 700; color: #22c55e; letter-spacing: 0.15em; margin-top: 0.75rem; }
 
+
+.why-services-section {
+  color: #FBF6DA;
+}
+
+
+
 /* ── Feature cards ── */
 .feature-card {
-  background: white;
+  background: #FBF6DA;
   color: #1a1a1a;
   border-radius: 1.25rem;
   padding: 1.5rem;
@@ -500,7 +511,9 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
 }
-
+.text-3xl{
+  color: #FBF6DA;
+}
 /* ── Service cards ── */
 .service-card {
   background: rgba(255,255,255,0.07);
@@ -550,7 +563,7 @@ onMounted(() => {
 .btn-primary {
   display: inline-block;
   padding: 0.75rem 2rem;
-  background: white; color: #0d4226; font-weight: 700;
+  background: #FBF6DA; color: #0d4226; font-weight: 700;
   border-radius: 0.75rem;
   box-shadow: 0 4px 24px rgba(0,0,0,0.2);
   transition: transform 0.2s, box-shadow 0.2s;
@@ -560,7 +573,7 @@ onMounted(() => {
 .btn-secondary {
   display: inline-block;
   padding: 0.75rem 2rem;
-  border: 2px solid rgba(255,255,255,0.4); color: white; font-weight: 600;
+  border: 2px solid rgba(255,255,255,0.4); color: #FBF6DA; font-weight: 600;
   border-radius: 0.75rem;
   transition: background 0.2s, border-color 0.2s;
   text-decoration: none;

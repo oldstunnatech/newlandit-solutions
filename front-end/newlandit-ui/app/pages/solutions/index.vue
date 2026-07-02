@@ -71,6 +71,15 @@ const cards = [
 </script>
 
 <style scoped>
+
+.text-4xl{
+  color: #FBF6DA;
+}
+
+.text-xl{
+  color: #FBF6DA;
+}
+
 .solutions-page {
   background: linear-gradient(160deg, #0d4226 0%, #156534 40%, #1d8044 100%);
   min-height: 100vh;
@@ -119,7 +128,7 @@ const cards = [
 .solution-link { color: #4ade80; font-weight: 600; font-size: 0.9rem; }
 .btn-primary {
   display: inline-block; padding: 0.75rem 2rem;
-  background: white; color: #0d4226; font-weight: 700;
+  background: #FBF6DA; color: #0d4226; font-weight: 700;
   border-radius: 0.75rem; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, box-shadow 0.2s; text-decoration: none;
 }

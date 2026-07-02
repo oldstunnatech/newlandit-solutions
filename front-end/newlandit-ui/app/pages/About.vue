@@ -231,6 +231,7 @@ const values = [
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 1.5rem;
+  color: #FBF6DA;
   padding: 2rem;
   text-align: center;
   transition: background 0.2s, transform 0.2s;
@@ -272,20 +273,33 @@ const values = [
 }
 .btn-primary {
   display: inline-block; padding: 0.75rem 2rem;
-  background: white; color: #0d4226; font-weight: 700;
+  background: #FBF6DA; color: #0d4226; font-weight: 700;
   border-radius: 0.75rem; box-shadow: 0 4px 24px rgba(0,0,0,0.2);
   transition: transform 0.2s, box-shadow 0.2s; text-decoration: none;
 }
 .btn-primary:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
 .btn-secondary {
   display: inline-block; padding: 0.75rem 2rem;
-  border: 2px solid rgba(255,255,255,0.4); color: white;
+  border: 2px solid rgba(255,255,255,0.4); color: #fbf6da;
   font-weight: 600; border-radius: 0.75rem;
   transition: background 0.2s, border-color 0.2s; text-decoration: none;
 }
 .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); }
 .fade-in-up { opacity: 0; transform: translateY(24px); animation: fadeInUp 0.6s ease forwards; }
 @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+.text-4xl{
+  color: #FBF6DA;
+}
+.text-3xl{
+  color: #FBF6DA;
+}
+
+.font-bold{
+  color: #FBF6DA;
+}
+
+
 @media (prefers-reduced-motion: reduce) {
   .blob { animation: none; }
   .fade-in-up { animation: none; opacity: 1; transform: none; }

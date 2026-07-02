@@ -75,4 +75,12 @@ const yearRange = computed(() => (contact.startYear === currentYear ? `${contact
 
 <style scoped>
 /* keep scoped empty; visuals handled by Tailwind */
+
+.font-semibold{
+color: #FBF6DA;
+}
+.mt-6{
+  color: #FBF6DA;
+}
+
 </style>
