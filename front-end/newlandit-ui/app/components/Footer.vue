@@ -40,7 +40,7 @@
           <div class="flex flex-col items-end gap-4">
             <div class="flex gap-4">
               <!-- LinkedIn icon circle -->
-              <a href="#" aria-label="LinkedIn" class="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-blue-500 text-blue-400 bg-transparent hover:bg-blue-500/5">
+              <a href="https://www.linkedin.com/company/105865773" aria-label="LinkedIn" class="inline-flex items-center justify-center w-10 h-10 rounded-full border-2 border-blue-500 text-blue-400 bg-transparent hover:bg-blue-500/5">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.268c-.966 0-1.75-.789-1.75-1.762s.784-1.762 1.75-1.762 1.75.789 1.75 1.762-.784 1.762-1.75 1.762zm13.5 10.268h-3v-4.5c0-1.08-.02-2.468-1.503-2.468-1.504 0-1.734 1.174-1.734 2.392v4.576h-3v-9h2.88v1.233h.041c.401-.758 1.379-1.556 2.84-1.556 3.037 0 3.6 1.999 3.6 4.597v5.726z"/>
                 </svg>
