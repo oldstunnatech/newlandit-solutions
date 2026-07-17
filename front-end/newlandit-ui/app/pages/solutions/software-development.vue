@@ -9,6 +9,7 @@
       <div class="text-center max-w-2xl mx-auto mb-12">
         <p class="eyebrow-pill mb-4">Software Development</p>
         <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">Software Development</h1>
+        <p class="text-lg leading-relaxed mb-8">Welcome to the Software Development department of Newland IT-Solutions. We develop customized solutions for web and mobile applications, CMS platforms, API integrations and complete digital systems especially for companies in Amsterdam and the Amsterdam Metropolitan Region.</p>
       </div>
 
       <div class="detail-card">

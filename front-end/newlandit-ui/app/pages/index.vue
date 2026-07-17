@@ -7,24 +7,24 @@
     <section class="hero-section relative min-h-screen flex flex-col justify-center items-center text-white overflow-hidden">
 
   <!-- Animated grid background -->
-  <div class="hero-grid" aria-hidden="true"></div>
+  <!-- <div class="hero-grid" aria-hidden="true"></div> -->
 
   <!-- Glowing orbs -->
-  <div class="orb orb-1" aria-hidden="true"></div>
+  <!-- <div class="orb orb-1" aria-hidden="true"></div>
   <div class="orb orb-2" aria-hidden="true"></div>
-  <div class="orb orb-3" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div> -->
 
   <!-- Floating particles -->
-  <div class="particles" aria-hidden="true">
+  <!-- <div class="particles" aria-hidden="true">
     <span v-for="i in 20" :key="i" class="particle" :style="`--i:${i}`"></span>
-  </div>
+  </div> -->
 
   <!-- Scanning line -->
-  <div class="scan-line" aria-hidden="true"></div>
+  <!-- <div class="scan-line" aria-hidden="true"></div> -->
 
   <!-- Cursor follower -->
-<div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
-<div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+<!-- <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div> -->
 
   <!-- Content -->
   <div class="relative z-10 text-center px-6 max-w-5xl mx-auto hero-content">
@@ -66,12 +66,12 @@
   </div>
 
   <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 text-xs scroll-hint">
+  <!-- <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 text-xs scroll-hint">
     <span>Scroll</span>
     <div class="scroll-mouse">
       <div class="scroll-wheel"></div>
     </div>
-  </div>
+  </div> -->
 </section>
 
     <!-- ============================================================
@@ -90,21 +90,42 @@
          CUSTOMERS MARQUEE
     ============================================================ -->
     <section class="customers-section py-20 px-6 text-white text-center" data-observe>
-      <p class="eyebrow-pill2 mb-3">Trusted by</p>
-      <h2 class="text-3xl1 md:text-4xl font-bold mb-4 mt-3">Our customers</h2>
-      <p class="max-w-2xl mx-auto text-white/70 mb-12">
-        From local organizations to national institutions these customers rely on our expertise in software development, IT strategy and project management.
-      </p>
-      <div class="marquee-track">
-        <div class="marquee-inner">
-          <div class="marquee-group" v-for="n in 2" :key="n">
-            <div class="carousel-logo-card" v-for="item in items" :key="item.image + n">
-              <img :src="item.image" class="w-full h-16 object-contain filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity duration-300" />
+  <p class="eyebrow-pill2 mb-3">Trusted by</p>
+  <h2 class="text-3xl1 md:text-4xl font-bold mb-4 mt-3">Our customers</h2>
+  <p class="max-w-2xl mx-auto text-white/70 mb-12">
+    From local organizations to national institutions these customers rely on our expertise in software development, IT strategy and project management.
+  </p>
+
+  <div class="marquee-track" :class="{ 'marquee-paused': activeReview !== null }">
+    <div class="marquee-inner">
+      <div class="marquee-group" v-for="n in 2" :key="n">
+        <div
+          v-for="(item, idx) in items"
+          :key="item.image + n"
+          class="carousel-logo-card"
+          :class="{ 'carousel-logo-card--hoverable': item.quote }"
+          @mouseenter="item.quote && openReview(n + '-' + idx)"
+          @mouseleave="item.quote && closeReview()"
+          @click="item.quote && toggleReview(n + '-' + idx)"
+        >
+          <img :src="item.image" class="logo-img" />
+
+          <!-- Slide-down review -->
+          <Transition name="slide-review">
+            <div
+              v-if="item.quote && activeReview === n + '-' + idx"
+              class="review-dropdown"
+            >
+              <div class="review-arrow"></div>
+              <p class="review-quote">"{{ item.quote }}"</p>
+              <p class="review-author">— {{ item.author }}, {{ item.company }}</p>
             </div>
-          </div>
+          </Transition>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
      <!-- ============================================================
          WHY US + SERVICES
@@ -145,7 +166,28 @@
     <section class="process-section py-20 px-6 text-white" data-observe>
       <div class="max-w-5xl mx-auto">
         <p class="eyebrow-pill4 mb-3 block text-center">Our approach</p>
-        <h2 class="text-3xl3 md:text-4xl font-bold mb-16 text-center mt-3">How we work</h2>
+        <h2 class="text-3xl3 md:text-4xl font-bold mb-16 text-center mt-3">Who are we here for?</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+          <div class="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-px"></div>
+          <div
+            v-for="(step, index) in offerSteps"
+            :key="step.title"
+            class="process-card scroll-child"
+            :style="`transition-delay: ${index * 0.12}s`"
+          >
+            <div class="process-icon">
+              <component :is="step.icon" :size="26" :stroke-width="1.5" class="text-green-300" />
+            </div>
+            <!-- <div class="step-number">{{ String(index + 1).padStart(2, '0') }}</div> -->
+            <h3 class="text-lg font-bold mt-4 mb-2">{{ step.title }}</h3>
+            <p class="text-sm text-white/60">{{ step.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-5xl mx-auto">
+        <!-- <p class="eyebrow-pill4 mb-3 block text-center">Our approach</p> -->
+        <h2 class="text-3xl3 md:text-4xl font-bold mb-16 text-center mt-10">What we offer</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           <div class="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-px"></div>
           <div
@@ -163,34 +205,40 @@
           </div>
         </div>
       </div>
+
     </section>
 
     <section id="services" class="why-services-section2 py-20 px-6" data-observe>
-      <div class="flex-1">
-            <p class="eyebrow-pill5 mb-3">What we do</p>
-            <h2 class="text-3xl4 md:text-4xl font-bold mb-4 mt-3 tracking-tight">Our services</h2>
-            <p class="service-text mb-8 text-white/70">
-              We offer a wide range of specialized IT services, tailored to your unique situation always focused on sustainable digital growth.
-            </p>
-            <div class="grid grid-cols-1 gap-5">
-              <div
-                v-for="(service, i) in services"
-                :key="service.title"
-                class="service-card scroll-child"
-                :style="`transition-delay: ${i * 0.1}s`"
-              >
-                <div class="service-icon">
-                  <component :is="service.icon" :size="24" :stroke-width="1.5" class="text-green-300" />
-                </div>
-                <div>
-                  <h3 class="text-base font-bold mb-1">{{ service.title }}</h3>
-                  <p class="text-sm text-white/60">{{ service.description }}</p>
-                </div>
-              </div>
-            </div>
-            <a href="#contact" class="btn-primary1 mt-8 inline-block">View all our services →</a>
+  <div class="flex-1">
+    <p class="eyebrow-pill5 mb-3">What we do</p>
+    <h2 class="text-3xl4 md:text-4xl font-bold mb-4 mt-3 tracking-tight">Our services</h2>
+    <p class="service-text mb-8 text-white/70">
+      We offer a wide range of specialized IT services, tailored to your unique situation always focused on sustainable digital growth.
+    </p>
+    <div class="grid grid-cols-1 gap-5 mt-10">
+      <div
+        v-for="(service, i) in services"
+        :key="service.title"
+        class="service-card scroll-child"
+        :style="`transition-delay: ${i * 0.1}s; background-image: url('${service.image}')`"
+      >
+        <div class="service-card-overlay">
+          <div class="service-icon">
+            <component :is="service.icon" :size="24" :stroke-width="1.5" class="text-green-300" />
           </div>
-    </section>
+          <div>
+            <h3 class="text-base font-bold mb-1 mt-10">{{ service.title }}</h3>
+            <p class="text-sm text-white/60">{{ service.description }}</p>
+            <a href="#services" class="btn-secondary11">{{ service.button }}</a>
+            
+            <!-- <a href="/solutions" class="btn-primary11 mt-8 inline-block">{{ service.button }}</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="/solutions" class="btn-primary1 mt-8 inline-block">View all our services →</a>
+  </div>
+</section>
 
    
 
@@ -198,7 +246,8 @@
          TESTIMONIALS
     ============================================================ -->
     <section class="testimonials-section py-20 px-6 text-white" data-observe>
-      <div class="max-w-6xl mx-auto">
+      
+      <!-- <div class="max-w-6xl mx-auto">
         <p class="eyebrow-pill6 mb-3 block text-center">What clients say</p>
         <h2 class="text-3xl5 md:text-4xl font-bold mb-12 text-center mt-3">Testimonials</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -219,7 +268,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <!-- ============================================================
@@ -263,7 +312,6 @@ import {
 } from '@lucide/vue'
 
 definePageMeta({ layout: 'default' })
-
 import '~/assets/css/main.css'
 
 const heroStats = [
@@ -279,8 +327,15 @@ const stats = [
   { raw: 72, suffix: 'hr', label: 'Response time' },
 ]
 
+const offerSteps = [
+  { icon: SearchIcon,        title: 'Personal approach', description: 'We believe in short lines of communication and clear communication. We get to know your challenges and help find solutions that work.' },
+  { icon: ClipboardListIcon, title: 'Experience & expertise',      description: 'With years of experience in web development, consultancy, and IT support, we help organizations grow in efficiency and stability.' },
+  { icon: SettingsIcon,      title: 'Flexible solutions',     description: 'From small assignments to ongoing support our approach adapts to your organization.' },
+  { icon: ShieldIcon,        title: 'Customer-oriented & reliable',   description: 'Your success is our priority. We ensure that our solutions demonstrably contribute to your processes and business goals.' },
+]
+
 const processSteps = [
-  { icon: SearchIcon,        title: 'Discovery', description: 'We listen, analyse and understand your situation and goals.' },
+  { icon: SearchIcon,        title: 'Discovery', description: 'We listen, analyze and understand your situation and goals.' },
   { icon: ClipboardListIcon, title: 'Plan',      description: 'We create a clear, tailored roadmap for your project.' },
   { icon: SettingsIcon,      title: 'Build',     description: 'We develop and implement the solution with precision.' },
   { icon: ShieldIcon,        title: 'Support',   description: 'We stay available for ongoing support and improvements.' },
@@ -294,32 +349,80 @@ const whyCards = [
 ]
 
 const services = [
-  { icon: MonitorIcon,    title: 'Software & Automation',  description: 'Smart tools that accelerate and simplify processes.' },
-  { icon: WrenchIcon,     title: 'IT Support & Management', description: 'Reliable and secure IT support.' },
-  { icon: TrendingUpIcon, title: 'Consultancy & Strategy',  description: 'Strategic digital growth advice.' },
+  {
+    icon: MonitorIcon,
+    title: 'Software & Automation',
+    description: 'Smart tools that accelerate and simplify processes. We build solutions that really work from data management to workflow optimization.',
+    image: '/images/startup-programmer-testing-debugging-company-ai-software.jpg',
+    button: 'Learn more→'
+  },
+  {
+    icon: WrenchIcon,
+    title: 'IT Support & Management',
+    description: 'Immediate assistance with malfunctions, maintenance, and security. Remote or on-site, we ensure your systems remain stable and secure.',
+    image: '/images/employees-looking-financial-statistics-computer.jpg',
+    button: 'Learn more→'
+  },
+  {
+    icon: TrendingUpIcon,
+    title: 'Consultancy & Strategy',
+    description: 'Strategic advice for digital transformation and scalable growth. We ensure that your technology supports your ambitions.',
+    image: '/images/diverse-coworkers-talking-with-customers.jpg',
+    button: 'Learn more→'
+  },
 ]
 
 const testimonials = [
   { quote: 'Newland IT helped us modernize our entire workflow. Professional, fast and always available.', name: 'Sarah de Vries', company: 'Agape Joy Care' },
-  { quote: 'From strategy to implementation they guided us every step of the way. Highly recommended.',  name: 'Mark Janssen',  company: 'BZVJ' },
+  { quote: 'From strategy to implementation — they guided us every step of the way. Highly recommended.',  name: 'Mark Janssen',  company: 'BZVJ' },
   { quote: 'Finally an IT partner that speaks our language. No technical jargon, just clear solutions.',    name: 'Lisa Bakker',   company: 'Flexxes' },
 ]
 
 const items = [
-  { image: '/images/agapejoycare-high-sd2l7h.png.webp' },
-  { image: '/images/bzvj-high-1vnsrg.png.webp' },
+  {
+    image: '/images/agapejoycare-high-sd2l7h.png.webp',
+    quote: 'Newland IT helped us modernize our entire workflow. Professional, fast and always available.',
+    author: 'Sarah de Vries',
+    company: 'Agape Joy Care',
+  },
+  {
+    image: '/images/bzvj-high-1vnsrg.png.webp',
+    quote: 'From strategy to implementation — they guided us every step of the way. Highly recommended.',
+    author: 'Mark Janssen',
+    company: 'BZVJ',
+  },
   { image: '/images/chatgpt-image-may-12-2025-11_00_28-pm-high-high.webp' },
   { image: '/images/color-2x-high.png.webp' },
   { image: '/images/double-asap-greytones-high-xdljy4.png.webp' },
-  { image: '/images/flexxes-logo-v5_flexxes-logo-cmyk-black-standard-transparant_1600x-high.webp' },
+  {
+    image: '/images/flexxes-logo-v5_flexxes-logo-cmyk-black-standard-transparant_1600x-high.webp',
+    quote: 'Finally an IT partner that speaks our language. No technical jargon, just clear solutions.',
+    author: 'Lisa Bakker',
+    company: 'Flexxes',
+  },
   { image: '/images/gemeente-amsterdam-4-logo-png-transparent-high.png.webp' },
 ]
+
+import { ref } from 'vue'
+
+const activeReview = ref<string | null>(null)
+
+function openReview(key: string) {
+  activeReview.value = key
+}
+
+function closeReview() {
+  activeReview.value = null
+}
+
+function toggleReview(key: string) {
+  activeReview.value = activeReview.value === key ? null : key
+}
 
 onMounted(() => {
   // ── Hero headline soft reveal ──────────────────────────────────
   const LINE1 = 'Newland'
   const LINE2 = 'IT Solutions'
-
   const headlineEl = document.getElementById('hero-headline')
   const subtitleEl = document.getElementById('hero-subtitle')
   const ctaEl      = document.getElementById('hero-cta')
@@ -348,10 +451,8 @@ onMounted(() => {
 
     const cur = document.createElement('span')
     cur.className = 'hero-cursor'
-
     const l2 = makeLine(LINE2, true)
     l2.appendChild(cur)
-
     headlineEl.appendChild(makeLine(LINE1))
     headlineEl.appendChild(l2)
 
@@ -379,99 +480,113 @@ onMounted(() => {
     })
   }
 
+ // ── Testimonial popup positioning ──────────────────────────────
+const popup     = document.getElementById('testimonial-popup') as HTMLElement
+const quoteEl   = document.getElementById('popup-quote') as HTMLElement
+const authorEl  = document.getElementById('popup-author') as HTMLElement
+
+if (popup) {
+  document.querySelectorAll<HTMLElement>('.carousel-logo-card--hoverable').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      const quote  = card.dataset.quote  || ''
+      const author = card.dataset.author || ''
+
+      quoteEl.textContent  = `"${quote}"`
+      authorEl.textContent = `— ${author}`
+
+      popup.style.display  = 'block'
+      popup.style.position = 'fixed'
+      popup.style.zIndex   = '99999'
+
+      requestAnimationFrame(() => {
+        const rect       = card.getBoundingClientRect()
+        const popupWidth = popup.offsetWidth || 260
+        const viewportW  = window.innerWidth
+
+        let left = rect.left + rect.width / 2 - popupWidth / 2
+        left = Math.max(8, Math.min(left, viewportW - popupWidth - 8))
+
+        const img = card.querySelector('img')
+        const imgRect = img ? img.getBoundingClientRect() : rect
+
+        popup.style.left = `${left}px`
+        popup.style.top  = `${imgRect.bottom + 6}px`
+      })
+    })
+
+    card.addEventListener('mouseleave', () => {
+      popup.style.display = 'none'
+    })
+  })
+}
 
   // ── Cursor magnetic glow ───────────────────────────────────────
-const heroSection = document.querySelector('.hero-section') as HTMLElement
-const cursorGlow  = document.getElementById('cursor-glow')
-const cursorRing  = document.getElementById('cursor-ring')
+  const heroSection = document.querySelector('.hero-section') as HTMLElement
+  const cursorGlow  = document.getElementById('cursor-glow')
+  const cursorRing  = document.getElementById('cursor-ring')
 
-if (heroSection && cursorGlow && cursorRing) {
-  let glowX = 0, glowY = 0
-  let ringX = 0, ringY = 0
-  let rafId: number
+  if (heroSection && cursorGlow && cursorRing) {
+    let glowX = 0, glowY = 0
+    let ringX = 0, ringY = 0
+    let rafId: number
 
-  const onMouseMove = (e: MouseEvent) => {
-    const rect = heroSection.getBoundingClientRect()
-    const x = e.clientX - rect.left
-    const y = e.clientY - rect.top
+    const onMouseMove = (e: MouseEvent) => {
+      const rect = heroSection.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
 
-    glowX = x
-    glowY = y
+      glowX = x
+      glowY = y
 
-    // Glow follows instantly
-    cursorGlow.style.left = `${x}px`
-    cursorGlow.style.top  = `${y}px`
-    cursorGlow.style.transform = `translate(-50%, -50%)`
-    cursorGlow.style.opacity   = '1'
+      cursorGlow.style.left      = `${x}px`
+      cursorGlow.style.top       = `${y}px`
+      cursorGlow.style.transform = 'translate(-50%, -50%)'
+      cursorGlow.style.opacity   = '1'
 
-    // Ring lags behind with RAF for smooth trailing effect
-    cancelAnimationFrame(rafId)
-    const lerp = (a: number, b: number, t: number) => a + (b - a) * t
+      cancelAnimationFrame(rafId)
+      const lerp = (a: number, b: number, t: number) => a + (b - a) * t
 
-    const animateRing = () => {
-      ringX = lerp(ringX, glowX, 0.12)
-      ringY = lerp(ringY, glowY, 0.12)
-      cursorRing.style.left = `${ringX}px`
-      cursorRing.style.top  = `${ringY}px`
-      cursorRing.style.transform = `translate(-50%, -50%)`      
-      cursorRing.style.opacity   = '1'
+      const animateRing = () => {
+        ringX = lerp(ringX, glowX, 0.12)
+        ringY = lerp(ringY, glowY, 0.12)
+        cursorRing.style.left      = `${ringX}px`
+        cursorRing.style.top       = `${ringY}px`
+        cursorRing.style.transform = 'translate(-50%, -50%)'
+        cursorRing.style.opacity   = '1'
+        if (Math.abs(ringX - glowX) > 0.5 || Math.abs(ringY - glowY) > 0.5) {
+          rafId = requestAnimationFrame(animateRing)
+        }
+      }
+      rafId = requestAnimationFrame(animateRing)
 
-      if (Math.abs(ringX - glowX) > 0.5 || Math.abs(ringY - glowY) > 0.5) {
-        rafId = requestAnimationFrame(animateRing)
+      // Tilt the headline slightly
+      const headlineWrap = document.querySelector('.hero-headline-wrap') as HTMLElement
+      if (headlineWrap) {
+        const tiltX = (y / rect.height - 0.5) * -6
+        const tiltY = (x / rect.width  - 0.5) *  6
+        headlineWrap.style.transform = `perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`
       }
     }
-    rafId = requestAnimationFrame(animateRing)
 
-    // Parallax on orbs
-    const moveX = (x / rect.width  - 0.5) * 30
-    const moveY = (y / rect.height - 0.5) * 30
-    const orb1 = document.querySelector('.orb-1') as HTMLElement
-    const orb2 = document.querySelector('.orb-2') as HTMLElement
-    const orb3 = document.querySelector('.orb-3') as HTMLElement
-    if (orb1) orb1.style.transform = `translate(${moveX * 0.6}px, ${moveY * 0.6}px)`
-    if (orb2) orb2.style.transform = `translate(${-moveX * 0.4}px, ${-moveY * 0.4}px)`
-    if (orb3) orb3.style.transform = `translate(${moveX * 0.3}px, ${moveY * 0.8}px)`
-
-    // Tilt the headline slightly
-    const headlineWrap = document.querySelector('.hero-headline-wrap') as HTMLElement
-    if (headlineWrap) {
-      const tiltX = (y / rect.height - 0.5) * -6
-      const tiltY = (x / rect.width  - 0.5) *  6
-      headlineWrap.style.transform = `perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`
+    const onMouseLeave = () => {
+      cursorGlow.style.opacity = '0'
+      cursorRing.style.opacity = '0'
+      const headlineWrap = document.querySelector('.hero-headline-wrap') as HTMLElement
+      if (headlineWrap) headlineWrap.style.transform = ''
     }
+
+    heroSection.addEventListener('mousemove', onMouseMove)
+    heroSection.addEventListener('mouseleave', onMouseLeave)
   }
-
-  const onMouseLeave = () => {
-    cursorGlow.style.opacity = '0'
-    cursorRing.style.opacity = '0'
-
-    // Reset orbs and headline
-    const orb1 = document.querySelector('.orb-1') as HTMLElement
-    const orb2 = document.querySelector('.orb-2') as HTMLElement
-    const orb3 = document.querySelector('.orb-3') as HTMLElement
-    const headlineWrap = document.querySelector('.hero-headline-wrap') as HTMLElement
-    if (orb1) orb1.style.transform = ''
-    if (orb2) orb2.style.transform = ''
-    if (orb3) orb3.style.transform = ''
-    if (headlineWrap) headlineWrap.style.transform = ''
-  }
-
-  heroSection.addEventListener('mousemove', onMouseMove)
-  heroSection.addEventListener('mouseleave', onMouseLeave)
-}
 
   // ── Intersection observer — scroll reveals ─────────────────────
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return
       const section = entry.target
-
       section.classList.add('in-view')
-      section.querySelectorAll<HTMLElement>('.scroll-child').forEach(el => {
-        el.classList.add('in-view')
-      })
+      section.querySelectorAll<HTMLElement>('.scroll-child').forEach(el => el.classList.add('in-view'))
 
-      // Count-up for stats
       section.querySelectorAll<HTMLElement>('.stat-number').forEach(el => {
         const target = parseInt(el.dataset.target || '0')
         const suffix = el.textContent?.replace(/[0-9]/g, '') || ''
@@ -499,11 +614,14 @@ if (heroSection && cursorGlow && cursorRing) {
 }
 
 /* ── Hero content — large screen centering ── */
-@media (min-width: 1024px) {
-  .hero-section {
-    align-items: center;
-    justify-content: center;
-  }
+
+ .hero-section {
+  background:
+    linear-gradient(160deg, rgba(13, 66, 38, 0.75) 0%, rgba(21, 101, 52, 0.65) 50%, rgba(29, 128, 68, 0.70) 100%),
+    url('/images/IMG_8959.jpg') center center / cover no-repeat;
+  min-height: 100vh;
+  position: relative;
+}
 
   .hero-content {
     display: flex;
@@ -545,7 +663,7 @@ if (heroSection && cursorGlow && cursorRing) {
     margin-right: auto;
     justify-content: space-between;
   }
-}
+
 
 @media (min-width: 1280px) {
   .hero-content {
@@ -783,12 +901,172 @@ if (heroSection && cursorGlow && cursorRing) {
 .scroll-child.in-view { opacity: 1; transform: translateY(0); }
 
 /* ── Marquee ── */
-.marquee-track { overflow: hidden; width: 100%; }
-.marquee-inner { display: flex; width: max-content; animation: marquee 28s linear infinite; }
+.marquee-track { overflow: hidden; position: relative; }
+.marquee-inner {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marquee-paused .marquee-inner {
+  animation-play-state: paused !important;
+  overflow: visible;
+  clip-path: inset(0 0 -200px 0);
+}
+
+.marquee-paused {
+  overflow: visible;
+  clip-path: inset(0 1px -200px 1px);
+}
+
 .marquee-inner:hover { animation-play-state: paused; }
-.marquee-group { display: flex; align-items: center; gap: 3rem; padding: 0 1.5rem; }
+.marquee-group { display: flex; align-items: center; gap: 2rem; padding: 0 1rem; overflow: visible; }
 @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-.carousel-logo-card { display: flex; align-items: center; justify-content: center; padding: 1rem; height: 80px; width: 140px; flex-shrink: 0; }
+
+/* Logo card needs relative positioning for the dropdown */
+.carousel-logo-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  flex-shrink: 0;
+  width: 160px;
+}
+
+.carousel-logo-card--hoverable {
+  cursor: pointer;
+}
+
+.logo-img {
+  width: 500%;
+  height: 350px;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.carousel-logo-card--hoverable:hover .logo-img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.review-arrow {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgba(74, 222, 128, 0.4);
+}
+
+/* Slide-down review card */
+.review-dropdown {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  max-width: calc(100vw - 280px); /* 280px accounts for the sidebar width */
+  background: rgba(13, 66, 38, 0.97);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  text-align: left;
+  z-index: 9999;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  white-space: normal;
+  word-break: break-word;
+  margin-top: -80px;
+}
+
+.review-quote {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.review-author {
+  font-size: 0.75rem;
+  color: #4ade80;
+  font-weight: 600;
+}
+
+/* Slide transition */
+.slide-review-enter-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.slide-review-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.slide-review-enter-from {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-8px);
+}
+.slide-review-leave-to {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+
+.customers-section {
+  position: relative;
+}
+
+.page-root {
+  background: linear-gradient(160deg, #0d4226 0%, #156534 40%, #1d8044 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.carousel-logo-card--hoverable:hover .testimonial-popup {
+  opacity: 1;
+}
+
+.carousel-logo-card--testimonial {
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  width: 260px;
+  height: auto;
+  gap: 0.75rem;
+}
+
+.testimonial-quote {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 0.6rem;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.testimonial-author {
+  font-size: 0.75rem;
+  color: #4ade80;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
 /* ── Eyebrow pill ── */
 .eyebrow-pill1 {
@@ -981,16 +1259,31 @@ if (heroSection && cursorGlow && cursorRing) {
 
 /* ── Service cards ── */
 .service-card {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
+  border: none;
   border-radius: 1.25rem;
-  padding: 1.25rem 1.5rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s, opacity 0.5s ease;
+  min-height: 250px;
+}
+.service-card:hover {
+  transform: translateX(6px);
+}
+.service-card-overlay {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  transition: background 0.2s, transform 0.2s, opacity 0.5s ease;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 66, 38, 0.82) 0%,
+    rgba(21, 101, 52, 0.72) 100%
+  );
+  min-height: 250px;
+  width: 100%;
 }
-.service-card:hover { background: rgba(255,255,255,0.13); transform: translateX(6px); }
+
 .service-icon {
   width: 44px; height: 44px;
   background: rgba(52,211,153,0.1);
@@ -1036,6 +1329,16 @@ if (heroSection && cursorGlow && cursorRing) {
   text-decoration: none;
 }
 .btn-primary:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
+
+.btn-secondary11 {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255,255,255,0.4); color: #FBF6DA; font-weight: 600;
+  border-radius: 0.75rem;
+  transition: background 0.2s, border-color 0.2s;
+  text-decoration: none;
+  margin-top: 10px;
+}
 
 .btn-primary1 {
   display: inline-block;
@@ -1089,8 +1392,8 @@ if (heroSection && cursorGlow && cursorRing) {
 /* ── Cursor glow ── */
 .cursor-glow {
   position: absolute;
-  width: 400px; height: 400px;
-  border-radius: 50%;
+  width: 150px; height: 150px;
+  border-radius: 75%;
   background: radial-gradient(circle,
     rgba(74,222,128,0.15) 0%,
     rgba(34,197,94,0.08) 40%,
@@ -1106,9 +1409,9 @@ if (heroSection && cursorGlow && cursorRing) {
 }
 
 /* ── Cursor ring (trailing) ── */
-..cursor-ring {
+.cursor-ring {
   position: absolute;
-  width: 48px; height: 48px;
+  width: 20px; height: 20px;
   border-radius: 50%;
   border: 1.5px solid rgba(74,222,128,0.6);
   pointer-events: none;
