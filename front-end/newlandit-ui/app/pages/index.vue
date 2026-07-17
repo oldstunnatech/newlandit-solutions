@@ -229,7 +229,8 @@
           <div>
             <h3 class="text-base font-bold mb-1 mt-10">{{ service.title }}</h3>
             <p class="text-sm text-white/60">{{ service.description }}</p>
-            <a href="#services" class="btn-secondary11">{{ service.button }}</a>
+            <NuxtLink :to="service.href" class="btn-secondary11 mt-4 inline-block"> {{ service.button }}</NuxtLink>
+            
             
             <!-- <a href="/solutions" class="btn-primary11 mt-8 inline-block">{{ service.button }}</a> -->
           </div>
@@ -354,21 +355,25 @@ const services = [
     title: 'Software & Automation',
     description: 'Smart tools that accelerate and simplify processes. We build solutions that really work from data management to workflow optimization.',
     image: '/images/startup-programmer-testing-debugging-company-ai-software.jpg',
-    button: 'Learn more→'
+    button: 'More about Development',
+    href: '/solutions/software-development',
   },
   {
     icon: WrenchIcon,
     title: 'IT Support & Management',
     description: 'Immediate assistance with malfunctions, maintenance, and security. Remote or on-site, we ensure your systems remain stable and secure.',
     image: '/images/employees-looking-financial-statistics-computer.jpg',
-    button: 'Learn more→'
+    button: 'More about IT Support',
+    href: '/solutions/it-consulting',
   },
   {
     icon: TrendingUpIcon,
     title: 'Consultancy & Strategy',
     description: 'Strategic advice for digital transformation and scalable growth. We ensure that your technology supports your ambitions.',
     image: '/images/diverse-coworkers-talking-with-customers.jpg',
-    button: 'Learn more→'
+    button: 'More about Strategy',
+    href: '/solutions/digital-strategy',
+
   },
 ]
 
@@ -1600,6 +1605,26 @@ if (popup) {
   margin-left: 45px;
 }
 .btn-primary:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
+
+.review-dropdown {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  max-width: calc(100vw - 280px); /* 280px accounts for the sidebar width */
+  background: rgba(13, 66, 38, 0.97);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  text-align: left;
+  z-index: 9999;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  white-space: normal;
+  word-break: break-word;
+  margin-top: -180px;
+}
 
 
 }
