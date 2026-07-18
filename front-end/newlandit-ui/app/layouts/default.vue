@@ -48,8 +48,20 @@ const navItems = [
     href: '/solutions',
     icon: 'lucide:share-2',
     children: [
-      { name: 'Software Development', href: '/solutions/software-development' },
-      { name: 'IT Consulting', href: '/solutions/it-consulting' },
+      {
+        name: 'Software Development',
+        href: '/solutions/software-development',
+        children: [
+          { name: 'CMS Website & WordPress', href: '/solutions/cms-websites' },
+        ],
+      },
+      {
+        name: 'IT Consulting',
+        href: '/solutions/it-consulting',
+        children: [
+          { name: 'IT Support (helpdesk, remote & on-site)', href: '/solutions/it-support' },
+        ],
+      },
       { name: 'Digital Strategy & Enablement', href: '/solutions/digital-strategy' },
     ],
   },

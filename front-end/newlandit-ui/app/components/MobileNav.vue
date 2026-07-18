@@ -20,49 +20,77 @@
       <nav class="flex-1" aria-label="Mobile primary">
         <ul class="space-y-5">
           <li v-for="nav in navItems" :key="nav.name" class="nav-item">
-            <!-- item with children: tap toggles submenu -->
+
+            <!-- Item with level-2 children: tap toggles -->
             <template v-if="nav.children">
-              <div class="flex items-center justify-between w-full">
-                <!-- navigates to solutions.vue -->
-                <NuxtLink
-                :to="nav.href"
-                class="flex items-center gap-4 text-slate-800 hover:text-emerald-800 transition-colors flex-1"
+              <button
+                class="flex items-center justify-between w-full gap-4 text-slate-800 hover:text-emerald-800 transition-colors"
                 :class="{ 'text-emerald-800 font-bold': isActive(nav.href) }"
-                :aria-current="isActive(nav.href) ? 'page' : false"
-                @click="$emit('close')"
-                >
-                <Icon :name="nav.icon" class="w-6 h-6 shrink-0" aria-hidden="true" />
-                <span class="text-lg font-semibold">{{ nav.name }}</span>
-                </NuxtLink>
-                
-                <!-- arrow only toggles submenu -->
-                <button class="p-1 rounded text-slate-500 hover:text-emerald-800 transition-colors shrink-0" @click.stop="openMenu = openMenu === nav.name ? null : nav.name"
+                @click="openMenu = openMenu === nav.name ? null : nav.name"
                 :aria-expanded="openMenu === nav.name"
-                :aria-label="`Toggle ${nav.name} submenu`"
-                >
+              >
+                <span class="flex items-center gap-4">
+                  <Icon :name="nav.icon" class="w-6 h-6 shrink-0" aria-hidden="true" />
+                  <span class="text-lg font-semibold">{{ nav.name }}</span>
+                </span>
                 <Icon
-                name="lucide:chevron-right"
-                class="w-4 h-4 transition-transform duration-200"
-                :class="{ 'rotate-90': openMenu === nav.name }"
-                aria-hidden="true"
+                  name="lucide:chevron-right"
+                  class="w-4 h-4 shrink-0 text-slate-500 transition-transform duration-200"
+                  :class="{ 'rotate-90': openMenu === nav.name }"
+                  aria-hidden="true"
                 />
-                </button>
-                </div>
-                  
-                  <!-- submenu -->
-                  <ul v-show="openMenu === nav.name" class="submenu">
-                    <li v-for="child in nav.children" :key="child.name">
-                      <NuxtLink
+              </button>
+
+              <!-- Level 2 submenu -->
+              <ul v-show="openMenu === nav.name" class="submenu">
+                <li v-for="child in nav.children" :key="child.name">
+
+                  <!-- Child with level-3 children -->
+                  <template v-if="child.children">
+                    <button
+                      class="submenu-link flex items-center justify-between w-full"
+                      @click="openSubmenu = openSubmenu === child.name ? null : child.name"
+                      :aria-expanded="openSubmenu === child.name"
+                    >
+                      <span>{{ child.name }}</span>
+                      <Icon
+                        name="lucide:chevron-right"
+                        class="w-3 h-3 text-slate-400 transition-transform duration-200"
+                        :class="{ 'rotate-90': openSubmenu === child.name }"
+                        aria-hidden="true"
+                      />
+                    </button>
+
+                    <!-- Level 3 submenu -->
+                    <ul v-show="openSubmenu === child.name" class="submenu submenu--nested">
+                      <li v-for="grandchild in child.children" :key="grandchild.name">
+                        <NuxtLink
+                          :to="grandchild.href"
+                          class="submenu-link submenu-link--small"
+                          @click="$emit('close')"
+                        >
+                          {{ grandchild.name }}
+                        </NuxtLink>
+                      </li>
+                    </ul>
+                  </template>
+
+                  <!-- Simple child link -->
+                  <template v-else>
+                    <NuxtLink
                       :to="child.href"
                       class="submenu-link"
-                      @click="$emit('close')" >
+                      @click="$emit('close')"
+                    >
                       {{ child.name }}
-                      </NuxtLink>
-                      </li>
-                      </ul>
+                    </NuxtLink>
+                  </template>
+
+                </li>
+              </ul>
             </template>
 
-            <!-- simple link -->
+            <!-- Simple top-level link -->
             <NuxtLink
               v-else
               :to="nav.href"
@@ -74,6 +102,7 @@
               <Icon :name="nav.icon" class="w-6 h-6 shrink-0" aria-hidden="true" />
               <span class="text-lg font-semibold">{{ nav.name }}</span>
             </NuxtLink>
+
           </li>
         </ul>
       </nav>
@@ -92,14 +121,20 @@ defineProps<{
     name: string
     href: string
     icon: string
-    children?: Array<{ name: string; href: string }>
+    children?: Array<{
+      name: string
+      href: string
+      children?: Array<{ name: string; href: string }>
+    }>
   }>
 }>()
 
 defineEmits<{ close: [] }>()
 
 const route = useRoute()
-const openMenu = ref<string | null>(null)
+const openMenu    = ref<string | null>(null)
+const openSubmenu = ref<string | null>(null)
+
 const isActive = (href: string) => isActivePath(href, route.path)
 </script>
 
@@ -114,6 +149,14 @@ const isActive = (href: string) => isActivePath(href, route.path)
   border-left: 2px solid rgba(6, 78, 59, 0.15);
   padding-left: 1rem;
 }
+
+.submenu--nested {
+  margin-top: 0.4rem;
+  margin-left: 1rem;
+  border-left: 2px solid rgba(6, 78, 59, 0.08);
+  padding-left: 0.75rem;
+}
+
 .submenu-link {
   display: block;
   font-size: 0.9rem;
@@ -122,6 +165,19 @@ const isActive = (href: string) => isActivePath(href, route.path)
   text-decoration: none;
   transition: color 0.15s;
   padding: 0.2rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
 }
+
 .submenu-link:hover { color: #065f46; }
+
+.submenu-link--small {
+  font-size: 0.8rem;
+  color: rgba(30, 41, 59, 0.6);
+}
+
+.submenu-link--small:hover { color: #065f46; }
 </style>

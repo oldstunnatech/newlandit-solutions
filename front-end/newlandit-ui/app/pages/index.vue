@@ -41,13 +41,13 @@
     <!-- Badge -->
     <div class="hero-badge mb-8">
       <span class="badge-dot"></span>
-      <span>Smart IT Solutions</span>
+      <span>Smart IT solutions for growing companies in Amsterdam</span>
       <span class="badge-dot"></span>
     </div>
 
     <!-- Subtitle -->
     <p class="text-lg sm:text-xl max-w-2xl mx-auto text-white/60 mb-10 hero-subtitle" id="hero-subtitle">
-      Your bridge to tomorrow's technology reliable IT support, custom software and professional websites.
+    We help freelancers and small businesses in Amsterdam and the surrounding area with reliable IT support, custom software, and professional websites, without complicated technical language.
     </p>
 
     <!-- CTAs -->

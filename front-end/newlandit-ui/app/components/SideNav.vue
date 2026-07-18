@@ -40,17 +40,38 @@
             </NuxtLink>
 
             <!-- submenu flyout -->
-            <ul
-              v-if="nav.children"
-              v-show="openMenu === nav.name"
-              class="submenu"
-            >
-              <li v-for="child in nav.children" :key="child.name">
-                <NuxtLink :to="child.href" class="submenu-link">
-                  {{ child.name }}
-                </NuxtLink>
-              </li>
-            </ul>
+            <!-- Level 2 submenu -->
+<ul
+  v-if="nav.children"
+  v-show="openMenu === nav.name"
+  class="submenu"
+>
+  <li v-for="child in nav.children" :key="child.name">
+    <div
+      @mouseenter="child.children && (openSubmenu = child.name)"
+      @mouseleave="child.children && (openSubmenu = null)"
+    >
+      <NuxtLink :to="child.href" class="submenu-link flex items-center justify-between">
+        <span>{{ child.name }}</span>
+        <Icon
+          v-if="child.children"
+          name="lucide:chevron-right"
+          class="w-3 h-3 text-slate-400 transition-transform"
+          :class="{ 'rotate-90': openSubmenu === child.name }"
+        />
+      </NuxtLink>
+
+      <!-- Level 3 submenu -->
+      <ul v-if="child.children" v-show="openSubmenu === child.name" class="submenu submenu--nested">
+        <li v-for="grandchild in child.children" :key="grandchild.name">
+          <NuxtLink :to="grandchild.href" class="submenu-link submenu-link--small">
+            {{ grandchild.name }}
+          </NuxtLink>
+        </li>
+      </ul>
+    </div>
+  </li>
+</ul>
           </li>
         </ul>
       </nav>
@@ -66,6 +87,7 @@ import logo from '~/assets/company_logo.png'
 
 const route = useRoute()
 const openMenu = ref<string | null>(null)
+const openSubmenu = ref<string | null>(null)
 
 const navItems = [
   { name: 'Home', href: '/', icon: 'lucide:home' },
@@ -74,8 +96,20 @@ const navItems = [
     href: '/solutions',
     icon: 'lucide:share-2',
     children: [
-      { name: 'Software Development', href: '/solutions/software-development' },
-      { name: 'IT Consulting', href: '/solutions/it-consulting' },
+      {
+        name: 'Software Development',
+        href: '/solutions/software-development',
+        children: [
+          { name: 'CMS Website & WordPress', href: '/solutions/cms-websites' },
+        ],
+      },
+      {
+        name: 'IT Consulting',
+        href: '/solutions/it-consulting',
+        children: [
+          { name: 'IT Support (helpdesk, remote & on-site)', href: '/solutions/it-support' },
+        ],
+      },
       { name: 'Digital Strategy & Enablement', href: '/solutions/digital-strategy' },
     ],
   },
@@ -118,4 +152,21 @@ const isActive = (href: string) => isActivePath(href, route.path)
 .submenu-link:hover {
   color: #065f46;
 }
+
+.submenu--nested {
+  margin-top: 0.4rem;
+  margin-left: 1rem;
+  border-left: 2px solid rgba(6, 78, 59, 0.08);
+  padding-left: 0.75rem;
+}
+
+.submenu-link--small {
+  font-size: 0.8rem;
+  color: rgba(30, 41, 59, 0.6);
+}
+
+.submenu-link--small:hover {
+  color: #065f46;
+}
+
 </style>
