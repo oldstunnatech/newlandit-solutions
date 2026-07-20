@@ -34,8 +34,8 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div v-for="(card, i) in mvs" :key="card.title" class="mvs-card fade-in-up" :style="`animation-delay: ${i * 0.15}s`">
           <div class="mvs-icon">
-            <component :is="card.icon" :size="28" :stroke-width="1.5" class="text-green-300" />
-          </div>
+            <component :is="card.icon" :size="32" :stroke-width="1" class="text-green-300" />
+            </div>
           <h3 class="text-xl font-bold mt-5 mb-3">{{ card.title }}</h3>
           <p class="text-white/65 text-sm leading-relaxed">{{ card.body }}</p>
         </div>
@@ -90,7 +90,7 @@
         <p class="text-white/70 mb-10 text-lg">Tell us what you're working on we'll get back to you within 3 business day.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="/contact" class="btn-primary">Plan een kennismaking</a>
-          <a href="/#services" class="btn-secondary">View our services</a>
+          <a href="/solutions" class="btn-secondary">View our services</a>
         </div>
       </div>
     </div>
@@ -107,13 +107,16 @@
 
 <script setup lang="ts">
 import {
-  TargetIcon,
-  EyeIcon,
-  BarChart2Icon,
+  // TargetIcon,
+  // EyeIcon,
+  // BarChart2Icon,
   HandshakeIcon,
   SettingsIcon,
   ZapIcon,
   BrainIcon,
+  CompassIcon, 
+  TelescopeIcon, 
+  NetworkIcon,
 } from '@lucide/vue'
 
 definePageMeta({
@@ -129,17 +132,17 @@ const stats = [
 
 const mvs = [
   {
-    icon: TargetIcon,
+    icon: CompassIcon,
     title: 'Mission',
     body: 'At Newland IT-Solutions, the customer is central. We help companies and individuals in Amsterdam and the surrounding area with smart IT solutions that accelerate digitization and simplify processes. Our approach is personal and accessible: technology must work for the customer.',
   },
   {
-    icon: EyeIcon,
+    icon: TelescopeIcon,
     title: 'Vision',
     body: 'We make technology understandable and applicable not only for large organizations, but also for freelancers, schools and teams in Amsterdam and North Holland. With knowledge sharing and customization, we help customers work faster, grow more efficiently and be ready for the digital future.',
   },
   {
-    icon: BarChart2Icon,
+    icon: NetworkIcon,
     title: 'Strategy',
     body: 'As an IT agency in Amsterdam, we develop customized IT solutions that are scalable and user-friendly. In addition, we help organizations refine their digital strategy by clearly mapping complex issues and realizing efficient solutions.',
   },
@@ -248,15 +251,36 @@ const values = [
 }
 .mvs-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-5px); }
 .mvs-icon {
-  width: 64px; height: 64px;
+  width: 68px;
+  height: 68px;
   margin: 0 auto;
-  background: rgba(52,211,153,0.12);
-  border: 1px solid rgba(52,211,153,0.3);
-  border-radius: 50%;
+  border: 1.5px solid rgba(74, 222, 128, 0.5);
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  background: transparent;
 }
+
+
+.mvs-icon::before,
+.mvs-icon::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #4ade80;
+}
+.mvs-icon::before {
+  top: -2px;
+  left: -2px;
+}
+.mvs-icon::after {
+  bottom: -2px;
+  right: -2px;
+}
+
 .timeline { display: flex; flex-direction: column; }
 .timeline-item { display: grid; grid-template-columns: 72px 32px 1fr; gap: 0 1rem; align-items: start; }
 .timeline-year { text-align: right; font-weight: 800; font-size: 0.9rem; color: #22c55e; padding-top: 2px; letter-spacing: 0.05em; }

@@ -58,7 +58,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
         </svg>
       </a>
-      <a href="#services" class="btn-secondary">Our services</a>
+      <a href="#services1" class="btn-secondary">Our services</a>
     </div>
 
     <!-- Stats row -->
@@ -208,7 +208,7 @@
 
     </section>
 
-    <section id="services" class="why-services-section2 py-20 px-6" data-observe>
+    <section id="services1" class="why-services-section2 py-20 px-6" data-observe>
   <div class="flex-1">
     <p class="eyebrow-pill5 mb-3">What we do</p>
     <h2 class="text-3xl4 md:text-4xl font-bold mb-4 mt-3 tracking-tight">Our services</h2>

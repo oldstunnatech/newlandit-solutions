@@ -14,7 +14,7 @@ export interface ContactFormState {
 type FieldErrors = Partial<Record<keyof ContactFormState, string>>
 
 function createEmptyState(): ContactFormState {
-  return { name: '', email: '', phone: '', company: '', address:'', message: '', website: '' }
+  return { name: '', email: '', phone: '', company: '', address: '', message: '', website: '' }
 }
 
 export function useContactForm() {
@@ -22,6 +22,7 @@ export function useContactForm() {
   const errors = ref<FieldErrors>({})
   const attachment = ref<File | null>(null)
   const attachmentError = ref<string | null>(null)
+  const isDragging = ref(false)
 
   const status = ref<'idle' | 'submitting' | 'success' | 'error'>('idle')
   const statusMessage = ref('')
@@ -35,7 +36,6 @@ export function useContactForm() {
       errors.value = {}
       return true
     }
-
     const fieldErrors: FieldErrors = {}
     for (const issue of result.error.issues) {
       const key = issue.path[0] as keyof ContactFormState
@@ -45,31 +45,34 @@ export function useContactForm() {
     return false
   }
 
+  function validateFile(file: File): boolean {
+    attachmentError.value = null
+    const ext = `.${file.name.split('.').pop()?.toLowerCase()}`
+    if (!ALLOWED_EXTENSIONS.includes(ext)) {
+      attachmentError.value = 'File type not supported.'
+      return false
+    }
+    if (file.size > MAX_ATTACHMENT_MB * 1024 * 1024) {
+      attachmentError.value = `File must be under ${MAX_ATTACHMENT_MB}MB.`
+      return false
+    }
+    return true
+  }
+
   function onAttachmentChange(event: Event) {
     const input = event.target as HTMLInputElement
     const file = input.files?.[0]
     attachmentError.value = null
+    if (!file) { attachment.value = null; return }
+    if (!validateFile(file)) { attachment.value = null; input.value = ''; return }
+    attachment.value = file
+  }
 
-    if (!file) {
-      attachment.value = null
-      return
-    }
-
-    const ext = `.${file.name.split('.').pop()?.toLowerCase()}`
-    if (!ALLOWED_EXTENSIONS.includes(ext)) {
-      attachmentError.value = 'File type not supported.'
-      attachment.value = null
-      input.value = ''
-      return
-    }
-
-    if (file.size > MAX_ATTACHMENT_MB * 1024 * 1024) {
-      attachmentError.value = `File must be under ${MAX_ATTACHMENT_MB}MB.`
-      attachment.value = null
-      input.value = ''
-      return
-    }
-
+  function onDrop(event: DragEvent) {
+    isDragging.value = false
+    const file = event.dataTransfer?.files?.[0]
+    if (!file) return
+    if (!validateFile(file)) return
     attachment.value = file
   }
 
@@ -84,7 +87,6 @@ export function useContactForm() {
       statusMessage.value = 'Please check the highlighted fields.'
       return
     }
-
     status.value = 'submitting'
     statusMessage.value = ''
 
@@ -96,16 +98,13 @@ export function useContactForm() {
     body.append('address', form.address)
     body.append('message', form.message)
     body.append('website', form.website)
-    if (attachment.value) {
-      body.append('attachment', attachment.value)
-    }
+    if (attachment.value) body.append('attachment', attachment.value)
 
     try {
       const result = await $fetch<ContactSubmissionResult>('/api/contact', {
         method: 'POST',
         body,
       })
-
       status.value = 'success'
       statusMessage.value = result.message
       Object.assign(form, createEmptyState())
@@ -132,9 +131,11 @@ export function useContactForm() {
     errors,
     attachment,
     attachmentError,
+    isDragging,
     status,
     statusMessage,
     onAttachmentChange,
+    onDrop,
     clearAttachment,
     submit,
     reset,

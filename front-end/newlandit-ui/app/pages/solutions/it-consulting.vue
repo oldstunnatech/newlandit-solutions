@@ -20,7 +20,7 @@
         <ul class="offer-list mb-10">
           <li v-for="item in offers" :key="item">{{ item }}</li>
         </ul>
-        <a href="/contact" class="btn-primary">More about IT Consultancy</a>
+        <a href="/solutions/it-support" class="btn-primary">More about IT Consultancy</a>
       </div>
 
       <div class="sub-sections">
@@ -81,7 +81,7 @@ const subSections = [
     image: '/images/pexels-ai25studioai-5466243.jpg',
     paragraphs: [
       'At Newland IT-Solutions, we support organizations in realizing digital transformation and integration projects. We ensure you are ready for the future from strategy to implementation.',
-      'Trust our expertise to strengthen your organization with smart, scalable, and future-proof IT solutions. Whether it involves cloud solutions, on-premise systems, or hybrid integrations we help you improve your competitive position.',
+      'Trust our expertise to strengthen your organization with smart, scalable, and future proof IT solutions. Whether it involves cloud solutions, on premise systems, or hybrid integrations we help you improve your competitive position.',
     ],
     points: [
       'Strategy determination and implementation',

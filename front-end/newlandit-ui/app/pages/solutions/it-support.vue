@@ -11,7 +11,7 @@
         <p class="eyebrow-pill mb-4">IT Support Services</p>
         <h1 class="text-4xl sm:text-4xl font-extrabold mb-6">Smart IT support, wherever and whenever you need it</h1>
         <p class="text-white/70 text-lg leading-relaxed">
-          At Newland IT-Solutions we keep your business running in Amsterdam and North Holland. Whether you are self-employed or managing a growing team we offer reliable support remotely and on-site. From quick helpdesk questions to proactive system management: you choose the package that suits your organization.
+          At Newland IT-Solutions we keep your business running in Amsterdam and North Holland. Whether you are self-employed or managing a growing team we offer reliable support remotely and on site. From quick help desk questions to proactive system management: you choose the package that suits your organization.
         </p>
       </div>
 
@@ -74,7 +74,7 @@
       <!-- CTA -->
       <div class="cta-band mt-20">
         <h2 class="text-2xl font-bold mb-3">Not sure which package fits?</h2>
-        <p class="text-white/70 mb-6">Contact us for a no-obligation consultation — we'll find the right plan together.</p>
+        <p class="text-white/70 mb-6">Contact us for a no obligation consultation we'll find the right plan together.</p>
         <a href="/contact" class="btn-primary">Plan a free consultation</a>
       </div>
     </div>

@@ -107,41 +107,47 @@
             </div>
 
             <div class="field mt-5">
-              <label for="attachment">Attachment (optional)</label>
+  <label for="attachment">Attachment (optional)</label>
 
-              <label v-if="!attachment" for="attachment" class="file-drop">
-                <span class="file-drop-icon"><PaperclipIcon :size="22" :stroke-width="1.5" /></span>
-                <span class="text-sm text-white/70">
-                  Click to attach a brief, RFP, or document
-                </span>
-                <span class="text-xs text-white/40 mt-1"
-                  >PDF, Word, or image up to 5MB</span
-                >
-              </label>
-              <input
-                id="attachment"
-                type="file"
-                class="sr-only"
-                accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.webp"
-                @change="onAttachmentChange"
-              />
+  <label
+    v-if="!attachment"
+    for="attachment"
+    class="file-drop"
+    :class="{ 'file-drop--active': isDragging }"
+    @dragover.prevent="isDragging = true"
+    @dragleave.prevent="isDragging = false"
+    @drop.prevent="onDrop"
+  >
+    <span class="file-drop-icon">
+      <PaperclipIcon :size="22" :stroke-width="1.5" />
+    </span>
+    <span class="text-sm text-white/70">
+      {{ isDragging ? 'Drop your file here' : 'Click or drag & drop to attach' }}
+    </span>
+    <span class="text-xs text-white/40 mt-1">PDF, Word, or image — up to 5MB</span>
+  </label>
 
-              <div v-if="attachment" class="file-chip">
-                <span class="truncate">{{ attachment.name }}</span>
-                <button
-                  type="button"
-                  class="file-chip-remove"
-                  @click="clearAttachment"
-                  aria-label="Remove attachment"
-                >
-                  <XIcon :size="16" />
-                </button>
-              </div>
-              <span v-if="attachmentError" class="field-error">{{
-                attachmentError
-              }}</span>
-            </div>
+  <input
+    id="attachment"
+    type="file"
+    class="sr-only"
+    accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.webp"
+    @change="onAttachmentChange"
+  />
 
+  <div v-if="attachment" class="file-chip">
+    <span class="truncate">{{ attachment.name }}</span>
+    <button
+      type="button"
+      class="file-chip-remove"
+      @click="clearAttachment"
+      aria-label="Remove attachment"
+    >
+      <XIcon :size="16" />
+    </button>
+  </div>
+  <span v-if="attachmentError" class="field-error">{{ attachmentError }}</span>
+</div>
             <div class="honeypot" aria-hidden="true">
               <label for="website">Website</label>
               <input
@@ -228,7 +234,7 @@
               Prefer chat?
             </p>
             <a
-              href="https://wa.me/31600000000"
+              href="https://wa.me/31648364450"
               target="_blank"
               rel="noopener"
               class="btn-secondary self-start text-sm"
@@ -294,25 +300,18 @@
 </template>
 
 <script setup lang="ts">
-import { CONTACT } from "~~/shared/utils/contact";
-import { PaperclipIcon, XIcon, CheckIcon, PhoneIcon, MailIcon, GlobeIcon } from "@lucide/vue";
+import { CONTACT } from '~~/shared/utils/contact'
+import { PaperclipIcon, XIcon, CheckIcon, PhoneIcon, MailIcon, GlobeIcon } from '@lucide/vue'
 
 definePageMeta({
-  layout: "default",
-});
+  layout: 'default',
+})
 
 const {
-  form,
-  errors,
-  attachment,
-  attachmentError,
-  status,
-  statusMessage,
-  onAttachmentChange,
-  clearAttachment,
-  submit,
-  reset,
-} = useContactForm();
+  form, errors, attachment, attachmentError,
+  isDragging, status, statusMessage,
+  onAttachmentChange, onDrop, clearAttachment, submit, reset,
+} = useContactForm()
 </script>
 
 <style scoped>
@@ -619,6 +618,15 @@ const {
 }
 .text-xs{
   color: #fbf6da;
+}
+
+.file-drop--active {
+  border-color: #4ade80;
+  background: rgba(74, 222, 128, 0.08);
+}
+
+.file-drop--active .file-drop-icon {
+  color: #4ade80;
 }
 
 .whatsapp-fab {

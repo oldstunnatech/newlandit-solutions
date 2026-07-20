@@ -20,7 +20,7 @@
         <ul class="offer-list mb-10">
           <li v-for="item in offers" :key="item">{{ item }}</li>
         </ul>
-        <a href="/contact" class="btn-primary">More about Development</a>
+        <a href="/solutions/cms-websites" class="btn-primary">More about Development</a>
       </div>
 
       <!-- ── Sub-sections ─────────────────────────────────────── -->
@@ -79,8 +79,8 @@ const subSections = [
     title: 'Custom web and mobile applications',
     image: '/images/pexels-a-darmel-8133993.jpg',
     paragraphs: [
-      'We build applications tailored to your daily practice. From internal tools to customer-oriented platforms — our solutions combine technology with user-friendliness and scalability. In this way, we deliver solutions that are not only technically robust but also intuitive and future-proof.',
-      'Choose our custom solutions and benefit from efficiency and customer-oriented service.',
+      'We build applications tailored to your daily practice. From internal tools to customer oriented platforms our solutions combine technology with user friendliness and scalability. In this way, we deliver solutions that are not only technically robust but also intuitive and future proof.',
+      'Choose our custom solutions and benefit from efficiency and customer oriented service.',
     ],
     points: [
       'Fully tailored to your processes',
@@ -95,8 +95,8 @@ const subSections = [
     title: 'CMS websites (including WordPress, Wix, Shopify)',
     image: '/images/pexels-mikhail-nilov-9301316.jpg',
     paragraphs: [
-      'Whether you choose WordPress, Wix, or Shopify — we build intuitive, scalable, and manageable CMS websites that strengthen your online visibility and contribute to business growth.',
-      'We design and build CMS websites that are not only beautiful but also deliver measurable results. Whether you need a portfolio, webshop, or business site — we ensure speed, clarity, and ease of use.',
+      'Whether you choose WordPress, Wix, or Shopify we build intuitive, scalable, and manageable CMS websites that strengthen your online visibility and contribute to business growth.',
+      'We design and build CMS websites that are not only beautiful but also deliver measurable results. Whether you need a portfolio, web shop, or business site we ensure speed, clarity, and ease of use.',
     ],
     points: [
       'Professional design & technical execution',
