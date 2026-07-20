@@ -1529,7 +1529,7 @@ if (popup) {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 95px;
+  margin-left: 103px;
   
 }
 
@@ -1544,7 +1544,7 @@ if (popup) {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 85px;
+  margin-left: 90px;
   
 }
 
@@ -1559,7 +1559,7 @@ if (popup) {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 95px;
+  margin-left: 98px;
   
 }
 

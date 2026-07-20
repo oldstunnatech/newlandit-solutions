@@ -4,7 +4,7 @@
     aria-label="Mobile navigatie"
   >
     <div class="flex flex-col flex-1">
-      <!-- header row: logo + close -->
+      <!-- header: logo + close -->
       <div class="flex items-center justify-between mb-8">
         <img :src="logo" alt="Newland IT-Solutions" class="h-12 object-contain" />
         <button
@@ -16,50 +16,67 @@
         </button>
       </div>
 
-      <!-- nav -->
       <nav class="flex-1" aria-label="Mobile primary">
         <ul class="space-y-5">
           <li v-for="nav in navItems" :key="nav.name" class="nav-item">
 
-            <!-- Item with level-2 children: tap toggles -->
+            <!-- Top-level item WITH children -->
             <template v-if="nav.children">
-              <button
-                class="flex items-center justify-between w-full gap-4 text-slate-800 hover:text-emerald-800 transition-colors"
-                :class="{ 'text-emerald-800 font-bold': isActive(nav.href) }"
-                @click="openMenu = openMenu === nav.name ? null : nav.name"
-                :aria-expanded="openMenu === nav.name"
-              >
-                <span class="flex items-center gap-4">
+              <div class="flex items-center justify-between">
+                <!-- Link navigates to page -->
+                <NuxtLink
+                  :to="nav.href"
+                  class="flex items-center gap-4 text-slate-800 hover:text-emerald-800 transition-colors flex-1"
+                  :class="{ 'text-emerald-800 font-bold': isActive(nav.href) }"
+                  :aria-current="isActive(nav.href) ? 'page' : false"
+                  @click="$emit('close')"
+                >
                   <Icon :name="nav.icon" class="w-6 h-6 shrink-0" aria-hidden="true" />
                   <span class="text-lg font-semibold">{{ nav.name }}</span>
-                </span>
-                <Icon
-                  name="lucide:chevron-right"
-                  class="w-4 h-4 shrink-0 text-slate-500 transition-transform duration-200"
-                  :class="{ 'rotate-90': openMenu === nav.name }"
-                  aria-hidden="true"
-                />
-              </button>
+                </NuxtLink>
+                <!-- Arrow only toggles children -->
+                <button
+                  class="p-2 rounded-lg hover:bg-slate-100 transition-colors"
+                  @click.stop="openMenu = openMenu === nav.name ? null : nav.name"
+                  :aria-expanded="openMenu === nav.name"
+                  :aria-label="`Toggle ${nav.name} submenu`"
+                >
+                  <Icon
+                    name="lucide:chevron-right"
+                    class="w-4 h-4 text-slate-500 transition-transform duration-200"
+                    :class="{ 'rotate-90': openMenu === nav.name }"
+                    aria-hidden="true"
+                  />
+                </button>
+              </div>
 
               <!-- Level 2 submenu -->
               <ul v-show="openMenu === nav.name" class="submenu">
                 <li v-for="child in nav.children" :key="child.name">
 
-                  <!-- Child with level-3 children -->
+                  <!-- Child WITH grandchildren -->
                   <template v-if="child.children">
-                    <button
-                      class="submenu-link flex items-center justify-between w-full"
-                      @click="openSubmenu = openSubmenu === child.name ? null : child.name"
-                      :aria-expanded="openSubmenu === child.name"
-                    >
-                      <span>{{ child.name }}</span>
-                      <Icon
-                        name="lucide:chevron-right"
-                        class="w-3 h-3 text-slate-400 transition-transform duration-200"
-                        :class="{ 'rotate-90': openSubmenu === child.name }"
-                        aria-hidden="true"
-                      />
-                    </button>
+                    <div class="flex items-center justify-between">
+                      <NuxtLink
+                        :to="child.href"
+                        class="submenu-link flex-1"
+                        @click="$emit('close')"
+                      >
+                        {{ child.name }}
+                      </NuxtLink>
+                      <button
+                        class="p-1 rounded hover:bg-slate-100 transition-colors"
+                        @click.stop="openSubmenu = openSubmenu === child.name ? null : child.name"
+                        :aria-label="`Toggle ${child.name} submenu`"
+                      >
+                        <Icon
+                          name="lucide:chevron-right"
+                          class="w-3 h-3 text-slate-400 transition-transform duration-200"
+                          :class="{ 'rotate-90': openSubmenu === child.name }"
+                          aria-hidden="true"
+                        />
+                      </button>
+                    </div>
 
                     <!-- Level 3 submenu -->
                     <ul v-show="openSubmenu === child.name" class="submenu submenu--nested">
@@ -90,7 +107,7 @@
               </ul>
             </template>
 
-            <!-- Simple top-level link -->
+            <!-- Simple top-level link (no children) -->
             <NuxtLink
               v-else
               :to="nav.href"
@@ -149,14 +166,12 @@ const isActive = (href: string) => isActivePath(href, route.path)
   border-left: 2px solid rgba(6, 78, 59, 0.15);
   padding-left: 1rem;
 }
-
 .submenu--nested {
   margin-top: 0.4rem;
   margin-left: 1rem;
   border-left: 2px solid rgba(6, 78, 59, 0.08);
   padding-left: 0.75rem;
 }
-
 .submenu-link {
   display: block;
   font-size: 0.9rem;
@@ -171,13 +186,10 @@ const isActive = (href: string) => isActivePath(href, route.path)
   text-align: left;
   width: 100%;
 }
-
 .submenu-link:hover { color: #065f46; }
-
 .submenu-link--small {
   font-size: 0.8rem;
   color: rgba(30, 41, 59, 0.6);
 }
-
 .submenu-link--small:hover { color: #065f46; }
 </style>
