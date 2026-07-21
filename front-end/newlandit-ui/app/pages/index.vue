@@ -1462,19 +1462,20 @@ if (popup) {
 }
 .text-3xl2{
   color: #FBF6DA;
-  margin-left: 30px;
+  margin-left: 45px;
   font-size: 23px;
 }
 .text-3xl3{
   color: #FBF6DA;
-  margin-left: -10px;
+  margin-left: 20px;
   font-size: 23px;
 }
 .text-3xl4{
   color: #FBF6DA;
-  margin-left: 100px;
+  margin-left: 110px;
   font-size: 23px;
 }
+
 .text-3xl5{
   color: #FBF6DA;
   margin-left: -20px;
@@ -1529,7 +1530,7 @@ if (popup) {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 103px;
+  margin-left: 110px;
   
 }
 
@@ -1544,7 +1545,7 @@ if (popup) {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 90px;
+  margin-left: 95px;
   
 }
 
@@ -1559,7 +1560,7 @@ if (popup) {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 98px;
+  margin-left: 105px;
   
 }
 
