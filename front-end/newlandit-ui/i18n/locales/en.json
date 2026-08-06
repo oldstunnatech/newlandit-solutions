@@ -1,0 +1,225 @@
+{
+  "common": {
+    "cta": {
+      "intro": "Schedule an introduction",
+      "ourServices": "Our services",
+      "viewAllServices": "View all our services →",
+      "viewServices": "View our services",
+      "contactUs": "Contact us",
+      "learnMore": "Learn more",
+      "allSolutions": "← All solutions",
+      "scheduleIntake": "Schedule an intake interview"
+    },
+    "whatsapp": "Chat with us",
+    "langSwitch": "Language"
+  },
+  "nav": {
+    "primary": "Primary navigation",
+    "home": "Home",
+    "solutions": "Solutions",
+    "softwareDevelopment": "Software Development",
+    "cmsWebsites": "CMS Website & WordPress",
+    "itConsulting": "IT Consulting",
+    "itSupport": "IT Support (helpdesk, remote & on-site)",
+    "digitalStrategy": "Digital Strategy & Enablement",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "seo": {
+    "home": {
+      "title": "IT Support, Custom Software & Websites in Amsterdam",
+      "description": "Newland IT-Solutions is your IT partner in Amsterdam: reliable IT support, custom software and professional websites for freelancers and small businesses — no jargon."
+    },
+    "solutions": {
+      "title": "IT Solutions & Services in Amsterdam",
+      "description": "Smart, scalable IT solutions from Newland IT-Solutions: software development, IT consulting & support, and digital strategy for organisations in Amsterdam."
+    },
+    "about": {
+      "title": "About Newland IT-Solutions — Your IT Partner in Amsterdam",
+      "description": "Since 2021 Newland IT-Solutions has helped companies in Amsterdam turn complex IT challenges into clear, lasting solutions. Learn about our mission, values and team."
+    },
+    "contact": {
+      "title": "Contact Newland IT-Solutions in Amsterdam",
+      "description": "Get in touch with Newland IT-Solutions in Amsterdam. Tell us about your project and we’ll respond within 3 business days. Call, email or WhatsApp us."
+    },
+    "softwareDevelopment": {
+      "title": "Software Development in Amsterdam",
+      "description": "Custom web & mobile applications, CMS websites and API integrations for businesses in Amsterdam. Scalable, user-friendly software built by Newland IT-Solutions."
+    },
+    "cmsWebsites": {
+      "title": "CMS Websites — WordPress, Wix & Shopify",
+      "description": "Professional, easy-to-manage CMS websites in WordPress, Wix or Shopify. Newland IT-Solutions builds fast, scalable sites that grow your online presence."
+    },
+    "itConsulting": {
+      "title": "IT Consulting & System Selection in Amsterdam",
+      "description": "Strategic IT consultancy, system selection and digital transformation for organisations in Amsterdam. Smart IT decisions with reliable ongoing support."
+    },
+    "itSupport": {
+      "title": "IT Support in Amsterdam — Remote & On-site",
+      "description": "Reliable IT support in Amsterdam: helpdesk, remote and on-site assistance with clear SLAs. Keep your systems stable and secure with Newland IT-Solutions."
+    },
+    "digitalStrategy": {
+      "title": "Digital Strategy & Enablement in Amsterdam",
+      "description": "Digital strategy, project management, branding and UX/UI design from Newland IT-Solutions. We align technology with your ambitions for scalable growth."
+    }
+  },
+  "home": {
+    "badge": "Smart IT solutions for growing companies in Amsterdam",
+    "subtitle": "We help freelancers and small businesses in Amsterdam and the surrounding area with reliable IT support, custom software and professional websites — without complicated technical language.",
+    "stats": {
+      "clients": "Clients served",
+      "experience": "Years experience",
+      "satisfaction": "Satisfaction rate",
+      "response": "Response time"
+    },
+    "customers": {
+      "eyebrow": "Trusted by",
+      "heading": "Our customers",
+      "intro": "From local organizations to national institutions, these customers rely on our expertise in software development, IT strategy and project management."
+    },
+    "why": {
+      "eyebrow": "Our values",
+      "heading": "Why Newland IT-Solutions?",
+      "cards": [
+        { "title": "Clear communication & transparency", "description": "Clear agreements, clear language, no surprises." },
+        { "title": "Customization", "description": "Solutions tailored to your processes and goals." },
+        { "title": "Fast support", "description": "Quickly helped, remotely or on location." },
+        { "title": "Experienced team", "description": "From implementation to strategy — one partner." }
+      ]
+    },
+    "offer": {
+      "eyebrow": "Our approach",
+      "heading": "Who are we here for?",
+      "steps": [
+        { "title": "Personal approach", "description": "We believe in short lines and clear communication. We get to know your challenges and help find solutions that work." },
+        { "title": "Experience & expertise", "description": "With years of experience in web development, consultancy and IT support, we help organizations grow in efficiency and stability." },
+        { "title": "Flexible solutions", "description": "From small assignments to ongoing support, our approach adapts to your organization." },
+        { "title": "Customer-oriented & reliable", "description": "Your success is our priority. We ensure our solutions demonstrably contribute to your processes and business goals." }
+      ]
+    },
+    "process": {
+      "heading": "What we offer",
+      "steps": [
+        { "title": "Discovery", "description": "We listen, analyze and understand your situation and goals." },
+        { "title": "Plan", "description": "We create a clear, tailored roadmap for your project." },
+        { "title": "Build", "description": "We develop and implement the solution with precision." },
+        { "title": "Support", "description": "We stay available for ongoing support and improvements." }
+      ]
+    },
+    "services": {
+      "eyebrow": "What we do",
+      "heading": "Our services",
+      "intro": "We offer a wide range of specialized IT services, tailored to your unique situation — always focused on sustainable digital growth.",
+      "items": [
+        { "title": "Software & Automation", "description": "Smart tools that accelerate and simplify processes. We build solutions that really work — from data management to workflow optimization.", "button": "More about Development" },
+        { "title": "IT Support & Management", "description": "Immediate assistance with malfunctions, maintenance and security. Remote or on-site, we keep your systems stable and secure.", "button": "More about IT Support" },
+        { "title": "Consultancy & Strategy", "description": "Strategic advice for digital transformation and scalable growth. We make sure your technology supports your ambitions.", "button": "More about Strategy" }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Get in touch",
+      "heading": "Ready to grow your business?",
+      "text": "Let's talk about how we can help you with IT support, software or strategy."
+    }
+  },
+  "solutions": {
+    "eyebrow": "What we do",
+    "heading": "Solutions",
+    "intro": "At Newland IT-Solutions, we deliver smart and scalable IT solutions that help organizations grow, streamline processes and become digitally stronger. From software development to strategy and support, we are ready to be your digital partner.",
+    "learnMore": "Learn more →",
+    "cards": [
+      { "title": "Software Development", "summary": "From custom applications to CMS websites: we build digital solutions that perfectly align with your organization. We guide the entire development process, from strategy to implementation." },
+      { "title": "IT Consulting", "summary": "We support organizations in making smart IT decisions and ensure that systems always remain operational. From strategic advice to daily IT support." },
+      { "title": "Digital Strategy & Enablement", "summary": "We guide both IT and non-IT projects with a structured approach. In addition, we strengthen your organization with digital strategies for brand development." }
+    ],
+    "ctaText": "Not sure which solution suits your situation? Contact us for a no-obligation consultation. Together, we will find the right path."
+  },
+  "about": {
+    "eyebrow": "Who we are",
+    "headingA": "Technology that works",
+    "headingB": "for people",
+    "intro": "Since 2021 we've been helping companies and individuals in Amsterdam and beyond turn complex IT challenges into clear, lasting solutions.",
+    "stats": {
+      "clients": "Clients served",
+      "experience": "Years experience",
+      "satisfaction": "Satisfaction rate",
+      "response": "Response time"
+    },
+    "foundation": {
+      "eyebrow": "Our foundation",
+      "heading": "What drives us"
+    },
+    "journey": {
+      "eyebrow": "Our journey",
+      "heading": "How we got here"
+    },
+    "valuesSection": {
+      "eyebrow": "Our values",
+      "heading": "What we stand for"
+    },
+    "cta": {
+      "eyebrow": "Let's work together",
+      "heading": "Ready to move your business forward?",
+      "text": "Tell us what you're working on — we'll get back to you within 3 business days."
+    },
+    "mvs": [
+      { "title": "Mission", "body": "At Newland IT-Solutions, the customer is central. We help companies and individuals in Amsterdam and the surrounding area with smart IT solutions that accelerate digitization and simplify processes. Our approach is personal and accessible: technology must work for the customer." },
+      { "title": "Vision", "body": "We make technology understandable and applicable — not only for large organizations, but also for freelancers, schools and teams in Amsterdam and North Holland. With knowledge sharing and customization, we help customers work faster, grow more efficiently and be ready for the digital future." },
+      { "title": "Strategy", "body": "As an IT agency in Amsterdam, we develop customized IT solutions that are scalable and user-friendly. In addition, we help organizations refine their digital strategy by clearly mapping complex issues and realizing efficient solutions." }
+    ],
+    "timeline": [
+      { "year": "2025", "title": "Growing the team & platform", "description": "Investing in our own platform and tooling to deliver faster, more consistent results for clients across all service lines." },
+      { "year": "2024", "title": "Trusted by 50+ clients", "description": "Reached a milestone of 50+ active clients, from freelancers and schools to national institutions, with a 98% satisfaction rate." },
+      { "year": "2023", "title": "Expanded service offering", "description": "Added software development and consultancy services, enabling us to guide clients from strategy all the way through to implementation." },
+      { "year": "2022", "title": "First major clients", "description": "Grew our portfolio to include local organizations and SMEs across Amsterdam and North Holland, delivering IT support, automation and strategy." },
+      { "year": "2021", "title": "Founded in Amsterdam", "description": "Newland IT-Solutions was established with a clear mission: make technology personal, accessible and effective for businesses of every size." }
+    ],
+    "values": [
+      { "title": "Transparency", "description": "Clear agreements, plain language, no surprises. You always know what we're doing and why." },
+      { "title": "Customization", "description": "No off-the-shelf thinking. Every solution is tailored to your specific processes and goals." },
+      { "title": "Responsiveness", "description": "Fast, reliable support, remotely or on location. We're there when it matters." },
+      { "title": "Expertise", "description": "From hands-on implementation to high-level strategy, one partner across the full stack." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "heading": "Let's talk about your project",
+    "intro": "Tell us what you're working on and we'll get back to you within 3 business days.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "address": "Address",
+      "message": "Message",
+      "attachment": "Attachment (optional)",
+      "dropActive": "Drop your file here",
+      "dropIdle": "Click or drag & drop to attach",
+      "fileHint": "PDF, Word, or image — up to 5MB",
+      "removeAttachment": "Remove attachment",
+      "send": "Send message",
+      "sending": "Sending…",
+      "sentHeading": "Message sent",
+      "sendAnother": "Send another message"
+    },
+    "info": {
+      "direct": "Direct contact",
+      "responseTime": "Response time",
+      "typicalReply": "typical reply",
+      "responseNote": "We read every message personally — no ticket queues, no bots.",
+      "preferChat": "Prefer chat?",
+      "whatsappBtn": "Message us on WhatsApp"
+    },
+    "visit": {
+      "eyebrow": "Visit us",
+      "heading": "Find our office",
+      "mapTitle": "Office location map",
+      "address": "Address",
+      "closedHolidays": "Closed on public holidays",
+      "openingHours": "Opening hours"
+    }
+  },
+  "detail": {
+    "whatWeOffer": "What we offer:"
+  }
+}

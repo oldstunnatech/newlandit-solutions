@@ -1,4 +1,4 @@
-import { useSeoMeta, useHead, useRuntimeConfig, useRoute } from '#imports'
+import { useSeoMeta, useRuntimeConfig, useRoute } from '#imports'
 
 export interface SeoOptions {
   /** Page title (without the "| Newland IT-Solutions" suffix — that is added by titleTemplate). */
@@ -13,27 +13,24 @@ export interface SeoOptions {
   type?: 'website' | 'article'
   /** Set true to keep the page out of search indexes. */
   noindex?: boolean
-  /**
-   * Locale for og:locale. Defaults to 'nl_NL' (primary market).
-   * Phase 2 (i18n) will pass the active locale here and add hreflang alternates.
-   */
-  locale?: string
 }
 
 /**
  * Centralised SEO head management. One call per page sets title, description,
- * canonical, Open Graph and Twitter card tags consistently.
+ * Open Graph and Twitter card tags consistently.
  *
- * Bilingual-ready: when the NL/EN i18n layer lands, pass `locale` and extend
- * this helper to emit hreflang alternates. Canonical is already normalised to a
- * lowercase absolute URL so /About vs /about cannot split ranking signals.
+ * Canonical URL, hreflang alternates, <html lang> and og:locale are owned by
+ * i18n's `useLocaleHead()` (wired in the default layout), so they are always
+ * locale-correct and are intentionally NOT set here to avoid duplicate tags.
+ * `route.path` already carries the /en prefix for the English locale, so the
+ * og:url computed below is locale-correct for both.
  */
 export function useSeo(opts: SeoOptions) {
   const config = useRuntimeConfig()
   const route = useRoute()
 
   const base = String(config.public.siteUrl || '').replace(/\/+$/, '')
-  const path = (opts.path ?? route.path).toLowerCase().replace(/\/+$/, '') || '/'
+  const path = (opts.path ?? route.path).replace(/\/+$/, '') || '/'
   const url = base + path
 
   const rawImage = opts.image ?? '/images/IMG_8959.jpg'
@@ -48,15 +45,10 @@ export function useSeo(opts: SeoOptions) {
     ogUrl: url,
     ogImage: image,
     ogSiteName: 'Newland IT-Solutions',
-    ogLocale: opts.locale ?? 'nl_NL',
     twitterCard: 'summary_large_image',
     twitterTitle: opts.title,
     twitterDescription: opts.description,
     twitterImage: image,
     robots: opts.noindex ? 'noindex, nofollow' : 'index, follow',
-  })
-
-  useHead({
-    link: [{ rel: 'canonical', href: url }],
   })
 }

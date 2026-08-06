@@ -1,0 +1,225 @@
+{
+  "common": {
+    "cta": {
+      "intro": "Plan een kennismaking",
+      "ourServices": "Onze diensten",
+      "viewAllServices": "Bekijk al onze diensten →",
+      "viewServices": "Bekijk onze diensten",
+      "contactUs": "Neem contact op",
+      "learnMore": "Lees meer",
+      "allSolutions": "← Alle diensten",
+      "scheduleIntake": "Plan een intakegesprek"
+    },
+    "whatsapp": "Chat met ons",
+    "langSwitch": "Taal"
+  },
+  "nav": {
+    "primary": "Hoofdnavigatie",
+    "home": "Home",
+    "solutions": "Diensten",
+    "softwareDevelopment": "Softwareontwikkeling",
+    "cmsWebsites": "CMS-website & WordPress",
+    "itConsulting": "IT-consultancy",
+    "itSupport": "IT-support (helpdesk, remote & on-site)",
+    "digitalStrategy": "Digitale strategie & enablement",
+    "about": "Over ons",
+    "contact": "Contact"
+  },
+  "seo": {
+    "home": {
+      "title": "IT-support, maatwerksoftware & websites in Amsterdam",
+      "description": "Newland IT-Solutions is jouw IT-partner in Amsterdam: betrouwbare IT-support, maatwerksoftware en professionele websites voor zzp’ers en het mkb — zonder jargon."
+    },
+    "solutions": {
+      "title": "IT-diensten & oplossingen in Amsterdam",
+      "description": "Slimme, schaalbare IT-oplossingen van Newland IT-Solutions: softwareontwikkeling, IT-consultancy & support en digitale strategie voor organisaties in Amsterdam."
+    },
+    "about": {
+      "title": "Over Newland IT-Solutions — jouw IT-partner in Amsterdam",
+      "description": "Sinds 2021 helpt Newland IT-Solutions bedrijven in Amsterdam om complexe IT-uitdagingen om te zetten in heldere, duurzame oplossingen. Lees over onze missie, waarden en team."
+    },
+    "contact": {
+      "title": "Contact Newland IT-Solutions in Amsterdam",
+      "description": "Neem contact op met Newland IT-Solutions in Amsterdam. Vertel ons over je project en we reageren binnen 3 werkdagen. Bel, mail of WhatsApp ons."
+    },
+    "softwareDevelopment": {
+      "title": "Softwareontwikkeling in Amsterdam",
+      "description": "Maatwerk web- en mobiele applicaties, CMS-websites en API-integraties voor bedrijven in Amsterdam. Schaalbare, gebruiksvriendelijke software van Newland IT-Solutions."
+    },
+    "cmsWebsites": {
+      "title": "CMS-websites — WordPress, Wix & Shopify",
+      "description": "Professionele, eenvoudig te beheren CMS-websites in WordPress, Wix of Shopify. Newland IT-Solutions bouwt snelle, schaalbare sites die je online zichtbaarheid vergroten."
+    },
+    "itConsulting": {
+      "title": "IT-consultancy & systeemselectie in Amsterdam",
+      "description": "Strategische IT-consultancy, systeemselectie en digitale transformatie voor organisaties in Amsterdam. Slimme IT-keuzes met betrouwbare doorlopende support."
+    },
+    "itSupport": {
+      "title": "IT-support in Amsterdam — remote & on-site",
+      "description": "Betrouwbare IT-support in Amsterdam: helpdesk, remote en on-site hulp met heldere SLA’s. Houd je systemen stabiel en veilig met Newland IT-Solutions."
+    },
+    "digitalStrategy": {
+      "title": "Digitale strategie & enablement in Amsterdam",
+      "description": "Digitale strategie, projectmanagement, branding en UX/UI-design van Newland IT-Solutions. Wij laten technologie jouw ambities ondersteunen voor schaalbare groei."
+    }
+  },
+  "home": {
+    "badge": "Slimme IT-oplossingen voor groeiende bedrijven in Amsterdam",
+    "subtitle": "Wij helpen zzp’ers en het mkb in Amsterdam en omstreken met betrouwbare IT-support, maatwerksoftware en professionele websites — zonder ingewikkelde technische taal.",
+    "stats": {
+      "clients": "Klanten geholpen",
+      "experience": "Jaar ervaring",
+      "satisfaction": "Tevredenheid",
+      "response": "Reactietijd"
+    },
+    "customers": {
+      "eyebrow": "Vertrouwd door",
+      "heading": "Onze klanten",
+      "intro": "Van lokale organisaties tot landelijke instellingen — deze klanten vertrouwen op onze expertise in softwareontwikkeling, IT-strategie en projectmanagement."
+    },
+    "why": {
+      "eyebrow": "Onze waarden",
+      "heading": "Waarom Newland IT-Solutions?",
+      "cards": [
+        { "title": "Heldere communicatie & transparantie", "description": "Duidelijke afspraken, begrijpelijke taal, geen verrassingen." },
+        { "title": "Maatwerk", "description": "Oplossingen afgestemd op jouw processen en doelen." },
+        { "title": "Snelle support", "description": "Snel geholpen, remote of op locatie." },
+        { "title": "Ervaren team", "description": "Van implementatie tot strategie — één partner." }
+      ]
+    },
+    "offer": {
+      "eyebrow": "Onze aanpak",
+      "heading": "Voor wie zijn wij er?",
+      "steps": [
+        { "title": "Persoonlijke aanpak", "description": "Wij geloven in korte lijnen en heldere communicatie. We leren jouw uitdagingen kennen en helpen oplossingen te vinden die werken." },
+        { "title": "Ervaring & expertise", "description": "Met jarenlange ervaring in webdevelopment, consultancy en IT-support helpen we organisaties groeien in efficiëntie en stabiliteit." },
+        { "title": "Flexibele oplossingen", "description": "Van kleine opdrachten tot doorlopende support — onze aanpak past zich aan jouw organisatie aan." },
+        { "title": "Klantgericht & betrouwbaar", "description": "Jouw succes is onze prioriteit. Wij zorgen dat onze oplossingen aantoonbaar bijdragen aan je processen en bedrijfsdoelen." }
+      ]
+    },
+    "process": {
+      "heading": "Wat wij bieden",
+      "steps": [
+        { "title": "Ontdekken", "description": "We luisteren, analyseren en begrijpen jouw situatie en doelen." },
+        { "title": "Plannen", "description": "We maken een helder, op maat gemaakt plan voor je project." },
+        { "title": "Bouwen", "description": "We ontwikkelen en implementeren de oplossing met precisie." },
+        { "title": "Support", "description": "We blijven beschikbaar voor doorlopende support en verbeteringen." }
+      ]
+    },
+    "services": {
+      "eyebrow": "Wat wij doen",
+      "heading": "Onze diensten",
+      "intro": "We bieden een breed scala aan gespecialiseerde IT-diensten, afgestemd op jouw unieke situatie — altijd gericht op duurzame digitale groei.",
+      "items": [
+        { "title": "Software & automatisering", "description": "Slimme tools die processen versnellen en vereenvoudigen. We bouwen oplossingen die écht werken — van databeheer tot workflow-optimalisatie.", "button": "Meer over ontwikkeling" },
+        { "title": "IT-support & beheer", "description": "Directe hulp bij storingen, onderhoud en beveiliging. Remote of op locatie zorgen we dat je systemen stabiel en veilig blijven.", "button": "Meer over IT-support" },
+        { "title": "Consultancy & strategie", "description": "Strategisch advies voor digitale transformatie en schaalbare groei. Wij zorgen dat je technologie je ambities ondersteunt.", "button": "Meer over strategie" }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Neem contact op",
+      "heading": "Klaar om je bedrijf te laten groeien?",
+      "text": "Laten we bespreken hoe we je kunnen helpen met IT-support, software of strategie."
+    }
+  },
+  "solutions": {
+    "eyebrow": "Wat wij doen",
+    "heading": "Diensten",
+    "intro": "Bij Newland IT-Solutions leveren we slimme en schaalbare IT-oplossingen die organisaties helpen groeien, processen stroomlijnen en digitaal sterker worden. Van softwareontwikkeling tot strategie en support — wij zijn jouw digitale partner.",
+    "learnMore": "Lees meer →",
+    "cards": [
+      { "title": "Softwareontwikkeling", "summary": "Van maatwerkapplicaties tot CMS-websites: we bouwen digitale oplossingen die perfect aansluiten op je organisatie. We begeleiden het hele ontwikkeltraject, van strategie tot implementatie." },
+      { "title": "IT-consultancy", "summary": "We ondersteunen organisaties bij het maken van slimme IT-keuzes en zorgen dat systemen altijd operationeel blijven. Van strategisch advies tot dagelijkse IT-support." },
+      { "title": "Digitale strategie & enablement", "summary": "We begeleiden zowel IT- als niet-IT-projecten met een gestructureerde aanpak. Daarnaast versterken we je organisatie met digitale strategieën voor merkontwikkeling." }
+    ],
+    "ctaText": "Niet zeker welke oplossing bij jouw situatie past? Neem contact op voor een vrijblijvend gesprek. Samen vinden we het juiste pad."
+  },
+  "about": {
+    "eyebrow": "Wie we zijn",
+    "headingA": "Technologie die werkt",
+    "headingB": "voor mensen",
+    "intro": "Sinds 2021 helpen we bedrijven en particulieren in Amsterdam en daarbuiten om complexe IT-uitdagingen om te zetten in heldere, duurzame oplossingen.",
+    "stats": {
+      "clients": "Klanten geholpen",
+      "experience": "Jaar ervaring",
+      "satisfaction": "Tevredenheid",
+      "response": "Reactietijd"
+    },
+    "foundation": {
+      "eyebrow": "Ons fundament",
+      "heading": "Wat ons drijft"
+    },
+    "journey": {
+      "eyebrow": "Onze reis",
+      "heading": "Hoe we hier kwamen"
+    },
+    "valuesSection": {
+      "eyebrow": "Onze waarden",
+      "heading": "Waar we voor staan"
+    },
+    "cta": {
+      "eyebrow": "Laten we samenwerken",
+      "heading": "Klaar om je bedrijf vooruit te helpen?",
+      "text": "Vertel ons waar je aan werkt — we reageren binnen 3 werkdagen."
+    },
+    "mvs": [
+      { "title": "Missie", "body": "Bij Newland IT-Solutions staat de klant centraal. We helpen bedrijven en particulieren in Amsterdam en omstreken met slimme IT-oplossingen die digitalisering versnellen en processen vereenvoudigen. Onze aanpak is persoonlijk en toegankelijk: technologie moet voor de klant werken." },
+      { "title": "Visie", "body": "We maken technologie begrijpelijk en toepasbaar — niet alleen voor grote organisaties, maar ook voor zzp’ers, scholen en teams in Amsterdam en Noord-Holland. Met kennisdeling en maatwerk helpen we klanten sneller te werken, efficiënter te groeien en klaar te zijn voor de digitale toekomst." },
+      { "title": "Strategie", "body": "Als IT-bureau in Amsterdam ontwikkelen we IT-oplossingen op maat die schaalbaar en gebruiksvriendelijk zijn. Daarnaast helpen we organisaties hun digitale strategie aan te scherpen door complexe vraagstukken helder in kaart te brengen en efficiënte oplossingen te realiseren." }
+    ],
+    "timeline": [
+      { "year": "2025", "title": "Team & platform laten groeien", "description": "We investeren in ons eigen platform en tooling om sneller en consistenter resultaten te leveren voor klanten binnen al onze diensten." },
+      { "year": "2024", "title": "Vertrouwd door 50+ klanten", "description": "Mijlpaal van 50+ actieve klanten bereikt — van zzp’ers en scholen tot landelijke instellingen, met een tevredenheid van 98%." },
+      { "year": "2023", "title": "Dienstenaanbod uitgebreid", "description": "Softwareontwikkeling en consultancy toegevoegd, waardoor we klanten van strategie tot implementatie kunnen begeleiden." },
+      { "year": "2022", "title": "Eerste grote klanten", "description": "Ons portfolio uitgebreid met lokale organisaties en mkb in Amsterdam en Noord-Holland — IT-support, automatisering en strategie." },
+      { "year": "2021", "title": "Opgericht in Amsterdam", "description": "Newland IT-Solutions opgericht met een heldere missie: technologie persoonlijk, toegankelijk en effectief maken voor bedrijven van elke omvang." }
+    ],
+    "values": [
+      { "title": "Transparantie", "description": "Duidelijke afspraken, begrijpelijke taal, geen verrassingen. Je weet altijd wat we doen en waarom." },
+      { "title": "Maatwerk", "description": "Geen standaardoplossingen. Elke oplossing is afgestemd op jouw specifieke processen en doelen." },
+      { "title": "Responsiviteit", "description": "Snelle, betrouwbare support — remote of op locatie. We zijn er wanneer het ertoe doet." },
+      { "title": "Expertise", "description": "Van praktische implementatie tot strategie op hoog niveau — één partner over de volle breedte." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Neem contact op",
+    "heading": "Laten we praten over je project",
+    "intro": "Vertel ons waar je aan werkt en we reageren binnen 3 werkdagen.",
+    "form": {
+      "name": "Naam",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "company": "Bedrijf",
+      "address": "Adres",
+      "message": "Bericht",
+      "attachment": "Bijlage (optioneel)",
+      "dropActive": "Zet je bestand hier neer",
+      "dropIdle": "Klik of sleep om toe te voegen",
+      "fileHint": "PDF, Word of afbeelding — tot 5 MB",
+      "removeAttachment": "Bijlage verwijderen",
+      "send": "Verstuur bericht",
+      "sending": "Versturen…",
+      "sentHeading": "Bericht verzonden",
+      "sendAnother": "Nog een bericht sturen"
+    },
+    "info": {
+      "direct": "Direct contact",
+      "responseTime": "Reactietijd",
+      "typicalReply": "gemiddelde reactie",
+      "responseNote": "We lezen elk bericht persoonlijk — geen wachtrijen, geen bots.",
+      "preferChat": "Liever chatten?",
+      "whatsappBtn": "Stuur ons een WhatsApp"
+    },
+    "visit": {
+      "eyebrow": "Bezoek ons",
+      "heading": "Vind ons kantoor",
+      "mapTitle": "Kaart kantoorlocatie",
+      "address": "Adres",
+      "closedHolidays": "Gesloten op feestdagen",
+      "openingHours": "Openingstijden"
+    }
+  },
+  "detail": {
+    "whatWeOffer": "Wat wij bieden:"
+  }
+}

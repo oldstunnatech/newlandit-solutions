@@ -38,10 +38,16 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useHead, useRuntimeConfig } from '#imports'
+import { useHead, useRuntimeConfig, useLocaleHead } from '#imports'
 import { CONTACT } from '#shared/utils/contact'
+import { useNav } from '~/composables/useNav'
 
 const mobileNavOpen = ref(false)
+const { navItems } = useNav()
+
+// ── Locale <html lang>, canonical + hreflang alternates (owned by i18n) ──
+const localeHead = useLocaleHead()
+useHead(localeHead)
 
 // ── LocalBusiness structured data (site-wide) ──────────────────────
 const siteUrl = String(useRuntimeConfig().public.siteUrl || '').replace(/\/+$/, '')
@@ -101,33 +107,6 @@ useHead({
   ],
 })
 
-const navItems = [
-  { name: 'Home', href: '/', icon: 'lucide:home' },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: 'lucide:share-2',
-    children: [
-      {
-        name: 'Software Development',
-        href: '/solutions/software-development',
-        children: [
-          { name: 'CMS Website & WordPress', href: '/solutions/cms-websites' },
-        ],
-      },
-      {
-        name: 'IT Consulting',
-        href: '/solutions/it-consulting',
-        children: [
-          { name: 'IT Support (helpdesk, remote & on-site)', href: '/solutions/it-support' },
-        ],
-      },
-      { name: 'Digital Strategy & Enablement', href: '/solutions/digital-strategy' },
-    ],
-  },
-  { name: 'About', href: '/about', icon: 'lucide:user' },
-  { name: 'Contact', href: '/contact', icon: 'lucide:mail' },
-]
 </script>
 
 <style scoped>

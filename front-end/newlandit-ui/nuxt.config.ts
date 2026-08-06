@@ -1,22 +1,29 @@
 export default defineNuxtConfig({
   compatibilityDate: '2026-06-17',
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/i18n'],
+
+  i18n: {
+    strategy: 'prefix_except_default',
+    defaultLocale: 'nl',
+    locales: [
+      { code: 'nl', language: 'nl-NL', name: 'Nederlands', file: 'nl.json' },
+      { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
+    ],
+    // Dutch is the primary market — do not auto-redirect based on browser.
+    detectBrowserLanguage: false,
+    baseUrl: process.env.SITE_URL || 'https://www.newlandit-solutions.com',
+  },
 
   app: {
     head: {
-      // Phase 2 (i18n): switch to per-request locale + hreflang alternates.
-      htmlAttrs: { lang: 'en' },
+      // Locale <html lang> + hreflang are set per-request via useLocaleHead
+      // in the default layout. This is the no-JS/first-paint fallback.
+      htmlAttrs: { lang: 'nl' },
       titleTemplate: (title?: string) =>
         title ? `${title} | Newland IT-Solutions` : 'Newland IT-Solutions | IT-bedrijf Amsterdam',
-      title: 'IT Solutions, Software Development & IT Support in Amsterdam',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        {
-          name: 'description',
-          content:
-            'Newland IT-Solutions helps freelancers and small businesses in Amsterdam with reliable IT support, custom software and professional websites — clear, no jargon.',
-        },
         { name: 'theme-color', content: '#0d4226' },
         { property: 'og:site_name', content: 'Newland IT-Solutions' },
       ],
