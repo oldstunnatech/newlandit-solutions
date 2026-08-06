@@ -85,6 +85,13 @@
 <script setup lang="ts">
 definePageMeta({ layout: 'default' })
 
+useSeo({
+  title: 'Digital Strategy & Enablement in Amsterdam',
+  description:
+    'Digital strategy, project management, branding and UX/UI design from Newland IT-Solutions. We align technology with your ambitions for scalable growth.',
+  path: '/solutions/digital-strategy',
+})
+
 const offers = [
   'Project management (also outside IT)',
   'Digital strategy, branding & visual design',

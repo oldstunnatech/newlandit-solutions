@@ -123,6 +123,13 @@ definePageMeta({
   layout: 'default',
 })
 
+useSeo({
+  title: 'About Newland IT-Solutions — Your IT Partner in Amsterdam',
+  description:
+    'Since 2021 Newland IT-Solutions has helped companies in Amsterdam turn complex IT challenges into clear, lasting solutions. Learn about our mission, values and team.',
+  path: '/about',
+})
+
 const stats = [
   { value: '50+', label: 'Clients served' },
   { value: '5yr', label: 'Experience' },

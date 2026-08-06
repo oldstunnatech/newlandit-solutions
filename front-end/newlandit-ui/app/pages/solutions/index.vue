@@ -55,6 +55,13 @@ definePageMeta({
   layout: 'default',
 })
 
+useSeo({
+  title: 'IT Solutions & Services in Amsterdam',
+  description:
+    'Smart, scalable IT solutions from Newland IT-Solutions: software development, IT consulting & support, and digital strategy for organisations in Amsterdam.',
+  path: '/solutions',
+})
+
 const cards = [
   {
     slug: 'software-development',

@@ -307,6 +307,13 @@ definePageMeta({
   layout: 'default',
 })
 
+useSeo({
+  title: 'Contact Newland IT-Solutions in Amsterdam',
+  description:
+    'Get in touch with Newland IT-Solutions in Amsterdam. Tell us about your project and we’ll respond within 3 business days. Call, email or WhatsApp us.',
+  path: '/contact',
+})
+
 const {
   form, errors, attachment, attachmentError,
   isDragging, status, statusMessage,

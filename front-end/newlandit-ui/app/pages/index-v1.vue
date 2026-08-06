@@ -225,6 +225,14 @@ definePageMeta({
   layout: 'default',
 })
 
+// Legacy homepage draft — kept for reference, kept out of search indexes.
+useSeo({
+  title: 'Newland IT-Solutions',
+  description: 'Newland IT-Solutions — IT support, software and websites in Amsterdam.',
+  path: '/index-v1',
+  noindex: true,
+})
+
 import '~/assets/css/main.css'
 
 const stats = [

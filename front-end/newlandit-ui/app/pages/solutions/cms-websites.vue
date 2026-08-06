@@ -69,6 +69,13 @@
 <script setup lang="ts">
 definePageMeta({ layout: 'default' })
 
+useSeo({
+  title: 'CMS Websites — WordPress, Wix & Shopify',
+  description:
+    'Professional, easy-to-manage CMS websites in WordPress, Wix or Shopify. Newland IT-Solutions builds fast, scalable sites that grow your online presence.',
+  path: '/solutions/cms-websites',
+})
+
 const products = [
   {
     title: 'WiX Website',

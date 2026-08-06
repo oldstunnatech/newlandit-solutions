@@ -35,7 +35,7 @@
     <!-- Headline -->
     <div class="hero-headline-wrap mb-6">
       <div class="hero-glow-pulse"></div>
-      <h1 class="hero-headline" id="hero-headline"></h1>
+      <h1 class="hero-headline" id="hero-headline">Newland IT Solutions</h1>
     </div>
 
     <!-- Badge -->
@@ -108,7 +108,7 @@
           @mouseleave="item.quote && closeReview()"
           @click="item.quote && toggleReview(n + '-' + idx)"
         >
-          <img :src="item.image" class="logo-img" />
+          <img :src="item.image" :alt="item.alt" class="logo-img" loading="lazy" />
 
           <!-- Slide-down review -->
           <Transition name="slide-review">
@@ -315,6 +315,13 @@ import {
 definePageMeta({ layout: 'default' })
 import '~/assets/css/main.css'
 
+useSeo({
+  title: 'IT Support, Custom Software & Websites in Amsterdam',
+  description:
+    'Newland IT-Solutions is your IT partner in Amsterdam: reliable IT support, custom software and professional websites for freelancers and small businesses — no jargon.',
+  path: '/',
+})
+
 const heroStats = [
   { val: '50+', label: 'Clients served' },
   { val: '5yr', label: 'Experience' },
@@ -386,26 +393,29 @@ const testimonials = [
 const items = [
   {
     image: '/images/agapejoycare-high-sd2l7h.png.webp',
+    alt: 'Agape Joy Care logo — client of Newland IT-Solutions',
     quote: 'Newland IT helped us modernize our entire workflow. Professional, fast and always available.',
     author: 'Sarah de Vries',
     company: 'Agape Joy Care',
   },
   {
     image: '/images/bzvj-high-1vnsrg.png.webp',
+    alt: 'BZVJ logo — client of Newland IT-Solutions',
     quote: 'From strategy to implementation — they guided us every step of the way. Highly recommended.',
     author: 'Mark Janssen',
     company: 'BZVJ',
   },
-  { image: '/images/chatgpt-image-may-12-2025-11_00_28-pm-high-high.webp' },
-  { image: '/images/color-2x-high.png.webp' },
-  { image: '/images/double-asap-greytones-high-xdljy4.png.webp' },
+  { image: '/images/chatgpt-image-may-12-2025-11_00_28-pm-high-high.webp', alt: 'Client logo — Newland IT-Solutions' },
+  { image: '/images/color-2x-high.png.webp', alt: 'Client logo — Newland IT-Solutions' },
+  { image: '/images/double-asap-greytones-high-xdljy4.png.webp', alt: 'ASAP logo — client of Newland IT-Solutions' },
   {
     image: '/images/flexxes-logo-v5_flexxes-logo-cmyk-black-standard-transparant_1600x-high.webp',
+    alt: 'Flexxes logo — client of Newland IT-Solutions',
     quote: 'Finally an IT partner that speaks our language. No technical jargon, just clear solutions.',
     author: 'Lisa Bakker',
     company: 'Flexxes',
   },
-  { image: '/images/gemeente-amsterdam-4-logo-png-transparent-high.png.webp' },
+  { image: '/images/gemeente-amsterdam-4-logo-png-transparent-high.png.webp', alt: 'Gemeente Amsterdam logo — client of Newland IT-Solutions' },
 ]
 
 import { ref } from 'vue'

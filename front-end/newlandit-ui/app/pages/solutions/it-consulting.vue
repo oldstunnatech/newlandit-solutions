@@ -56,6 +56,13 @@
 <script setup lang="ts">
 definePageMeta({ layout: 'default' })
 
+useSeo({
+  title: 'IT Consulting & System Selection in Amsterdam',
+  description:
+    'Strategic IT consultancy, system selection and digital transformation for organisations in Amsterdam. Smart IT decisions with reliable ongoing support.',
+  path: '/solutions/it-consulting',
+})
+
 const offers = [
   'IT consultancy & system selection',
   'Digital transformation & integration',

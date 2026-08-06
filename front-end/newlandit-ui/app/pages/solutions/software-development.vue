@@ -68,6 +68,13 @@ definePageMeta({
   layout: 'default',
 })
 
+useSeo({
+  title: 'Software Development in Amsterdam',
+  description:
+    'Custom web & mobile applications, CMS websites and API integrations for businesses in Amsterdam. Scalable, user-friendly software built by Newland IT-Solutions.',
+  path: '/solutions/software-development',
+})
+
 const offers = [
   'Custom web and mobile applications',
   'CMS websites (including WordPress & Wix, Shopify)',
