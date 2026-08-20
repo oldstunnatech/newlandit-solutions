@@ -1,7 +1,7 @@
 <template>
   <aside
     class="w-72 h-screen sticky top-0 bg-[#fbf6da] border-r border-slate-200 p-8 hidden md:flex md:flex-col"
-    aria-label="Hoofd navigatie"
+    :aria-label="t('nav.primary')"
   >
     <div class="flex flex-col flex-1">
       <!-- logo / brand area -->
@@ -75,49 +75,25 @@
           </li>
         </ul>
       </nav>
+
+      <!-- language switcher -->
+      <div class="mt-6 pt-6 border-t border-slate-200">
+        <LanguageSwitcher />
+      </div>
     </div>
   </aside>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useRoute } from 'vue-router'
-import { isActivePath } from '#shared/utils/navigation'
+import { useI18n } from '#imports'
+import { useNav } from '~/composables/useNav'
 import logo from '~/assets/company_logo.png'
 
-const route = useRoute()
+const { t } = useI18n()
+const { navItems, isActive } = useNav()
 const openMenu = ref<string | null>(null)
 const openSubmenu = ref<string | null>(null)
-
-const navItems = [
-  { name: 'Home', href: '/', icon: 'lucide:home' },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: 'lucide:share-2',
-    children: [
-      {
-        name: 'Software Development',
-        href: '/solutions/software-development',
-        children: [
-          { name: 'CMS Website & WordPress', href: '/solutions/cms-websites' },
-        ],
-      },
-      {
-        name: 'IT Consulting',
-        href: '/solutions/it-consulting',
-        children: [
-          { name: 'IT Support (helpdesk, remote & on-site)', href: '/solutions/it-support' },
-        ],
-      },
-      { name: 'Digital Strategy & Enablement', href: '/solutions/digital-strategy' },
-    ],
-  },
-  { name: 'About', href: '/about', icon: 'lucide:user' },
-  { name: 'Contact', href: '/contact', icon: 'lucide:mail' },
-]
-
-const isActive = (href: string) => isActivePath(href, route.path)
 </script>
 
 <style scoped>

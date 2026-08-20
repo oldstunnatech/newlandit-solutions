@@ -92,6 +92,13 @@
 <script setup lang="ts">
 definePageMeta({ layout: 'default' })
 
+useSeo({
+  title: 'IT Support in Amsterdam — Remote & On-site',
+  description:
+    'Reliable IT support in Amsterdam: helpdesk, remote and on-site assistance with clear SLAs. Keep your systems stable and secure with Newland IT-Solutions.',
+  path: '/solutions/it-support',
+})
+
 const plans = [
   {
     title: 'Basic Support Remote',

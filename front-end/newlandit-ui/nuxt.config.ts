@@ -1,6 +1,35 @@
 export default defineNuxtConfig({
   compatibilityDate: '2026-06-17',
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/i18n'],
+
+  i18n: {
+    strategy: 'prefix_except_default',
+    defaultLocale: 'nl',
+    locales: [
+      { code: 'nl', language: 'nl-NL', name: 'Nederlands', file: 'nl.json' },
+      { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
+    ],
+    // Dutch is the primary market — do not auto-redirect based on browser.
+    detectBrowserLanguage: false,
+    baseUrl: process.env.SITE_URL || 'https://www.newlandit-solutions.com',
+  },
+
+  app: {
+    head: {
+      // Locale <html lang> + hreflang are set per-request via useLocaleHead
+      // in the default layout. This is the no-JS/first-paint fallback.
+      htmlAttrs: { lang: 'nl' },
+      titleTemplate: (title?: string) =>
+        title ? `${title} | Newland IT-Solutions` : 'Newland IT-Solutions | IT-bedrijf Amsterdam',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'theme-color', content: '#0d4226' },
+        { property: 'og:site_name', content: 'Newland IT-Solutions' },
+      ],
+      link: [{ rel: 'icon', href: '/favicon.ico' }],
+    },
+  },
 
   routeRules: {
     '/**': {
@@ -24,7 +53,7 @@ export default defineNuxtConfig({
     public: {
       sanityProjectId: process.env.SANITY_PROJECT_ID,
       sanityDataset: process.env.SANITY_DATASET || 'production',
-      siteUrl: process.env.SITE_URL || 'http://localhost:3000',
+      siteUrl: process.env.SITE_URL || 'https://www.newlandit-solutions.com',
     },
   },
 })

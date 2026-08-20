@@ -35,30 +35,30 @@
     <!-- Headline -->
     <div class="hero-headline-wrap mb-6">
       <div class="hero-glow-pulse"></div>
-      <h1 class="hero-headline" id="hero-headline"></h1>
+      <h1 class="hero-headline" id="hero-headline">Newland IT Solutions</h1>
     </div>
 
     <!-- Badge -->
     <div class="hero-badge mb-8">
       <span class="badge-dot"></span>
-      <span>Smart IT solutions for growing companies in Amsterdam</span>
+      <span>{{ t('home.badge') }}</span>
       <span class="badge-dot"></span>
     </div>
 
     <!-- Subtitle -->
     <p class="text-lg sm:text-xl max-w-2xl mx-auto text-white/60 mb-10 hero-subtitle" id="hero-subtitle">
-    We help freelancers and small businesses in Amsterdam and the surrounding area with reliable IT support, custom software, and professional websites, without complicated technical language.
+    {{ t('home.subtitle') }}
     </p>
 
     <!-- CTAs -->
     <div class="flex flex-col sm:flex-row gap-4 justify-center hero-cta" id="hero-cta">
       <a href="#contact" class="btn-primary hero-btn-main">
-        <span>Plan een kennismaking</span>
+        <span>{{ t('common.cta.intro') }}</span>
         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
         </svg>
       </a>
-      <a href="#services1" class="btn-secondary">Our services</a>
+      <a href="#services1" class="btn-secondary">{{ t('common.cta.ourServices') }}</a>
     </div>
 
     <!-- Stats row -->
@@ -90,10 +90,10 @@
          CUSTOMERS MARQUEE
     ============================================================ -->
     <section class="customers-section py-20 px-6 text-white text-center" data-observe>
-  <p class="eyebrow-pill2 mb-3">Trusted by</p>
-  <h2 class="text-3xl1 md:text-4xl font-bold mb-4 mt-3">Our customers</h2>
+  <p class="eyebrow-pill2 mb-3">{{ t('home.customers.eyebrow') }}</p>
+  <h2 class="text-3xl1 md:text-4xl font-bold mb-4 mt-3">{{ t('home.customers.heading') }}</h2>
   <p class="max-w-2xl mx-auto text-white/70 mb-12">
-    From local organizations to national institutions these customers rely on our expertise in software development, IT strategy and project management.
+    {{ t('home.customers.intro') }}
   </p>
 
   <div class="marquee-track" :class="{ 'marquee-paused': activeReview !== null }">
@@ -108,7 +108,7 @@
           @mouseleave="item.quote && closeReview()"
           @click="item.quote && toggleReview(n + '-' + idx)"
         >
-          <img :src="item.image" class="logo-img" />
+          <img :src="item.image" :alt="item.alt" class="logo-img" loading="lazy" />
 
           <!-- Slide-down review -->
           <Transition name="slide-review">
@@ -135,8 +135,8 @@
         <div class="flex flex-col lg:flex-row gap-16">
 
           <div class="flex-1">
-             <p class="eyebrow-pill3 mb-3">Our values</p>
-            <h2 class="text-3xl2 md:text-4xl font-bold mb-8 mt-3 tracking-tight">Why Newland IT Solutions?</h2>
+             <p class="eyebrow-pill3 mb-3">{{ t('home.why.eyebrow') }}</p>
+            <h2 class="text-3xl2 md:text-4xl font-bold mb-8 mt-3 tracking-tight">{{ t('home.why.heading') }}</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div
                 v-for="(card, i) in whyCards"
@@ -165,8 +165,8 @@
     ============================================================ -->
     <section class="process-section py-20 px-6 text-white" data-observe>
       <div class="max-w-5xl mx-auto">
-        <p class="eyebrow-pill4 mb-3 block text-center">Our approach</p>
-        <h2 class="text-3xl3 md:text-4xl font-bold mb-16 text-center mt-3">Who are we here for?</h2>
+        <p class="eyebrow-pill4 mb-3 block text-center">{{ t('home.offer.eyebrow') }}</p>
+        <h2 class="text-3xl3 md:text-4xl font-bold mb-16 text-center mt-3">{{ t('home.offer.heading') }}</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           <div class="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-px"></div>
           <div
@@ -187,7 +187,7 @@
 
       <div class="max-w-5xl mx-auto">
         <!-- <p class="eyebrow-pill4 mb-3 block text-center">Our approach</p> -->
-        <h2 class="text-3xl3 md:text-4xl font-bold mb-16 text-center mt-10">What we offer</h2>
+        <h2 class="text-3xl3 md:text-4xl font-bold mb-16 text-center mt-10">{{ t('home.process.heading') }}</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           <div class="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-px"></div>
           <div
@@ -210,10 +210,10 @@
 
     <section id="services1" class="why-services-section2 py-20 px-6" data-observe>
   <div class="flex-1">
-    <p class="eyebrow-pill5 mb-3">What we do</p>
-    <h2 class="text-3xl4 md:text-4xl font-bold mb-4 mt-3 tracking-tight">Our services</h2>
+    <p class="eyebrow-pill5 mb-3">{{ t('home.services.eyebrow') }}</p>
+    <h2 class="text-3xl4 md:text-4xl font-bold mb-4 mt-3 tracking-tight">{{ t('home.services.heading') }}</h2>
     <p class="service-text mb-8 text-white/70">
-      We offer a wide range of specialized IT services, tailored to your unique situation always focused on sustainable digital growth.
+      {{ t('home.services.intro') }}
     </p>
     <div class="grid grid-cols-1 gap-5 mt-10">
       <div
@@ -237,7 +237,7 @@
         </div>
       </div>
     </div>
-    <a href="/solutions" class="btn-primary1 mt-8 inline-block">View all our services →</a>
+    <NuxtLink :to="localePath('/solutions')" class="btn-primary1 mt-8 inline-block">{{ t('common.cta.viewAllServices') }}</NuxtLink>
   </div>
 </section>
 
@@ -277,27 +277,28 @@
     ============================================================ -->
     <section id="contact" class="contact-section py-24 px-6 text-white text-center" data-observe>
       <div class="max-w-2xl mx-auto">
-        <p class="eyebrow-pill7 mb-3">Get in touch</p>
-        <h2 class="text-3xl6 md:text-5xl font-extrabold mb-6 mt-3">Ready to grow your business?</h2>
-        <p class="text-white/70 mb-10">Let's talk about how we can help you with IT support, software, or strategy.</p>
-        <a href="/contact" class="btn-primary text-lg px-10 py-4">Plan een kennismaking</a>
+        <p class="eyebrow-pill7 mb-3">{{ t('home.contact.eyebrow') }}</p>
+        <h2 class="text-3xl6 md:text-5xl font-extrabold mb-6 mt-3">{{ t('home.contact.heading') }}</h2>
+        <p class="text-white/70 mb-10">{{ t('home.contact.text') }}</p>
+        <NuxtLink :to="localePath('/contact')" class="btn-primary text-lg px-10 py-4">{{ t('common.cta.intro') }}</NuxtLink>
       </div>
     </section>
 
     <!-- WhatsApp FAB -->
-    <a href="https://wa.me/31648364450" target="_blank" class="whatsapp-fab" title="Chat with us on WhatsApp">
+    <a href="https://wa.me/31648364450" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" :title="t('common.whatsapp')">
       <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
       </svg>
-      <span class="whatsapp-label">Chat with us</span>
+      <span class="whatsapp-label">{{ t('common.whatsapp') }}</span>
     </a>
 
-    
+
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, computed } from 'vue'
+import { useI18n, useLocalePath } from '#imports'
 import {
   SearchIcon,
   ClipboardListIcon,
@@ -315,67 +316,58 @@ import {
 definePageMeta({ layout: 'default' })
 import '~/assets/css/main.css'
 
-const heroStats = [
-  { val: '50+', label: 'Clients served' },
-  { val: '5yr', label: 'Experience' },
-  { val: '98%', label: 'Satisfaction' },
-]
+const { t, tm, rt } = useI18n()
+const localePath = useLocalePath()
 
-const stats = [
-  { raw: 50, suffix: '+', label: 'Clients served' },
-  { raw: 5,  suffix: 'yr', label: 'Experience' },
-  { raw: 98, suffix: '%', label: 'Satisfaction rate' },
-  { raw: 72, suffix: 'hr', label: 'Response time' },
-]
+useSeo({
+  title: t('seo.home.title'),
+  description: t('seo.home.description'),
+  path: '/',
+})
 
-const offerSteps = [
-  { icon: SearchIcon,        title: 'Personal approach', description: 'We believe in short lines of communication and clear communication. We get to know your challenges and help find solutions that work.' },
-  { icon: ClipboardListIcon, title: 'Experience & expertise',      description: 'With years of experience in web development, consultancy, and IT support, we help organizations grow in efficiency and stability.' },
-  { icon: SettingsIcon,      title: 'Flexible solutions',     description: 'From small assignments to ongoing support our approach adapts to your organization.' },
-  { icon: ShieldIcon,        title: 'Customer-oriented & reliable',   description: 'Your success is our priority. We ensure that our solutions demonstrably contribute to your processes and business goals.' },
-]
+const stats = computed(() => [
+  { raw: 50, suffix: '+',  label: t('home.stats.clients') },
+  { raw: 5,  suffix: 'yr', label: t('home.stats.experience') },
+  { raw: 98, suffix: '%',  label: t('home.stats.satisfaction') },
+  { raw: 72, suffix: 'hr', label: t('home.stats.response') },
+])
 
-const processSteps = [
-  { icon: SearchIcon,        title: 'Discovery', description: 'We listen, analyze and understand your situation and goals.' },
-  { icon: ClipboardListIcon, title: 'Plan',      description: 'We create a clear, tailored roadmap for your project.' },
-  { icon: SettingsIcon,      title: 'Build',     description: 'We develop and implement the solution with precision.' },
-  { icon: ShieldIcon,        title: 'Support',   description: 'We stay available for ongoing support and improvements.' },
-]
+const offerIcons = [SearchIcon, ClipboardListIcon, SettingsIcon, ShieldIcon]
+const offerSteps = computed(() =>
+  (tm('home.offer.steps') as any[]).map((s, i) => ({
+    icon: offerIcons[i], title: rt(s.title), description: rt(s.description),
+  })),
+)
 
-const whyCards = [
-  { icon: HandshakeIcon, title: 'Clear communication & transparency', description: 'Clear agreements, clear language, no surprises.' },
-  { icon: TargetIcon,    title: 'Customization',                      description: 'Solutions tailored to your processes and goals.' },
-  { icon: ZapIcon,       title: 'Fast support',                       description: 'Quickly helped remotely or on location.' },
-  { icon: BrainIcon,     title: 'Experienced team',                   description: 'From implementation to strategy one partner.' },
-]
+const processIcons = [SearchIcon, ClipboardListIcon, SettingsIcon, ShieldIcon]
+const processSteps = computed(() =>
+  (tm('home.process.steps') as any[]).map((s, i) => ({
+    icon: processIcons[i], title: rt(s.title), description: rt(s.description),
+  })),
+)
 
-const services = [
-  {
-    icon: MonitorIcon,
-    title: 'Software & Automation',
-    description: 'Smart tools that accelerate and simplify processes. We build solutions that really work from data management to workflow optimization.',
-    image: '/images/startup-programmer-testing-debugging-company-ai-software.jpg',
-    button: 'More about Development',
-    href: '/solutions/software-development',
-  },
-  {
-    icon: WrenchIcon,
-    title: 'IT Support & Management',
-    description: 'Immediate assistance with malfunctions, maintenance, and security. Remote or on-site, we ensure your systems remain stable and secure.',
-    image: '/images/employees-looking-financial-statistics-computer.jpg',
-    button: 'More about IT Support',
-    href: '/solutions/it-consulting',
-  },
-  {
-    icon: TrendingUpIcon,
-    title: 'Consultancy & Strategy',
-    description: 'Strategic advice for digital transformation and scalable growth. We ensure that your technology supports your ambitions.',
-    image: '/images/diverse-coworkers-talking-with-customers.jpg',
-    button: 'More about Strategy',
-    href: '/solutions/digital-strategy',
+const whyIcons = [HandshakeIcon, TargetIcon, ZapIcon, BrainIcon]
+const whyCards = computed(() =>
+  (tm('home.why.cards') as any[]).map((c, i) => ({
+    icon: whyIcons[i], title: rt(c.title), description: rt(c.description),
+  })),
+)
 
-  },
+const serviceMeta = [
+  { icon: MonitorIcon,    image: '/images/startup-programmer-testing-debugging-company-ai-software.jpg', href: '/solutions/software-development' },
+  { icon: WrenchIcon,     image: '/images/employees-looking-financial-statistics-computer.jpg',        href: '/solutions/it-consulting' },
+  { icon: TrendingUpIcon, image: '/images/diverse-coworkers-talking-with-customers.jpg',               href: '/solutions/digital-strategy' },
 ]
+const services = computed(() =>
+  (tm('home.services.items') as any[]).map((s, i) => ({
+    icon: serviceMeta[i].icon,
+    image: serviceMeta[i].image,
+    href: localePath(serviceMeta[i].href),
+    title: rt(s.title),
+    description: rt(s.description),
+    button: rt(s.button),
+  })),
+)
 
 const testimonials = [
   { quote: 'Newland IT helped us modernize our entire workflow. Professional, fast and always available.', name: 'Sarah de Vries', company: 'Agape Joy Care' },
@@ -386,26 +378,29 @@ const testimonials = [
 const items = [
   {
     image: '/images/agapejoycare-high-sd2l7h.png.webp',
+    alt: 'Agape Joy Care logo — client of Newland IT-Solutions',
     quote: 'Newland IT helped us modernize our entire workflow. Professional, fast and always available.',
     author: 'Sarah de Vries',
     company: 'Agape Joy Care',
   },
   {
     image: '/images/bzvj-high-1vnsrg.png.webp',
+    alt: 'BZVJ logo — client of Newland IT-Solutions',
     quote: 'From strategy to implementation — they guided us every step of the way. Highly recommended.',
     author: 'Mark Janssen',
     company: 'BZVJ',
   },
-  { image: '/images/chatgpt-image-may-12-2025-11_00_28-pm-high-high.webp' },
-  { image: '/images/color-2x-high.png.webp' },
-  { image: '/images/double-asap-greytones-high-xdljy4.png.webp' },
+  { image: '/images/chatgpt-image-may-12-2025-11_00_28-pm-high-high.webp', alt: 'Client logo — Newland IT-Solutions' },
+  { image: '/images/color-2x-high.png.webp', alt: 'Client logo — Newland IT-Solutions' },
+  { image: '/images/double-asap-greytones-high-xdljy4.png.webp', alt: 'ASAP logo — client of Newland IT-Solutions' },
   {
     image: '/images/flexxes-logo-v5_flexxes-logo-cmyk-black-standard-transparant_1600x-high.webp',
+    alt: 'Flexxes logo — client of Newland IT-Solutions',
     quote: 'Finally an IT partner that speaks our language. No technical jargon, just clear solutions.',
     author: 'Lisa Bakker',
     company: 'Flexxes',
   },
-  { image: '/images/gemeente-amsterdam-4-logo-png-transparent-high.png.webp' },
+  { image: '/images/gemeente-amsterdam-4-logo-png-transparent-high.png.webp', alt: 'Gemeente Amsterdam logo — client of Newland IT-Solutions' },
 ]
 
 import { ref } from 'vue'
