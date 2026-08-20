@@ -1,1 +1,23 @@
+# Dependencies
 node_modules
+
+# JetBrains volatile / plugin-generated files (shared config stays tracked)
+.idea/ShadcnHelperSettings.xml
+.idea/workspace.xml
+.idea/shelf/
+.idea/httpRequests/
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/dictionaries/
+
+# Claude Code local (per-machine) settings
+.claude/settings.local.json
+
+# Env / secrets (safety net; app-level .gitignore also covers these)
+.env
+.env.*
+!.env.example
+
+# OS noise
+.DS_Store
+Thumbs.db
