@@ -220,6 +220,136 @@
     }
   },
   "detail": {
-    "whatWeOffer": "What we offer:"
+    "whatWeOffer": "What we offer:",
+    "backToSolutions": "← All solutions",
+    "includes": "Includes:",
+    "viewDetails": "View details",
+    "orderFrom": "Order from",
+    "getStarted": "Get started",
+    "freeConsult": "Plan a free consultation",
+    "software": {
+      "eyebrow": "Software Development",
+      "h1": "Software development for every business",
+      "intro": "Welcome to the Software Development department of Newland IT-Solutions. We develop customized solutions for web and mobile applications, CMS platforms, API integrations and complete digital systems — especially for companies in Amsterdam and the Amsterdam Metropolitan Region.",
+      "moreBtn": "More about Development",
+      "offers": [
+        "Custom web and mobile applications",
+        "CMS websites (including WordPress, Wix, Shopify)",
+        "Software Development & API Integrations"
+      ],
+      "sub": [
+        {
+          "title": "Custom web and mobile applications",
+          "paragraphs": [
+            "We build applications tailored to your daily practice. From internal tools to customer-oriented platforms, our solutions combine technology with user-friendliness and scalability. This way, we deliver solutions that are not only technically robust but also intuitive and future-proof.",
+            "Choose our custom solutions and benefit from efficiency and customer-oriented service."
+          ],
+          "points": ["Fully tailored to your processes", "Application of the latest technologies", "Focused on ease of use and results"],
+          "link": "Schedule an intake interview"
+        },
+        {
+          "title": "CMS websites (including WordPress, Wix, Shopify)",
+          "paragraphs": [
+            "Whether you choose WordPress, Wix, or Shopify, we build intuitive, scalable and manageable CMS websites that strengthen your online visibility and contribute to business growth.",
+            "We design and build CMS websites that are not only beautiful but also deliver measurable results. Whether you need a portfolio, web shop or business site, we ensure speed, clarity and ease of use."
+          ],
+          "points": ["Professional design & technical execution", "Easy-to-manage CMS", "Optimization of online presence"],
+          "link": "Learn more"
+        },
+        {
+          "title": "Software Development & API Integrations",
+          "paragraphs": [
+            "We develop scalable software platforms that optimize your business processes and support growth. With smart API integrations, we connect systems, accelerate workflows and make data exchange seamless.",
+            "Work on the future of your organization with our custom solutions for platform development and integrations."
+          ],
+          "points": ["Efficiently designed processes", "Better scalability and flexibility", "Integration of external tools and data sources"],
+          "link": "Schedule an intake interview"
+        }
+      ]
+    },
+    "cms": {
+      "backSoftware": "← Software Development",
+      "eyebrow": "CMS Websites",
+      "h1": "CMS Websites for business growth",
+      "intro": "At Newland IT-Solutions, we build intuitive, scalable and user-friendly websites that enhance your online visibility. Whether you need a personal site, a business website or an online store, we offer solutions for companies in Amsterdam and the surrounding area, tailored to your goals, budget and style.",
+      "ctaText": "Not sure which platform suits your situation?",
+      "products": [
+        { "title": "Wix Website", "description": "A fast, modern website based on a user-friendly drag & drop editor. Ideal for freelancers, small businesses or portfolios.", "features": ["Pixel-perfect design", "More freedom in design", "Better performance & scalability"] },
+        { "title": "WordPress Website", "description": "Powerful and flexible websites on the most widely used CMS in the world. Perfect for growing businesses.", "features": ["Fully customizable", "Expandable with plugins", "SEO-friendly and scalable"] },
+        { "title": "E-commerce Shopify Website", "description": "Professional e-commerce solution to sell products online quickly and clearly.", "features": ["Optimized for conversion", "Payment and shipping modules included", "Fully manageable via dashboard"] }
+      ]
+    },
+    "consulting": {
+      "eyebrow": "IT Consulting",
+      "h1": "IT Consulting & Support",
+      "intro": "We help you make smart IT choices and ensure that systems, processes and support function optimally, today and in the future.",
+      "moreBtn": "More about IT Consultancy",
+      "offers": ["IT consultancy & system selection", "Digital transformation & integration", "IT support (helpdesk, remote & on-site)"],
+      "sub": [
+        {
+          "title": "IT consultancy & system selection",
+          "paragraphs": ["With our IT consultancy and system selection, we offer expert advice and guidance in choosing the right IT solutions that fit your organization and ambitions, specifically for companies in Amsterdam and the Metropolitan Area.", "Choose our IT consultancy and system selection to select the right IT solutions that fit your business needs and future plans."],
+          "points": ["Expert advice", "Custom solutions", "Future-oriented"],
+          "link": "Schedule a consultation"
+        },
+        {
+          "title": "Digital transformation & integration",
+          "paragraphs": ["At Newland IT-Solutions, we support organizations in realizing digital transformation and integration projects. We ensure you are ready for the future, from strategy to implementation.", "Trust our expertise to strengthen your organization with smart, scalable and future-proof IT solutions. Whether it involves cloud solutions, on-premise systems or hybrid integrations, we help you improve your competitive position."],
+          "points": ["Strategy determination and implementation", "Innovative cloud and on-premise solutions", "Efficiency improvement in processes and systems"],
+          "link": "Request a strategy session"
+        },
+        {
+          "title": "IT support (helpdesk, remote & on-site)",
+          "paragraphs": ["Our IT support services provide remote or on-site support, always fast and reliable, exactly when you need it.", "With Newland IT-Solutions, you are assured of professional support for a wide range of IT challenges, from daily help desk questions to critical system failures."],
+          "points": ["Fast response times", "Proactive management", "Support on demand"],
+          "link": "Request support"
+        }
+      ]
+    },
+    "support": {
+      "backConsulting": "← IT Consulting",
+      "eyebrow": "IT Support Services",
+      "h1": "Smart IT support, wherever and whenever you need it",
+      "intro": "At Newland IT-Solutions we keep your business running in Amsterdam and North Holland. Whether you are self-employed or managing a growing team, we offer reliable support remotely and on site. From quick help desk questions to proactive system management: you choose the package that suits your organization.",
+      "mostPopular": "Most popular",
+      "ctaHeading": "Not sure which package fits?",
+      "ctaText": "Contact us for a no-obligation consultation, we'll find the right plan together.",
+      "plans": [
+        { "title": "Basic Support Remote", "target": "Aimed at sole proprietorships and small organizations that mainly need reactive remote help, without fixed obligations.", "description": "€80 per hour (on demand) or €45/month per workplace", "features": ["Remote support during office hours", "Basic monitoring (optional via remote-agent)", "10% discount on extra work (such as small projects or upgrades)"], "note": "" },
+        { "title": "Pro Support Remote", "target": "For growing companies in need of continuity, monitoring and optimization.", "description": "From €55 p/m per workplace for SMEs with 5–25 workplaces.", "features": ["Unlimited remote support during office hours", "Periodic health checks", "Patch management", "Backup and storage advice"], "note": "" },
+        { "title": "Premium Support – DevOps & Cloud SLA", "target": "For agencies, development teams and companies with complex IT environments, CI/CD processes or hybrid cloud structures.", "description": "From €750 p/m based on a custom SLA depending on project scope and deployment.", "features": ["Hybrid support (remote & on-site)", "SLA-based approach with fast response times", "Cloud and infrastructure management (Azure, AWS, CI/CD)"], "note": "This package is fully tailored to your specific situation. Request a free quote for a tailor-made proposal." }
+      ]
+    },
+    "strategy": {
+      "eyebrow": "Digital Strategy",
+      "h1": "Digital Strategy & Enablement",
+      "intro": "We guide both IT and non-IT projects with a structured approach. In addition, we strengthen your organization with digital strategies for brand development, from project management to branding and design.",
+      "moreBtn": "More about Enablement",
+      "ctaText": "Ready to strengthen your brand and digital presence?",
+      "offers": ["Project management (also outside IT)", "Digital strategy, branding & visual design", "UI/UX Design"],
+      "sub": [
+        {
+          "title": "Project management",
+          "badge": "Planning",
+          "paragraphs": ["Whether it concerns an IT implementation, digital transformation or internal process improvement, good project management makes the difference. At Newland IT-Solutions, we guide companies in Amsterdam from start to delivery with structure, realistic planning and clear communication."],
+          "points": ["Supervision of both technical and non-technical projects", "Structure, planning and progress monitoring", "Alignment with your internal processes and teams"],
+          "link": "Request project support"
+        },
+        {
+          "title": "Branding & Logo Design",
+          "badge": "Identity",
+          "paragraphs": ["Our team of experts will strengthen your brand identity through unique logo and branding design.", "Our creative approach ensures a unique look that attracts and retains customers."],
+          "points": ["Unique logo and branding design", "Optimal user experience", "Effective strategies"],
+          "link": "Schedule a design intake"
+        },
+        {
+          "title": "UX/UI Design",
+          "badge": "Design",
+          "paragraphs": ["We ensure an optimal user experience with our thoughtful UX/UI designs that attract and retain customers.", "We strive for perfection in every detail of our design, so that your brand stands out from the rest."],
+          "points": ["Consistent branding", "Customer attraction", "User-friendliness"],
+          "link": "Schedule a design intake"
+        }
+      ]
+    }
   }
 }

@@ -220,6 +220,136 @@
     }
   },
   "detail": {
-    "whatWeOffer": "Wat wij bieden:"
+    "whatWeOffer": "Wat wij bieden:",
+    "backToSolutions": "← Alle diensten",
+    "includes": "Inbegrepen:",
+    "viewDetails": "Bekijk details",
+    "orderFrom": "Bestel vanaf",
+    "getStarted": "Aan de slag",
+    "freeConsult": "Plan een gratis adviesgesprek",
+    "software": {
+      "eyebrow": "Softwareontwikkeling",
+      "h1": "Softwareontwikkeling voor elk bedrijf",
+      "intro": "Welkom bij de afdeling Softwareontwikkeling van Newland IT-Solutions. We ontwikkelen oplossingen op maat voor web- en mobiele applicaties, CMS-platforms, API-integraties en complete digitale systemen — speciaal voor bedrijven in Amsterdam en de Metropoolregio Amsterdam.",
+      "moreBtn": "Meer over ontwikkeling",
+      "offers": [
+        "Web- en mobiele applicaties op maat",
+        "CMS-websites (waaronder WordPress, Wix, Shopify)",
+        "Softwareontwikkeling & API-integraties"
+      ],
+      "sub": [
+        {
+          "title": "Web- en mobiele applicaties op maat",
+          "paragraphs": [
+            "We bouwen applicaties afgestemd op je dagelijkse praktijk. Van interne tools tot klantgerichte platforms — onze oplossingen combineren technologie met gebruiksgemak en schaalbaarheid. Zo leveren we oplossingen die niet alleen technisch robuust zijn, maar ook intuïtief en toekomstbestendig.",
+            "Kies voor onze maatwerkoplossingen en profiteer van efficiëntie en klantgerichte service."
+          ],
+          "points": ["Volledig afgestemd op je processen", "Toepassing van de nieuwste technologieën", "Gericht op gebruiksgemak en resultaat"],
+          "link": "Plan een intakegesprek"
+        },
+        {
+          "title": "CMS-websites (waaronder WordPress, Wix, Shopify)",
+          "paragraphs": [
+            "Of je nu kiest voor WordPress, Wix of Shopify — we bouwen intuïtieve, schaalbare en beheersbare CMS-websites die je online zichtbaarheid versterken en bijdragen aan groei.",
+            "We ontwerpen en bouwen CMS-websites die niet alleen mooi zijn, maar ook meetbaar resultaat leveren. Of je nu een portfolio, webshop of zakelijke site nodig hebt — we zorgen voor snelheid, helderheid en gebruiksgemak."
+          ],
+          "points": ["Professioneel ontwerp & technische uitvoering", "Eenvoudig te beheren CMS", "Optimalisatie van je online aanwezigheid"],
+          "link": "Lees meer"
+        },
+        {
+          "title": "Softwareontwikkeling & API-integraties",
+          "paragraphs": [
+            "We ontwikkelen schaalbare softwareplatforms die je bedrijfsprocessen optimaliseren en groei ondersteunen. Met slimme API-integraties koppelen we systemen, versnellen we workflows en maken we data-uitwisseling naadloos.",
+            "Werk aan de toekomst van je organisatie met onze maatwerkoplossingen voor platformontwikkeling en integraties."
+          ],
+          "points": ["Efficiënt ingerichte processen", "Betere schaalbaarheid en flexibiliteit", "Integratie van externe tools en databronnen"],
+          "link": "Plan een intakegesprek"
+        }
+      ]
+    },
+    "cms": {
+      "backSoftware": "← Softwareontwikkeling",
+      "eyebrow": "CMS-websites",
+      "h1": "CMS-websites voor bedrijfsgroei",
+      "intro": "Bij Newland IT-Solutions bouwen we intuïtieve, schaalbare en gebruiksvriendelijke websites die je online zichtbaarheid vergroten. Of je nu een persoonlijke site, een zakelijke website of een webshop nodig hebt — we bieden oplossingen voor bedrijven in Amsterdam en omstreken, afgestemd op je doelen, budget en stijl.",
+      "ctaText": "Niet zeker welk platform bij jouw situatie past?",
+      "products": [
+        { "title": "Wix-website", "description": "Een snelle, moderne website op basis van een gebruiksvriendelijke drag-and-drop-editor. Ideaal voor zzp’ers, kleine bedrijven of portfolio’s.", "features": ["Pixel-perfect ontwerp", "Meer vrijheid in design", "Betere performance & schaalbaarheid"] },
+        { "title": "WordPress-website", "description": "Krachtige en flexibele websites op het meest gebruikte CMS ter wereld. Perfect voor groeiende bedrijven.", "features": ["Volledig aanpasbaar", "Uit te breiden met plugins", "SEO-vriendelijk en schaalbaar"] },
+        { "title": "E-commerce Shopify-website", "description": "Professionele e-commerce-oplossing om snel en overzichtelijk producten online te verkopen.", "features": ["Geoptimaliseerd voor conversie", "Betaal- en verzendmodules inbegrepen", "Volledig te beheren via dashboard"] }
+      ]
+    },
+    "consulting": {
+      "eyebrow": "IT-consultancy",
+      "h1": "IT-consultancy & support",
+      "intro": "We helpen je slimme IT-keuzes te maken en zorgen dat systemen, processen en support optimaal functioneren — vandaag en in de toekomst.",
+      "moreBtn": "Meer over IT-consultancy",
+      "offers": ["IT-consultancy & systeemselectie", "Digitale transformatie & integratie", "IT-support (helpdesk, remote & on-site)"],
+      "sub": [
+        {
+          "title": "IT-consultancy & systeemselectie",
+          "paragraphs": ["Met onze IT-consultancy en systeemselectie bieden we deskundig advies en begeleiding bij het kiezen van de juiste IT-oplossingen die passen bij je organisatie en ambities — speciaal voor bedrijven in Amsterdam en de Metropoolregio.", "Kies voor onze IT-consultancy en systeemselectie om de juiste IT-oplossingen te kiezen die passen bij je bedrijfsbehoeften en toekomstplannen."],
+          "points": ["Deskundig advies", "Oplossingen op maat", "Toekomstgericht"],
+          "link": "Plan een adviesgesprek"
+        },
+        {
+          "title": "Digitale transformatie & integratie",
+          "paragraphs": ["Bij Newland IT-Solutions ondersteunen we organisaties bij het realiseren van digitale transformatie- en integratieprojecten. We zorgen dat je klaar bent voor de toekomst — van strategie tot implementatie.", "Vertrouw op onze expertise om je organisatie te versterken met slimme, schaalbare en toekomstbestendige IT-oplossingen. Of het nu gaat om cloudoplossingen, on-premise systemen of hybride integraties — we helpen je je concurrentiepositie te verbeteren."],
+          "points": ["Strategiebepaling en implementatie", "Innovatieve cloud- en on-premise oplossingen", "Efficiëntieverbetering in processen en systemen"],
+          "link": "Vraag een strategiesessie aan"
+        },
+        {
+          "title": "IT-support (helpdesk, remote & on-site)",
+          "paragraphs": ["Onze IT-supportdiensten bieden remote of on-site ondersteuning — altijd snel en betrouwbaar, precies wanneer je het nodig hebt.", "Met Newland IT-Solutions ben je verzekerd van professionele support voor een breed scala aan IT-uitdagingen, van dagelijkse helpdeskvragen tot kritieke systeemstoringen."],
+          "points": ["Snelle reactietijden", "Proactief beheer", "Support op aanvraag"],
+          "link": "Vraag support aan"
+        }
+      ]
+    },
+    "support": {
+      "backConsulting": "← IT-consultancy",
+      "eyebrow": "IT-supportdiensten",
+      "h1": "Slimme IT-support, waar en wanneer je die nodig hebt",
+      "intro": "Bij Newland IT-Solutions houden we je bedrijf draaiend in Amsterdam en Noord-Holland. Of je nu zzp’er bent of een groeiend team aanstuurt — we bieden betrouwbare support, remote en op locatie. Van snelle helpdeskvragen tot proactief systeembeheer: jij kiest het pakket dat bij je organisatie past.",
+      "mostPopular": "Meest gekozen",
+      "ctaHeading": "Niet zeker welk pakket past?",
+      "ctaText": "Neem contact op voor een vrijblijvend adviesgesprek — samen vinden we het juiste plan.",
+      "plans": [
+        { "title": "Basic Support Remote", "target": "Gericht op zzp’ers en kleine organisaties die vooral reactieve remote hulp nodig hebben, zonder vaste verplichtingen.", "description": "€80 per uur (op aanvraag) of €45/maand per werkplek", "features": ["Remote support tijdens kantooruren", "Basismonitoring (optioneel via remote-agent)", "10% korting op meerwerk (zoals kleine projecten of upgrades)"], "note": "" },
+        { "title": "Pro Support Remote", "target": "Voor groeiende bedrijven die behoefte hebben aan continuïteit, monitoring en optimalisatie.", "description": "Vanaf €55 p/m per werkplek voor het mkb met 5–25 werkplekken.", "features": ["Onbeperkte remote support tijdens kantooruren", "Periodieke health checks", "Patchbeheer", "Advies over back-up en opslag"], "note": "" },
+        { "title": "Premium Support – DevOps & Cloud SLA", "target": "Voor agencies, ontwikkelteams en bedrijven met complexe IT-omgevingen, CI/CD-processen of hybride cloudstructuren.", "description": "Vanaf €750 p/m op basis van een SLA op maat, afhankelijk van projectomvang en uitrol.", "features": ["Hybride support (remote & on-site)", "SLA-gebaseerde aanpak met snelle reactietijden", "Cloud- en infrastructuurbeheer (Azure, AWS, CI/CD)"], "note": "Dit pakket wordt volledig afgestemd op jouw specifieke situatie. Vraag een gratis offerte aan voor een voorstel op maat." }
+      ]
+    },
+    "strategy": {
+      "eyebrow": "Digitale strategie",
+      "h1": "Digitale strategie & enablement",
+      "intro": "We begeleiden zowel IT- als niet-IT-projecten met een gestructureerde aanpak. Daarnaast versterken we je organisatie met digitale strategieën voor merkontwikkeling — van projectmanagement tot branding en design.",
+      "moreBtn": "Meer over enablement",
+      "ctaText": "Klaar om je merk en digitale aanwezigheid te versterken?",
+      "offers": ["Projectmanagement (ook buiten IT)", "Digitale strategie, branding & visueel design", "UI/UX-design"],
+      "sub": [
+        {
+          "title": "Projectmanagement",
+          "badge": "Planning",
+          "paragraphs": ["Of het nu gaat om een IT-implementatie, digitale transformatie of interne procesverbetering — goed projectmanagement maakt het verschil. Bij Newland IT-Solutions begeleiden we bedrijven in Amsterdam van start tot oplevering, met structuur, realistische planning en heldere communicatie."],
+          "points": ["Begeleiding van technische én niet-technische projecten", "Structuur, planning en voortgangsbewaking", "Afstemming op je interne processen en teams"],
+          "link": "Vraag projectbegeleiding aan"
+        },
+        {
+          "title": "Branding & logo-ontwerp",
+          "badge": "Identiteit",
+          "paragraphs": ["Ons team van experts versterkt je merkidentiteit met uniek logo- en brandingontwerp.", "Onze creatieve aanpak zorgt voor een unieke uitstraling die klanten aantrekt en behoudt."],
+          "points": ["Uniek logo- en brandingontwerp", "Optimale gebruikerservaring", "Effectieve strategieën"],
+          "link": "Plan een designintake"
+        },
+        {
+          "title": "UX/UI-design",
+          "badge": "Design",
+          "paragraphs": ["We zorgen voor een optimale gebruikerservaring met doordachte UX/UI-designs die klanten aantrekken en behouden.", "We streven naar perfectie in elk detail van ons ontwerp, zodat je merk zich onderscheidt van de rest."],
+          "points": ["Consistente branding", "Klanten aantrekken", "Gebruiksgemak"],
+          "link": "Plan een designintake"
+        }
+      ]
+    }
   }
 }
