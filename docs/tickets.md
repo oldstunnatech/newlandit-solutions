@@ -35,13 +35,13 @@
 </details>
 
 <details open>
-<summary><strong>📋 Phase 3 — Content completeness + legal · IN PROGRESS (0/5)</strong></summary>
+<summary><strong>✅ Phase 3 — Content completeness + legal · DONE (3/3 P0 closed; NWL-004/007 remain P1)</strong></summary>
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-001 | 🔴 P0 | 📋 Todo | Homepage stats show `0+ / 0yr / 0% / 0hr` placeholders — fill with real data (About uses `50+/5yr/98%/72hr`) |
-| NWL-002 | 🔴 P0 | 📋 Todo | Production Vercel serves stale pre-i18n EN build — merge `seo-and-nl-i18n` + redeploy so `/` is NL |
-| NWL-003 | 🔴 P0 | 📋 Todo | No legal pages — add privacy statement, cookie policy, terms + footer links (NL/EN) |
+| NWL-001 | 🔴 P0 | ✅ Done | Homepage stats show `0+ / 0yr / 0% / 0hr` placeholders — fill with real data (About uses `50+/5yr/98%/72hr`) |
+| NWL-002 | 🔴 P0 | ✅ Done | Production Vercel serves stale pre-i18n EN build — merge `seo-and-nl-i18n` + redeploy so `/` is NL |
+| NWL-003 | 🔴 P0 | ✅ Done | No legal pages — add privacy statement, cookie policy, terms + footer links (NL/EN) |
 | NWL-004 | 🟠 P1 | 📋 Todo | No cookie/consent banner gating Google Maps embed + WhatsApp (AVG) |
 | NWL-007 | 🟠 P1 | 📋 Todo | Service-page content parity vs old `/oplossingen` deliverables |
 
@@ -60,11 +60,11 @@
 </details>
 
 <details open>
-<summary><strong>📋 Phase 5 — Launch (cutover) · NOT STARTED (0/2)</strong></summary>
+<summary><strong>📋 Phase 5 — Launch (cutover) · IN PROGRESS (1/2)</strong></summary>
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-010 | 🔴 P0 | 📋 Todo | 301 redirects old→new (`/oplossingen`→`/solutions`, `/over-ons`→`/about`) |
+| NWL-010 | 🔴 P0 | ✅ Done | 301 redirects old→new (`/oplossingen`→`/solutions`, `/over-ons`→`/about`) |
 | NWL-011 | 🟠 P1 | 📋 Todo | Sitemap + robots verify both locales; submit to Search Console; NAP consistency |
 
 </details>
@@ -212,7 +212,7 @@
 
 ## 🔗 Dependencies & next steps
 
-- **Launch blockers (P0):** NWL-001, NWL-002, NWL-003, NWL-010.
+- **Launch blockers (P0):** ✅ All closed — NWL-001, NWL-002, NWL-003, NWL-010.
 - NWL-002 (redeploy) also validates all Phase 2 i18n work in production.
 - NWL-003 (legal) + NWL-004 (consent) should ship together.
 - **Backlog chains:** NWL-020 → NWL-017 → NWL-018/019 (blog); NWL-020 → NWL-021 (copy migration);
