@@ -31,6 +31,7 @@
           <slot />
         </main>
         <Footer />
+        <CookieConsent />
       </div>
     </div>
   </div>
