@@ -23,7 +23,10 @@
     "itSupport": "IT Support (helpdesk, remote & on-site)",
     "digitalStrategy": "Digital Strategy & Enablement",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "privacy": "Privacy Statement",
+    "cookies": "Cookie Policy",
+    "terms": "Terms & Conditions"
   },
   "seo": {
     "home": {
@@ -61,6 +64,18 @@
     "digitalStrategy": {
       "title": "Digital Strategy & Enablement in Amsterdam",
       "description": "Digital strategy, project management, branding and UX/UI design from Newland IT-Solutions. We align technology with your ambitions for scalable growth."
+    },
+    "privacy": {
+      "title": "Privacy Statement — Newland IT-Solutions",
+      "description": "Learn how Newland IT-Solutions processes personal data under the GDPR and what rights you have as a data subject."
+    },
+    "cookies": {
+      "title": "Cookie Policy — Newland IT-Solutions",
+      "description": "Information about our use of cookies and local storage on the Newland IT-Solutions website."
+    },
+    "terms": {
+      "title": "Terms & Conditions — Newland IT-Solutions",
+      "description": "The general terms and conditions applicable to all services provided by Newland IT-Solutions."
     }
   },
   "home": {
@@ -284,7 +299,7 @@
       "h1": "IT Consulting & Support",
       "intro": "We help you make smart IT choices and ensure that systems, processes and support function optimally, today and in the future.",
       "moreBtn": "More about IT Consultancy",
-      "offers": ["IT consultancy & system selection", "Digital transformation & integration", "IT support (helpdesk, remote & on-site)"],
+      "offers": ["IT consultancy & system selection", "Network, server & cloud management", "Digital transformation & integration", "IT support (helpdesk, remote & on-site)"],
       "sub": [
         {
           "title": "IT consultancy & system selection",
@@ -348,6 +363,196 @@
           "paragraphs": ["We ensure an optimal user experience with our thoughtful UX/UI designs that attract and retain customers.", "We strive for perfection in every detail of our design, so that your brand stands out from the rest."],
           "points": ["Consistent branding", "Customer attraction", "User-friendliness"],
           "link": "Schedule a design intake"
+        }
+      ]
+    }
+  },
+  "consent": {
+    "title": "Your privacy",
+    "text": "We use functional cookies and local storage for basic functionality. With your consent we also load Google Maps. No tracking or marketing cookies.",
+    "accept": "Give consent",
+    "decline": "Functional only",
+    "learnMore": "Cookie policy"
+  },
+  "legal": {
+    "lastUpdated": "August 2026",
+    "privacy": {
+      "title": "Privacy Statement",
+      "intro": "Newland IT-Solutions values your privacy. This privacy statement explains which personal data we process, why we do so and what rights you have under the General Data Protection Regulation (GDPR).",
+      "sections": [
+        {
+          "heading": "1. Data controller",
+          "paras": [
+            "Newland IT-Solutions is the data controller for the processing of your personal data.",
+            "Newland IT-Solutions, Hessenbergweg 8, 1101 BT Amsterdam • KVK: 83541934 • VAT: NL003835137B29 • info@newlandit-solutions.com • +31 648 364 450"
+          ]
+        },
+        {
+          "heading": "2. What personal data do we process?",
+          "paras": [
+            "Through our contact form we process the data you provide: name, email address, phone number, company name, address, your message and any attachments (PDF, Word or image, up to 5 MB).",
+            "We only collect data you voluntarily provide. We do not process special categories of personal data."
+          ]
+        },
+        {
+          "heading": "3. Purposes and legal bases",
+          "paras": [
+            "We process your data solely for the following purposes:",
+            "• Responding to your enquiry — legal basis: legitimate interest (Art. 6(1)(f) GDPR).",
+            "• Delivering agreed services — legal basis: performance of a contract (Art. 6(1)(b) GDPR).",
+            "• Compliance with legal obligations — legal basis: legal obligation (Art. 6(1)(c) GDPR)."
+          ]
+        },
+        {
+          "heading": "4. Third-party recipients",
+          "paras": [
+            "We use the following processors, each covered by a data processing agreement or Standard Contractual Clauses (SCCs):",
+            "• Resend Inc. (US) — sends email notifications from our contact form.",
+            "• Sanity AS (Norway/US) — CMS platform for content management, where applicable.",
+            "• Google LLC (US) — Google Maps embed on the contact page, only with your explicit consent.",
+            "We never sell your personal data or share it for commercial purposes."
+          ]
+        },
+        {
+          "heading": "5. Retention periods",
+          "paras": [
+            "Contact data is retained for a maximum of two years after your enquiry is handled, unless a longer retention period is required by law."
+          ]
+        },
+        {
+          "heading": "6. Your rights",
+          "paras": [
+            "Under the GDPR you have the following rights: access to your personal data, rectification of inaccurate data, erasure ('right to be forgotten'), restriction of processing, data portability and the right to object to processing based on legitimate interests.",
+            "You may exercise your rights by contacting us at info@newlandit-solutions.com. We will respond within 30 days.",
+            "You also have the right to lodge a complaint with the Dutch Data Protection Authority (autoriteitpersoonsgegevens.nl)."
+          ]
+        },
+        {
+          "heading": "7. Security",
+          "paras": [
+            "We implement appropriate technical and organisational measures to protect your personal data against loss, unauthorised access or unlawful processing."
+          ]
+        },
+        {
+          "heading": "8. Changes",
+          "paras": [
+            "We reserve the right to update this privacy statement. The most current version is always available on our website."
+          ]
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "intro": "The Newland IT-Solutions website uses cookies and similar storage technologies. This cookie policy explains which cookies we use and how you can manage your preferences.",
+      "sections": [
+        {
+          "heading": "1. What are cookies?",
+          "paras": [
+            "Cookies are small text files stored by your browser on your device when you visit a website. They support the website's functionality and user experience."
+          ]
+        },
+        {
+          "heading": "2. Which cookies do we use?",
+          "paras": [
+            "Functional cookies: strictly necessary for the website to work. These cookies contain no personal data and are exempt from consent requirements.",
+            "Consent preference: your cookie choice is stored in your browser's local storage (localStorage, key: nwl_consent). This is not a cookie but local storage; no personal data is stored in it."
+          ]
+        },
+        {
+          "heading": "3. Analytics and marketing cookies",
+          "paras": [
+            "We do not place analytics or marketing cookies. We do not collect visitor statistics via third parties."
+          ]
+        },
+        {
+          "heading": "4. Third parties after consent",
+          "paras": [
+            "Google Maps (Google LLC, US): when you give consent via our cookie banner, a Google Maps embed is loaded on the contact page. Google may process data in accordance with their privacy policy (policies.google.com/privacy).",
+            "WhatsApp: clicking a WhatsApp button takes you to the WhatsApp app or website. We do not load WhatsApp automatically; you initiate this contact yourself."
+          ]
+        },
+        {
+          "heading": "5. Managing consent",
+          "paras": [
+            "You can give or withdraw consent for non-functional cookies via the cookie banner at the bottom of the page. You can change your choice at any time by clearing your browser's local storage.",
+            "Without consent, Google Maps is not loaded and no data is sent to Google."
+          ]
+        },
+        {
+          "heading": "6. More information",
+          "paras": [
+            "More information about cookies and your rights is available from the Dutch Data Protection Authority: autoriteitpersoonsgegevens.nl",
+            "Google's privacy policy: policies.google.com/privacy"
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms & Conditions",
+      "intro": "These terms and conditions apply to all offers, quotations and agreements of Newland IT-Solutions (KVK: 83541934), registered at Hessenbergweg 8, 1101 BT Amsterdam, the Netherlands.",
+      "sections": [
+        {
+          "heading": "Article 1 — Applicability",
+          "paras": [
+            "1.1 These terms apply to all agreements between Newland IT-Solutions and the client, unless expressly agreed otherwise in writing.",
+            "1.2 Deviations from these terms are only valid if explicitly and mutually agreed in writing."
+          ]
+        },
+        {
+          "heading": "Article 2 — Offers and quotations",
+          "paras": [
+            "2.1 All offers and quotations are non-binding and valid for 30 days from the date of issue, unless otherwise stated in writing.",
+            "2.2 An agreement is concluded upon written confirmation by Newland IT-Solutions or upon actual commencement of the work."
+          ]
+        },
+        {
+          "heading": "Article 3 — Performance",
+          "paras": [
+            "3.1 Newland IT-Solutions performs its work to the best of its knowledge and ability. Agreements are best-effort obligations unless a specific result has been expressly agreed.",
+            "3.2 The client ensures timely provision of all information required for performance and provides the necessary cooperation."
+          ]
+        },
+        {
+          "heading": "Article 4 — Fees and payment",
+          "paras": [
+            "4.1 All fees are exclusive of VAT unless otherwise agreed in writing.",
+            "4.2 Invoices must be paid within 14 days of the invoice date.",
+            "4.3 In the event of late payment, statutory commercial interest and extrajudicial collection costs will be charged."
+          ]
+        },
+        {
+          "heading": "Article 5 — Liability",
+          "paras": [
+            "5.1 Newland IT-Solutions' total liability for direct damages is limited to the amount invoiced under the relevant agreement, subject to a maximum of € 5,000 per damaging event.",
+            "5.2 Newland IT-Solutions is not liable for indirect damages, consequential loss, loss of profit or business interruption."
+          ]
+        },
+        {
+          "heading": "Article 6 — Intellectual property",
+          "paras": [
+            "6.1 All works developed by Newland IT-Solutions — including software, designs, documentation and graphics — remain the property of Newland IT-Solutions until the client has fulfilled all obligations in full.",
+            "6.2 Upon full payment, Newland IT-Solutions transfers the agreed rights to the client in accordance with the agreed terms."
+          ]
+        },
+        {
+          "heading": "Article 7 — Confidentiality",
+          "paras": [
+            "7.1 Both parties treat confidential information received from the other party with due care and use it solely for the performance of the agreement. This obligation also applies after termination of the agreement."
+          ]
+        },
+        {
+          "heading": "Article 8 — Duration and termination",
+          "paras": [
+            "8.1 Agreements are entered into for the agreed duration.",
+            "8.2 Termination is subject to the notice period specified in the agreement, with a minimum of one calendar month unless otherwise agreed."
+          ]
+        },
+        {
+          "heading": "Article 9 — Governing law and disputes",
+          "paras": [
+            "9.1 Dutch law exclusively governs all agreements with Newland IT-Solutions.",
+            "9.2 Any disputes will be submitted to the competent court of the District Court of Amsterdam."
+          ]
         }
       ]
     }

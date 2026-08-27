@@ -23,7 +23,10 @@
     "itSupport": "IT-support (helpdesk, remote & on-site)",
     "digitalStrategy": "Digitale strategie & enablement",
     "about": "Over ons",
-    "contact": "Contact"
+    "contact": "Contact",
+    "privacy": "Privacyverklaring",
+    "cookies": "Cookiebeleid",
+    "terms": "Algemene voorwaarden"
   },
   "seo": {
     "home": {
@@ -61,6 +64,18 @@
     "digitalStrategy": {
       "title": "Digitale strategie & enablement in Amsterdam",
       "description": "Digitale strategie, projectmanagement, branding en UX/UI-design van Newland IT-Solutions. Wij laten technologie jouw ambities ondersteunen voor schaalbare groei."
+    },
+    "privacy": {
+      "title": "Privacyverklaring — Newland IT-Solutions",
+      "description": "Lees hoe Newland IT-Solutions persoonsgegevens verwerkt conform de AVG en welke rechten u heeft als betrokkene."
+    },
+    "cookies": {
+      "title": "Cookiebeleid — Newland IT-Solutions",
+      "description": "Meer informatie over ons gebruik van cookies en lokale opslag op de website van Newland IT-Solutions."
+    },
+    "terms": {
+      "title": "Algemene Voorwaarden — Newland IT-Solutions",
+      "description": "De algemene voorwaarden die van toepassing zijn op alle diensten van Newland IT-Solutions."
     }
   },
   "home": {
@@ -284,7 +299,7 @@
       "h1": "IT-consultancy & support",
       "intro": "We helpen je slimme IT-keuzes te maken en zorgen dat systemen, processen en support optimaal functioneren — vandaag en in de toekomst.",
       "moreBtn": "Meer over IT-consultancy",
-      "offers": ["IT-consultancy & systeemselectie", "Digitale transformatie & integratie", "IT-support (helpdesk, remote & on-site)"],
+      "offers": ["IT-consultancy & systeemselectie", "Netwerk-, server- & cloudbeheer", "Digitale transformatie & integratie", "IT-support (helpdesk, remote & on-site)"],
       "sub": [
         {
           "title": "IT-consultancy & systeemselectie",
@@ -327,6 +342,7 @@
       "moreBtn": "Meer over enablement",
       "ctaText": "Klaar om je merk en digitale aanwezigheid te versterken?",
       "offers": ["Projectmanagement (ook buiten IT)", "Digitale strategie, branding & visueel design", "UI/UX-design"],
+
       "sub": [
         {
           "title": "Projectmanagement",
@@ -348,6 +364,196 @@
           "paragraphs": ["We zorgen voor een optimale gebruikerservaring met doordachte UX/UI-designs die klanten aantrekken en behouden.", "We streven naar perfectie in elk detail van ons ontwerp, zodat je merk zich onderscheidt van de rest."],
           "points": ["Consistente branding", "Klanten aantrekken", "Gebruiksgemak"],
           "link": "Plan een designintake"
+        }
+      ]
+    }
+  },
+  "consent": {
+    "title": "Uw privacy",
+    "text": "We gebruiken functionele cookies en lokale opslag voor basisfunctionaliteit. Met uw toestemming laden we ook Google Maps in. Geen tracking- of marketingcookies.",
+    "accept": "Toestemming geven",
+    "decline": "Alleen functioneel",
+    "learnMore": "Cookiebeleid"
+  },
+  "legal": {
+    "lastUpdated": "Augustus 2026",
+    "privacy": {
+      "title": "Privacyverklaring",
+      "intro": "Newland IT-Solutions hecht grote waarde aan uw privacy. In deze privacyverklaring leggen wij uit welke persoonsgegevens wij verwerken, waarom wij dat doen en welke rechten u heeft op grond van de Algemene verordening gegevensbescherming (AVG).",
+      "sections": [
+        {
+          "heading": "1. Verwerkingsverantwoordelijke",
+          "paras": [
+            "Newland IT-Solutions is de verwerkingsverantwoordelijke voor de verwerking van uw persoonsgegevens.",
+            "Newland IT-Solutions, Hessenbergweg 8, 1101 BT Amsterdam • KVK: 83541934 • BTW: NL003835137B29 • info@newlandit-solutions.com • +31 648 364 450"
+          ]
+        },
+        {
+          "heading": "2. Welke persoonsgegevens verwerken wij?",
+          "paras": [
+            "Via ons contactformulier verwerken wij de gegevens die u zelf invult: naam, e-mailadres, telefoonnummer, bedrijfsnaam, adres, uw bericht en eventuele bijlagen (PDF, Word of afbeelding, maximaal 5 MB).",
+            "Wij verzamelen uitsluitend de gegevens die u vrijwillig aan ons verstrekt. Wij verwerken geen bijzondere categorieën persoonsgegevens."
+          ]
+        },
+        {
+          "heading": "3. Doeleinden en grondslagen",
+          "paras": [
+            "Wij verwerken uw gegevens uitsluitend voor de volgende doeleinden:",
+            "• Beantwoorden van uw contactverzoek — grondslag: gerechtvaardigd belang (art. 6 lid 1 sub f AVG).",
+            "• Levering van overeengekomen diensten — grondslag: uitvoering van een overeenkomst (art. 6 lid 1 sub b AVG).",
+            "• Nakoming van wettelijke verplichtingen — grondslag: wettelijke verplichting (art. 6 lid 1 sub c AVG)."
+          ]
+        },
+        {
+          "heading": "4. Verstrekking aan derden",
+          "paras": [
+            "Wij maken gebruik van de volgende verwerkers, elk gedekt door een verwerkersovereenkomst of standaardcontractbepalingen (SCCs):",
+            "• Resend Inc. (VS) — verzorgt het versturen van e-mailnotificaties vanuit ons contactformulier.",
+            "• Sanity AS (Noorwegen/VS) — CMS-platform voor contentbeheer, indien in gebruik.",
+            "• Google LLC (VS) — Google Maps-embed op de contactpagina, uitsluitend na uw uitdrukkelijke toestemming.",
+            "Wij verkopen uw persoonsgegevens nooit aan derden en verstrekken deze niet voor commerciële doeleinden."
+          ]
+        },
+        {
+          "heading": "5. Bewaartermijnen",
+          "paras": [
+            "Contactgegevens bewaren wij maximaal twee jaar na de afhandeling van uw verzoek, tenzij een langere bewaartermijn wettelijk vereist is."
+          ]
+        },
+        {
+          "heading": "6. Uw rechten",
+          "paras": [
+            "Op grond van de AVG heeft u de volgende rechten: inzage in uw persoonsgegevens, rectificatie van onjuiste gegevens, wissing ('recht op vergetelheid'), beperking van de verwerking, gegevensoverdraagbaarheid en bezwaar tegen verwerking op grond van gerechtvaardigd belang.",
+            "U kunt uw rechten uitoefenen door contact op te nemen via info@newlandit-solutions.com. Wij reageren binnen 30 dagen.",
+            "U heeft tevens het recht een klacht in te dienen bij de Autoriteit Persoonsgegevens (autoriteitpersoonsgegevens.nl)."
+          ]
+        },
+        {
+          "heading": "7. Beveiliging",
+          "paras": [
+            "Wij treffen passende technische en organisatorische maatregelen om uw persoonsgegevens te beschermen tegen verlies, onbevoegde toegang of onrechtmatige verwerking."
+          ]
+        },
+        {
+          "heading": "8. Wijzigingen",
+          "paras": [
+            "Wij behouden het recht deze privacyverklaring te wijzigen. De meest actuele versie is altijd te raadplegen via onze website."
+          ]
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookiebeleid",
+      "intro": "Op de website van Newland IT-Solutions maken wij gebruik van cookies en vergelijkbare technologie. In dit cookiebeleid leggen wij uit welke cookies wij gebruiken en hoe u uw voorkeuren kunt beheren.",
+      "sections": [
+        {
+          "heading": "1. Wat zijn cookies?",
+          "paras": [
+            "Cookies zijn kleine tekstbestanden die door uw browser op uw apparaat worden opgeslagen bij het bezoeken van een website. Ze ondersteunen de werking en functionaliteit van de website."
+          ]
+        },
+        {
+          "heading": "2. Welke cookies gebruiken wij?",
+          "paras": [
+            "Functionele cookies: strikt noodzakelijk voor de werking van de website. Deze cookies bevatten geen persoonsgegevens en zijn vrijgesteld van toestemmingsvereisten.",
+            "Toestemmingsvoorkeur: uw cookiekeuze slaan wij op in de lokale opslag van uw browser (localStorage, sleutel: nwl_consent). Dit is géén cookie, maar lokale opslag; er worden geen persoonsgegevens in opgeslagen."
+          ]
+        },
+        {
+          "heading": "3. Analytische en marketing cookies",
+          "paras": [
+            "Wij plaatsen geen analytische of marketing cookies. Wij verzamelen geen bezoekersstatistieken via derden."
+          ]
+        },
+        {
+          "heading": "4. Derde partijen na toestemming",
+          "paras": [
+            "Google Maps (Google LLC, VS): wanneer u via onze cookiebanner toestemming geeft, wordt op de contactpagina een Google Maps-kaart ingeladen. Google kan hierbij gegevens verwerken conform hun privacybeleid (policies.google.com/privacy).",
+            "WhatsApp: klikken op een WhatsApp-knop leidt u door naar de WhatsApp-app of -website. Wij laden WhatsApp niet automatisch in; u initieert dit contact zelf."
+          ]
+        },
+        {
+          "heading": "5. Toestemming beheren",
+          "paras": [
+            "Via de cookiebanner onderaan de pagina kunt u toestemming geven of weigeren voor niet-functionele cookies. U kunt uw keuze op elk moment herzien door de lokale opslag van uw browser te wissen of de banner opnieuw te activeren.",
+            "Zonder toestemming wordt Google Maps niet geladen en worden geen gegevens naar Google verzonden."
+          ]
+        },
+        {
+          "heading": "6. Meer informatie",
+          "paras": [
+            "Meer informatie over cookies en uw rechten vindt u op de website van de Autoriteit Persoonsgegevens: autoriteitpersoonsgegevens.nl",
+            "Privacybeleid Google: policies.google.com/privacy"
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Algemene Voorwaarden",
+      "intro": "Deze algemene voorwaarden zijn van toepassing op alle aanbiedingen, offertes en overeenkomsten van Newland IT-Solutions (KVK: 83541934), gevestigd te Hessenbergweg 8, 1101 BT Amsterdam.",
+      "sections": [
+        {
+          "heading": "Artikel 1 — Toepasselijkheid",
+          "paras": [
+            "1.1 Deze voorwaarden zijn van toepassing op alle overeenkomsten tussen Newland IT-Solutions en de opdrachtgever, tenzij schriftelijk anders is overeengekomen.",
+            "1.2 Afwijkingen van deze voorwaarden zijn uitsluitend geldig indien deze uitdrukkelijk en schriftelijk zijn overeengekomen."
+          ]
+        },
+        {
+          "heading": "Artikel 2 — Aanbiedingen en offertes",
+          "paras": [
+            "2.1 Alle aanbiedingen en offertes zijn vrijblijvend en geldig gedurende 30 dagen na dagtekening, tenzij schriftelijk anders vermeld.",
+            "2.2 Een overeenkomst komt tot stand na schriftelijke bevestiging door Newland IT-Solutions of bij feitelijke aanvang van de werkzaamheden."
+          ]
+        },
+        {
+          "heading": "Artikel 3 — Uitvoering van de overeenkomst",
+          "paras": [
+            "3.1 Newland IT-Solutions verricht haar werkzaamheden naar beste inzicht en vermogen. De overeenkomst heeft het karakter van een inspanningsverplichting, tenzij uitdrukkelijk een resultaat is overeengekomen.",
+            "3.2 De opdrachtgever draagt zorg voor tijdige aanlevering van alle voor de uitvoering benodigde informatie en verleent de vereiste medewerking."
+          ]
+        },
+        {
+          "heading": "Artikel 4 — Tarieven en betaling",
+          "paras": [
+            "4.1 Alle tarieven zijn exclusief BTW, tenzij schriftelijk anders overeengekomen.",
+            "4.2 Facturen dienen binnen 14 dagen na factuurdatum te worden voldaan.",
+            "4.3 Bij niet-tijdige betaling is de wettelijke handelsrente (art. 6:119a BW) verschuldigd, alsmede buitengerechtelijke incassokosten conform het Besluit vergoeding voor buitengerechtelijke incassokosten."
+          ]
+        },
+        {
+          "heading": "Artikel 5 — Aansprakelijkheid",
+          "paras": [
+            "5.1 De totale aansprakelijkheid van Newland IT-Solutions voor directe schade is beperkt tot het bedrag dat in het kader van de betreffende opdracht in rekening is gebracht, met een maximum van € 5.000 per schadeveroorzakend feit.",
+            "5.2 Newland IT-Solutions is niet aansprakelijk voor indirecte schade, gevolgschade, gederfde winst, gemiste besparingen of schade door bedrijfsstagnatie."
+          ]
+        },
+        {
+          "heading": "Artikel 6 — Intellectueel eigendom",
+          "paras": [
+            "6.1 Alle door Newland IT-Solutions ontwikkelde werken — waaronder software, ontwerpen, documentatie en grafische uitingen — blijven eigendom van Newland IT-Solutions totdat de opdrachtgever alle verplichtingen volledig heeft voldaan.",
+            "6.2 Na volledige betaling draagt Newland IT-Solutions de overeengekomen rechten over aan de opdrachtgever conform de gemaakte afspraken."
+          ]
+        },
+        {
+          "heading": "Artikel 7 — Vertrouwelijkheid",
+          "paras": [
+            "7.1 Beide partijen behandelen van de wederpartij ontvangen vertrouwelijke informatie met de nodige geheimhouding en gebruiken deze uitsluitend ter uitvoering van de overeenkomst. Deze verplichting geldt ook na beëindiging van de overeenkomst."
+          ]
+        },
+        {
+          "heading": "Artikel 8 — Duur en beëindiging",
+          "paras": [
+            "8.1 Overeenkomsten worden aangegaan voor de overeengekomen looptijd.",
+            "8.2 Opzegging geschiedt conform de in de overeenkomst vastgelegde opzegtermijn, met een minimum van één kalendermaand, tenzij anders overeengekomen."
+          ]
+        },
+        {
+          "heading": "Artikel 9 — Toepasselijk recht en geschillen",
+          "paras": [
+            "9.1 Op alle overeenkomsten met Newland IT-Solutions is uitsluitend Nederlands recht van toepassing.",
+            "9.2 Geschillen worden in eerste aanleg voorgelegd aan de bevoegde rechter van de Rechtbank Amsterdam."
+          ]
         }
       ]
     }
