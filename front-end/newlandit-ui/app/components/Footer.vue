@@ -39,6 +39,11 @@
             </div>
 
             <div class="mt-6 text-slate-300">© {{ yearRange }} Newland IT-Solution's</div>
+            <div class="mt-4 flex flex-wrap gap-4">
+              <NuxtLink :to="localePath('/privacy')" class="legal-link">{{ t('nav.privacy') }}</NuxtLink>
+              <NuxtLink :to="localePath('/cookies')" class="legal-link">{{ t('nav.cookies') }}</NuxtLink>
+              <NuxtLink :to="localePath('/terms')" class="legal-link">{{ t('nav.terms') }}</NuxtLink>
+            </div>
           </div>
 
           <!-- right: icons -->
@@ -72,6 +77,10 @@
 import { CONTACT } from '#shared/utils/contact'
 import type { ContactInfo } from '#shared/types/company'
 import { computed } from 'vue'
+import { useI18n, useLocalePath } from '#imports'
+
+const { t } = useI18n()
+const localePath = useLocalePath()
 
 const contact: ContactInfo = CONTACT
 const currentYear = new Date().getFullYear()
@@ -79,13 +88,13 @@ const yearRange = computed(() => (contact.startYear === currentYear ? `${contact
 </script>
 
 <style scoped>
-/* keep scoped empty; visuals handled by Tailwind */
-
-.font-semibold{
-color: #FBF6DA;
+.font-semibold { color: #FBF6DA; }
+.mt-6 { color: #FBF6DA; }
+.legal-link {
+  font-size: 0.8rem;
+  color: rgba(251, 246, 218, 0.5);
+  text-decoration: none;
+  transition: color 0.2s;
 }
-.mt-6{
-  color: #FBF6DA;
-}
-
+.legal-link:hover { color: rgba(251, 246, 218, 0.85); }
 </style>
