@@ -22,9 +22,9 @@ Source: `report.md` gap audit (new vs old site)
 | --- | --- | --- | --- | --- |
 | 1 | SEO infrastructure | Done | 100% | None |
 | 2 | i18n NL/EN + copy translation | Done | 100% | Phase 1 |
-| 3 | Content completeness + legal compliance | In progress | 0% | Phase 2 |
+| 3 | Content completeness + legal compliance | In progress | 60% (P0 done; NWL-004/007 remain P1) | Phase 2 |
 | 4 | Trust, conversion & UX polish | Not started | 0% | Phase 3 |
-| 5 | Launch: cutover from `.com` | Not started | 0% | Phase 3 |
+| 5 | Launch: cutover from `.com` | In progress | 50% (NWL-010 done; NWL-011 remains) | Phase 3 |
 
 ---
 
@@ -41,9 +41,6 @@ Source: `report.md` gap audit (new vs old site)
 - No browser auto-redirect (Dutch primary market).
 - All page copy externalised to `i18n/locales/{nl,en}.json`.
 - Language switcher component.
-
-> ⚠️ Deploy note: the NL-default build is on branch `seo-and-nl-i18n` and not yet the live
-> Vercel deploy — see NWL-002 (Phase 3 / Phase 5 blocker).
 
 ## Phase 3 — Content completeness + legal (current)
 
@@ -64,6 +61,12 @@ Remove every placeholder/empty state; reach AVG/GDPR compliance.
 
 ### Exit gate
 All P0 tickets done + verified in preview.
+
+### ✅ P0 shipped (2026-08-28)
+- NWL-001: Homepage stats wired to real values (50+/5yr/98%/72hr)
+- NWL-002: NL-default i18n merged to main; Vercel production redeployed
+- NWL-003: Privacy, cookie policy, terms pages live in NL + EN; footer linked
+- NWL-010: 301 redirects `/oplossingen`→`/solutions`, `/over-ons`→`/about`
 
 ## Phase 4 — Trust, conversion & UX polish
 

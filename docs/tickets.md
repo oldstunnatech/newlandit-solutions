@@ -131,39 +131,6 @@
 ## 🔨 Active Ticket Detail
 
 <details open>
-<summary><strong>NWL-001 — Homepage stats placeholder 🔴 P0</strong></summary>
-
-- Files: `app/pages/index.vue`, `i18n/locales/{nl,en}.json`
-- Problem: home stats render `0+ CLIENTS / 0yr EXPERIENCE / 0% SATISFACTION / 0hr RESPONSE`.
-  About page already uses real values (`50+ / 5yr / 98% / 72hr`).
-- Tasks: source real numbers from owner; wire into home; if count-up animation exists, fix trigger.
-- DoD: no zero/placeholder stat visible; home + About numbers consistent.
-
-</details>
-
-<details open>
-<summary><strong>NWL-002 — Production serves stale EN build 🔴 P0</strong></summary>
-
-- Problem: `newlandit-solutions.vercel.app/` renders an all-English hero (pre-i18n build).
-  NL-default i18n lives on branch `seo-and-nl-i18n` (commit `4488042`), not yet deployed.
-- Tasks: merge branch → main; confirm Vercel production tracks main; redeploy; verify `/` = NL,
-  `/en` = EN, hreflang correct.
-- DoD: production `/` serves Dutch by default; language switch works; no hardcoded EN strings.
-
-</details>
-
-<details open>
-<summary><strong>NWL-003 — Legal pages (AVG/GDPR) 🔴 P0</strong></summary>
-
-- Files: new `app/pages/{privacy,cookies,terms}.vue`, `app/components/Footer.vue`, locale JSON.
-- Problem: contact form collects personal data + file uploads; site embeds Google Maps + WhatsApp.
-  No privacy statement, cookie policy, or terms exist; footer has no legal links.
-- Tasks: author privacyverklaring (NL primary), cookiebeleid, algemene voorwaarden; add footer links; i18n.
-- DoD: three legal pages live in NL + EN; linked from footer; privacy statement covers form data + Resend + Sanity.
-
-</details>
-
-<details open>
 <summary><strong>NWL-004 — Cookie/consent banner 🟠 P1</strong></summary>
 
 - Problem: Google Maps iframe + WhatsApp load without prior consent — AVG requires consent for
