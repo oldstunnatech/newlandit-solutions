@@ -1,6 +1,6 @@
 # 🎫 Newland IT-Solutions — Engineering Tickets
 
-> Last updated: 2026-08-20 · Source: `report.md` · Roadmap: `roadmap.md`
+> Last updated: 2026-08-28 · Source: `report.md` · Roadmap: `roadmap.md`
 >
 > **Legend:** 🔴 P0 launch-blocking · 🟠 P1 high · 🟡 P2 medium · ✅ Done · 🟡 In progress · 📋 Todo
 >
@@ -35,14 +35,14 @@
 </details>
 
 <details open>
-<summary><strong>✅ Phase 3 — Content completeness + legal · DONE (3/3 P0 closed; NWL-004/007 remain P1)</strong></summary>
+<summary><strong>📋 Phase 3 — Content completeness + legal · IN PROGRESS (3/5 done; NWL-004/007 remain P1)</strong></summary>
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
 | NWL-001 | 🔴 P0 | ✅ Done | Homepage stats show `0+ / 0yr / 0% / 0hr` placeholders — fill with real data (About uses `50+/5yr/98%/72hr`) |
 | NWL-002 | 🔴 P0 | ✅ Done | Production Vercel serves stale pre-i18n EN build — merge `seo-and-nl-i18n` + redeploy so `/` is NL |
 | NWL-003 | 🔴 P0 | ✅ Done | No legal pages — add privacy statement, cookie policy, terms + footer links (NL/EN) |
-| NWL-004 | 🟠 P1 | 📋 Todo | No cookie/consent banner gating Google Maps embed + WhatsApp (AVG) |
+| NWL-004 | 🟠 P1 | 📋 Todo | Cookie/consent banner exists but Maps iframe still loads unconditionally — gate it behind `nwl_consent` |
 | NWL-007 | 🟠 P1 | 📋 Todo | Service-page content parity vs old `/oplossingen` deliverables |
 
 </details>
@@ -131,13 +131,12 @@
 ## 🔨 Active Ticket Detail
 
 <details open>
-<summary><strong>NWL-004 — Cookie/consent banner 🟠 P1</strong></summary>
+<summary><strong>NWL-004 — Cookie/consent banner (Maps gate) 🟠 P1</strong></summary>
 
-- Problem: Google Maps iframe + WhatsApp load without prior consent — AVG requires consent for
-  non-essential third-party embeds.
-- Tasks: consent banner (accept/decline non-essential); gate the map iframe behind consent;
-  most-privacy-preserving default.
-- DoD: no non-essential third-party request before consent; choice persisted; NL/EN copy.
+- Files: `app/pages/contact.vue`, `app/components/CookieConsent.vue`
+- Done: banner component with accept/decline; `nwl_consent` persisted in localStorage; NL/EN copy live.
+- Remaining: `contact.vue` Maps `<iframe>` loads unconditionally — wrap in `v-if="consentAccepted"` with placeholder fallback.
+- DoD: no Maps network request fires before `nwl_consent === 'accepted'`; placeholder shown when declined.
 
 </details>
 
@@ -180,10 +179,9 @@
 ## 🔗 Dependencies & next steps
 
 - **Launch blockers (P0):** ✅ All closed — NWL-001, NWL-002, NWL-003, NWL-010.
-- NWL-002 (redeploy) also validates all Phase 2 i18n work in production.
-- NWL-003 (legal) + NWL-004 (consent) should ship together.
+- NWL-004: banner exists (`CookieConsent.vue`), `nwl_consent` key persisted — only Maps gating remains.
 - **Backlog chains:** NWL-020 → NWL-017 → NWL-018/019 (blog); NWL-020 → NWL-021 (copy migration);
   NWL-012 → NWL-013 (cases); NWL-015 → NWL-016 (FAQ); SEO-009 → SEO-010 (local pages);
   NWL-001 → NWL-025 (count-up).
 - **Decision-gated:** NWL-020 (CMS vs i18n), NWL-023 (Stripe) — resolve in PRD §10 before pulling in.
-- **Suggested next:** NWL-002 → NWL-001 → NWL-003/004 → NWL-007 → Phase 4 trust content.
+- **Suggested next:** NWL-004 (wire Maps gate) → NWL-007 (service content parity) → Phase 4 trust content.
