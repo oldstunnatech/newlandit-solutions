@@ -2,7 +2,7 @@
 
 > Completed-ticket detail. The live status overview and active-ticket detail live in
 > [`tickets.md`](./tickets.md). Move a ticket here once it is ✅ Done.
-> Last updated: 2026-08-20
+> Last updated: 2026-08-28
 
 ---
 
@@ -42,3 +42,31 @@
 ### I18N-003 — Language switcher
 - Files: `app/components/LanguageSwitcher.vue`
 - Delivered: NL ⇄ EN toggle; preserves route via locale path.
+
+---
+
+## Phase 3 — Content completeness + legal ✅ P0s shipped 2026-08-28
+
+### NWL-001 — Homepage stats placeholder
+- Files: `app/pages/index.vue`
+- Delivered: `stats` computed array hardcodes real values (50+, 5yr, 98%, 72hr). Count-up animation
+  reads `data-target` attribute; initial display uses same values. Consistent with About page.
+
+### NWL-002 — Production serves stale EN build
+- Delivered: NL-default i18n branch merged to `main` via PR #2 (2026-08-28); Vercel production
+  tracks `main` and redeployed automatically. `/` now serves Dutch; `/en` serves English; hreflang correct.
+
+### NWL-003 — Legal pages (AVG/GDPR)
+- Files: `app/pages/{privacy,cookies,terms}.vue`, `app/components/Footer.vue`, `i18n/locales/{nl,en}.json`
+- Delivered: three legal pages (privacyverklaring, cookiebeleid, algemene voorwaarden) driven by
+  `legal.*` i18n keys. Footer links to all three via `localePath`. `useSeo` applied per page.
+  Cookie consent banner (`CookieConsent.vue`) gates Google Maps iframe; choice stored in `localStorage(nwl_consent)`.
+
+---
+
+## Phase 5 — Launch (cutover) — partial
+
+### NWL-010 — 301 redirects old→new
+- Files: `front-end/newlandit-ui/nuxt.config.ts` (`routeRules`)
+- Delivered: `/oplossingen` → `/solutions` (301), `/oplossingen/**` → `/solutions` (301),
+  `/over-ons` → `/about` (301). Merged via PR #3 → PR #2 (2026-08-28).
