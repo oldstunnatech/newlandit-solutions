@@ -4,23 +4,23 @@
     <div class="blob blob-2"></div>
 
     <div class="relative z-10 max-w-5xl mx-auto px-6 pt-32 pb-24">
-      <NuxtLink to="/solutions" class="back-link mb-8">← All solutions</NuxtLink>
+      <NuxtLink :to="localePath('/solutions')" class="back-link mb-8">{{ t('detail.backToSolutions') }}</NuxtLink>
 
       <div class="text-center max-w-2xl mx-auto mb-12">
-        <p class="eyebrow-pill mb-4">IT Consulting</p>
-        <h1 class="text-xl sm:text-4xl font-extrabold mb-6">IT Consulting & Support</h1>
+        <p class="eyebrow-pill mb-4">{{ t('detail.consulting.eyebrow') }}</p>
+        <h1 class="text-xl sm:text-4xl font-extrabold mb-6">{{ t('detail.consulting.h1') }}</h1>
 
       </div>
 
       <div class="detail-card mb-16">
         <p class="text-lg leading-relaxed mb-8">
-          We help you make smart IT choices and ensure that systems, processes, and support function optimally today and in the future.
+          {{ t('detail.consulting.intro') }}
         </p>
-        <h2 class="text-xl font-bold mb-5">What we offer:</h2>
+        <h2 class="text-xl font-bold mb-5">{{ t('detail.whatWeOffer') }}</h2>
         <ul class="offer-list mb-10">
           <li v-for="item in offers" :key="item">{{ item }}</li>
         </ul>
-        <a href="/solutions/it-support" class="btn-primary">More about IT Consultancy</a>
+        <NuxtLink :to="localePath('/solutions/it-support')" class="btn-primary">{{ t('detail.consulting.moreBtn') }}</NuxtLink>
       </div>
 
       <div class="sub-sections">
@@ -48,64 +48,43 @@
       <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
       </svg>
-      <span class="whatsapp-label">Chat with us</span>
+      <span class="whatsapp-label">{{ t('common.whatsapp') }}</span>
     </a>
   </section>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useI18n, useLocalePath } from '#imports'
+
 definePageMeta({ layout: 'default' })
 
-const offers = [
-  'IT consultancy & system selection',
-  'Digital transformation & integration',
-  'IT support (helpdesk, remote & on-site)',
-  
+const { t, tm, rt } = useI18n()
+const localePath = useLocalePath()
+
+useSeo({
+  title: t('seo.itConsulting.title'),
+  description: t('seo.itConsulting.description'),
+  path: '/solutions/it-consulting',
+})
+
+const offers = computed(() => (tm('detail.consulting.offers') as any[]).map((o) => rt(o)))
+
+const subMeta = [
+  { image: '/images/pexels-ai25studioai-5466280.jpg', href: '/contact' },
+  { image: '/images/pexels-ai25studioai-5466243.jpg', href: '/contact' },
+  { image: '/images/pexels-ai25studioai-5583974.jpg', href: '/contact' },
 ]
-
-const subSections = [
-  {
-    title: 'IT consultancy & system selection',
-    image: '/images/pexels-ai25studioai-5466280.jpg',
-    paragraphs: [
-      'With our IT consultancy and system selection, we offer expert advice and guidance in choosing the right IT solutions that fit your organization and ambitions specifically for companies in Amsterdam and the Metropolitan Area.',
-      'Choose our IT consultancy and system selection to choose the right IT solutions that fit your business needs and future plans.',
-    ],
-    points: ['Expert advice', 'Custom solutions', 'Future-oriented'],
-    link: 'Schedule a consultation',
-
-    href: '/contact/',
-  },
-  {
-    title: 'Digital transformation & integration',
-    image: '/images/pexels-ai25studioai-5466243.jpg',
-    paragraphs: [
-      'At Newland IT-Solutions, we support organizations in realizing digital transformation and integration projects. We ensure you are ready for the future from strategy to implementation.',
-      'Trust our expertise to strengthen your organization with smart, scalable, and future proof IT solutions. Whether it involves cloud solutions, on premise systems, or hybrid integrations we help you improve your competitive position.',
-    ],
-    points: [
-      'Strategy determination and implementation',
-      'Innovative cloud and on-premise solutions',
-      'Efficiency improvement in processes and systems',
-    ],
-    link: 'Request a strategy session',
-
-    href: '/contact/',
-
-  },
-  {
-    title: 'IT support (helpdesk, remote & on-site)',
-    image: '/images/pexels-ai25studioai-5583974.jpg',
-    paragraphs: [
-      'Our IT support services provide remote or on-site support always fast and reliable, exactly when you need it.',
-      'With Newland IT-Solutions, you are assured of professional support for a wide range of IT challenges from daily help desk questions to critical system failures.',
-    ],
-    points: ['Fast response times', 'Proactive management', 'Support on demand'],
-    link: 'Request support',
-
-    href: '/contact/',
-  },
-]
+const subSections = computed(() =>
+  (tm('detail.consulting.sub') as any[]).map((s, i) => ({
+    image: subMeta[i].image,
+    href: localePath(subMeta[i].href),
+    title: rt(s.title),
+    paragraphs: (s.paragraphs as any[]).map((p) => rt(p)),
+    points: (s.points as any[]).map((p) => rt(p)),
+    link: rt(s.link),
+  })),
+)
 </script>
 
 <style scoped>

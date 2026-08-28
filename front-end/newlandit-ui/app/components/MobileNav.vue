@@ -123,36 +123,27 @@
           </li>
         </ul>
       </nav>
+
+      <!-- language switcher -->
+      <div class="mt-6 pt-6 border-t border-slate-200">
+        <LanguageSwitcher />
+      </div>
     </div>
   </aside>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useRoute } from 'vue-router'
-import { isActivePath } from '#shared/utils/navigation'
+import { useNav, type NavItem } from '~/composables/useNav'
 import logo from '~/assets/company_logo.png'
 
-defineProps<{
-  navItems: Array<{
-    name: string
-    href: string
-    icon: string
-    children?: Array<{
-      name: string
-      href: string
-      children?: Array<{ name: string; href: string }>
-    }>
-  }>
-}>()
+defineProps<{ navItems: NavItem[] }>()
 
 defineEmits<{ close: [] }>()
 
-const route = useRoute()
+const { isActive } = useNav()
 const openMenu    = ref<string | null>(null)
 const openSubmenu = ref<string | null>(null)
-
-const isActive = (href: string) => isActivePath(href, route.path)
 </script>
 
 <style scoped>

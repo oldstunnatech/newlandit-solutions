@@ -36,7 +36,7 @@ jobs:
         run: npm ci
 
       - name: Type check
-        run: npx vue-tsc --noEmit
+        run: ./node_modules/.bin/vue-tsc --noEmit
 
       - name: Security audit (high/critical)
         run: npm audit --audit-level=high

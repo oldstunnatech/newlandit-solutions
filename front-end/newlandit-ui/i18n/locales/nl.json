@@ -1,0 +1,561 @@
+{
+  "common": {
+    "cta": {
+      "intro": "Plan een kennismaking",
+      "ourServices": "Onze diensten",
+      "viewAllServices": "Bekijk al onze diensten →",
+      "viewServices": "Bekijk onze diensten",
+      "contactUs": "Neem contact op",
+      "learnMore": "Lees meer",
+      "allSolutions": "← Alle diensten",
+      "scheduleIntake": "Plan een intakegesprek"
+    },
+    "whatsapp": "Chat met ons",
+    "langSwitch": "Taal"
+  },
+  "nav": {
+    "primary": "Hoofdnavigatie",
+    "home": "Home",
+    "solutions": "Diensten",
+    "softwareDevelopment": "Softwareontwikkeling",
+    "cmsWebsites": "CMS-website & WordPress",
+    "itConsulting": "IT-consultancy",
+    "itSupport": "IT-support (helpdesk, remote & on-site)",
+    "digitalStrategy": "Digitale strategie & enablement",
+    "about": "Over ons",
+    "contact": "Contact",
+    "privacy": "Privacyverklaring",
+    "cookies": "Cookiebeleid",
+    "terms": "Algemene voorwaarden"
+  },
+  "seo": {
+    "home": {
+      "title": "IT-support, maatwerksoftware & websites in Amsterdam",
+      "description": "Newland IT-Solutions is jouw IT-partner in Amsterdam: betrouwbare IT-support, maatwerksoftware en professionele websites voor zzp’ers en het mkb — zonder jargon."
+    },
+    "solutions": {
+      "title": "IT-diensten & oplossingen in Amsterdam",
+      "description": "Slimme, schaalbare IT-oplossingen van Newland IT-Solutions: softwareontwikkeling, IT-consultancy & support en digitale strategie voor organisaties in Amsterdam."
+    },
+    "about": {
+      "title": "Over Newland IT-Solutions — jouw IT-partner in Amsterdam",
+      "description": "Sinds 2021 helpt Newland IT-Solutions bedrijven in Amsterdam om complexe IT-uitdagingen om te zetten in heldere, duurzame oplossingen. Lees over onze missie, waarden en team."
+    },
+    "contact": {
+      "title": "Contact Newland IT-Solutions in Amsterdam",
+      "description": "Neem contact op met Newland IT-Solutions in Amsterdam. Vertel ons over je project en we reageren binnen 3 werkdagen. Bel, mail of WhatsApp ons."
+    },
+    "softwareDevelopment": {
+      "title": "Softwareontwikkeling in Amsterdam",
+      "description": "Maatwerk web- en mobiele applicaties, CMS-websites en API-integraties voor bedrijven in Amsterdam. Schaalbare, gebruiksvriendelijke software van Newland IT-Solutions."
+    },
+    "cmsWebsites": {
+      "title": "CMS-websites — WordPress, Wix & Shopify",
+      "description": "Professionele, eenvoudig te beheren CMS-websites in WordPress, Wix of Shopify. Newland IT-Solutions bouwt snelle, schaalbare sites die je online zichtbaarheid vergroten."
+    },
+    "itConsulting": {
+      "title": "IT-consultancy & systeemselectie in Amsterdam",
+      "description": "Strategische IT-consultancy, systeemselectie en digitale transformatie voor organisaties in Amsterdam. Slimme IT-keuzes met betrouwbare doorlopende support."
+    },
+    "itSupport": {
+      "title": "IT-support in Amsterdam — remote & on-site",
+      "description": "Betrouwbare IT-support in Amsterdam: helpdesk, remote en on-site hulp met heldere SLA’s. Houd je systemen stabiel en veilig met Newland IT-Solutions."
+    },
+    "digitalStrategy": {
+      "title": "Digitale strategie & enablement in Amsterdam",
+      "description": "Digitale strategie, projectmanagement, branding en UX/UI-design van Newland IT-Solutions. Wij laten technologie jouw ambities ondersteunen voor schaalbare groei."
+    },
+    "privacy": {
+      "title": "Privacyverklaring — Newland IT-Solutions",
+      "description": "Lees hoe Newland IT-Solutions persoonsgegevens verwerkt conform de AVG en welke rechten u heeft als betrokkene."
+    },
+    "cookies": {
+      "title": "Cookiebeleid — Newland IT-Solutions",
+      "description": "Meer informatie over ons gebruik van cookies en lokale opslag op de website van Newland IT-Solutions."
+    },
+    "terms": {
+      "title": "Algemene Voorwaarden — Newland IT-Solutions",
+      "description": "De algemene voorwaarden die van toepassing zijn op alle diensten van Newland IT-Solutions."
+    }
+  },
+  "home": {
+    "badge": "Slimme IT-oplossingen voor groeiende bedrijven in Amsterdam",
+    "subtitle": "Wij helpen zzp’ers en het mkb in Amsterdam en omstreken met betrouwbare IT-support, maatwerksoftware en professionele websites — zonder ingewikkelde technische taal.",
+    "stats": {
+      "clients": "Klanten geholpen",
+      "experience": "Jaar ervaring",
+      "satisfaction": "Tevredenheid",
+      "response": "Reactietijd"
+    },
+    "customers": {
+      "eyebrow": "Vertrouwd door",
+      "heading": "Onze klanten",
+      "intro": "Van lokale organisaties tot landelijke instellingen — deze klanten vertrouwen op onze expertise in softwareontwikkeling, IT-strategie en projectmanagement."
+    },
+    "why": {
+      "eyebrow": "Onze waarden",
+      "heading": "Waarom Newland IT-Solutions?",
+      "cards": [
+        { "title": "Heldere communicatie & transparantie", "description": "Duidelijke afspraken, begrijpelijke taal, geen verrassingen." },
+        { "title": "Maatwerk", "description": "Oplossingen afgestemd op jouw processen en doelen." },
+        { "title": "Snelle support", "description": "Snel geholpen, remote of op locatie." },
+        { "title": "Ervaren team", "description": "Van implementatie tot strategie — één partner." }
+      ]
+    },
+    "offer": {
+      "eyebrow": "Onze aanpak",
+      "heading": "Voor wie zijn wij er?",
+      "steps": [
+        { "title": "Persoonlijke aanpak", "description": "Wij geloven in korte lijnen en heldere communicatie. We leren jouw uitdagingen kennen en helpen oplossingen te vinden die werken." },
+        { "title": "Ervaring & expertise", "description": "Met jarenlange ervaring in webdevelopment, consultancy en IT-support helpen we organisaties groeien in efficiëntie en stabiliteit." },
+        { "title": "Flexibele oplossingen", "description": "Van kleine opdrachten tot doorlopende support — onze aanpak past zich aan jouw organisatie aan." },
+        { "title": "Klantgericht & betrouwbaar", "description": "Jouw succes is onze prioriteit. Wij zorgen dat onze oplossingen aantoonbaar bijdragen aan je processen en bedrijfsdoelen." }
+      ]
+    },
+    "process": {
+      "heading": "Wat wij bieden",
+      "steps": [
+        { "title": "Ontdekken", "description": "We luisteren, analyseren en begrijpen jouw situatie en doelen." },
+        { "title": "Plannen", "description": "We maken een helder, op maat gemaakt plan voor je project." },
+        { "title": "Bouwen", "description": "We ontwikkelen en implementeren de oplossing met precisie." },
+        { "title": "Support", "description": "We blijven beschikbaar voor doorlopende support en verbeteringen." }
+      ]
+    },
+    "services": {
+      "eyebrow": "Wat wij doen",
+      "heading": "Onze diensten",
+      "intro": "We bieden een breed scala aan gespecialiseerde IT-diensten, afgestemd op jouw unieke situatie — altijd gericht op duurzame digitale groei.",
+      "items": [
+        { "title": "Software & automatisering", "description": "Slimme tools die processen versnellen en vereenvoudigen. We bouwen oplossingen die écht werken — van databeheer tot workflow-optimalisatie.", "button": "Meer over ontwikkeling" },
+        { "title": "IT-support & beheer", "description": "Directe hulp bij storingen, onderhoud en beveiliging. Remote of op locatie zorgen we dat je systemen stabiel en veilig blijven.", "button": "Meer over IT-support" },
+        { "title": "Consultancy & strategie", "description": "Strategisch advies voor digitale transformatie en schaalbare groei. Wij zorgen dat je technologie je ambities ondersteunt.", "button": "Meer over strategie" }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Neem contact op",
+      "heading": "Klaar om je bedrijf te laten groeien?",
+      "text": "Laten we bespreken hoe we je kunnen helpen met IT-support, software of strategie."
+    }
+  },
+  "solutions": {
+    "eyebrow": "Wat wij doen",
+    "heading": "Diensten",
+    "intro": "Bij Newland IT-Solutions leveren we slimme en schaalbare IT-oplossingen die organisaties helpen groeien, processen stroomlijnen en digitaal sterker worden. Van softwareontwikkeling tot strategie en support — wij zijn jouw digitale partner.",
+    "learnMore": "Lees meer →",
+    "cards": [
+      { "title": "Softwareontwikkeling", "summary": "Van maatwerkapplicaties tot CMS-websites: we bouwen digitale oplossingen die perfect aansluiten op je organisatie. We begeleiden het hele ontwikkeltraject, van strategie tot implementatie." },
+      { "title": "IT-consultancy", "summary": "We ondersteunen organisaties bij het maken van slimme IT-keuzes en zorgen dat systemen altijd operationeel blijven. Van strategisch advies tot dagelijkse IT-support." },
+      { "title": "Digitale strategie & enablement", "summary": "We begeleiden zowel IT- als niet-IT-projecten met een gestructureerde aanpak. Daarnaast versterken we je organisatie met digitale strategieën voor merkontwikkeling." }
+    ],
+    "ctaText": "Niet zeker welke oplossing bij jouw situatie past? Neem contact op voor een vrijblijvend gesprek. Samen vinden we het juiste pad."
+  },
+  "about": {
+    "eyebrow": "Wie we zijn",
+    "headingA": "Technologie die werkt",
+    "headingB": "voor mensen",
+    "intro": "Sinds 2021 helpen we bedrijven en particulieren in Amsterdam en daarbuiten om complexe IT-uitdagingen om te zetten in heldere, duurzame oplossingen.",
+    "stats": {
+      "clients": "Klanten geholpen",
+      "experience": "Jaar ervaring",
+      "satisfaction": "Tevredenheid",
+      "response": "Reactietijd"
+    },
+    "foundation": {
+      "eyebrow": "Ons fundament",
+      "heading": "Wat ons drijft"
+    },
+    "journey": {
+      "eyebrow": "Onze reis",
+      "heading": "Hoe we hier kwamen"
+    },
+    "valuesSection": {
+      "eyebrow": "Onze waarden",
+      "heading": "Waar we voor staan"
+    },
+    "cta": {
+      "eyebrow": "Laten we samenwerken",
+      "heading": "Klaar om je bedrijf vooruit te helpen?",
+      "text": "Vertel ons waar je aan werkt — we reageren binnen 3 werkdagen."
+    },
+    "mvs": [
+      { "title": "Missie", "body": "Bij Newland IT-Solutions staat de klant centraal. We helpen bedrijven en particulieren in Amsterdam en omstreken met slimme IT-oplossingen die digitalisering versnellen en processen vereenvoudigen. Onze aanpak is persoonlijk en toegankelijk: technologie moet voor de klant werken." },
+      { "title": "Visie", "body": "We maken technologie begrijpelijk en toepasbaar — niet alleen voor grote organisaties, maar ook voor zzp’ers, scholen en teams in Amsterdam en Noord-Holland. Met kennisdeling en maatwerk helpen we klanten sneller te werken, efficiënter te groeien en klaar te zijn voor de digitale toekomst." },
+      { "title": "Strategie", "body": "Als IT-bureau in Amsterdam ontwikkelen we IT-oplossingen op maat die schaalbaar en gebruiksvriendelijk zijn. Daarnaast helpen we organisaties hun digitale strategie aan te scherpen door complexe vraagstukken helder in kaart te brengen en efficiënte oplossingen te realiseren." }
+    ],
+    "timeline": [
+      { "year": "2025", "title": "Team & platform laten groeien", "description": "We investeren in ons eigen platform en tooling om sneller en consistenter resultaten te leveren voor klanten binnen al onze diensten." },
+      { "year": "2024", "title": "Vertrouwd door 50+ klanten", "description": "Mijlpaal van 50+ actieve klanten bereikt — van zzp’ers en scholen tot landelijke instellingen, met een tevredenheid van 98%." },
+      { "year": "2023", "title": "Dienstenaanbod uitgebreid", "description": "Softwareontwikkeling en consultancy toegevoegd, waardoor we klanten van strategie tot implementatie kunnen begeleiden." },
+      { "year": "2022", "title": "Eerste grote klanten", "description": "Ons portfolio uitgebreid met lokale organisaties en mkb in Amsterdam en Noord-Holland — IT-support, automatisering en strategie." },
+      { "year": "2021", "title": "Opgericht in Amsterdam", "description": "Newland IT-Solutions opgericht met een heldere missie: technologie persoonlijk, toegankelijk en effectief maken voor bedrijven van elke omvang." }
+    ],
+    "values": [
+      { "title": "Transparantie", "description": "Duidelijke afspraken, begrijpelijke taal, geen verrassingen. Je weet altijd wat we doen en waarom." },
+      { "title": "Maatwerk", "description": "Geen standaardoplossingen. Elke oplossing is afgestemd op jouw specifieke processen en doelen." },
+      { "title": "Responsiviteit", "description": "Snelle, betrouwbare support — remote of op locatie. We zijn er wanneer het ertoe doet." },
+      { "title": "Expertise", "description": "Van praktische implementatie tot strategie op hoog niveau — één partner over de volle breedte." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Neem contact op",
+    "heading": "Laten we praten over je project",
+    "intro": "Vertel ons waar je aan werkt en we reageren binnen 3 werkdagen.",
+    "form": {
+      "name": "Naam",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "company": "Bedrijf",
+      "address": "Adres",
+      "message": "Bericht",
+      "attachment": "Bijlage (optioneel)",
+      "dropActive": "Zet je bestand hier neer",
+      "dropIdle": "Klik of sleep om toe te voegen",
+      "fileHint": "PDF, Word of afbeelding — tot 5 MB",
+      "removeAttachment": "Bijlage verwijderen",
+      "send": "Verstuur bericht",
+      "sending": "Versturen…",
+      "sentHeading": "Bericht verzonden",
+      "sendAnother": "Nog een bericht sturen"
+    },
+    "info": {
+      "direct": "Direct contact",
+      "responseTime": "Reactietijd",
+      "typicalReply": "gemiddelde reactie",
+      "responseNote": "We lezen elk bericht persoonlijk — geen wachtrijen, geen bots.",
+      "preferChat": "Liever chatten?",
+      "whatsappBtn": "Stuur ons een WhatsApp"
+    },
+    "visit": {
+      "eyebrow": "Bezoek ons",
+      "heading": "Vind ons kantoor",
+      "mapTitle": "Kaart kantoorlocatie",
+      "address": "Adres",
+      "closedHolidays": "Gesloten op feestdagen",
+      "openingHours": "Openingstijden"
+    }
+  },
+  "detail": {
+    "whatWeOffer": "Wat wij bieden:",
+    "backToSolutions": "← Alle diensten",
+    "includes": "Inbegrepen:",
+    "viewDetails": "Bekijk details",
+    "orderFrom": "Bestel vanaf",
+    "getStarted": "Aan de slag",
+    "freeConsult": "Plan een gratis adviesgesprek",
+    "software": {
+      "eyebrow": "Softwareontwikkeling",
+      "h1": "Softwareontwikkeling voor elk bedrijf",
+      "intro": "Welkom bij de afdeling Softwareontwikkeling van Newland IT-Solutions. We ontwikkelen oplossingen op maat voor web- en mobiele applicaties, CMS-platforms, API-integraties en complete digitale systemen — speciaal voor bedrijven in Amsterdam en de Metropoolregio Amsterdam.",
+      "moreBtn": "Meer over ontwikkeling",
+      "offers": [
+        "Web- en mobiele applicaties op maat",
+        "CMS-websites (waaronder WordPress, Wix, Shopify)",
+        "Softwareontwikkeling & API-integraties"
+      ],
+      "sub": [
+        {
+          "title": "Web- en mobiele applicaties op maat",
+          "paragraphs": [
+            "We bouwen applicaties afgestemd op je dagelijkse praktijk. Van interne tools tot klantgerichte platforms — onze oplossingen combineren technologie met gebruiksgemak en schaalbaarheid. Zo leveren we oplossingen die niet alleen technisch robuust zijn, maar ook intuïtief en toekomstbestendig.",
+            "Kies voor onze maatwerkoplossingen en profiteer van efficiëntie en klantgerichte service."
+          ],
+          "points": ["Volledig afgestemd op je processen", "Toepassing van de nieuwste technologieën", "Gericht op gebruiksgemak en resultaat"],
+          "link": "Plan een intakegesprek"
+        },
+        {
+          "title": "CMS-websites (waaronder WordPress, Wix, Shopify)",
+          "paragraphs": [
+            "Of je nu kiest voor WordPress, Wix of Shopify — we bouwen intuïtieve, schaalbare en beheersbare CMS-websites die je online zichtbaarheid versterken en bijdragen aan groei.",
+            "We ontwerpen en bouwen CMS-websites die niet alleen mooi zijn, maar ook meetbaar resultaat leveren. Of je nu een portfolio, webshop of zakelijke site nodig hebt — we zorgen voor snelheid, helderheid en gebruiksgemak."
+          ],
+          "points": ["Professioneel ontwerp & technische uitvoering", "Eenvoudig te beheren CMS", "Optimalisatie van je online aanwezigheid"],
+          "link": "Lees meer"
+        },
+        {
+          "title": "Softwareontwikkeling & API-integraties",
+          "paragraphs": [
+            "We ontwikkelen schaalbare softwareplatforms die je bedrijfsprocessen optimaliseren en groei ondersteunen. Met slimme API-integraties koppelen we systemen, versnellen we workflows en maken we data-uitwisseling naadloos.",
+            "Werk aan de toekomst van je organisatie met onze maatwerkoplossingen voor platformontwikkeling en integraties."
+          ],
+          "points": ["Efficiënt ingerichte processen", "Betere schaalbaarheid en flexibiliteit", "Integratie van externe tools en databronnen"],
+          "link": "Plan een intakegesprek"
+        }
+      ]
+    },
+    "cms": {
+      "backSoftware": "← Softwareontwikkeling",
+      "eyebrow": "CMS-websites",
+      "h1": "CMS-websites voor bedrijfsgroei",
+      "intro": "Bij Newland IT-Solutions bouwen we intuïtieve, schaalbare en gebruiksvriendelijke websites die je online zichtbaarheid vergroten. Of je nu een persoonlijke site, een zakelijke website of een webshop nodig hebt — we bieden oplossingen voor bedrijven in Amsterdam en omstreken, afgestemd op je doelen, budget en stijl.",
+      "ctaText": "Niet zeker welk platform bij jouw situatie past?",
+      "products": [
+        { "title": "Wix-website", "description": "Een snelle, moderne website op basis van een gebruiksvriendelijke drag-and-drop-editor. Ideaal voor zzp’ers, kleine bedrijven of portfolio’s.", "features": ["Pixel-perfect ontwerp", "Meer vrijheid in design", "Betere performance & schaalbaarheid"] },
+        { "title": "WordPress-website", "description": "Krachtige en flexibele websites op het meest gebruikte CMS ter wereld. Perfect voor groeiende bedrijven.", "features": ["Volledig aanpasbaar", "Uit te breiden met plugins", "SEO-vriendelijk en schaalbaar"] },
+        { "title": "E-commerce Shopify-website", "description": "Professionele e-commerce-oplossing om snel en overzichtelijk producten online te verkopen.", "features": ["Geoptimaliseerd voor conversie", "Betaal- en verzendmodules inbegrepen", "Volledig te beheren via dashboard"] }
+      ]
+    },
+    "consulting": {
+      "eyebrow": "IT-consultancy",
+      "h1": "IT-consultancy & support",
+      "intro": "We helpen je slimme IT-keuzes te maken en zorgen dat systemen, processen en support optimaal functioneren — vandaag en in de toekomst.",
+      "moreBtn": "Meer over IT-consultancy",
+      "offers": ["IT-consultancy & systeemselectie", "Netwerk-, server- & cloudbeheer", "Digitale transformatie & integratie", "IT-support (helpdesk, remote & on-site)"],
+      "sub": [
+        {
+          "title": "IT-consultancy & systeemselectie",
+          "paragraphs": ["Met onze IT-consultancy en systeemselectie bieden we deskundig advies en begeleiding bij het kiezen van de juiste IT-oplossingen die passen bij je organisatie en ambities — speciaal voor bedrijven in Amsterdam en de Metropoolregio.", "Kies voor onze IT-consultancy en systeemselectie om de juiste IT-oplossingen te kiezen die passen bij je bedrijfsbehoeften en toekomstplannen."],
+          "points": ["Deskundig advies", "Oplossingen op maat", "Toekomstgericht"],
+          "link": "Plan een adviesgesprek"
+        },
+        {
+          "title": "Digitale transformatie & integratie",
+          "paragraphs": ["Bij Newland IT-Solutions ondersteunen we organisaties bij het realiseren van digitale transformatie- en integratieprojecten. We zorgen dat je klaar bent voor de toekomst — van strategie tot implementatie.", "Vertrouw op onze expertise om je organisatie te versterken met slimme, schaalbare en toekomstbestendige IT-oplossingen. Of het nu gaat om cloudoplossingen, on-premise systemen of hybride integraties — we helpen je je concurrentiepositie te verbeteren."],
+          "points": ["Strategiebepaling en implementatie", "Innovatieve cloud- en on-premise oplossingen", "Efficiëntieverbetering in processen en systemen"],
+          "link": "Vraag een strategiesessie aan"
+        },
+        {
+          "title": "IT-support (helpdesk, remote & on-site)",
+          "paragraphs": ["Onze IT-supportdiensten bieden remote of on-site ondersteuning — altijd snel en betrouwbaar, precies wanneer je het nodig hebt.", "Met Newland IT-Solutions ben je verzekerd van professionele support voor een breed scala aan IT-uitdagingen, van dagelijkse helpdeskvragen tot kritieke systeemstoringen."],
+          "points": ["Snelle reactietijden", "Proactief beheer", "Support op aanvraag"],
+          "link": "Vraag support aan"
+        }
+      ]
+    },
+    "support": {
+      "backConsulting": "← IT-consultancy",
+      "eyebrow": "IT-supportdiensten",
+      "h1": "Slimme IT-support, waar en wanneer je die nodig hebt",
+      "intro": "Bij Newland IT-Solutions houden we je bedrijf draaiend in Amsterdam en Noord-Holland. Of je nu zzp’er bent of een groeiend team aanstuurt — we bieden betrouwbare support, remote en op locatie. Van snelle helpdeskvragen tot proactief systeembeheer: jij kiest het pakket dat bij je organisatie past.",
+      "mostPopular": "Meest gekozen",
+      "ctaHeading": "Niet zeker welk pakket past?",
+      "ctaText": "Neem contact op voor een vrijblijvend adviesgesprek — samen vinden we het juiste plan.",
+      "plans": [
+        { "title": "Basic Support Remote", "target": "Gericht op zzp’ers en kleine organisaties die vooral reactieve remote hulp nodig hebben, zonder vaste verplichtingen.", "description": "€80 per uur (op aanvraag) of €45/maand per werkplek", "features": ["Remote support tijdens kantooruren", "Basismonitoring (optioneel via remote-agent)", "10% korting op meerwerk (zoals kleine projecten of upgrades)"], "note": "" },
+        { "title": "Pro Support Remote", "target": "Voor groeiende bedrijven die behoefte hebben aan continuïteit, monitoring en optimalisatie.", "description": "Vanaf €55 p/m per werkplek voor het mkb met 5–25 werkplekken.", "features": ["Onbeperkte remote support tijdens kantooruren", "Periodieke health checks", "Patchbeheer", "Advies over back-up en opslag"], "note": "" },
+        { "title": "Premium Support – DevOps & Cloud SLA", "target": "Voor agencies, ontwikkelteams en bedrijven met complexe IT-omgevingen, CI/CD-processen of hybride cloudstructuren.", "description": "Vanaf €750 p/m op basis van een SLA op maat, afhankelijk van projectomvang en uitrol.", "features": ["Hybride support (remote & on-site)", "SLA-gebaseerde aanpak met snelle reactietijden", "Cloud- en infrastructuurbeheer (Azure, AWS, CI/CD)"], "note": "Dit pakket wordt volledig afgestemd op jouw specifieke situatie. Vraag een gratis offerte aan voor een voorstel op maat." }
+      ]
+    },
+    "strategy": {
+      "eyebrow": "Digitale strategie",
+      "h1": "Digitale strategie & enablement",
+      "intro": "We begeleiden zowel IT- als niet-IT-projecten met een gestructureerde aanpak. Daarnaast versterken we je organisatie met digitale strategieën voor merkontwikkeling — van projectmanagement tot branding en design.",
+      "moreBtn": "Meer over enablement",
+      "ctaText": "Klaar om je merk en digitale aanwezigheid te versterken?",
+      "offers": ["Projectmanagement (ook buiten IT)", "Digitale strategie, branding & visueel design", "UI/UX-design"],
+
+      "sub": [
+        {
+          "title": "Projectmanagement",
+          "badge": "Planning",
+          "paragraphs": ["Of het nu gaat om een IT-implementatie, digitale transformatie of interne procesverbetering — goed projectmanagement maakt het verschil. Bij Newland IT-Solutions begeleiden we bedrijven in Amsterdam van start tot oplevering, met structuur, realistische planning en heldere communicatie."],
+          "points": ["Begeleiding van technische én niet-technische projecten", "Structuur, planning en voortgangsbewaking", "Afstemming op je interne processen en teams"],
+          "link": "Vraag projectbegeleiding aan"
+        },
+        {
+          "title": "Branding & logo-ontwerp",
+          "badge": "Identiteit",
+          "paragraphs": ["Ons team van experts versterkt je merkidentiteit met uniek logo- en brandingontwerp.", "Onze creatieve aanpak zorgt voor een unieke uitstraling die klanten aantrekt en behoudt."],
+          "points": ["Uniek logo- en brandingontwerp", "Optimale gebruikerservaring", "Effectieve strategieën"],
+          "link": "Plan een designintake"
+        },
+        {
+          "title": "UX/UI-design",
+          "badge": "Design",
+          "paragraphs": ["We zorgen voor een optimale gebruikerservaring met doordachte UX/UI-designs die klanten aantrekken en behouden.", "We streven naar perfectie in elk detail van ons ontwerp, zodat je merk zich onderscheidt van de rest."],
+          "points": ["Consistente branding", "Klanten aantrekken", "Gebruiksgemak"],
+          "link": "Plan een designintake"
+        }
+      ]
+    }
+  },
+  "consent": {
+    "title": "Uw privacy",
+    "text": "We gebruiken functionele cookies en lokale opslag voor basisfunctionaliteit. Met uw toestemming laden we ook Google Maps in. Geen tracking- of marketingcookies.",
+    "accept": "Toestemming geven",
+    "decline": "Alleen functioneel",
+    "learnMore": "Cookiebeleid"
+  },
+  "legal": {
+    "lastUpdated": "Augustus 2026",
+    "privacy": {
+      "title": "Privacyverklaring",
+      "intro": "Newland IT-Solutions hecht grote waarde aan uw privacy. In deze privacyverklaring leggen wij uit welke persoonsgegevens wij verwerken, waarom wij dat doen en welke rechten u heeft op grond van de Algemene verordening gegevensbescherming (AVG).",
+      "sections": [
+        {
+          "heading": "1. Verwerkingsverantwoordelijke",
+          "paras": [
+            "Newland IT-Solutions is de verwerkingsverantwoordelijke voor de verwerking van uw persoonsgegevens.",
+            "Newland IT-Solutions, Hessenbergweg 8, 1101 BT Amsterdam • KVK: 83541934 • BTW: NL003835137B29 • info@newlandit-solutions.com • +31 648 364 450"
+          ]
+        },
+        {
+          "heading": "2. Welke persoonsgegevens verwerken wij?",
+          "paras": [
+            "Via ons contactformulier verwerken wij de gegevens die u zelf invult: naam, e-mailadres, telefoonnummer, bedrijfsnaam, adres, uw bericht en eventuele bijlagen (PDF, Word of afbeelding, maximaal 5 MB).",
+            "Wij verzamelen uitsluitend de gegevens die u vrijwillig aan ons verstrekt. Wij verwerken geen bijzondere categorieën persoonsgegevens."
+          ]
+        },
+        {
+          "heading": "3. Doeleinden en grondslagen",
+          "paras": [
+            "Wij verwerken uw gegevens uitsluitend voor de volgende doeleinden:",
+            "• Beantwoorden van uw contactverzoek — grondslag: gerechtvaardigd belang (art. 6 lid 1 sub f AVG).",
+            "• Levering van overeengekomen diensten — grondslag: uitvoering van een overeenkomst (art. 6 lid 1 sub b AVG).",
+            "• Nakoming van wettelijke verplichtingen — grondslag: wettelijke verplichting (art. 6 lid 1 sub c AVG)."
+          ]
+        },
+        {
+          "heading": "4. Verstrekking aan derden",
+          "paras": [
+            "Wij maken gebruik van de volgende verwerkers, elk gedekt door een verwerkersovereenkomst of standaardcontractbepalingen (SCCs):",
+            "• Resend Inc. (VS) — verzorgt het versturen van e-mailnotificaties vanuit ons contactformulier.",
+            "• Sanity AS (Noorwegen/VS) — CMS-platform voor contentbeheer, indien in gebruik.",
+            "• Google LLC (VS) — Google Maps-embed op de contactpagina, uitsluitend na uw uitdrukkelijke toestemming.",
+            "Wij verkopen uw persoonsgegevens nooit aan derden en verstrekken deze niet voor commerciële doeleinden."
+          ]
+        },
+        {
+          "heading": "5. Bewaartermijnen",
+          "paras": [
+            "Contactgegevens bewaren wij maximaal twee jaar na de afhandeling van uw verzoek, tenzij een langere bewaartermijn wettelijk vereist is."
+          ]
+        },
+        {
+          "heading": "6. Uw rechten",
+          "paras": [
+            "Op grond van de AVG heeft u de volgende rechten: inzage in uw persoonsgegevens, rectificatie van onjuiste gegevens, wissing ('recht op vergetelheid'), beperking van de verwerking, gegevensoverdraagbaarheid en bezwaar tegen verwerking op grond van gerechtvaardigd belang.",
+            "U kunt uw rechten uitoefenen door contact op te nemen via info@newlandit-solutions.com. Wij reageren binnen 30 dagen.",
+            "U heeft tevens het recht een klacht in te dienen bij de Autoriteit Persoonsgegevens (autoriteitpersoonsgegevens.nl)."
+          ]
+        },
+        {
+          "heading": "7. Beveiliging",
+          "paras": [
+            "Wij treffen passende technische en organisatorische maatregelen om uw persoonsgegevens te beschermen tegen verlies, onbevoegde toegang of onrechtmatige verwerking."
+          ]
+        },
+        {
+          "heading": "8. Wijzigingen",
+          "paras": [
+            "Wij behouden het recht deze privacyverklaring te wijzigen. De meest actuele versie is altijd te raadplegen via onze website."
+          ]
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookiebeleid",
+      "intro": "Op de website van Newland IT-Solutions maken wij gebruik van cookies en vergelijkbare technologie. In dit cookiebeleid leggen wij uit welke cookies wij gebruiken en hoe u uw voorkeuren kunt beheren.",
+      "sections": [
+        {
+          "heading": "1. Wat zijn cookies?",
+          "paras": [
+            "Cookies zijn kleine tekstbestanden die door uw browser op uw apparaat worden opgeslagen bij het bezoeken van een website. Ze ondersteunen de werking en functionaliteit van de website."
+          ]
+        },
+        {
+          "heading": "2. Welke cookies gebruiken wij?",
+          "paras": [
+            "Functionele cookies: strikt noodzakelijk voor de werking van de website. Deze cookies bevatten geen persoonsgegevens en zijn vrijgesteld van toestemmingsvereisten.",
+            "Toestemmingsvoorkeur: uw cookiekeuze slaan wij op in de lokale opslag van uw browser (localStorage, sleutel: nwl_consent). Dit is géén cookie, maar lokale opslag; er worden geen persoonsgegevens in opgeslagen."
+          ]
+        },
+        {
+          "heading": "3. Analytische en marketing cookies",
+          "paras": [
+            "Wij plaatsen geen analytische of marketing cookies. Wij verzamelen geen bezoekersstatistieken via derden."
+          ]
+        },
+        {
+          "heading": "4. Derde partijen na toestemming",
+          "paras": [
+            "Google Maps (Google LLC, VS): wanneer u via onze cookiebanner toestemming geeft, wordt op de contactpagina een Google Maps-kaart ingeladen. Google kan hierbij gegevens verwerken conform hun privacybeleid (policies.google.com/privacy).",
+            "WhatsApp: klikken op een WhatsApp-knop leidt u door naar de WhatsApp-app of -website. Wij laden WhatsApp niet automatisch in; u initieert dit contact zelf."
+          ]
+        },
+        {
+          "heading": "5. Toestemming beheren",
+          "paras": [
+            "Via de cookiebanner onderaan de pagina kunt u toestemming geven of weigeren voor niet-functionele cookies. U kunt uw keuze op elk moment herzien door de lokale opslag van uw browser te wissen of de banner opnieuw te activeren.",
+            "Zonder toestemming wordt Google Maps niet geladen en worden geen gegevens naar Google verzonden."
+          ]
+        },
+        {
+          "heading": "6. Meer informatie",
+          "paras": [
+            "Meer informatie over cookies en uw rechten vindt u op de website van de Autoriteit Persoonsgegevens: autoriteitpersoonsgegevens.nl",
+            "Privacybeleid Google: policies.google.com/privacy"
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Algemene Voorwaarden",
+      "intro": "Deze algemene voorwaarden zijn van toepassing op alle aanbiedingen, offertes en overeenkomsten van Newland IT-Solutions (KVK: 83541934), gevestigd te Hessenbergweg 8, 1101 BT Amsterdam.",
+      "sections": [
+        {
+          "heading": "Artikel 1 — Toepasselijkheid",
+          "paras": [
+            "1.1 Deze voorwaarden zijn van toepassing op alle overeenkomsten tussen Newland IT-Solutions en de opdrachtgever, tenzij schriftelijk anders is overeengekomen.",
+            "1.2 Afwijkingen van deze voorwaarden zijn uitsluitend geldig indien deze uitdrukkelijk en schriftelijk zijn overeengekomen."
+          ]
+        },
+        {
+          "heading": "Artikel 2 — Aanbiedingen en offertes",
+          "paras": [
+            "2.1 Alle aanbiedingen en offertes zijn vrijblijvend en geldig gedurende 30 dagen na dagtekening, tenzij schriftelijk anders vermeld.",
+            "2.2 Een overeenkomst komt tot stand na schriftelijke bevestiging door Newland IT-Solutions of bij feitelijke aanvang van de werkzaamheden."
+          ]
+        },
+        {
+          "heading": "Artikel 3 — Uitvoering van de overeenkomst",
+          "paras": [
+            "3.1 Newland IT-Solutions verricht haar werkzaamheden naar beste inzicht en vermogen. De overeenkomst heeft het karakter van een inspanningsverplichting, tenzij uitdrukkelijk een resultaat is overeengekomen.",
+            "3.2 De opdrachtgever draagt zorg voor tijdige aanlevering van alle voor de uitvoering benodigde informatie en verleent de vereiste medewerking."
+          ]
+        },
+        {
+          "heading": "Artikel 4 — Tarieven en betaling",
+          "paras": [
+            "4.1 Alle tarieven zijn exclusief BTW, tenzij schriftelijk anders overeengekomen.",
+            "4.2 Facturen dienen binnen 14 dagen na factuurdatum te worden voldaan.",
+            "4.3 Bij niet-tijdige betaling is de wettelijke handelsrente (art. 6:119a BW) verschuldigd, alsmede buitengerechtelijke incassokosten conform het Besluit vergoeding voor buitengerechtelijke incassokosten."
+          ]
+        },
+        {
+          "heading": "Artikel 5 — Aansprakelijkheid",
+          "paras": [
+            "5.1 De totale aansprakelijkheid van Newland IT-Solutions voor directe schade is beperkt tot het bedrag dat in het kader van de betreffende opdracht in rekening is gebracht, met een maximum van € 5.000 per schadeveroorzakend feit.",
+            "5.2 Newland IT-Solutions is niet aansprakelijk voor indirecte schade, gevolgschade, gederfde winst, gemiste besparingen of schade door bedrijfsstagnatie."
+          ]
+        },
+        {
+          "heading": "Artikel 6 — Intellectueel eigendom",
+          "paras": [
+            "6.1 Alle door Newland IT-Solutions ontwikkelde werken — waaronder software, ontwerpen, documentatie en grafische uitingen — blijven eigendom van Newland IT-Solutions totdat de opdrachtgever alle verplichtingen volledig heeft voldaan.",
+            "6.2 Na volledige betaling draagt Newland IT-Solutions de overeengekomen rechten over aan de opdrachtgever conform de gemaakte afspraken."
+          ]
+        },
+        {
+          "heading": "Artikel 7 — Vertrouwelijkheid",
+          "paras": [
+            "7.1 Beide partijen behandelen van de wederpartij ontvangen vertrouwelijke informatie met de nodige geheimhouding en gebruiken deze uitsluitend ter uitvoering van de overeenkomst. Deze verplichting geldt ook na beëindiging van de overeenkomst."
+          ]
+        },
+        {
+          "heading": "Artikel 8 — Duur en beëindiging",
+          "paras": [
+            "8.1 Overeenkomsten worden aangegaan voor de overeengekomen looptijd.",
+            "8.2 Opzegging geschiedt conform de in de overeenkomst vastgelegde opzegtermijn, met een minimum van één kalendermaand, tenzij anders overeengekomen."
+          ]
+        },
+        {
+          "heading": "Artikel 9 — Toepasselijk recht en geschillen",
+          "paras": [
+            "9.1 Op alle overeenkomsten met Newland IT-Solutions is uitsluitend Nederlands recht van toepassing.",
+            "9.2 Geschillen worden in eerste aanleg voorgelegd aan de bevoegde rechter van de Rechtbank Amsterdam."
+          ]
+        }
+      ]
+    }
+  }
+}

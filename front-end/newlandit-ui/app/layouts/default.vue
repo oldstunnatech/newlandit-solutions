@@ -31,6 +31,7 @@
           <slot />
         </main>
         <Footer />
+        <CookieConsent />
       </div>
     </div>
   </div>
@@ -38,36 +39,75 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useHead, useRuntimeConfig, useLocaleHead } from '#imports'
+import { CONTACT } from '#shared/utils/contact'
+import { useNav } from '~/composables/useNav'
 
 const mobileNavOpen = ref(false)
+const { navItems } = useNav()
 
-const navItems = [
-  { name: 'Home', href: '/', icon: 'lucide:home' },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: 'lucide:share-2',
-    children: [
-      {
-        name: 'Software Development',
-        href: '/solutions/software-development',
-        children: [
-          { name: 'CMS Website & WordPress', href: '/solutions/cms-websites' },
-        ],
-      },
-      {
-        name: 'IT Consulting',
-        href: '/solutions/it-consulting',
-        children: [
-          { name: 'IT Support (helpdesk, remote & on-site)', href: '/solutions/it-support' },
-        ],
-      },
-      { name: 'Digital Strategy & Enablement', href: '/solutions/digital-strategy' },
-    ],
+// ── Locale <html lang>, canonical + hreflang alternates (owned by i18n) ──
+const localeHead = useLocaleHead()
+useHead(localeHead)
+
+// ── LocalBusiness structured data (site-wide) ──────────────────────
+const siteUrl = String(useRuntimeConfig().public.siteUrl || '').replace(/\/+$/, '')
+
+const dayMap: Record<string, string[]> = {
+  'Mon - Thu': ['Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+  Fri: ['Friday'],
+}
+
+const openingHoursSpecification = CONTACT.openingHours
+  .filter((e) => !/closed/i.test(e.hours) && dayMap[e.label])
+  .map((e) => {
+    const [opens, closes] = (e.hours.match(/\d{1,2}:\d{2}/g) || [])
+    return {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: dayMap[e.label],
+      opens,
+      closes,
+    }
+  })
+
+const localBusinessJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': `${siteUrl}/#organization`,
+  name: 'Newland IT-Solutions',
+  description:
+    'IT-bedrijf in Amsterdam voor softwareontwikkeling, IT-support en professionele websites voor zzp’ers en het mkb.',
+  url: siteUrl,
+  telephone: CONTACT.phone,
+  email: CONTACT.email,
+  vatID: CONTACT.btw,
+  foundingDate: String(CONTACT.startYear),
+  image: `${siteUrl}/images/IMG_8959.jpg`,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: CONTACT.address.street,
+    postalCode: CONTACT.address.postalCode,
+    addressLocality: CONTACT.address.city,
+    addressCountry: 'NL',
   },
-  { name: 'About', href: '/about', icon: 'lucide:user' },
-  { name: 'Contact', href: '/contact', icon: 'lucide:mail' },
-]
+  areaServed: [
+    { '@type': 'City', name: 'Amsterdam' },
+    { '@type': 'AdministrativeArea', name: 'Metropoolregio Amsterdam' },
+  ],
+  openingHoursSpecification,
+  sameAs: ['https://www.linkedin.com/company/105865773'],
+  identifier: { '@type': 'PropertyValue', name: 'KVK', value: CONTACT.kvk },
+}
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(localBusinessJsonLd),
+    },
+  ],
+})
+
 </script>
 
 <style scoped>
