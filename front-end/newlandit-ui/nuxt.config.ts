@@ -40,6 +40,9 @@ export default defineNuxtConfig({
         'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
       },
     },
+    '/oplossingen': { redirect: { to: '/solutions', statusCode: 301 } },
+    '/oplossingen/**': { redirect: { to: '/solutions', statusCode: 301 } },
+    '/over-ons': { redirect: { to: '/about', statusCode: 301 } },
   },
 
   runtimeConfig: {
