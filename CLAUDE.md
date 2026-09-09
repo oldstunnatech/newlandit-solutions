@@ -1,4 +1,4 @@
-# CLAUDE.md — Newland IT-Solutions
+# Developer Guide — Newland IT-Solutions
 
 ## Project Overview
 
