@@ -2,7 +2,7 @@
 
 > Completed-ticket detail. The live status overview and active-ticket detail live in
 > [`tickets.md`](./tickets.md). Move a ticket here once it is ✅ Done.
-> Last updated: 2026-08-28
+> Last updated: 2026-09-04
 
 ---
 
@@ -45,7 +45,7 @@
 
 ---
 
-## Phase 3 — Content completeness + legal ✅ P0s shipped 2026-08-28
+## Phase 3 — Content completeness + legal ✅ Fully done 2026-09-04
 
 ### NWL-001 — Homepage stats placeholder
 - Files: `app/pages/index.vue`
@@ -61,6 +61,16 @@
 - Delivered: three legal pages (privacyverklaring, cookiebeleid, algemene voorwaarden) driven by
   `legal.*` i18n keys. Footer links to all three via `localePath`. `useSeo` applied per page.
   Cookie consent banner (`CookieConsent.vue`) gates Google Maps iframe; choice stored in `localStorage(nwl_consent)`.
+
+### NWL-004 — Consent-gate Maps iframe
+- Files: `app/composables/useConsent.ts` (new), `app/components/CookieConsent.vue`, `app/pages/contact.vue`, `i18n/locales/{nl,en}.json`
+- Delivered: `useConsent()` composable with Nuxt `useState` shared reactive state (`nwl_consent`, `nwl_consent_banner`). Exposes `consentAccepted`, `openBanner`, `accept`, `decline`. `CookieConsent.vue` refactored to use composable (removed local state). `contact.vue` Maps `<iframe>` wrapped in `v-if="consentAccepted"`; placeholder with "Cookies beheren" / "Manage cookies" button (calls `openBanner()`) shown otherwise. Locale keys `contact.visit.mapBlocked` + `contact.visit.enableMaps` added NL/EN.
+- DoD met: no Maps network request fires before `nwl_consent === 'accepted'`; placeholder shown when declined/unset.
+
+### NWL-007 — Service content parity vs old site
+- Files: `i18n/locales/{nl,en}.json`, `app/pages/solutions/it-consulting.vue`
+- Delivered: diffed all 8 old `/oplossingen` deliverables against new solution pages. Gap found: "netwerk-/server-/cloudbeheer" appeared in `consulting.offers` but had no `sub` detail section (3 subs for 4 offers). Added `sub` entry (NL + EN) with 2 paragraphs, 3 bullet points, CTA link. Fixed `subMeta` in `it-consulting.vue` (was hardcoded 3 image entries, now 4). Changed grid from `repeat(3, 1fr)` to `auto-fill, minmax(280px, 1fr)` for flexible layout.
+- DoD met: all 8 old deliverables represented on a new solution page.
 
 ---
 

@@ -1,6 +1,6 @@
 # 🎫 Newland IT-Solutions — Engineering Tickets
 
-> Last updated: 2026-08-28 · Source: `report.md` · Roadmap: `roadmap.md`
+> Last updated: 2026-09-04 · Source: `report.md` · Roadmap: `roadmap.md`
 >
 > **Legend:** 🔴 P0 launch-blocking · 🟠 P1 high · 🟡 P2 medium · ✅ Done · 🟡 In progress · 📋 Todo
 >
@@ -11,41 +11,7 @@
 
 ## 📊 Status Overview
 
-<details>
-<summary><strong>✅ Phase 1 — SEO infrastructure · DONE</strong></summary>
-
-| ID | Priority | Status | Notes |
-| --- | --- | --- | --- |
-| SEO-001 | 🟠 P1 | ✅ Done | Centralised `useSeo` composable (title/desc/OG/Twitter/robots) |
-| SEO-002 | 🟠 P1 | ✅ Done | Canonical + hreflang + `<html lang>` via i18n `useLocaleHead` |
-| SEO-003 | 🟡 P2 | ✅ Done | Global security headers via `routeRules` |
-| SEO-004 | 🟡 P2 | ✅ Done | Per-page SEO copy under `seo.*` locale keys |
-
-</details>
-
-<details>
-<summary><strong>✅ Phase 2 — i18n NL/EN + translation · DONE</strong></summary>
-
-| ID | Priority | Status | Notes |
-| --- | --- | --- | --- |
-| I18N-001 | 🟠 P1 | ✅ Done | `@nuxtjs/i18n`, NL default, `prefix_except_default`, no browser redirect |
-| I18N-002 | 🟠 P1 | ✅ Done | All page copy externalised to `locales/{nl,en}.json` |
-| I18N-003 | 🟡 P2 | ✅ Done | Language switcher component |
-
-</details>
-
-<details open>
-<summary><strong>📋 Phase 3 — Content completeness + legal · IN PROGRESS (3/5 done; NWL-004/007 remain P1)</strong></summary>
-
-| ID | Priority | Status | Notes |
-| --- | --- | --- | --- |
-| NWL-001 | 🔴 P0 | ✅ Done | Homepage stats show `0+ / 0yr / 0% / 0hr` placeholders — fill with real data (About uses `50+/5yr/98%/72hr`) |
-| NWL-002 | 🔴 P0 | ✅ Done | Production Vercel serves stale pre-i18n EN build — merge `seo-and-nl-i18n` + redeploy so `/` is NL |
-| NWL-003 | 🔴 P0 | ✅ Done | No legal pages — add privacy statement, cookie policy, terms + footer links (NL/EN) |
-| NWL-004 | 🟠 P1 | 📋 Todo | Cookie/consent banner exists but Maps iframe still loads unconditionally — gate it behind `nwl_consent` |
-| NWL-007 | 🟠 P1 | 📋 Todo | Service-page content parity vs old `/oplossingen` deliverables |
-
-</details>
+✅ **Phases 1–3 archived** — see [`tickets-archive.md`](./tickets-archive.md).
 
 <details open>
 <summary><strong>📋 Phase 4 — Trust, conversion & UX · IN PROGRESS (2/4)</strong></summary>
@@ -65,7 +31,7 @@
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
 | NWL-010 | 🔴 P0 | ✅ Done | 301 redirects old→new (`/oplossingen`→`/solutions`, `/over-ons`→`/about`) |
-| NWL-011 | 🟠 P1 | 📋 Todo | Sitemap + robots verify both locales; submit to Search Console; NAP consistency |
+| NWL-011 | 🟠 P1 | 🟡 In progress | `@nuxtjs/sitemap` added — auto-generates both locales at build; robots.txt already correct. Manual: submit to Search Console; NAP consistency audit. |
 
 </details>
 
@@ -130,29 +96,6 @@
 
 ## 🔨 Active Ticket Detail
 
-<details open>
-<summary><strong>NWL-004 — Cookie/consent banner (Maps gate) 🟠 P1</strong></summary>
-
-- Files: `app/pages/contact.vue`, `app/components/CookieConsent.vue`
-- Done: banner component with accept/decline; `nwl_consent` persisted in localStorage; NL/EN copy live.
-- Remaining: `contact.vue` Maps `<iframe>` loads unconditionally — wrap in `v-if="consentAccepted"` with placeholder fallback.
-- DoD: no Maps network request fires before `nwl_consent === 'accepted'`; placeholder shown when declined.
-
-</details>
-
-<details open>
-<summary><strong>NWL-007 — Service content parity vs old site 🟠 P1</strong></summary>
-
-- Files: `app/pages/solutions/*.vue`, locale JSON.
-- Problem: old `/oplossingen` listed concrete deliverables that must survive the redesign:
-  `WordPress/Wix/Shopify`, `platform-/API-integraties`, `IT-consultancy & systeemselectie`,
-  `netwerk-/server-/cloudbeheer`, `helpdesk remote & on-site`, `projectmanagement (ook buiten IT)`,
-  `branding & visueel design`, `UI/UX`.
-- Tasks: diff old deliverables against new `offers` lists; add any missing bullets.
-- DoD: every old service deliverable is represented on a new solution page.
-
-</details>
-
 <details>
 <summary><strong>NWL-020 — Sanity fetch layer + schemas 🟡 P2 (decision-gated)</strong></summary>
 
@@ -178,10 +121,10 @@
 
 ## 🔗 Dependencies & next steps
 
-- **Launch blockers (P0):** ✅ All closed — NWL-001, NWL-002, NWL-003, NWL-010.
-- NWL-004: banner exists (`CookieConsent.vue`), `nwl_consent` key persisted — only Maps gating remains.
+- **Phase 1–3:** ✅ All closed. Phase 3 detail archived 2026-09-04.
+- **Phase 5:** NWL-010 ✅ done; NWL-011 🟡 in progress (sitemap module added — manual Search Console submit + NAP audit remain).
 - **Backlog chains:** NWL-020 → NWL-017 → NWL-018/019 (blog); NWL-020 → NWL-021 (copy migration);
   NWL-012 → NWL-013 (cases); NWL-015 → NWL-016 (FAQ); SEO-009 → SEO-010 (local pages);
   NWL-001 → NWL-025 (count-up).
 - **Decision-gated:** NWL-020 (CMS vs i18n), NWL-023 (Stripe) — resolve in PRD §10 before pulling in.
-- **Suggested next:** NWL-004 (wire Maps gate) → NWL-007 (service content parity) → Phase 4 trust content.
+- **Suggested next:** Phase 4 trust content (NWL-005/006) → NWL-011 manual steps.

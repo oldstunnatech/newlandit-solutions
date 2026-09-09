@@ -252,7 +252,9 @@
       "mapTitle": "Kaart kantoorlocatie",
       "address": "Adres",
       "closedHolidays": "Gesloten op feestdagen",
-      "openingHours": "Openingstijden"
+      "openingHours": "Openingstijden",
+      "mapBlocked": "Schakel cookies in om de kaart te bekijken.",
+      "enableMaps": "Cookies beheren"
     }
   },
   "detail": {
@@ -327,6 +329,12 @@
           "paragraphs": ["Met onze IT-consultancy en systeemselectie bieden we deskundig advies en begeleiding bij het kiezen van de juiste IT-oplossingen die passen bij je organisatie en ambities — speciaal voor bedrijven in Amsterdam en de Metropoolregio.", "Kies voor onze IT-consultancy en systeemselectie om de juiste IT-oplossingen te kiezen die passen bij je bedrijfsbehoeften en toekomstplannen."],
           "points": ["Deskundig advies", "Oplossingen op maat", "Toekomstgericht"],
           "link": "Plan een adviesgesprek"
+        },
+        {
+          "title": "Netwerk-, server- & cloudbeheer",
+          "paragraphs": ["Van lokale netwerken tot cloudinfrastructuur — wij beheren, monitoren en optimaliseren je IT-omgeving zodat jij je kunt focussen op je bedrijf.", "Of het nu gaat om een on-premise server, een hybride cloud of een volledig cloudgebaseerde omgeving (Azure, AWS) — we zorgen voor uptime, veiligheid en prestaties."],
+          "points": ["Netwerk- en serverinstallatie & -beheer", "Cloud-infrastructuur (Azure, AWS, hybride)", "Monitoring, patchbeheer & back-upstrategie"],
+          "link": "Vraag een infrastructuurgesprek aan"
         },
         {
           "title": "Digitale transformatie & integratie",
@@ -406,7 +414,7 @@
           "heading": "1. Verwerkingsverantwoordelijke",
           "paras": [
             "Newland IT-Solutions is de verwerkingsverantwoordelijke voor de verwerking van uw persoonsgegevens.",
-            "Newland IT-Solutions, Hessenbergweg 8, 1101 BT Amsterdam • KVK: 83541934 • BTW: NL003835137B29 • info@newlandit-solutions.com • +31 648 364 450"
+            "Newland IT-Solutions, Hessenbergweg 8, 1101 BT Amsterdam • KVK: 83541934 • BTW: NL003835137B29 • info{'@'}newlandit-solutions.com • +31 648 364 450"
           ]
         },
         {

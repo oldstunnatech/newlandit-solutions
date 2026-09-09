@@ -1,6 +1,17 @@
 export default defineNuxtConfig({
   compatibilityDate: '2026-06-17',
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/i18n'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/i18n', '@nuxtjs/sitemap'],
+
+  site: {
+    url: process.env.SITE_URL || 'https://www.newlandit-solutions.com',
+    name: 'Newland IT-Solutions',
+  },
+
+  sitemap: {
+    // i18n routes auto-discovered via @nuxtjs/i18n integration
+    // excludes admin/api paths; includes both NL (default) + EN (prefixed)
+    exclude: ['/admin/**'],
+  },
 
   i18n: {
     strategy: 'prefix_except_default',
