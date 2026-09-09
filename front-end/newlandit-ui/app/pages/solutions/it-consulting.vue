@@ -72,6 +72,7 @@ const offers = computed(() => (tm('detail.consulting.offers') as any[]).map((o) 
 
 const subMeta = [
   { image: '/images/pexels-ai25studioai-5466280.jpg', href: '/contact' },
+  { image: '/images/pexels-mikhail-nilov-9301316.jpg', href: '/contact' },
   { image: '/images/pexels-ai25studioai-5466243.jpg', href: '/contact' },
   { image: '/images/pexels-ai25studioai-5583974.jpg', href: '/contact' },
 ]
@@ -113,8 +114,8 @@ const subSections = computed(() =>
 .offer-list li { position: relative; padding-left: 1.5rem; color: #fbf6da; font-weight: 500; }
 .offer-list li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 8px; height: 8px; border-radius: 50%; background: #4ade80; }
 
-/* ── Card-style sub-sections (3 columns) ── */
-.sub-sections { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; align-items: start; }
+/* ── Card-style sub-sections (auto-fill) ── */
+.sub-sections { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; align-items: start; }
 .sub-section {
   display: flex; flex-direction: column;
   border-radius: 1.25rem; overflow: hidden;

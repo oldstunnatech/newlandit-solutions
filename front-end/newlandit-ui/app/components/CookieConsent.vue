@@ -19,31 +19,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
 import { useI18n, useLocalePath } from '#imports'
-
-const CONSENT_KEY = 'nwl_consent'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
 
-const showBanner = ref(false)
-
-onMounted(() => {
-  if (!localStorage.getItem(CONSENT_KEY)) {
-    showBanner.value = true
-  }
-})
-
-function accept() {
-  localStorage.setItem(CONSENT_KEY, 'accepted')
-  showBanner.value = false
-}
-
-function decline() {
-  localStorage.setItem(CONSENT_KEY, 'declined')
-  showBanner.value = false
-}
+const { showBanner, accept, decline } = useConsent()
 </script>
 
 <style scoped>

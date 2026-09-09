@@ -231,7 +231,9 @@
       "mapTitle": "Office location map",
       "address": "Address",
       "closedHolidays": "Closed on public holidays",
-      "openingHours": "Opening hours"
+      "openingHours": "Opening hours",
+      "mapBlocked": "Enable cookies to view the map.",
+      "enableMaps": "Manage cookies"
     }
   },
   "detail": {
@@ -306,6 +308,12 @@
           "paragraphs": ["With our IT consultancy and system selection, we offer expert advice and guidance in choosing the right IT solutions that fit your organization and ambitions, specifically for companies in Amsterdam and the Metropolitan Area.", "Choose our IT consultancy and system selection to select the right IT solutions that fit your business needs and future plans."],
           "points": ["Expert advice", "Custom solutions", "Future-oriented"],
           "link": "Schedule a consultation"
+        },
+        {
+          "title": "Network, server & cloud management",
+          "paragraphs": ["From local networks to cloud infrastructure, we manage, monitor and optimise your IT environment so you can focus on your business.", "Whether it involves an on-premise server, a hybrid cloud or a fully cloud-based environment (Azure, AWS), we ensure uptime, security and performance."],
+          "points": ["Network and server installation & management", "Cloud infrastructure (Azure, AWS, hybrid)", "Monitoring, patch management & backup strategy"],
+          "link": "Request an infrastructure consultation"
         },
         {
           "title": "Digital transformation & integration",
@@ -384,7 +392,7 @@
           "heading": "1. Data controller",
           "paras": [
             "Newland IT-Solutions is the data controller for the processing of your personal data.",
-            "Newland IT-Solutions, Hessenbergweg 8, 1101 BT Amsterdam • KVK: 83541934 • VAT: NL003835137B29 • info@newlandit-solutions.com • +31 648 364 450"
+            "Newland IT-Solutions, Hessenbergweg 8, 1101 BT Amsterdam • KVK: 83541934 • VAT: NL003835137B29 • info{'@'}newlandit-solutions.com • +31 648 364 450"
           ]
         },
         {
@@ -423,7 +431,7 @@
           "heading": "6. Your rights",
           "paras": [
             "Under the GDPR you have the following rights: access to your personal data, rectification of inaccurate data, erasure ('right to be forgotten'), restriction of processing, data portability and the right to object to processing based on legitimate interests.",
-            "You may exercise your rights by contacting us at info@newlandit-solutions.com. We will respond within 30 days.",
+            "You may exercise your rights by contacting us at info{'@'}newlandit-solutions.com. We will respond within 30 days.",
             "You also have the right to lodge a complaint with the Dutch Data Protection Authority (autoriteitpersoonsgegevens.nl)."
           ]
         },
