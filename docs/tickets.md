@@ -48,12 +48,12 @@
 </details>
 
 <details open>
-<summary><strong>📋 Phase 4 — Trust, conversion & UX · NOT STARTED (0/4)</strong></summary>
+<summary><strong>📋 Phase 4 — Trust, conversion & UX · IN PROGRESS (2/4)</strong></summary>
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-005 | 🟠 P1 | 📋 Todo | "Trusted by / Our customers" has no real client logos (`ClientLogo.vue` empty) |
-| NWL-006 | 🟠 P1 | 📋 Todo | No testimonials / case references section |
+| NWL-005 | 🟠 P1 | ✅ Done | `ClientLogo.vue` implemented; wired into customers marquee via controlled props/events |
+| NWL-006 | 🟠 P1 | ✅ Done | `TestimonialCard.vue` component added; section live with i18n (nl + en) |
 | NWL-008 | 🟡 P2 | 📋 Todo | About timeline — verify years/events are real, not fabricated |
 | NWL-009 | 🟡 P2 | 📋 Todo | Solution-subpage `<img>` assets — replace placeholders with real imagery + alt text |
 
