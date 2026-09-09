@@ -131,6 +131,27 @@
         { "title": "Consultancy & Strategy", "description": "Strategic advice for digital transformation and scalable growth. We make sure your technology supports your ambitions.", "button": "More about Strategy" }
       ]
     },
+    "testimonials": {
+      "eyebrow": "What clients say",
+      "heading": "Testimonials",
+      "items": [
+        {
+          "quote": "Newland IT helped us modernize our entire workflow. Professional, fast and always available.",
+          "name": "Sarah de Vries",
+          "company": "Agape Joy Care"
+        },
+        {
+          "quote": "From strategy to implementation — they guided us every step of the way. Highly recommended.",
+          "name": "Mark Janssen",
+          "company": "BZVJ"
+        },
+        {
+          "quote": "Finally an IT partner that speaks our language. No technical jargon, just clear solutions.",
+          "name": "Lisa Bakker",
+          "company": "Flexxes"
+        }
+      ]
+    },
     "contact": {
       "eyebrow": "Get in touch",
       "heading": "Ready to grow your business?",

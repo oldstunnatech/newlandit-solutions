@@ -247,29 +247,20 @@
          TESTIMONIALS
     ============================================================ -->
     <section class="testimonials-section py-20 px-6 text-white" data-observe>
-      
-      <!-- <div class="max-w-6xl mx-auto">
-        <p class="eyebrow-pill6 mb-3 block text-center">What clients say</p>
-        <h2 class="text-3xl5 md:text-4xl font-bold mb-12 text-center mt-3">Testimonials</h2>
+      <div class="max-w-6xl mx-auto">
+        <p class="eyebrow-pill6 mb-3 block text-center">{{ t('home.testimonials.eyebrow') }}</p>
+        <h2 class="text-3xl5 md:text-4xl font-bold mb-12 text-center mt-3">{{ t('home.testimonials.heading') }}</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div
-            v-for="(testimonial, i) in testimonials"
-            :key="testimonial.name"
-            class="testimonial-card scroll-child"
-            :style="`transition-delay: ${i * 0.15}s`"
-          >
-            <div class="stars mb-4">★★★★★</div>
-            <p class="text-white/80 text-sm leading-relaxed mb-6">"{{ testimonial.quote }}"</p>
-            <div class="flex items-center gap-3">
-              <div class="avatar">{{ testimonial.name[0] }}</div>
-              <div>
-                <div class="font-semibold text-sm">{{ testimonial.name }}</div>
-                <div class="text-white/50 text-xs">{{ testimonial.company }}</div>
-              </div>
-            </div>
-          </div>
+          <TestimonialCard
+            v-for="(item, i) in testimonials"
+            :key="item.name"
+            :quote="item.quote"
+            :name="item.name"
+            :company="item.company"
+            :delay="i * 0.15"
+          />
         </div>
-      </div> -->
+      </div>
     </section>
 
     <!-- ============================================================
@@ -369,11 +360,13 @@ const services = computed(() =>
   })),
 )
 
-const testimonials = [
-  { quote: 'Newland IT helped us modernize our entire workflow. Professional, fast and always available.', name: 'Sarah de Vries', company: 'Agape Joy Care' },
-  { quote: 'From strategy to implementation — they guided us every step of the way. Highly recommended.',  name: 'Mark Janssen',  company: 'BZVJ' },
-  { quote: 'Finally an IT partner that speaks our language. No technical jargon, just clear solutions.',    name: 'Lisa Bakker',   company: 'Flexxes' },
-]
+const testimonials = computed(() =>
+  (tm('home.testimonials.items') as any[]).map(item => ({
+    quote: rt(item.quote),
+    name: rt(item.name),
+    company: rt(item.company),
+  })),
+)
 
 const items = [
   {
@@ -1297,23 +1290,6 @@ if (popup) {
 }
 
 
-/* ── Testimonials ── */
-.testimonial-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 1.5rem;
-  padding: 2rem;
-  transition: transform 0.2s, background 0.2s, opacity 0.5s ease;
-}
-.testimonial-card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.1); }
-.stars { color: #fbbf24; letter-spacing: 2px; font-size: 1rem; }
-.avatar {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #22c55e, #059669);
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 700; font-size: 1rem; color: white; flex-shrink: 0;
-}
 
 /* ── Contact CTA ── */
 .contact-section { background: rgba(0,0,0,0.2); border-top: 1px solid rgba(255,255,255,0.08); }
