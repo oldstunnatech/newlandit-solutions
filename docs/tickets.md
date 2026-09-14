@@ -1,6 +1,6 @@
 # 🎫 Newland IT-Solutions — Engineering Tickets
 
-> Last updated: 2026-09-04 · Source: `report.md` · Roadmap: `roadmap.md`
+> Last updated: 2026-09-14 · Source: `report.md` · Roadmap: `roadmap.md`
 >
 > **Legend:** 🔴 P0 launch-blocking · 🟠 P1 high · 🟡 P2 medium · ✅ Done · 🟡 In progress · 📋 Todo
 >
@@ -46,7 +46,7 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-012 | 🟡 P2 | 🟡 In progress | Case studies — `/cases` + `/cases/[slug]` routing + page/layout scaffold [ideas #3] |
+| NWL-012 | 🟡 P2 | ✅ Done | Case studies — `/cases` + `/cases/[slug]` routing + page/layout scaffold [ideas #3] |
 | NWL-013 | 🟡 P2 | 📋 Todo | Case studies — content model + first 2 real cases (problem→solution→result). Depends NWL-012 [ideas #3] |
 | NWL-014 | 🟡 P2 | 📋 Todo | "Onze aanpak" dedicated page — expand Discovery/Plan/Build/Support [ideas #4] |
 | NWL-015 | 🟡 P2 | ✅ Done | Reusable FAQ accordion component + i18n structure + `FAQPage` JSON-LD [ideas #5] |
@@ -127,4 +127,5 @@
   NWL-012 → NWL-013 (cases); NWL-015 → NWL-016 (FAQ); SEO-009 → SEO-010 (local pages);
   NWL-001 → NWL-025 (count-up).
 - **Decision-gated:** NWL-020 (CMS vs i18n), NWL-023 (Stripe) — resolve in PRD §10 before pulling in.
-- **Suggested next:** Phase 4 trust content (NWL-005/006) → NWL-011 manual steps.
+- **Shipped v1.1.0 (2026-09-14):** NWL-012, NWL-015, SEO-005, SEO-006 — archived below.
+- **Suggested next:** NWL-013 (case study content), NWL-016 (FAQ per service), SEO-007 (NAP audit), NWL-011 manual steps.
