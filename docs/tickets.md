@@ -49,7 +49,7 @@
 | NWL-012 | 🟡 P2 | 📋 Todo | Case studies — `/cases` + `/cases/[slug]` routing + page/layout scaffold [ideas #3] |
 | NWL-013 | 🟡 P2 | 📋 Todo | Case studies — content model + first 2 real cases (problem→solution→result). Depends NWL-012 [ideas #3] |
 | NWL-014 | 🟡 P2 | 📋 Todo | "Onze aanpak" dedicated page — expand Discovery/Plan/Build/Support [ideas #4] |
-| NWL-015 | 🟡 P2 | 🟡 In progress | Reusable FAQ accordion component + i18n structure + `FAQPage` JSON-LD [ideas #5] |
+| NWL-015 | 🟡 P2 | ✅ Done | Reusable FAQ accordion component + i18n structure + `FAQPage` JSON-LD [ideas #5] |
 | NWL-016 | 🟡 P2 | 📋 Todo | FAQ content per service (5 pages). Depends NWL-015 [ideas #5] |
 
 **Content engine**
@@ -66,8 +66,8 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| SEO-005 | 🟡 P2 | 🟡 In progress | Per-page `Service` JSON-LD on solution pages [ideas #8] |
-| SEO-006 | 🟡 P2 | 📋 Todo | `BreadcrumbList` JSON-LD site-wide [ideas #8] |
+| SEO-005 | 🟡 P2 | ✅ Done | Per-page `Service` JSON-LD on solution pages [ideas #8] |
+| SEO-006 | 🟡 P2 | 🟡 In progress | `BreadcrumbList` JSON-LD site-wide [ideas #8] |
 | SEO-007 | 🟠 P1 | 📋 Todo | NAP consistency audit + Google Business Profile alignment [ideas #9] |
 | SEO-008 | 🟡 P2 | 📋 Todo | Per-service OG images (replace shared hero) [ideas #10] |
 | SEO-009 | 🟡 P2 | 📋 Todo | Local landing-page template (i18n, schema, internal links) [ideas #11] |
