@@ -80,6 +80,13 @@ useSeo({
   path: '/solutions/software-development',
 })
 
+useServiceSchema({
+  name: t('seo.softwareDevelopment.title'),
+  description: t('seo.softwareDevelopment.description'),
+  path: '/solutions/software-development',
+  serviceType: 'Custom Software Development',
+})
+
 const offers = computed(() => (tm('detail.software.offers') as any[]).map((o) => rt(o)))
 
 const subMeta = [

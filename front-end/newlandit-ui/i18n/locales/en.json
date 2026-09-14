@@ -422,6 +422,34 @@
       "text": "Tell us about your project and we'll get back to you within 3 business days."
     }
   },
+  "faq": {
+    "eyebrow": "FAQ",
+    "heading": "Frequently Asked Questions",
+    "general": {
+      "items": [
+        {
+          "question": "What types of businesses do you work with?",
+          "answer": "We work with freelancers, SMEs, schools and non-profit organisations in Amsterdam and the broader North Holland area. Our solutions scale with your organisation — from a single-person business to a team of 50."
+        },
+        {
+          "question": "How quickly can you start on a new project?",
+          "answer": "For most projects we can begin within one to two weeks of our intake conversation. We'll confirm timelines clearly in our proposal so you always know what to expect."
+        },
+        {
+          "question": "Do you offer ongoing IT support after a project is delivered?",
+          "answer": "Yes. We offer flexible support packages — from remote helpdesk on demand to a dedicated Pro or Premium SLA. Support continues seamlessly after delivery at whatever level suits your organisation."
+        },
+        {
+          "question": "What does the onboarding process look like?",
+          "answer": "We start with a free introductory call to understand your situation and goals. After that we send a clear proposal with scope, timeline and pricing — no hidden costs, no surprises."
+        },
+        {
+          "question": "Do you work on-site in Amsterdam?",
+          "answer": "Yes. While most support is handled remotely for speed and convenience, we are available for on-site work in Amsterdam and the surrounding area when the situation calls for it."
+        }
+      ]
+    }
+  },
   "consent": {
     "title": "Your privacy",
     "text": "We use functional cookies and local storage for basic functionality. With your consent we also load Google Maps. No tracking or marketing cookies.",
