@@ -65,6 +65,10 @@
       "title": "Digital Strategy & Enablement in Amsterdam",
       "description": "Digital strategy, project management, branding and UX/UI design from Newland IT-Solutions. We align technology with your ambitions for scalable growth."
     },
+    "cases": {
+      "title": "Case Studies — Newland IT-Solutions Amsterdam",
+      "description": "Real client stories from Newland IT-Solutions: software development, IT support and digital strategy projects for organisations in Amsterdam and North Holland."
+    },
     "privacy": {
       "title": "Privacy Statement — Newland IT-Solutions",
       "description": "Learn how Newland IT-Solutions processes personal data under the GDPR and what rights you have as a data subject."
@@ -394,6 +398,28 @@
           "link": "Schedule a design intake"
         }
       ]
+    }
+  },
+  "cases": {
+    "eyebrow": "Case Studies",
+    "heading": "Our Work",
+    "intro": "Real challenges, real solutions. See how we've helped organisations in Amsterdam and beyond with software development, IT support and digital strategy.",
+    "readMore": "Read case study",
+    "backToCases": "← All case studies",
+    "challenge": "The challenge",
+    "solution": "Our approach",
+    "result": "The result",
+    "empty": {
+      "heading": "Case studies coming soon",
+      "text": "We're documenting our best work. In the meantime, get in touch and we'll tell you about the projects we're most proud of."
+    },
+    "notFound": {
+      "heading": "Case study not found",
+      "text": "This case study may have moved or isn't available yet."
+    },
+    "cta": {
+      "heading": "Ready to write your own success story?",
+      "text": "Tell us about your project and we'll get back to you within 3 business days."
     }
   },
   "consent": {

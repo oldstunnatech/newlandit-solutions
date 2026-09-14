@@ -65,6 +65,10 @@
       "title": "Digitale strategie & enablement in Amsterdam",
       "description": "Digitale strategie, projectmanagement, branding en UX/UI-design van Newland IT-Solutions. Wij laten technologie jouw ambities ondersteunen voor schaalbare groei."
     },
+    "cases": {
+      "title": "Cases — Newland IT-Solutions Amsterdam",
+      "description": "Echte klantcases van Newland IT-Solutions: softwareontwikkeling, IT-support en digitale-strategieprojecten voor organisaties in Amsterdam en Noord-Holland."
+    },
     "privacy": {
       "title": "Privacyverklaring — Newland IT-Solutions",
       "description": "Lees hoe Newland IT-Solutions persoonsgegevens verwerkt conform de AVG en welke rechten u heeft als betrokkene."
@@ -395,6 +399,28 @@
           "link": "Plan een designintake"
         }
       ]
+    }
+  },
+  "cases": {
+    "eyebrow": "Cases",
+    "heading": "Ons werk",
+    "intro": "Echte uitdagingen, echte oplossingen. Bekijk hoe we organisaties in Amsterdam en daarbuiten hebben geholpen met softwareontwikkeling, IT-support en digitale strategie.",
+    "readMore": "Lees case study",
+    "backToCases": "← Alle cases",
+    "challenge": "De uitdaging",
+    "solution": "Onze aanpak",
+    "result": "Het resultaat",
+    "empty": {
+      "heading": "Cases volgen binnenkort",
+      "text": "We zijn ons beste werk aan het documenteren. Neem in de tussentijd contact op en we vertellen je over de projecten waar we het meest trots op zijn."
+    },
+    "notFound": {
+      "heading": "Case study niet gevonden",
+      "text": "Deze case study is mogelijk verplaatst of nog niet beschikbaar."
+    },
+    "cta": {
+      "heading": "Klaar om jouw succesverhaal te schrijven?",
+      "text": "Vertel ons over jouw project en we reageren binnen 3 werkdagen."
     }
   },
   "consent": {
