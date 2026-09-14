@@ -68,6 +68,13 @@ useSeo({
   path: '/solutions/it-consulting',
 })
 
+useServiceSchema({
+  name: t('seo.itConsulting.title'),
+  description: t('seo.itConsulting.description'),
+  path: '/solutions/it-consulting',
+  serviceType: 'IT Consulting',
+})
+
 const offers = computed(() => (tm('detail.consulting.offers') as any[]).map((o) => rt(o)))
 
 const subMeta = [

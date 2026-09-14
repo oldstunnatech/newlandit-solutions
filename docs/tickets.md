@@ -66,7 +66,7 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| SEO-005 | 🟡 P2 | 📋 Todo | Per-page `Service` JSON-LD on solution pages [ideas #8] |
+| SEO-005 | 🟡 P2 | 🟡 In progress | Per-page `Service` JSON-LD on solution pages [ideas #8] |
 | SEO-006 | 🟡 P2 | 📋 Todo | `BreadcrumbList` JSON-LD site-wide [ideas #8] |
 | SEO-007 | 🟠 P1 | 📋 Todo | NAP consistency audit + Google Business Profile alignment [ideas #9] |
 | SEO-008 | 🟡 P2 | 📋 Todo | Per-service OG images (replace shared hero) [ideas #10] |
