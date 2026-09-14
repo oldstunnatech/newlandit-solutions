@@ -42,6 +42,7 @@ import { ref } from 'vue'
 import { useHead, useRuntimeConfig, useLocaleHead } from '#imports'
 import { CONTACT } from '#shared/utils/contact'
 import { useNav } from '~/composables/useNav'
+import { useBreadcrumbSchema } from '~/composables/useBreadcrumbSchema'
 
 const mobileNavOpen = ref(false)
 const { navItems } = useNav()
@@ -108,6 +109,7 @@ useHead({
   ],
 })
 
+useBreadcrumbSchema()
 </script>
 
 <style scoped>

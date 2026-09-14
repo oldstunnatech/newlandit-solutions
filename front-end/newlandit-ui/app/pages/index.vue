@@ -99,29 +99,19 @@
   <div class="marquee-track" :class="{ 'marquee-paused': activeReview !== null }">
     <div class="marquee-inner">
       <div class="marquee-group" v-for="n in 2" :key="n">
-        <div
+        <ClientLogo
           v-for="(item, idx) in items"
           :key="item.image + n"
-          class="carousel-logo-card"
-          :class="{ 'carousel-logo-card--hoverable': item.quote }"
-          @mouseenter="item.quote && openReview(n + '-' + idx)"
-          @mouseleave="item.quote && closeReview()"
-          @click="item.quote && toggleReview(n + '-' + idx)"
-        >
-          <img :src="item.image" :alt="item.alt" class="logo-img" loading="lazy" />
-
-          <!-- Slide-down review -->
-          <Transition name="slide-review">
-            <div
-              v-if="item.quote && activeReview === n + '-' + idx"
-              class="review-dropdown"
-            >
-              <div class="review-arrow"></div>
-              <p class="review-quote">"{{ item.quote }}"</p>
-              <p class="review-author">— {{ item.author }}, {{ item.company }}</p>
-            </div>
-          </Transition>
-        </div>
+          :image="item.image"
+          :alt="item.alt"
+          :quote="item.quote"
+          :author="item.author"
+          :company="item.company"
+          :is-active="activeReview === n + '-' + idx"
+          @enter="openReview(n + '-' + idx)"
+          @leave="closeReview()"
+          @toggle="toggleReview(n + '-' + idx)"
+        />
       </div>
     </div>
   </div>
@@ -247,29 +237,20 @@
          TESTIMONIALS
     ============================================================ -->
     <section class="testimonials-section py-20 px-6 text-white" data-observe>
-      
-      <!-- <div class="max-w-6xl mx-auto">
-        <p class="eyebrow-pill6 mb-3 block text-center">What clients say</p>
-        <h2 class="text-3xl5 md:text-4xl font-bold mb-12 text-center mt-3">Testimonials</h2>
+      <div class="max-w-6xl mx-auto">
+        <p class="eyebrow-pill6 mb-3 block text-center">{{ t('home.testimonials.eyebrow') }}</p>
+        <h2 class="text-3xl5 md:text-4xl font-bold mb-12 text-center mt-3">{{ t('home.testimonials.heading') }}</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div
-            v-for="(testimonial, i) in testimonials"
-            :key="testimonial.name"
-            class="testimonial-card scroll-child"
-            :style="`transition-delay: ${i * 0.15}s`"
-          >
-            <div class="stars mb-4">★★★★★</div>
-            <p class="text-white/80 text-sm leading-relaxed mb-6">"{{ testimonial.quote }}"</p>
-            <div class="flex items-center gap-3">
-              <div class="avatar">{{ testimonial.name[0] }}</div>
-              <div>
-                <div class="font-semibold text-sm">{{ testimonial.name }}</div>
-                <div class="text-white/50 text-xs">{{ testimonial.company }}</div>
-              </div>
-            </div>
-          </div>
+          <TestimonialCard
+            v-for="(item, i) in testimonials"
+            :key="item.name"
+            :quote="item.quote"
+            :name="item.name"
+            :company="item.company"
+            :delay="i * 0.15"
+          />
         </div>
-      </div> -->
+      </div>
     </section>
 
     <!-- ============================================================
@@ -369,11 +350,13 @@ const services = computed(() =>
   })),
 )
 
-const testimonials = [
-  { quote: 'Newland IT helped us modernize our entire workflow. Professional, fast and always available.', name: 'Sarah de Vries', company: 'Agape Joy Care' },
-  { quote: 'From strategy to implementation — they guided us every step of the way. Highly recommended.',  name: 'Mark Janssen',  company: 'BZVJ' },
-  { quote: 'Finally an IT partner that speaks our language. No technical jargon, just clear solutions.',    name: 'Lisa Bakker',   company: 'Flexxes' },
-]
+const testimonials = computed(() =>
+  (tm('home.testimonials.items') as any[]).map(item => ({
+    quote: rt(item.quote),
+    name: rt(item.name),
+    company: rt(item.company),
+  })),
+)
 
 const items = [
   {
@@ -479,46 +462,6 @@ onMounted(() => {
       }, i * 55)
     })
   }
-
- // ── Testimonial popup positioning ──────────────────────────────
-const popup     = document.getElementById('testimonial-popup') as HTMLElement
-const quoteEl   = document.getElementById('popup-quote') as HTMLElement
-const authorEl  = document.getElementById('popup-author') as HTMLElement
-
-if (popup) {
-  document.querySelectorAll<HTMLElement>('.carousel-logo-card--hoverable').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      const quote  = card.dataset.quote  || ''
-      const author = card.dataset.author || ''
-
-      quoteEl.textContent  = `"${quote}"`
-      authorEl.textContent = `— ${author}`
-
-      popup.style.display  = 'block'
-      popup.style.position = 'fixed'
-      popup.style.zIndex   = '99999'
-
-      requestAnimationFrame(() => {
-        const rect       = card.getBoundingClientRect()
-        const popupWidth = popup.offsetWidth || 260
-        const viewportW  = window.innerWidth
-
-        let left = rect.left + rect.width / 2 - popupWidth / 2
-        left = Math.max(8, Math.min(left, viewportW - popupWidth - 8))
-
-        const img = card.querySelector('img')
-        const imgRect = img ? img.getBoundingClientRect() : rect
-
-        popup.style.left = `${left}px`
-        popup.style.top  = `${imgRect.bottom + 6}px`
-      })
-    })
-
-    card.addEventListener('mouseleave', () => {
-      popup.style.display = 'none'
-    })
-  })
-}
 
   // ── Cursor magnetic glow ───────────────────────────────────────
   const heroSection = document.querySelector('.hero-section') as HTMLElement
@@ -923,101 +866,6 @@ if (popup) {
 .marquee-group { display: flex; align-items: center; gap: 2rem; padding: 0 1rem; overflow: visible; }
 @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-/* Logo card needs relative positioning for the dropdown */
-.carousel-logo-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  flex-shrink: 0;
-  width: 160px;
-}
-
-.carousel-logo-card--hoverable {
-  cursor: pointer;
-}
-
-.logo-img {
-  width: 500%;
-  height: 350px;
-  object-fit: contain;
-  opacity: 0.85;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-
-.carousel-logo-card--hoverable:hover .logo-img {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-.review-arrow {
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid rgba(74, 222, 128, 0.4);
-}
-
-/* Slide-down review card */
-.review-dropdown {
-  position: absolute;
-  top: calc(100% + 2px);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 220px;
-  max-width: calc(100vw - 280px); /* 280px accounts for the sidebar width */
-  background: rgba(13, 66, 38, 0.97);
-  border: 1px solid rgba(74, 222, 128, 0.35);
-  border-radius: 1rem;
-  padding: 1rem 1.25rem;
-  text-align: left;
-  z-index: 9999;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  pointer-events: none;
-  white-space: normal;
-  word-break: break-word;
-  margin-top: -80px;
-}
-
-.review-quote {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.6;
-  font-style: italic;
-  margin-bottom: 0.5rem;
-  white-space: normal;
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-
-.review-author {
-  font-size: 0.75rem;
-  color: #4ade80;
-  font-weight: 600;
-}
-
-/* Slide transition */
-.slide-review-enter-active {
-  transition: opacity 0.25s ease, transform 0.25s ease;
-}
-.slide-review-leave-active {
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-.slide-review-enter-from {
-  opacity: 0;
-  transform: translateX(-50%) translateY(-8px);
-}
-.slide-review-leave-to {
-  opacity: 0;
-  transform: translateX(-50%) translateY(-8px);
-}
-
 
 .customers-section {
   position: relative;
@@ -1029,39 +877,6 @@ if (popup) {
   overflow-x: hidden;
 }
 
-.carousel-logo-card--hoverable:hover .testimonial-popup {
-  opacity: 1;
-}
-
-.carousel-logo-card--testimonial {
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  padding: 1.25rem 1.5rem;
-  width: 260px;
-  height: auto;
-  gap: 0.75rem;
-}
-
-.testimonial-quote {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.6;
-  font-style: italic;
-  margin-bottom: 0.6rem;
-  white-space: normal;
-  word-break: break-word;
-}
-
-.testimonial-author {
-  font-size: 0.75rem;
-  color: #4ade80;
-  font-weight: 600;
-  white-space: nowrap;
-}
 
 @keyframes marquee {
   0% { transform: translateX(0); }
@@ -1297,23 +1112,6 @@ if (popup) {
 }
 
 
-/* ── Testimonials ── */
-.testimonial-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 1.5rem;
-  padding: 2rem;
-  transition: transform 0.2s, background 0.2s, opacity 0.5s ease;
-}
-.testimonial-card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.1); }
-.stars { color: #fbbf24; letter-spacing: 2px; font-size: 1rem; }
-.avatar {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #22c55e, #059669);
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 700; font-size: 1rem; color: white; flex-shrink: 0;
-}
 
 /* ── Contact CTA ── */
 .contact-section { background: rgba(0,0,0,0.2); border-top: 1px solid rgba(255,255,255,0.08); }
@@ -1601,27 +1399,6 @@ if (popup) {
   margin-left: 45px;
 }
 .btn-primary:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
-
-.review-dropdown {
-  position: absolute;
-  top: calc(100% + 2px);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 250px;
-  max-width: calc(100vw - 280px); /* 280px accounts for the sidebar width */
-  background: rgba(13, 66, 38, 0.97);
-  border: 1px solid rgba(74, 222, 128, 0.35);
-  border-radius: 1rem;
-  padding: 1rem 1.25rem;
-  text-align: left;
-  z-index: 9999;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  pointer-events: none;
-  white-space: normal;
-  word-break: break-word;
-  margin-top: -180px;
-}
-
 
 }
 

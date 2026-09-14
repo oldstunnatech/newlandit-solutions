@@ -65,6 +65,10 @@
       "title": "Digitale strategie & enablement in Amsterdam",
       "description": "Digitale strategie, projectmanagement, branding en UX/UI-design van Newland IT-Solutions. Wij laten technologie jouw ambities ondersteunen voor schaalbare groei."
     },
+    "cases": {
+      "title": "Cases — Newland IT-Solutions Amsterdam",
+      "description": "Echte klantcases van Newland IT-Solutions: softwareontwikkeling, IT-support en digitale-strategieprojecten voor organisaties in Amsterdam en Noord-Holland."
+    },
     "privacy": {
       "title": "Privacyverklaring — Newland IT-Solutions",
       "description": "Lees hoe Newland IT-Solutions persoonsgegevens verwerkt conform de AVG en welke rechten u heeft als betrokkene."
@@ -129,6 +133,27 @@
         { "title": "Software & automatisering", "description": "Slimme tools die processen versnellen en vereenvoudigen. We bouwen oplossingen die écht werken — van databeheer tot workflow-optimalisatie.", "button": "Meer over ontwikkeling" },
         { "title": "IT-support & beheer", "description": "Directe hulp bij storingen, onderhoud en beveiliging. Remote of op locatie zorgen we dat je systemen stabiel en veilig blijven.", "button": "Meer over IT-support" },
         { "title": "Consultancy & strategie", "description": "Strategisch advies voor digitale transformatie en schaalbare groei. Wij zorgen dat je technologie je ambities ondersteunt.", "button": "Meer over strategie" }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Wat klanten zeggen",
+      "heading": "Ervaringen",
+      "items": [
+        {
+          "quote": "Newland IT heeft ons gehele werkproces gemodernis­eerd. Professioneel, snel en altijd bereikbaar.",
+          "name": "Sarah de Vries",
+          "company": "Agape Joy Care"
+        },
+        {
+          "quote": "Van strategie tot implementatie — ze begeleidden ons elke stap. Zeer aan te bevelen.",
+          "name": "Mark Janssen",
+          "company": "BZVJ"
+        },
+        {
+          "quote": "Eindelijk een IT-partner die onze taal spreekt. Geen technisch jargon, gewoon heldere oplossingen.",
+          "name": "Lisa Bakker",
+          "company": "Flexxes"
+        }
       ]
     },
     "contact": {
@@ -231,7 +256,9 @@
       "mapTitle": "Kaart kantoorlocatie",
       "address": "Adres",
       "closedHolidays": "Gesloten op feestdagen",
-      "openingHours": "Openingstijden"
+      "openingHours": "Openingstijden",
+      "mapBlocked": "Schakel cookies in om de kaart te bekijken.",
+      "enableMaps": "Cookies beheren"
     }
   },
   "detail": {
@@ -308,6 +335,12 @@
           "link": "Plan een adviesgesprek"
         },
         {
+          "title": "Netwerk-, server- & cloudbeheer",
+          "paragraphs": ["Van lokale netwerken tot cloudinfrastructuur — wij beheren, monitoren en optimaliseren je IT-omgeving zodat jij je kunt focussen op je bedrijf.", "Of het nu gaat om een on-premise server, een hybride cloud of een volledig cloudgebaseerde omgeving (Azure, AWS) — we zorgen voor uptime, veiligheid en prestaties."],
+          "points": ["Netwerk- en serverinstallatie & -beheer", "Cloud-infrastructuur (Azure, AWS, hybride)", "Monitoring, patchbeheer & back-upstrategie"],
+          "link": "Vraag een infrastructuurgesprek aan"
+        },
+        {
           "title": "Digitale transformatie & integratie",
           "paragraphs": ["Bij Newland IT-Solutions ondersteunen we organisaties bij het realiseren van digitale transformatie- en integratieprojecten. We zorgen dat je klaar bent voor de toekomst — van strategie tot implementatie.", "Vertrouw op onze expertise om je organisatie te versterken met slimme, schaalbare en toekomstbestendige IT-oplossingen. Of het nu gaat om cloudoplossingen, on-premise systemen of hybride integraties — we helpen je je concurrentiepositie te verbeteren."],
           "points": ["Strategiebepaling en implementatie", "Innovatieve cloud- en on-premise oplossingen", "Efficiëntieverbetering in processen en systemen"],
@@ -368,6 +401,56 @@
       ]
     }
   },
+  "cases": {
+    "eyebrow": "Cases",
+    "heading": "Ons werk",
+    "intro": "Echte uitdagingen, echte oplossingen. Bekijk hoe we organisaties in Amsterdam en daarbuiten hebben geholpen met softwareontwikkeling, IT-support en digitale strategie.",
+    "readMore": "Lees case study",
+    "backToCases": "← Alle cases",
+    "challenge": "De uitdaging",
+    "solution": "Onze aanpak",
+    "result": "Het resultaat",
+    "empty": {
+      "heading": "Cases volgen binnenkort",
+      "text": "We zijn ons beste werk aan het documenteren. Neem in de tussentijd contact op en we vertellen je over de projecten waar we het meest trots op zijn."
+    },
+    "notFound": {
+      "heading": "Case study niet gevonden",
+      "text": "Deze case study is mogelijk verplaatst of nog niet beschikbaar."
+    },
+    "cta": {
+      "heading": "Klaar om jouw succesverhaal te schrijven?",
+      "text": "Vertel ons over jouw project en we reageren binnen 3 werkdagen."
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "heading": "Veelgestelde vragen",
+    "general": {
+      "items": [
+        {
+          "question": "Voor welke soorten bedrijven werken jullie?",
+          "answer": "We werken voor zzp'ers, het mkb, scholen en non-profitorganisaties in Amsterdam en de bredere regio Noord-Holland. Onze oplossingen groeien mee met je organisatie — van een eenmanszaak tot een team van 50 personen."
+        },
+        {
+          "question": "Hoe snel kunnen jullie starten met een nieuw project?",
+          "answer": "Voor de meeste projecten kunnen we binnen één tot twee weken na ons kennismakingsgesprek van start. We bevestigen de planning duidelijk in onze offerte, zodat je altijd weet waar je aan toe bent."
+        },
+        {
+          "question": "Bieden jullie ook doorlopende IT-support na oplevering?",
+          "answer": "Ja. We bieden flexibele supportpakketten — van remote helpdesk op aanvraag tot een dedicated Pro- of Premium-SLA. Na oplevering loopt de support naadloos door op het niveau dat bij jouw organisatie past."
+        },
+        {
+          "question": "Hoe verloopt het onboardingproces?",
+          "answer": "We beginnen met een gratis kennismakingsgesprek om jouw situatie en doelen te begrijpen. Daarna sturen we een heldere offerte met scope, planning en prijs — zonder verborgen kosten of verrassingen."
+        },
+        {
+          "question": "Werken jullie ook on-site in Amsterdam?",
+          "answer": "Ja. Hoewel de meeste support op afstand wordt afgehandeld voor snelheid en gemak, zijn we beschikbaar voor on-site werkzaamheden in Amsterdam en omgeving wanneer de situatie dat vraagt."
+        }
+      ]
+    }
+  },
   "consent": {
     "title": "Uw privacy",
     "text": "We gebruiken functionele cookies en lokale opslag voor basisfunctionaliteit. Met uw toestemming laden we ook Google Maps in. Geen tracking- of marketingcookies.",
@@ -385,7 +468,7 @@
           "heading": "1. Verwerkingsverantwoordelijke",
           "paras": [
             "Newland IT-Solutions is de verwerkingsverantwoordelijke voor de verwerking van uw persoonsgegevens.",
-            "Newland IT-Solutions, Hessenbergweg 8, 1101 BT Amsterdam • KVK: 83541934 • BTW: NL003835137B29 • info@newlandit-solutions.com • +31 648 364 450"
+            "Newland IT-Solutions, Hessenbergweg 8, 1101 BT Amsterdam • KVK: 83541934 • BTW: NL003835137B29 • info{'@'}newlandit-solutions.com • +31 648 364 450"
           ]
         },
         {

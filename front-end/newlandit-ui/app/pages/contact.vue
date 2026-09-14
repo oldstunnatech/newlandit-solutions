@@ -255,6 +255,7 @@
 
         <div class="map-card mb-8">
           <iframe
+            v-if="consentAccepted"
             :src="CONTACT.address.mapEmbedUrl"
             class="w-full h-[360px] sm:h-[420px] rounded-2xl"
             style="border: 0"
@@ -262,6 +263,13 @@
             referrerpolicy="no-referrer-when-downgrade"
             :title="t('contact.visit.mapTitle')"
           />
+          <div v-else class="map-blocked">
+            <MapPinIcon :size="32" class="map-blocked-icon" />
+            <p class="map-blocked-text">{{ t('contact.visit.mapBlocked') }}</p>
+            <button type="button" class="btn-secondary text-sm" @click="openBanner">
+              {{ t('contact.visit.enableMaps') }}
+            </button>
+          </div>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -301,7 +309,7 @@
 <script setup lang="ts">
 import { CONTACT } from '~~/shared/utils/contact'
 import { useI18n } from '#imports'
-import { PaperclipIcon, XIcon, CheckIcon, PhoneIcon, MailIcon, GlobeIcon } from '@lucide/vue'
+import { PaperclipIcon, XIcon, CheckIcon, PhoneIcon, MailIcon, GlobeIcon, MapPinIcon } from '@lucide/vue'
 
 definePageMeta({
   layout: 'default',
@@ -320,6 +328,8 @@ const {
   isDragging, status, statusMessage,
   onAttachmentChange, onDrop, clearAttachment, submit, reset,
 } = useContactForm()
+
+const { consentAccepted, openBanner } = useConsent()
 </script>
 
 <style scoped>
@@ -580,6 +590,27 @@ const {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.04);
   padding: 0.5rem;
+}
+
+.map-blocked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  height: 360px;
+  text-align: center;
+  padding: 2rem;
+}
+@media (min-width: 640px) {
+  .map-blocked { height: 420px; }
+}
+.map-blocked-icon {
+  color: rgba(255, 255, 255, 0.35);
+}
+.map-blocked-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
 }
 
 .hours-row {

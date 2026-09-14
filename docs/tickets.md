@@ -1,6 +1,6 @@
 # 🎫 Newland IT-Solutions — Engineering Tickets
 
-> Last updated: 2026-08-20 · Source: `report.md` · Roadmap: `roadmap.md`
+> Last updated: 2026-09-04 · Source: `report.md` · Roadmap: `roadmap.md`
 >
 > **Legend:** 🔴 P0 launch-blocking · 🟠 P1 high · 🟡 P2 medium · ✅ Done · 🟡 In progress · 📋 Todo
 >
@@ -11,49 +11,15 @@
 
 ## 📊 Status Overview
 
-<details>
-<summary><strong>✅ Phase 1 — SEO infrastructure · DONE</strong></summary>
-
-| ID | Priority | Status | Notes |
-| --- | --- | --- | --- |
-| SEO-001 | 🟠 P1 | ✅ Done | Centralised `useSeo` composable (title/desc/OG/Twitter/robots) |
-| SEO-002 | 🟠 P1 | ✅ Done | Canonical + hreflang + `<html lang>` via i18n `useLocaleHead` |
-| SEO-003 | 🟡 P2 | ✅ Done | Global security headers via `routeRules` |
-| SEO-004 | 🟡 P2 | ✅ Done | Per-page SEO copy under `seo.*` locale keys |
-
-</details>
-
-<details>
-<summary><strong>✅ Phase 2 — i18n NL/EN + translation · DONE</strong></summary>
-
-| ID | Priority | Status | Notes |
-| --- | --- | --- | --- |
-| I18N-001 | 🟠 P1 | ✅ Done | `@nuxtjs/i18n`, NL default, `prefix_except_default`, no browser redirect |
-| I18N-002 | 🟠 P1 | ✅ Done | All page copy externalised to `locales/{nl,en}.json` |
-| I18N-003 | 🟡 P2 | ✅ Done | Language switcher component |
-
-</details>
+✅ **Phases 1–3 archived** — see [`tickets-archive.md`](./tickets-archive.md).
 
 <details open>
-<summary><strong>✅ Phase 3 — Content completeness + legal · DONE (3/3 P0 closed; NWL-004/007 remain P1)</strong></summary>
+<summary><strong>📋 Phase 4 — Trust, conversion & UX · IN PROGRESS (2/4)</strong></summary>
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-001 | 🔴 P0 | ✅ Done | Homepage stats show `0+ / 0yr / 0% / 0hr` placeholders — fill with real data (About uses `50+/5yr/98%/72hr`) |
-| NWL-002 | 🔴 P0 | ✅ Done | Production Vercel serves stale pre-i18n EN build — merge `seo-and-nl-i18n` + redeploy so `/` is NL |
-| NWL-003 | 🔴 P0 | ✅ Done | No legal pages — add privacy statement, cookie policy, terms + footer links (NL/EN) |
-| NWL-004 | 🟠 P1 | 📋 Todo | No cookie/consent banner gating Google Maps embed + WhatsApp (AVG) |
-| NWL-007 | 🟠 P1 | 📋 Todo | Service-page content parity vs old `/oplossingen` deliverables |
-
-</details>
-
-<details open>
-<summary><strong>📋 Phase 4 — Trust, conversion & UX · NOT STARTED (0/4)</strong></summary>
-
-| ID | Priority | Status | Notes |
-| --- | --- | --- | --- |
-| NWL-005 | 🟠 P1 | 📋 Todo | "Trusted by / Our customers" has no real client logos (`ClientLogo.vue` empty) |
-| NWL-006 | 🟠 P1 | 📋 Todo | No testimonials / case references section |
+| NWL-005 | 🟠 P1 | ✅ Done | `ClientLogo.vue` implemented; wired into customers marquee via controlled props/events |
+| NWL-006 | 🟠 P1 | ✅ Done | `TestimonialCard.vue` component added; section live with i18n (nl + en) |
 | NWL-008 | 🟡 P2 | 📋 Todo | About timeline — verify years/events are real, not fabricated |
 | NWL-009 | 🟡 P2 | 📋 Todo | Solution-subpage `<img>` assets — replace placeholders with real imagery + alt text |
 
@@ -65,7 +31,7 @@
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
 | NWL-010 | 🔴 P0 | ✅ Done | 301 redirects old→new (`/oplossingen`→`/solutions`, `/over-ons`→`/about`) |
-| NWL-011 | 🟠 P1 | 📋 Todo | Sitemap + robots verify both locales; submit to Search Console; NAP consistency |
+| NWL-011 | 🟠 P1 | 🟡 In progress | `@nuxtjs/sitemap` added — auto-generates both locales at build; robots.txt already correct. Manual: submit to Search Console; NAP consistency audit. |
 
 </details>
 
@@ -80,10 +46,10 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-012 | 🟡 P2 | 📋 Todo | Case studies — `/cases` + `/cases/[slug]` routing + page/layout scaffold [ideas #3] |
+| NWL-012 | 🟡 P2 | 🟡 In progress | Case studies — `/cases` + `/cases/[slug]` routing + page/layout scaffold [ideas #3] |
 | NWL-013 | 🟡 P2 | 📋 Todo | Case studies — content model + first 2 real cases (problem→solution→result). Depends NWL-012 [ideas #3] |
 | NWL-014 | 🟡 P2 | 📋 Todo | "Onze aanpak" dedicated page — expand Discovery/Plan/Build/Support [ideas #4] |
-| NWL-015 | 🟡 P2 | 📋 Todo | Reusable FAQ accordion component + i18n structure + `FAQPage` JSON-LD [ideas #5] |
+| NWL-015 | 🟡 P2 | ✅ Done | Reusable FAQ accordion component + i18n structure + `FAQPage` JSON-LD [ideas #5] |
 | NWL-016 | 🟡 P2 | 📋 Todo | FAQ content per service (5 pages). Depends NWL-015 [ideas #5] |
 
 **Content engine**
@@ -100,8 +66,8 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| SEO-005 | 🟡 P2 | 📋 Todo | Per-page `Service` JSON-LD on solution pages [ideas #8] |
-| SEO-006 | 🟡 P2 | 📋 Todo | `BreadcrumbList` JSON-LD site-wide [ideas #8] |
+| SEO-005 | 🟡 P2 | ✅ Done | Per-page `Service` JSON-LD on solution pages [ideas #8] |
+| SEO-006 | 🟡 P2 | ✅ Done | `BreadcrumbList` JSON-LD site-wide [ideas #8] |
 | SEO-007 | 🟠 P1 | 📋 Todo | NAP consistency audit + Google Business Profile alignment [ideas #9] |
 | SEO-008 | 🟡 P2 | 📋 Todo | Per-service OG images (replace shared hero) [ideas #10] |
 | SEO-009 | 🟡 P2 | 📋 Todo | Local landing-page template (i18n, schema, internal links) [ideas #11] |
@@ -130,63 +96,6 @@
 
 ## 🔨 Active Ticket Detail
 
-<details open>
-<summary><strong>NWL-001 — Homepage stats placeholder 🔴 P0</strong></summary>
-
-- Files: `app/pages/index.vue`, `i18n/locales/{nl,en}.json`
-- Problem: home stats render `0+ CLIENTS / 0yr EXPERIENCE / 0% SATISFACTION / 0hr RESPONSE`.
-  About page already uses real values (`50+ / 5yr / 98% / 72hr`).
-- Tasks: source real numbers from owner; wire into home; if count-up animation exists, fix trigger.
-- DoD: no zero/placeholder stat visible; home + About numbers consistent.
-
-</details>
-
-<details open>
-<summary><strong>NWL-002 — Production serves stale EN build 🔴 P0</strong></summary>
-
-- Problem: `newlandit-solutions.vercel.app/` renders an all-English hero (pre-i18n build).
-  NL-default i18n lives on branch `seo-and-nl-i18n` (commit `4488042`), not yet deployed.
-- Tasks: merge branch → main; confirm Vercel production tracks main; redeploy; verify `/` = NL,
-  `/en` = EN, hreflang correct.
-- DoD: production `/` serves Dutch by default; language switch works; no hardcoded EN strings.
-
-</details>
-
-<details open>
-<summary><strong>NWL-003 — Legal pages (AVG/GDPR) 🔴 P0</strong></summary>
-
-- Files: new `app/pages/{privacy,cookies,terms}.vue`, `app/components/Footer.vue`, locale JSON.
-- Problem: contact form collects personal data + file uploads; site embeds Google Maps + WhatsApp.
-  No privacy statement, cookie policy, or terms exist; footer has no legal links.
-- Tasks: author privacyverklaring (NL primary), cookiebeleid, algemene voorwaarden; add footer links; i18n.
-- DoD: three legal pages live in NL + EN; linked from footer; privacy statement covers form data + Resend + Sanity.
-
-</details>
-
-<details open>
-<summary><strong>NWL-004 — Cookie/consent banner 🟠 P1</strong></summary>
-
-- Problem: Google Maps iframe + WhatsApp load without prior consent — AVG requires consent for
-  non-essential third-party embeds.
-- Tasks: consent banner (accept/decline non-essential); gate the map iframe behind consent;
-  most-privacy-preserving default.
-- DoD: no non-essential third-party request before consent; choice persisted; NL/EN copy.
-
-</details>
-
-<details open>
-<summary><strong>NWL-007 — Service content parity vs old site 🟠 P1</strong></summary>
-
-- Files: `app/pages/solutions/*.vue`, locale JSON.
-- Problem: old `/oplossingen` listed concrete deliverables that must survive the redesign:
-  `WordPress/Wix/Shopify`, `platform-/API-integraties`, `IT-consultancy & systeemselectie`,
-  `netwerk-/server-/cloudbeheer`, `helpdesk remote & on-site`, `projectmanagement (ook buiten IT)`,
-  `branding & visueel design`, `UI/UX`.
-- Tasks: diff old deliverables against new `offers` lists; add any missing bullets.
-- DoD: every old service deliverable is represented on a new solution page.
-
-</details>
-
 <details>
 <summary><strong>NWL-020 — Sanity fetch layer + schemas 🟡 P2 (decision-gated)</strong></summary>
 
@@ -212,11 +121,10 @@
 
 ## 🔗 Dependencies & next steps
 
-- **Launch blockers (P0):** ✅ All closed — NWL-001, NWL-002, NWL-003, NWL-010.
-- NWL-002 (redeploy) also validates all Phase 2 i18n work in production.
-- NWL-003 (legal) + NWL-004 (consent) should ship together.
+- **Phase 1–3:** ✅ All closed. Phase 3 detail archived 2026-09-04.
+- **Phase 5:** NWL-010 ✅ done; NWL-011 🟡 in progress (sitemap module added — manual Search Console submit + NAP audit remain).
 - **Backlog chains:** NWL-020 → NWL-017 → NWL-018/019 (blog); NWL-020 → NWL-021 (copy migration);
   NWL-012 → NWL-013 (cases); NWL-015 → NWL-016 (FAQ); SEO-009 → SEO-010 (local pages);
   NWL-001 → NWL-025 (count-up).
 - **Decision-gated:** NWL-020 (CMS vs i18n), NWL-023 (Stripe) — resolve in PRD §10 before pulling in.
-- **Suggested next:** NWL-002 → NWL-001 → NWL-003/004 → NWL-007 → Phase 4 trust content.
+- **Suggested next:** Phase 4 trust content (NWL-005/006) → NWL-011 manual steps.
