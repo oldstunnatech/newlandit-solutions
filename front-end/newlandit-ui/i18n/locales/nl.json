@@ -397,6 +397,34 @@
       ]
     }
   },
+  "faq": {
+    "eyebrow": "FAQ",
+    "heading": "Veelgestelde vragen",
+    "general": {
+      "items": [
+        {
+          "question": "Voor welke soorten bedrijven werken jullie?",
+          "answer": "We werken voor zzp'ers, het mkb, scholen en non-profitorganisaties in Amsterdam en de bredere regio Noord-Holland. Onze oplossingen groeien mee met je organisatie — van een eenmanszaak tot een team van 50 personen."
+        },
+        {
+          "question": "Hoe snel kunnen jullie starten met een nieuw project?",
+          "answer": "Voor de meeste projecten kunnen we binnen één tot twee weken na ons kennismakingsgesprek van start. We bevestigen de planning duidelijk in onze offerte, zodat je altijd weet waar je aan toe bent."
+        },
+        {
+          "question": "Bieden jullie ook doorlopende IT-support na oplevering?",
+          "answer": "Ja. We bieden flexibele supportpakketten — van remote helpdesk op aanvraag tot een dedicated Pro- of Premium-SLA. Na oplevering loopt de support naadloos door op het niveau dat bij jouw organisatie past."
+        },
+        {
+          "question": "Hoe verloopt het onboardingproces?",
+          "answer": "We beginnen met een gratis kennismakingsgesprek om jouw situatie en doelen te begrijpen. Daarna sturen we een heldere offerte met scope, planning en prijs — zonder verborgen kosten of verrassingen."
+        },
+        {
+          "question": "Werken jullie ook on-site in Amsterdam?",
+          "answer": "Ja. Hoewel de meeste support op afstand wordt afgehandeld voor snelheid en gemak, zijn we beschikbaar voor on-site werkzaamheden in Amsterdam en omgeving wanneer de situatie dat vraagt."
+        }
+      ]
+    }
+  },
   "consent": {
     "title": "Uw privacy",
     "text": "We gebruiken functionele cookies en lokale opslag voor basisfunctionaliteit. Met uw toestemming laden we ook Google Maps in. Geen tracking- of marketingcookies.",
