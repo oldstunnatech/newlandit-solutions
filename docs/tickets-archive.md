@@ -2,7 +2,7 @@
 
 > Completed-ticket detail. The live status overview and active-ticket detail live in
 > [`tickets.md`](./tickets.md). Move a ticket here once it is ✅ Done.
-> Last updated: 2026-09-04
+> Last updated: 2026-09-14
 
 ---
 
@@ -80,3 +80,27 @@
 - Files: `front-end/newlandit-ui/nuxt.config.ts` (`routeRules`)
 - Delivered: `/oplossingen` → `/solutions` (301), `/oplossingen/**` → `/solutions` (301),
   `/over-ons` → `/about` (301). Merged via PR #3 → PR #2 (2026-08-28).
+
+---
+
+## Backlog batch — shipped v1.1.0 (2026-09-14, PR #12)
+
+### NWL-015 — FAQ accordion component
+- Files: `app/components/FaqAccordion.vue`, `tests/faq-accordion.test.ts`, `i18n/locales/{nl,en}.json`
+- Delivered: accessible button accordion with CSS `grid-template-rows` height transition. Injects `FAQPage` JSON-LD via `useHead(computed(...))` when `pageUrl` prop provided. `faq.general.items` i18n namespace (5 Q&A pairs, nl + en). 8 Vitest tests covering schema builder, i18n parity.
+- Merged: PR #14 → development; shipped main via v1.1.0.
+
+### SEO-005 — Service JSON-LD on solution pages
+- Files: `app/composables/useServiceSchema.ts`, all 5 `app/pages/solutions/*.vue`, `tests/service-schema.test.ts`
+- Delivered: `useServiceSchema({ name, description, path, serviceType? })` composable. Builds `schema.org/Service` with hardcoded `PROVIDER` (Organization block: address, phone, email, KVK) and `areaServed: City Amsterdam`. Called in all 5 solution pages immediately after `useSeo()`. 8 Vitest tests.
+- Merged: PR #15 → development; shipped main via v1.1.0.
+
+### SEO-006 — BreadcrumbList JSON-LD site-wide
+- Files: `app/composables/useBreadcrumbSchema.ts`, `app/layouts/default.vue`, `tests/breadcrumb-schema.test.ts`
+- Delivered: `useBreadcrumbSchema()` composable called once in `default.vue`. Auto-derives `BreadcrumbList` from `useRoute().path`; strips `/en` prefix for English locale; maps slugs to `t('nav.*')` labels with capitalised fallback; no-ops on home (0 segments). 9 Vitest tests.
+- Merged: PR #16 → development; shipped main via v1.1.0.
+
+### NWL-012 — Case studies routing + scaffold
+- Files: `app/pages/cases/index.vue`, `app/pages/cases/[slug].vue`, `app/components/CaseCard.vue`, `shared/types/case.ts`, `shared/data/cases.ts`, `i18n/locales/{nl,en}.json`
+- Delivered: `/cases` index (grid of `CaseCard` or empty-state), `/cases/[slug]` detail (challenge / approach / result sections + CTA; `noindex: true` on not-found). Typed `CaseStudy` interface. Empty `cases[]` array with `getCaseBySlug` helper (NWL-013 populates). `cases.*` + `seo.cases.*` i18n keys (nl + en).
+- Merged: PR #17 → development; shipped main via v1.1.0.
