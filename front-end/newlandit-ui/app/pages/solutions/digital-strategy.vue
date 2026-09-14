@@ -97,6 +97,13 @@ useSeo({
   path: '/solutions/digital-strategy',
 })
 
+useServiceSchema({
+  name: t('seo.digitalStrategy.title'),
+  description: t('seo.digitalStrategy.description'),
+  path: '/solutions/digital-strategy',
+  serviceType: 'Digital Strategy',
+})
+
 const offers = computed(() => (tm('detail.strategy.offers') as any[]).map((o) => rt(o)))
 
 const subMeta = [

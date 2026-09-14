@@ -81,6 +81,13 @@ useSeo({
   path: '/solutions/cms-websites',
 })
 
+useServiceSchema({
+  name: t('seo.cmsWebsites.title'),
+  description: t('seo.cmsWebsites.description'),
+  path: '/solutions/cms-websites',
+  serviceType: 'CMS Website Development',
+})
+
 const productMeta = [
   {
     image: '/images/filters_quality(80).webp',
