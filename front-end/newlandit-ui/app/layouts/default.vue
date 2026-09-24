@@ -14,7 +14,7 @@
 
     <div class="flex flex-1">
       <!-- Desktop sidebar (always visible md+) -->
-      <SideNav class="w-64 shrink-0" />
+      <SideNav class="shrink-0" />
 
       <!-- Mobile drawer -->
       <Transition name="slide">

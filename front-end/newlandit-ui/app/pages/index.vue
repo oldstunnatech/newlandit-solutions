@@ -125,8 +125,8 @@
         <div class="flex flex-col lg:flex-row gap-16">
 
           <div class="flex-1">
-             <p class="eyebrow-pill3 mb-3">{{ t('home.why.eyebrow') }}</p>
-            <h2 class="text-3xl2 md:text-4xl font-bold mb-8 mt-3 tracking-tight">{{ t('home.why.heading') }}</h2>
+             <p class="eyebrow-pill3 mb-3 block text-center">{{ t('home.why.eyebrow') }}</p>
+            <h2 class="text-3xl2 md:text-4xl font-bold mb-8 mt-3 tracking-tight text-center">{{ t('home.why.heading') }}</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div
                 v-for="(card, i) in whyCards"
@@ -200,9 +200,9 @@
 
     <section id="services1" class="why-services-section2 py-20 px-6" data-observe>
   <div class="flex-1">
-    <p class="eyebrow-pill5 mb-3">{{ t('home.services.eyebrow') }}</p>
-    <h2 class="text-3xl4 md:text-4xl font-bold mb-4 mt-3 tracking-tight">{{ t('home.services.heading') }}</h2>
-    <p class="service-text mb-8 text-white/70">
+    <p class="eyebrow-pill5 mb-3 block text-center">{{ t('home.services.eyebrow') }}</p>
+    <h2 class="text-3xl4 md:text-4xl font-bold mb-4 mt-3 tracking-tight text-center">{{ t('home.services.heading') }}</h2>
+    <p class="service-text mb-8 text-white/70 text-center">
       {{ t('home.services.intro') }}
     </p>
     <div class="grid grid-cols-1 gap-5 mt-10">
@@ -922,8 +922,6 @@ onMounted(() => {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 520px;
-  
 }
 .eyebrow-pill4 {
   display: inline-block;
@@ -936,9 +934,6 @@ onMounted(() => {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 425px;
-
-  
 }
 .eyebrow-pill5 {
   display: inline-block;
@@ -951,8 +946,6 @@ onMounted(() => {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 505px;
-  
 }
 .eyebrow-pill6 {
   display: inline-block;
@@ -965,8 +958,6 @@ onMounted(() => {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 475px;
-  
 }
 
 .eyebrow-pill7 {
@@ -980,8 +971,6 @@ onMounted(() => {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 0px;
-  
 }
 
 /* ── Process cards ── */
@@ -1042,32 +1031,22 @@ onMounted(() => {
 }
 .text-3xl1{
   color: #FBF6DA;
-  margin-left: 0px;
 }
 .text-3xl2{
   color: #FBF6DA;
-  margin-left: 365px;
 }
 .text-3xl3{
   color: #FBF6DA;
-  margin-left: 0px;
 }
 .text-3xl4{
   color: #FBF6DA;
-  margin-left: 485px;
 }
 .text-3xl5{
   color: #FBF6DA;
-  margin-left: 0px;
 }
 
 .text-3xl6{
   color: #FBF6DA;
-  margin-left: 0px;
-}
-
-.service-text{
-  margin-left: 130px;
 }
 
 
@@ -1157,7 +1136,6 @@ onMounted(() => {
   box-shadow: 0 4px 24px rgba(0,0,0,0.2);
   transition: transform 0.2s, box-shadow 0.2s;
   text-decoration: none;
-  margin-left: 460px;
 }
 .btn-primary:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
 
@@ -1246,43 +1224,33 @@ onMounted(() => {
 
 }
 
-@media (max-width: 480px) 
+@media (max-width: 480px)
 {
   .text-3xl1{
   color: #FBF6DA;
-  margin-left: 0px;
   font-size: 23px;
 }
 .text-3xl2{
   color: #FBF6DA;
-  margin-left: 45px;
   font-size: 23px;
 }
 .text-3xl3{
   color: #FBF6DA;
-  margin-left: 20px;
   font-size: 23px;
 }
 .text-3xl4{
   color: #FBF6DA;
-  margin-left: 110px;
   font-size: 23px;
 }
 
 .text-3xl5{
   color: #FBF6DA;
-  margin-left: -20px;
   font-size: 23px;
 }
 
 .text-3xl6{
   color: #FBF6DA;
-  margin-left: -10px;
   font-size: 23px;
-}
-
-.service-text{
-  margin-left: 12px;
 }
 
 .eyebrow-pill1 {
@@ -1323,8 +1291,6 @@ onMounted(() => {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 110px;
-  
 }
 
 .eyebrow-pill4 {
@@ -1338,8 +1304,6 @@ onMounted(() => {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 95px;
-  
 }
 
 .eyebrow-pill5 {
@@ -1353,8 +1317,6 @@ onMounted(() => {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 105px;
-  
 }
 
 .eyebrow-pill6 {
@@ -1368,8 +1330,6 @@ onMounted(() => {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 65px;
-  
 }
 
 
@@ -1384,8 +1344,6 @@ onMounted(() => {
   border: 1px solid rgba(52,211,153,0.3);
   border-radius: 9999px;
   padding: 0.35rem 1rem;
-  margin-left: 0px;
-  
 }
 
 .btn-primary1 {
@@ -1396,7 +1354,6 @@ onMounted(() => {
   box-shadow: 0 4px 24px rgba(0,0,0,0.2);
   transition: transform 0.2s, box-shadow 0.2s;
   text-decoration: none;
-  margin-left: 45px;
 }
 .btn-primary:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
 
