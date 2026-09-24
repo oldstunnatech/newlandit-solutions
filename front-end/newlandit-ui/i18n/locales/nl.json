@@ -100,10 +100,10 @@
       "eyebrow": "Onze waarden",
       "heading": "Waarom Newland IT-Solutions?",
       "cards": [
-        { "title": "Heldere communicatie & transparantie", "description": "Duidelijke afspraken, begrijpelijke taal, geen verrassingen." },
-        { "title": "Maatwerk", "description": "Oplossingen afgestemd op jouw processen en doelen." },
-        { "title": "Snelle support", "description": "Snel geholpen, remote of op locatie." },
-        { "title": "Ervaren team", "description": "Van implementatie tot strategie — één partner." }
+        { "title": "Duidelijke communicatie & transparantie", "description": "Heldere afspraken, duidelijke taal, geen verrassingen." },
+        { "title": "Maatwerk, geen one-size-fits-all oplossingen", "description": "Oplossingen afgestemd op jouw processen en doelen." },
+        { "title": "Snelle support, remote of on-site", "description": "Snel geholpen remote of op locatie." },
+        { "title": "Ervaren in web, software én IT-strategieën", "description": "Van implementatie tot strategie — één partner." }
       ]
     },
     "offer": {
