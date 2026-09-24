@@ -283,12 +283,13 @@ const subSections = computed(() =>
 .btn-secondary11 {
   display: inline-block;
   padding: 0.75rem 1rem;
-  border: 1px solid rgba(255,255,255,0.4); color: #25d366;; font-weight: 600;
+  border: 1.5px solid rgba(74,222,128,0.4); color: #4ade80; font-weight: 600;
   border-radius: 0.75rem;
   transition: background 0.2s, border-color 0.2s;
   text-decoration: none;
   margin-top: 10px;
 }
+.btn-secondary11:hover { background: rgba(74,222,128,0.1); border-color: rgba(74,222,128,0.7); }
 
 /* ── Buttons ── */
 .btn-primary { display: inline-block; padding: 0.75rem 2rem; background: #fbf6da; color: #0d4226; font-weight: 700; border-radius: 0.75rem; box-shadow: 0 4px 24px rgba(0,0,0,0.2); transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; }
