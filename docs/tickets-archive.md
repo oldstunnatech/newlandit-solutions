@@ -2,7 +2,7 @@
 
 > Completed-ticket detail. The live status overview and active-ticket detail live in
 > [`tickets.md`](./tickets.md). Move a ticket here once it is ✅ Done.
-> Last updated: 2026-09-14
+> Last updated: 2026-09-24
 
 ---
 
@@ -71,6 +71,20 @@
 - Files: `i18n/locales/{nl,en}.json`, `app/pages/solutions/it-consulting.vue`
 - Delivered: diffed all 8 old `/oplossingen` deliverables against new solution pages. Gap found: "netwerk-/server-/cloudbeheer" appeared in `consulting.offers` but had no `sub` detail section (3 subs for 4 offers). Added `sub` entry (NL + EN) with 2 paragraphs, 3 bullet points, CTA link. Fixed `subMeta` in `it-consulting.vue` (was hardcoded 3 image entries, now 4). Changed grid from `repeat(3, 1fr)` to `auto-fill, minmax(280px, 1fr)` for flexible layout.
 - DoD met: all 8 old deliverables represented on a new solution page.
+
+---
+
+## Phase 4 — Trust, conversion & UX — partial
+
+### NWL-005 — Client logo marquee component
+- Files: `app/components/ClientLogo.vue`, `app/pages/index.vue`
+- Delivered: `ClientLogo.vue` renders logo img + optional review dropdown, controlled via `isActive` prop, emits `enter`/`leave`/`toggle` for marquee pause logic. Replaced inline `carousel-logo-card` divs in `index.vue` with `<ClientLogo>`; removed now-redundant scoped CSS and dead popup DOM query.
+- Merged: PR #11 (`e8e3afe`).
+
+### NWL-006 — Testimonials section
+- Files: `app/components/TestimonialCard.vue`, `app/pages/index.vue`, `i18n/locales/{nl,en}.json`
+- Delivered: `TestimonialCard.vue` displays quote, star rating, author avatar (initial), name, company; `delay` prop for staggered scroll reveal. `index.vue` testimonials section uncommented, hardcoded data replaced with `tm('home.testimonials.items')` computed. `home.testimonials.{eyebrow, heading, items[]}` i18n keys added (nl + en).
+- Merged: PR #11 (`5b55376`).
 
 ---
 
