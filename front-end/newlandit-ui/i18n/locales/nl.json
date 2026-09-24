@@ -23,6 +23,7 @@
     "itSupport": "IT-support (helpdesk, remote & on-site)",
     "digitalStrategy": "Digitale strategie & enablement",
     "about": "Over ons",
+    "approach": "Onze aanpak",
     "contact": "Contact",
     "privacy": "Privacyverklaring",
     "cookies": "Cookiebeleid",
@@ -40,6 +41,10 @@
     "about": {
       "title": "Over Newland IT-Solutions — jouw IT-partner in Amsterdam",
       "description": "Sinds 2021 helpt Newland IT-Solutions bedrijven in Amsterdam om complexe IT-uitdagingen om te zetten in heldere, duurzame oplossingen. Lees over onze missie, waarden en team."
+    },
+    "approach": {
+      "title": "Onze aanpak — zo werken we bij Newland IT-Solutions",
+      "description": "Van kennismaking tot doorlopende support: ontdek hoe Newland IT-Solutions elk IT-traject aanpakt, stap voor stap."
     },
     "contact": {
       "title": "Contact Newland IT-Solutions in Amsterdam",
@@ -221,6 +226,54 @@
       { "title": "Responsiviteit", "description": "Snelle, betrouwbare support — remote of op locatie. We zijn er wanneer het ertoe doet." },
       { "title": "Expertise", "description": "Van praktische implementatie tot strategie op hoog niveau — één partner over de volle breedte." }
     ]
+  },
+  "approach": {
+    "eyebrow": "Onze aanpak",
+    "heading": "Zo werken we samen",
+    "intro": "Van eerste kennismaking tot doorlopende support — dit is hoe een traject bij Newland IT-Solutions eruitziet, stap voor stap.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Ontdekken",
+        "paragraphs": [
+          "We beginnen elk traject met luisteren. In een vrijblijvend kennismakingsgesprek brengen we je huidige situatie, uitdagingen en doelen in kaart — zonder aannames, zonder jargon.",
+          "Op basis daarvan bepalen we samen wat er écht nodig is, zodat we geen tijd verspillen aan oplossingen die niet aansluiten bij jouw organisatie."
+        ],
+        "bullets": ["Vrijblijvend kennismakingsgesprek", "Analyse van huidige systemen en processen", "Heldere probleemstelling"]
+      },
+      {
+        "number": "02",
+        "title": "Plannen",
+        "paragraphs": [
+          "We vertalen de uitkomsten van de discovery-fase naar een concreet, op maat gemaakt plan — met duidelijke stappen, tijdlijn en verwachtingen.",
+          "Jij weet vooraf precies wat je krijgt, wanneer, en tegen welke investering — geen verrassingen achteraf."
+        ],
+        "bullets": ["Concreet stappenplan", "Tijdlijn & mijlpalen", "Transparante begroting"]
+      },
+      {
+        "number": "03",
+        "title": "Bouwen",
+        "paragraphs": [
+          "We ontwikkelen en implementeren de oplossing met precisie, met korte feedback-cycli zodat je grip houdt op de voortgang.",
+          "Of het nu gaat om software, een website of IT-infrastructuur — we werken volgens best practices en houden je steeds op de hoogte."
+        ],
+        "bullets": ["Iteratieve ontwikkeling", "Regelmatige check-ins", "Kwaliteitscontrole voor oplevering"]
+      },
+      {
+        "number": "04",
+        "title": "Support",
+        "paragraphs": [
+          "Na oplevering laten we je niet aan je lot over. We blijven beschikbaar voor vragen, onderhoud en doorontwikkeling.",
+          "Zo groeit je oplossing mee met je organisatie, in plaats van dat die na een paar jaar vervangen moet worden."
+        ],
+        "bullets": ["Doorlopende ondersteuning", "Proactief onderhoud", "Ruimte voor doorontwikkeling"]
+      }
+    ],
+    "cta": {
+      "eyebrow": "Klaar om te starten?",
+      "heading": "Laten we je traject bespreken",
+      "text": "Plan een vrijblijvend kennismakingsgesprek — stap 1 begint met een gesprek, niet met een verplichting."
+    }
   },
   "contact": {
     "eyebrow": "Neem contact op",

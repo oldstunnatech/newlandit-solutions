@@ -23,6 +23,7 @@
     "itSupport": "IT Support (helpdesk, remote & on-site)",
     "digitalStrategy": "Digital Strategy & Enablement",
     "about": "About",
+    "approach": "Our approach",
     "contact": "Contact",
     "privacy": "Privacy Statement",
     "cookies": "Cookie Policy",
@@ -40,6 +41,10 @@
     "about": {
       "title": "About Newland IT-Solutions — Your IT Partner in Amsterdam",
       "description": "Since 2021 Newland IT-Solutions has helped companies in Amsterdam turn complex IT challenges into clear, lasting solutions. Learn about our mission, values and team."
+    },
+    "approach": {
+      "title": "Our approach — how we work at Newland IT-Solutions",
+      "description": "From first introduction to ongoing support: see how Newland IT-Solutions approaches every IT project, step by step."
     },
     "contact": {
       "title": "Contact Newland IT-Solutions in Amsterdam",
@@ -221,6 +226,54 @@
       { "title": "Responsiveness", "description": "Fast, reliable support, remotely or on location. We're there when it matters." },
       { "title": "Expertise", "description": "From hands-on implementation to high-level strategy, one partner across the full stack." }
     ]
+  },
+  "approach": {
+    "eyebrow": "Our approach",
+    "heading": "How we work together",
+    "intro": "From first introduction to ongoing support — here's what a project with Newland IT-Solutions looks like, step by step.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Discover",
+        "paragraphs": [
+          "We start every project by listening. In a no-obligation introductory call, we map out your current situation, challenges and goals — no assumptions, no jargon.",
+          "From there, we figure out together what's actually needed, so we don't waste time on solutions that don't fit your organization."
+        ],
+        "bullets": ["No-obligation introductory call", "Analysis of current systems and processes", "A clear problem statement"]
+      },
+      {
+        "number": "02",
+        "title": "Plan",
+        "paragraphs": [
+          "We translate the outcomes of the discovery phase into a concrete, tailored plan — with clear steps, a timeline and expectations.",
+          "You know exactly what you're getting, when, and at what cost, up front — no surprises later."
+        ],
+        "bullets": ["Concrete step-by-step plan", "Timeline & milestones", "Transparent budget"]
+      },
+      {
+        "number": "03",
+        "title": "Build",
+        "paragraphs": [
+          "We develop and implement the solution with precision, with short feedback loops so you stay in control of progress.",
+          "Whether it's software, a website or IT infrastructure — we work to best practices and keep you informed every step of the way."
+        ],
+        "bullets": ["Iterative development", "Regular check-ins", "Quality control before delivery"]
+      },
+      {
+        "number": "04",
+        "title": "Support",
+        "paragraphs": [
+          "We don't disappear after delivery. We stay available for questions, maintenance and further development.",
+          "That way your solution grows alongside your organization, instead of needing to be replaced after a couple of years."
+        ],
+        "bullets": ["Ongoing support", "Proactive maintenance", "Room for further development"]
+      }
+    ],
+    "cta": {
+      "eyebrow": "Ready to get started?",
+      "heading": "Let's talk about your project",
+      "text": "Schedule a no-obligation introduction — step one starts with a conversation, not a commitment."
+    }
   },
   "contact": {
     "eyebrow": "Get in touch",
