@@ -25,7 +25,16 @@
           </div>
           <h3 class="text-xl font-bold mt-5 mb-3">{{ card.title }}</h3>
           <p class="text-white/65 text-sm leading-relaxed mb-5">{{ card.summary }}</p>
-          <span class="solution-link">{{ t('solutions.learnMore') }}</span>
+
+          <p class="solution-offer-label">{{ t('solutions.offerLabel') }}</p>
+          <ul class="solution-bullets">
+            <li v-for="bullet in card.bullets" :key="bullet">
+              <span class="solution-check">✓</span>
+              <span>{{ bullet }}</span>
+            </li>
+          </ul>
+
+          <span class="solution-cta">{{ card.ctaLabel }}</span>
         </NuxtLink>
       </div>
     </div>
@@ -77,6 +86,8 @@ const cards = computed(() =>
     icon: cardMeta[i].icon,
     title: rt(c.title),
     summary: rt(c.summary),
+    bullets: (c.bullets as any[]).map((b) => rt(b)),
+    ctaLabel: rt(c.ctaLabel),
   })),
 )
 </script>
@@ -120,7 +131,8 @@ const cards = computed(() =>
   padding: 0.4rem 1.1rem;
 }
 .solution-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
@@ -136,7 +148,49 @@ const cards = computed(() =>
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
 }
-.solution-link { color: #4ade80; font-weight: 600; font-size: 0.9rem; }
+
+.solution-offer-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #4ade80;
+  margin-bottom: 0.6rem;
+}
+.solution-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+  flex: 1;
+}
+.solution-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  line-height: 1.4;
+}
+.solution-check {
+  color: #4ade80;
+  font-size: 0.9rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.solution-cta {
+  display: block;
+  text-align: center;
+  margin-top: auto;
+  padding: 0.7rem 1.5rem;
+  background: #fbf6da;
+  color: #0d4226;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.solution-card:hover .solution-cta { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); }
 .btn-primary {
   display: inline-block; padding: 0.75rem 2rem;
   background: #FBF6DA; color: #0d4226; font-weight: 700;

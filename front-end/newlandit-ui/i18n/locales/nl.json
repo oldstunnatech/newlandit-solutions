@@ -167,10 +167,11 @@
     "heading": "Diensten",
     "intro": "Bij Newland IT-Solutions leveren we slimme en schaalbare IT-oplossingen die organisaties helpen groeien, processen stroomlijnen en digitaal sterker worden. Van softwareontwikkeling tot strategie en support — wij zijn jouw digitale partner.",
     "learnMore": "Lees meer →",
+    "offerLabel": "Wat wij bieden:",
     "cards": [
-      { "title": "Softwareontwikkeling", "summary": "Van maatwerkapplicaties tot CMS-websites: we bouwen digitale oplossingen die perfect aansluiten op je organisatie. We begeleiden het hele ontwikkeltraject, van strategie tot implementatie." },
-      { "title": "IT-consultancy", "summary": "We ondersteunen organisaties bij het maken van slimme IT-keuzes en zorgen dat systemen altijd operationeel blijven. Van strategisch advies tot dagelijkse IT-support." },
-      { "title": "Digitale strategie & enablement", "summary": "We begeleiden zowel IT- als niet-IT-projecten met een gestructureerde aanpak. Daarnaast versterken we je organisatie met digitale strategieën voor merkontwikkeling." }
+      { "title": "Softwareontwikkeling", "summary": "Van maatwerkapplicaties tot CMS-websites: we bouwen digitale oplossingen die perfect aansluiten op je organisatie. We begeleiden het hele ontwikkeltraject, van strategie tot implementatie.", "bullets": ["Maatwerk web- en mobiele applicaties", "CMS-websites (o.a. WordPress, Wix & Shopify)", "Platformontwikkeling & API-integraties"], "ctaLabel": "Meer over Development" },
+      { "title": "IT-consultancy", "summary": "We ondersteunen organisaties bij het maken van slimme IT-keuzes en zorgen dat systemen altijd operationeel blijven. Van strategisch advies tot dagelijkse IT-support.", "bullets": ["IT-consultancy & systeemselectie", "Digitale transformatie & integratie", "IT-support (helpdesk, remote & on-site)", "Netwerk-, server- & cloudbeheer"], "ctaLabel": "Meer over IT-Consultancy" },
+      { "title": "Digitale strategie & enablement", "summary": "We begeleiden zowel IT- als niet-IT-projecten met een gestructureerde aanpak. Daarnaast versterken we je organisatie met digitale strategieën voor merkontwikkeling.", "bullets": ["Projectmanagement (ook buiten IT)", "Digitale strategie, branding & visueel design", "UI/UX-design"], "ctaLabel": "Meer over Enablement" }
     ],
     "ctaText": "Niet zeker welke oplossing bij jouw situatie past? Neem contact op voor een vrijblijvend gesprek. Samen vinden we het juiste pad."
   },
