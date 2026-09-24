@@ -31,7 +31,7 @@
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
 | NWL-010 | 🔴 P0 | ✅ Done | 301 redirects old→new (`/oplossingen`→`/solutions`, `/over-ons`→`/about`) |
-| NWL-011 | 🟠 P1 | 🟡 In progress | `@nuxtjs/sitemap` added — auto-generates both locales at build; robots.txt already correct. NAP audit done (see SEO-007). Manual: submit sitemap to Search Console — no property registered yet under this Google account. |
+| NWL-011 | 🟠 P1 | 🟡 In progress | `@nuxtjs/sitemap` added; robots.txt correct. NAP audit done (see SEO-007). Search Console property created (URL prefix, `www.newlandit-solutions.com`); verification meta tag added in PR #19 (feat/NWL-011-search-console). Remaining after merge+deploy: click Verify, then submit `sitemap.xml`, confirm `/nl/` + `/en/` locales appear. |
 
 </details>
 
