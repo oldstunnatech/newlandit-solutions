@@ -2,7 +2,7 @@
 
 > Completed-ticket detail. The live status overview and active-ticket detail live in
 > [`tickets.md`](./tickets.md). Move a ticket here once it is ✅ Done.
-> Last updated: 2026-09-14
+> Last updated: 2026-09-24
 
 ---
 
@@ -74,6 +74,20 @@
 
 ---
 
+## Phase 4 — Trust, conversion & UX — partial
+
+### NWL-005 — Client logo marquee component
+- Files: `app/components/ClientLogo.vue`, `app/pages/index.vue`
+- Delivered: `ClientLogo.vue` renders logo img + optional review dropdown, controlled via `isActive` prop, emits `enter`/`leave`/`toggle` for marquee pause logic. Replaced inline `carousel-logo-card` divs in `index.vue` with `<ClientLogo>`; removed now-redundant scoped CSS and dead popup DOM query.
+- Merged: PR #11 (`e8e3afe`).
+
+### NWL-006 — Testimonials section
+- Files: `app/components/TestimonialCard.vue`, `app/pages/index.vue`, `i18n/locales/{nl,en}.json`
+- Delivered: `TestimonialCard.vue` displays quote, star rating, author avatar (initial), name, company; `delay` prop for staggered scroll reveal. `index.vue` testimonials section uncommented, hardcoded data replaced with `tm('home.testimonials.items')` computed. `home.testimonials.{eyebrow, heading, items[]}` i18n keys added (nl + en).
+- Merged: PR #11 (`5b55376`).
+
+---
+
 ## Phase 5 — Launch (cutover) — partial
 
 ### NWL-010 — 301 redirects old→new
@@ -104,3 +118,18 @@
 - Files: `app/pages/cases/index.vue`, `app/pages/cases/[slug].vue`, `app/components/CaseCard.vue`, `shared/types/case.ts`, `shared/data/cases.ts`, `i18n/locales/{nl,en}.json`
 - Delivered: `/cases` index (grid of `CaseCard` or empty-state), `/cases/[slug]` detail (challenge / approach / result sections + CTA; `noindex: true` on not-found). Typed `CaseStudy` interface. Empty `cases[]` array with `getCaseBySlug` helper (NWL-013 populates). `cases.*` + `seo.cases.*` i18n keys (nl + en).
 - Merged: PR #17 → development; shipped main via v1.1.0.
+
+---
+
+## SEO-007 — NAP consistency audit (2026-09-24)
+
+- Doc: [`nwl-011-seo-007-checklist.md`](./nwl-011-seo-007-checklist.md) (full findings log)
+- Delivered: audited Google Business Profile, Bing Places, KVK register, and Dutch directories against site NAP source of truth (`shared/utils/contact.ts`).
+- **Root cause found:** KVK trade register (KVK 83541934) has wrong handelsnaam (`Newland IT Solution's`) and wrong address (`Meibergdreef 466, 1105AX Amsterdam` vs actual `Hessenbergweg 8, 1101 BT Amsterdam`). Every stale/wrong third-party listing found (telefoonboek.nl, amsterdam-020.nl, adhocdata.nl) traces back to this — they scrape KVK data.
+- Fixed directly: Google Business Profile website field corrected (`newlandit-solutions.com` → `www.newlandit-solutions.com`), pending Google review.
+- Verified correct, no action: name/address/phone/category/hours on GBP; Infobel.com; LinkedIn; Facebook; own site.
+- Verified no listing exists (nothing to fix): Bing Places (unclaimed), Detelefoongids.nl/Goudengids.nl.
+- **Manual follow-up still open (not automatable — needs credentials/legal filing):**
+  - File official KVK trade-name + address correction via `mijn.kvk.nl` (eHerkenning/DigiD)
+  - Claim Bing Places listing and set NAP
+  - Once KVK is corrected, claim-and-fix telefoonboek.nl and adhocdata.nl listings (low priority — adhocdata.nl is a B2B data broker, not consumer-facing)
