@@ -227,7 +227,7 @@
         </div>
       </div>
     </div>
-    <NuxtLink :to="localePath('/solutions')" class="btn-primary1 mt-8 inline-block">{{ t('common.cta.viewAllServices') }}</NuxtLink>
+    <NuxtLink :to="localePath('/solutions')" class="btn-primary1 mt-8 block w-fit mx-auto">{{ t('common.cta.viewAllServices') }}</NuxtLink>
   </div>
 </section>
 
@@ -556,6 +556,12 @@ onMounted(() => {
   min-height: 100vh;
 }
 
+/* overflow-x:hidden here would implicitly compute overflow-y to auto
+   (CSS overflow spec), turning this element into its own scroll
+   container — a second scrollbar alongside the window's. Horizontal
+   clipping instead lives on .hero-section, which is what actually
+   holds the overflowing decorative elements (orbs, particles). */
+
 /* ── Hero content — large screen centering ── */
 
  .hero-section {
@@ -564,6 +570,7 @@ onMounted(() => {
     url('/images/IMG_8959.jpg') center center / cover no-repeat;
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 
   .hero-content {
@@ -871,12 +878,6 @@ onMounted(() => {
   position: relative;
 }
 
-.page-root {
-  background: linear-gradient(160deg, #0d4226 0%, #156534 40%, #1d8044 100%);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
 
 @keyframes marquee {
   0% { transform: translateX(0); }
@@ -1128,7 +1129,9 @@ onMounted(() => {
 }
 
 .btn-primary1 {
-  display: inline-block;
+  display: block;
+  width: max-content;
+  margin-inline: auto;
   padding: 0.75rem 2rem;
   background: #FBF6DA; color: #0d4226; font-weight: 700;
   border-radius: 0.75rem;
@@ -1137,17 +1140,6 @@ onMounted(() => {
   text-decoration: none;
 }
 .btn-primary1:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
-
-.btn-primary1 {
-  display: inline-block;
-  padding: 0.75rem 2rem;
-  background: #FBF6DA; color: #0d4226; font-weight: 700;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
-  transition: transform 0.2s, box-shadow 0.2s;
-  text-decoration: none;
-}
-.btn-primary:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
 
 
 .btn-secondary {
