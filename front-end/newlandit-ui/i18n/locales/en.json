@@ -167,10 +167,11 @@
     "heading": "Solutions",
     "intro": "At Newland IT-Solutions, we deliver smart and scalable IT solutions that help organizations grow, streamline processes and become digitally stronger. From software development to strategy and support, we are ready to be your digital partner.",
     "learnMore": "Learn more →",
+    "offerLabel": "What we offer:",
     "cards": [
-      { "title": "Software Development", "summary": "From custom applications to CMS websites: we build digital solutions that perfectly align with your organization. We guide the entire development process, from strategy to implementation." },
-      { "title": "IT Consulting", "summary": "We support organizations in making smart IT decisions and ensure that systems always remain operational. From strategic advice to daily IT support." },
-      { "title": "Digital Strategy & Enablement", "summary": "We guide both IT and non-IT projects with a structured approach. In addition, we strengthen your organization with digital strategies for brand development." }
+      { "title": "Software Development", "summary": "From custom applications to CMS websites: we build digital solutions that perfectly align with your organization. We guide the entire development process, from strategy to implementation.", "bullets": ["Custom web & mobile applications", "CMS websites (incl. WordPress, Wix & Shopify)", "Platform development & API integrations"], "ctaLabel": "More about Development" },
+      { "title": "IT Consulting", "summary": "We support organizations in making smart IT decisions and ensure that systems always remain operational. From strategic advice to daily IT support.", "bullets": ["IT consultancy & system selection", "Digital transformation & integration", "IT support (helpdesk, remote & on-site)", "Network, server & cloud management"], "ctaLabel": "More about IT Consultancy" },
+      { "title": "Digital Strategy & Enablement", "summary": "We guide both IT and non-IT projects with a structured approach. In addition, we strengthen your organization with digital strategies for brand development.", "bullets": ["Project management (including non-IT)", "Digital strategy, branding & visual design", "UI/UX design"], "ctaLabel": "More about Enablement" }
     ],
     "ctaText": "Not sure which solution suits your situation? Contact us for a no-obligation consultation. Together, we will find the right path."
   },
