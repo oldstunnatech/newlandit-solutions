@@ -912,7 +912,9 @@ onMounted(() => {
   
 }
 .eyebrow-pill3 {
-  display: inline-block;
+  display: block;
+  width: max-content;
+  margin-inline: auto;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.85rem;
@@ -924,7 +926,9 @@ onMounted(() => {
   padding: 0.35rem 1rem;
 }
 .eyebrow-pill4 {
-  display: inline-block;
+  display: block;
+  width: max-content;
+  margin-inline: auto;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.85rem;
@@ -936,7 +940,9 @@ onMounted(() => {
   padding: 0.35rem 1rem;
 }
 .eyebrow-pill5 {
-  display: inline-block;
+  display: block;
+  width: max-content;
+  margin-inline: auto;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.85rem;
@@ -948,7 +954,9 @@ onMounted(() => {
   padding: 0.35rem 1rem;
 }
 .eyebrow-pill6 {
-  display: inline-block;
+  display: block;
+  width: max-content;
+  margin-inline: auto;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.85rem;
@@ -961,7 +969,9 @@ onMounted(() => {
 }
 
 .eyebrow-pill7 {
-  display: inline-block;
+  display: block;
+  width: max-content;
+  margin-inline: auto;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.85rem;
@@ -1281,7 +1291,9 @@ onMounted(() => {
   
 }
 .eyebrow-pill3 {
-  display: inline-block;
+  display: block;
+  width: max-content;
+  margin-inline: auto;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.85rem;
@@ -1294,7 +1306,9 @@ onMounted(() => {
 }
 
 .eyebrow-pill4 {
-  display: inline-block;
+  display: block;
+  width: max-content;
+  margin-inline: auto;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.85rem;
@@ -1307,7 +1321,9 @@ onMounted(() => {
 }
 
 .eyebrow-pill5 {
-  display: inline-block;
+  display: block;
+  width: max-content;
+  margin-inline: auto;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.85rem;
@@ -1320,7 +1336,9 @@ onMounted(() => {
 }
 
 .eyebrow-pill6 {
-  display: inline-block;
+  display: block;
+  width: max-content;
+  margin-inline: auto;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.85rem;
@@ -1334,7 +1352,9 @@ onMounted(() => {
 
 
 .eyebrow-pill7 {
-  display: inline-block;
+  display: block;
+  width: max-content;
+  margin-inline: auto;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.85rem;
