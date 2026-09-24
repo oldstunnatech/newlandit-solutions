@@ -147,7 +147,6 @@ const products = computed(() =>
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  align-items: start;
 }
 
 .product-card {
