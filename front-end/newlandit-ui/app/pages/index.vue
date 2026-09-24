@@ -307,7 +307,7 @@ useSeo({
 })
 
 const stats = computed(() => [
-  { raw: 50, suffix: '+',  label: t('home.stats.clients') },
+  { raw: 25, suffix: '+',  label: t('home.stats.clients') },
   { raw: 5,  suffix: 'yr', label: t('home.stats.experience') },
   { raw: 98, suffix: '%',  label: t('home.stats.satisfaction') },
   { raw: 72, suffix: 'hr', label: t('home.stats.response') },

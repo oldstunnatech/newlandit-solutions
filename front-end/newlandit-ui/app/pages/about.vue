@@ -131,7 +131,7 @@ useSeo({
   path: '/about',
 })
 
-const statValues = ['50+', '5yr', '98%', '72hr']
+const statValues = ['25+', '5yr', '98%', '72hr']
 const statKeys = ['clients', 'experience', 'satisfaction', 'response'] as const
 const stats = computed(() => statValues.map((value, i) => ({ value, label: t(`about.stats.${statKeys[i]}`) })))
 
