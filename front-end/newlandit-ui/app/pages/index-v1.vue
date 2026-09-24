@@ -68,6 +68,7 @@
             <div v-if="slotProps?.item" class="carousel-logo-card">
               <img
                 :src="slotProps.item.image"
+                :alt="slotProps.item.title || 'Client logo — Newland IT-Solutions'"
                 class="w-full h-16 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
             </div>
