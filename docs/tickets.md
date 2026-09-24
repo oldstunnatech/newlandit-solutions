@@ -1,6 +1,6 @@
 # 🎫 Newland IT-Solutions — Engineering Tickets
 
-> Last updated: 2026-09-14 · Source: `report.md` · Roadmap: `roadmap.md`
+> Last updated: 2026-09-24 · Source: `report.md` · Roadmap: `roadmap.md`
 >
 > **Legend:** 🔴 P0 launch-blocking · 🟠 P1 high · 🟡 P2 medium · ✅ Done · 🟡 In progress · 📋 Todo
 >
@@ -31,7 +31,7 @@
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
 | NWL-010 | 🔴 P0 | ✅ Done | 301 redirects old→new (`/oplossingen`→`/solutions`, `/over-ons`→`/about`) |
-| NWL-011 | 🟠 P1 | 🟡 In progress | `@nuxtjs/sitemap` added — auto-generates both locales at build; robots.txt already correct. Manual: submit to Search Console; NAP consistency audit. |
+| NWL-011 | 🟠 P1 | 🟡 In progress | `@nuxtjs/sitemap` added — auto-generates both locales at build; robots.txt already correct. NAP audit done (see SEO-007). Manual: submit sitemap to Search Console — no property registered yet under this Google account. |
 
 </details>
 
@@ -68,7 +68,7 @@
 | --- | --- | --- | --- |
 | SEO-005 | 🟡 P2 | ✅ Done | Per-page `Service` JSON-LD on solution pages [ideas #8] |
 | SEO-006 | 🟡 P2 | ✅ Done | `BreadcrumbList` JSON-LD site-wide [ideas #8] |
-| SEO-007 | 🟠 P1 | 📋 Todo | NAP consistency audit + Google Business Profile alignment [ideas #9] |
+| SEO-007 | 🟠 P1 | ✅ Done | NAP consistency audit + Google Business Profile alignment [ideas #9] |
 | SEO-008 | 🟡 P2 | 📋 Todo | Per-service OG images (replace shared hero) [ideas #10] |
 | SEO-009 | 🟡 P2 | 📋 Todo | Local landing-page template (i18n, schema, internal links) [ideas #11] |
 | SEO-010 | 🟡 P2 | 📋 Todo | Publish neighbourhood/niche local pages (content). Depends SEO-009 [ideas #11] |
@@ -122,10 +122,11 @@
 ## 🔗 Dependencies & next steps
 
 - **Phase 1–3:** ✅ All closed. Phase 3 detail archived 2026-09-04.
-- **Phase 5:** NWL-010 ✅ done; NWL-011 🟡 in progress (sitemap module added — manual Search Console submit + NAP audit remain).
+- **Phase 5:** NWL-010 ✅ done; NWL-011 🟡 in progress (sitemap module added, NAP audit done — manual Search Console submit remains, blocked on no property registered yet).
 - **Backlog chains:** NWL-020 → NWL-017 → NWL-018/019 (blog); NWL-020 → NWL-021 (copy migration);
   NWL-012 → NWL-013 (cases); NWL-015 → NWL-016 (FAQ); SEO-009 → SEO-010 (local pages);
   NWL-001 → NWL-025 (count-up).
 - **Decision-gated:** NWL-020 (CMS vs i18n), NWL-023 (Stripe) — resolve in PRD §10 before pulling in.
 - **Shipped v1.1.0 (2026-09-14):** NWL-012, NWL-015, SEO-005, SEO-006 — archived below.
-- **Suggested next:** NWL-013 (case study content), NWL-016 (FAQ per service), SEO-007 (NAP audit), NWL-011 manual steps.
+- **Shipped 2026-09-24:** SEO-007 (NAP audit) — archived below; found KVK register root cause, needs manual legal correction.
+- **Suggested next:** NWL-011 manual Search Console submit, KVK register correction (blocks full SEO-007 cleanup), NWL-013 (case study content), NWL-016 (FAQ per service).
