@@ -38,7 +38,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useHead, useRuntimeConfig, useLocaleHead } from '#imports'
 import { CONTACT } from '#shared/utils/contact'
 import { useNav } from '~/composables/useNav'
@@ -46,6 +46,13 @@ import { useBreadcrumbSchema } from '~/composables/useBreadcrumbSchema'
 
 const mobileNavOpen = ref(false)
 const { navItems } = useNav()
+
+// Escape closes the mobile drawer for keyboard users (NWL-028).
+function onKeydown(event: KeyboardEvent) {
+  if (event.key === 'Escape' && mobileNavOpen.value) mobileNavOpen.value = false
+}
+onMounted(() => window.addEventListener('keydown', onKeydown))
+onUnmounted(() => window.removeEventListener('keydown', onKeydown))
 
 // ── Locale <html lang>, canonical + hreflang alternates (owned by i18n) ──
 const localeHead = useLocaleHead()
