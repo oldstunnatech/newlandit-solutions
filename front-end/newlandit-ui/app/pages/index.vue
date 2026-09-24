@@ -260,8 +260,8 @@
       <div class="max-w-2xl mx-auto">
         <p class="eyebrow-pill7 mb-3">{{ t('home.contact.eyebrow') }}</p>
         <h2 class="text-3xl6 md:text-5xl font-extrabold mb-6 mt-3">{{ t('home.contact.heading') }}</h2>
-        <p class="text-white/70 mb-10">{{ t('home.contact.text') }}</p>
-        <NuxtLink :to="localePath('/contact')" class="btn-primary text-lg px-10 py-4">{{ t('common.cta.intro') }}</NuxtLink>
+        <p class="text-white/70 mb-14">{{ t('home.contact.text') }}</p>
+        <NuxtLink :to="localePath('/contact')" class="btn-primary text-lg px-10 py-4 mt-2">{{ t('common.cta.intro') }}</NuxtLink>
       </div>
     </section>
 
