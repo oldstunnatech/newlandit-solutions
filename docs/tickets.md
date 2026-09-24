@@ -1,6 +1,6 @@
 # 🎫 Newland IT-Solutions — Engineering Tickets
 
-> Last updated: 2026-09-04 · Source: `report.md` · Roadmap: `roadmap.md`
+> Last updated: 2026-09-24 (evening) · Source: `report.md` · Roadmap: `roadmap.md`
 >
 > **Legend:** 🔴 P0 launch-blocking · 🟠 P1 high · 🟡 P2 medium · ✅ Done · 🟡 In progress · 📋 Todo
 >
@@ -14,24 +14,25 @@
 ✅ **Phases 1–3 archived** — see [`tickets-archive.md`](./tickets-archive.md).
 
 <details open>
-<summary><strong>📋 Phase 4 — Trust, conversion & UX · IN PROGRESS (2/4)</strong></summary>
+<summary><strong>📋 Phase 4 — Trust, conversion & UX · IN PROGRESS (2/4 done, archived)</strong></summary>
+
+> NWL-005, NWL-006 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-005 | 🟠 P1 | ✅ Done | `ClientLogo.vue` implemented; wired into customers marquee via controlled props/events |
-| NWL-006 | 🟠 P1 | ✅ Done | `TestimonialCard.vue` component added; section live with i18n (nl + en) |
-| NWL-008 | 🟡 P2 | 📋 Todo | About timeline — verify years/events are real, not fabricated |
-| NWL-009 | 🟡 P2 | 📋 Todo | Solution-subpage `<img>` assets — replace placeholders with real imagery + alt text |
+| NWL-008 | 🟡 P2 | 📋 Todo | About timeline — verify years/events are real, not fabricated. **Blocked: needs business-owner confirmation of actual history, not something Claude can verify.** |
+| NWL-009 | 🟡 P2 | 📋 Todo | Solution-subpage `<img>` assets — replace placeholders with real imagery + alt text. **Blocked: needs real company photos, not something Claude can source.** |
 
 </details>
 
 <details open>
-<summary><strong>📋 Phase 5 — Launch (cutover) · IN PROGRESS (1/2)</strong></summary>
+<summary><strong>📋 Phase 5 — Launch (cutover) · IN PROGRESS (1/2 done, archived)</strong></summary>
+
+> NWL-010 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-010 | 🔴 P0 | ✅ Done | 301 redirects old→new (`/oplossingen`→`/solutions`, `/over-ons`→`/about`) |
-| NWL-011 | 🟠 P1 | 🟡 In progress | `@nuxtjs/sitemap` added — auto-generates both locales at build; robots.txt already correct. Manual: submit to Search Console; NAP consistency audit. |
+| NWL-011 | 🟠 P1 | 🟡 In progress | `@nuxtjs/sitemap` added; robots.txt correct. NAP audit done (see SEO-007). Search Console property created (URL prefix, `www.newlandit-solutions.com`); verification meta tag added in PR #19 (feat/NWL-011-search-console). Remaining after merge+deploy: click Verify, then submit `sitemap.xml`, confirm `/nl/` + `/en/` locales appear. |
 
 </details>
 
@@ -44,12 +45,12 @@
 
 **Content & trust**
 
+> NWL-012, NWL-015 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
+
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-012 | 🟡 P2 | 🟡 In progress | Case studies — `/cases` + `/cases/[slug]` routing + page/layout scaffold [ideas #3] |
 | NWL-013 | 🟡 P2 | 📋 Todo | Case studies — content model + first 2 real cases (problem→solution→result). Depends NWL-012 [ideas #3] |
-| NWL-014 | 🟡 P2 | 📋 Todo | "Onze aanpak" dedicated page — expand Discovery/Plan/Build/Support [ideas #4] |
-| NWL-015 | 🟡 P2 | ✅ Done | Reusable FAQ accordion component + i18n structure + `FAQPage` JSON-LD [ideas #5] |
+| NWL-014 | 🟡 P2 | 🟡 In progress | "Onze aanpak" dedicated page — expand Discovery/Plan/Build/Support. New `/approach` page, PR #27 (feat/NWL-014-approach-page) [ideas #4] |
 | NWL-016 | 🟡 P2 | 📋 Todo | FAQ content per service (5 pages). Depends NWL-015 [ideas #5] |
 
 **Content engine**
@@ -64,11 +65,10 @@
 
 **SEO & local**
 
+> SEO-005, SEO-006, SEO-007 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
+
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| SEO-005 | 🟡 P2 | ✅ Done | Per-page `Service` JSON-LD on solution pages [ideas #8] |
-| SEO-006 | 🟡 P2 | ✅ Done | `BreadcrumbList` JSON-LD site-wide [ideas #8] |
-| SEO-007 | 🟠 P1 | 📋 Todo | NAP consistency audit + Google Business Profile alignment [ideas #9] |
 | SEO-008 | 🟡 P2 | 📋 Todo | Per-service OG images (replace shared hero) [ideas #10] |
 | SEO-009 | 🟡 P2 | 📋 Todo | Local landing-page template (i18n, schema, internal links) [ideas #11] |
 | SEO-010 | 🟡 P2 | 📋 Todo | Publish neighbourhood/niche local pages (content). Depends SEO-009 [ideas #11] |
@@ -85,10 +85,10 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-025 | 🟡 P2 | 📋 Todo | Count-up animation for stats. Depends NWL-001 [ideas #16] |
-| NWL-026 | 🟡 P2 | 📋 Todo | A11y — image alt-text policy + audit all imagery [ideas #17] |
-| NWL-027 | 🟡 P2 | 📋 Todo | A11y — visible focus states across interactive elements [ideas #17] |
-| NWL-028 | 🟡 P2 | 📋 Todo | A11y — keyboard nav (nav, mobile drawer, forms, FAB) [ideas #17] |
+| NWL-025 | 🟡 P2 | ✅ Done | Count-up animation for stats — already implemented as part of NWL-001 (IntersectionObserver in `index.vue`), verified live 2026-09-24. Depends NWL-001 [ideas #16] |
+| NWL-026 | 🟡 P2 | 🟡 In progress | A11y — image alt-text policy + audit all imagery. Audit done: all live pages already had alt text, one gap fixed on unused `/index-v1` route. PR #28 [ideas #17] |
+| NWL-027 | 🟡 P2 | 🟡 In progress | A11y — visible focus states across interactive elements. Site-wide `:focus-visible` outline added. PR #28 [ideas #17] |
+| NWL-028 | 🟡 P2 | 🟡 In progress | A11y — keyboard nav (nav, mobile drawer, forms, FAB). Real bug found + fixed: SideNav submenu was mouse-only, unreachable by keyboard. PR #28 (feat/NWL-026-027-028-a11y) [ideas #17] |
 
 </details>
 
@@ -122,9 +122,14 @@
 ## 🔗 Dependencies & next steps
 
 - **Phase 1–3:** ✅ All closed. Phase 3 detail archived 2026-09-04.
-- **Phase 5:** NWL-010 ✅ done; NWL-011 🟡 in progress (sitemap module added — manual Search Console submit + NAP audit remain).
+- **Phase 5:** NWL-010 ✅ done; NWL-011 🟡 in progress (sitemap module added, NAP audit done — manual Search Console submit remains, blocked on no property registered yet).
 - **Backlog chains:** NWL-020 → NWL-017 → NWL-018/019 (blog); NWL-020 → NWL-021 (copy migration);
   NWL-012 → NWL-013 (cases); NWL-015 → NWL-016 (FAQ); SEO-009 → SEO-010 (local pages);
   NWL-001 → NWL-025 (count-up).
 - **Decision-gated:** NWL-020 (CMS vs i18n), NWL-023 (Stripe) — resolve in PRD §10 before pulling in.
-- **Suggested next:** Phase 4 trust content (NWL-005/006) → NWL-011 manual steps.
+- **Shipped v1.1.0 (2026-09-14):** NWL-012, NWL-015, SEO-005, SEO-006 — archived below.
+- **Shipped 2026-09-24:** SEO-007 (NAP audit) — archived below; found KVK register root cause, needs manual legal correction.
+- **In review 2026-09-24:** NWL-014 (PR #27), NWL-026/027/028 (PR #28).
+- **NWL-025** turned out already done (built alongside NWL-001) — no PR needed, just verified and flipped to Done.
+- **Blocked, needs your input (not code-doable):** NWL-008 (verify real timeline facts), NWL-009 (real company photos), NWL-011's Search Console click-through (needs production deploy + Search Console access).
+- **Suggested next:** merge PR #27/#28, KVK register correction (blocks full SEO-007 cleanup), NWL-013 (case study content), NWL-016 (FAQ per service).

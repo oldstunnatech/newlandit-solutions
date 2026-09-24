@@ -37,6 +37,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'theme-color', content: '#0d4226' },
         { property: 'og:site_name', content: 'Newland IT-Solutions' },
+        { name: 'google-site-verification', content: 'CNJIhY0dOK1KYjOIjn8KarQNuEfqSbJE8bIQqBR8BBI' },
       ],
       link: [{ rel: 'icon', href: '/favicon.ico' }],
     },

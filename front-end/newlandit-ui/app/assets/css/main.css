@@ -9,5 +9,18 @@
   font-display: swap;
 }
 
+/* Site-wide visible focus state for keyboard navigation (NWL-027).
+   :focus-visible so mouse/touch clicks don't show it, only keyboard focus. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #4ade80;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 
 

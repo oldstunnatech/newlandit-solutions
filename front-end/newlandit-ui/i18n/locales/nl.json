@@ -23,6 +23,7 @@
     "itSupport": "IT-support (helpdesk, remote & on-site)",
     "digitalStrategy": "Digitale strategie & enablement",
     "about": "Over ons",
+    "approach": "Onze aanpak",
     "contact": "Contact",
     "privacy": "Privacyverklaring",
     "cookies": "Cookiebeleid",
@@ -40,6 +41,10 @@
     "about": {
       "title": "Over Newland IT-Solutions — jouw IT-partner in Amsterdam",
       "description": "Sinds 2021 helpt Newland IT-Solutions bedrijven in Amsterdam om complexe IT-uitdagingen om te zetten in heldere, duurzame oplossingen. Lees over onze missie, waarden en team."
+    },
+    "approach": {
+      "title": "Onze aanpak — zo werken we bij Newland IT-Solutions",
+      "description": "Van kennismaking tot doorlopende support: ontdek hoe Newland IT-Solutions elk IT-traject aanpakt, stap voor stap."
     },
     "contact": {
       "title": "Contact Newland IT-Solutions in Amsterdam",
@@ -100,10 +105,10 @@
       "eyebrow": "Onze waarden",
       "heading": "Waarom Newland IT-Solutions?",
       "cards": [
-        { "title": "Heldere communicatie & transparantie", "description": "Duidelijke afspraken, begrijpelijke taal, geen verrassingen." },
-        { "title": "Maatwerk", "description": "Oplossingen afgestemd op jouw processen en doelen." },
-        { "title": "Snelle support", "description": "Snel geholpen, remote of op locatie." },
-        { "title": "Ervaren team", "description": "Van implementatie tot strategie — één partner." }
+        { "title": "Duidelijke communicatie & transparantie", "description": "Heldere afspraken, duidelijke taal, geen verrassingen." },
+        { "title": "Maatwerk, geen one-size-fits-all oplossingen", "description": "Oplossingen afgestemd op jouw processen en doelen." },
+        { "title": "Snelle support, remote of on-site", "description": "Snel geholpen remote of op locatie." },
+        { "title": "Ervaren in web, software én IT-strategieën", "description": "Van implementatie tot strategie — één partner." }
       ]
     },
     "offer": {
@@ -167,10 +172,11 @@
     "heading": "Diensten",
     "intro": "Bij Newland IT-Solutions leveren we slimme en schaalbare IT-oplossingen die organisaties helpen groeien, processen stroomlijnen en digitaal sterker worden. Van softwareontwikkeling tot strategie en support — wij zijn jouw digitale partner.",
     "learnMore": "Lees meer →",
+    "offerLabel": "Wat wij bieden:",
     "cards": [
-      { "title": "Softwareontwikkeling", "summary": "Van maatwerkapplicaties tot CMS-websites: we bouwen digitale oplossingen die perfect aansluiten op je organisatie. We begeleiden het hele ontwikkeltraject, van strategie tot implementatie." },
-      { "title": "IT-consultancy", "summary": "We ondersteunen organisaties bij het maken van slimme IT-keuzes en zorgen dat systemen altijd operationeel blijven. Van strategisch advies tot dagelijkse IT-support." },
-      { "title": "Digitale strategie & enablement", "summary": "We begeleiden zowel IT- als niet-IT-projecten met een gestructureerde aanpak. Daarnaast versterken we je organisatie met digitale strategieën voor merkontwikkeling." }
+      { "title": "Softwareontwikkeling", "summary": "Van maatwerkapplicaties tot CMS-websites: we bouwen digitale oplossingen die perfect aansluiten op je organisatie. We begeleiden het hele ontwikkeltraject, van strategie tot implementatie.", "bullets": ["Maatwerk web- en mobiele applicaties", "CMS-websites (o.a. WordPress, Wix & Shopify)", "Platformontwikkeling & API-integraties"], "ctaLabel": "Meer over Development" },
+      { "title": "IT-consultancy", "summary": "We ondersteunen organisaties bij het maken van slimme IT-keuzes en zorgen dat systemen altijd operationeel blijven. Van strategisch advies tot dagelijkse IT-support.", "bullets": ["IT-consultancy & systeemselectie", "Digitale transformatie & integratie", "IT-support (helpdesk, remote & on-site)", "Netwerk-, server- & cloudbeheer"], "ctaLabel": "Meer over IT-Consultancy" },
+      { "title": "Digitale strategie & enablement", "summary": "We begeleiden zowel IT- als niet-IT-projecten met een gestructureerde aanpak. Daarnaast versterken we je organisatie met digitale strategieën voor merkontwikkeling.", "bullets": ["Projectmanagement (ook buiten IT)", "Digitale strategie, branding & visueel design", "UI/UX-design"], "ctaLabel": "Meer over Enablement" }
     ],
     "ctaText": "Niet zeker welke oplossing bij jouw situatie past? Neem contact op voor een vrijblijvend gesprek. Samen vinden we het juiste pad."
   },
@@ -220,6 +226,54 @@
       { "title": "Responsiviteit", "description": "Snelle, betrouwbare support — remote of op locatie. We zijn er wanneer het ertoe doet." },
       { "title": "Expertise", "description": "Van praktische implementatie tot strategie op hoog niveau — één partner over de volle breedte." }
     ]
+  },
+  "approach": {
+    "eyebrow": "Onze aanpak",
+    "heading": "Zo werken we samen",
+    "intro": "Van eerste kennismaking tot doorlopende support — dit is hoe een traject bij Newland IT-Solutions eruitziet, stap voor stap.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Ontdekken",
+        "paragraphs": [
+          "We beginnen elk traject met luisteren. In een vrijblijvend kennismakingsgesprek brengen we je huidige situatie, uitdagingen en doelen in kaart — zonder aannames, zonder jargon.",
+          "Op basis daarvan bepalen we samen wat er écht nodig is, zodat we geen tijd verspillen aan oplossingen die niet aansluiten bij jouw organisatie."
+        ],
+        "bullets": ["Vrijblijvend kennismakingsgesprek", "Analyse van huidige systemen en processen", "Heldere probleemstelling"]
+      },
+      {
+        "number": "02",
+        "title": "Plannen",
+        "paragraphs": [
+          "We vertalen de uitkomsten van de discovery-fase naar een concreet, op maat gemaakt plan — met duidelijke stappen, tijdlijn en verwachtingen.",
+          "Jij weet vooraf precies wat je krijgt, wanneer, en tegen welke investering — geen verrassingen achteraf."
+        ],
+        "bullets": ["Concreet stappenplan", "Tijdlijn & mijlpalen", "Transparante begroting"]
+      },
+      {
+        "number": "03",
+        "title": "Bouwen",
+        "paragraphs": [
+          "We ontwikkelen en implementeren de oplossing met precisie, met korte feedback-cycli zodat je grip houdt op de voortgang.",
+          "Of het nu gaat om software, een website of IT-infrastructuur — we werken volgens best practices en houden je steeds op de hoogte."
+        ],
+        "bullets": ["Iteratieve ontwikkeling", "Regelmatige check-ins", "Kwaliteitscontrole voor oplevering"]
+      },
+      {
+        "number": "04",
+        "title": "Support",
+        "paragraphs": [
+          "Na oplevering laten we je niet aan je lot over. We blijven beschikbaar voor vragen, onderhoud en doorontwikkeling.",
+          "Zo groeit je oplossing mee met je organisatie, in plaats van dat die na een paar jaar vervangen moet worden."
+        ],
+        "bullets": ["Doorlopende ondersteuning", "Proactief onderhoud", "Ruimte voor doorontwikkeling"]
+      }
+    ],
+    "cta": {
+      "eyebrow": "Klaar om te starten?",
+      "heading": "Laten we je traject bespreken",
+      "text": "Plan een vrijblijvend kennismakingsgesprek — stap 1 begint met een gesprek, niet met een verplichting."
+    }
   },
   "contact": {
     "eyebrow": "Neem contact op",
@@ -507,7 +561,7 @@
           "heading": "6. Uw rechten",
           "paras": [
             "Op grond van de AVG heeft u de volgende rechten: inzage in uw persoonsgegevens, rectificatie van onjuiste gegevens, wissing ('recht op vergetelheid'), beperking van de verwerking, gegevensoverdraagbaarheid en bezwaar tegen verwerking op grond van gerechtvaardigd belang.",
-            "U kunt uw rechten uitoefenen door contact op te nemen via info@newlandit-solutions.com. Wij reageren binnen 30 dagen.",
+            "U kunt uw rechten uitoefenen door contact op te nemen via info{'@'}newlandit-solutions.com. Wij reageren binnen 30 dagen.",
             "U heeft tevens het recht een klacht in te dienen bij de Autoriteit Persoonsgegevens (autoriteitpersoonsgegevens.nl)."
           ]
         },

@@ -18,6 +18,8 @@
             class="nav-item"
             @mouseenter="nav.children && (openMenu = nav.name)"
             @mouseleave="nav.children && (openMenu = null)"
+            @focusin="nav.children && (openMenu = nav.name)"
+            @focusout="onNavFocusOut($event, nav.name)"
           >
             <NuxtLink
               :to="nav.href"
@@ -50,6 +52,8 @@
     <div
       @mouseenter="child.children && (openSubmenu = child.name)"
       @mouseleave="child.children && (openSubmenu = null)"
+      @focusin="child.children && (openSubmenu = child.name)"
+      @focusout="onSubmenuFocusOut($event, child.name)"
     >
       <NuxtLink :to="child.href" class="submenu-link flex items-center justify-between">
         <span>{{ child.name }}</span>
@@ -94,6 +98,23 @@ const { t } = useI18n()
 const { navItems, isActive } = useNav()
 const openMenu = ref<string | null>(null)
 const openSubmenu = ref<string | null>(null)
+
+// Keyboard users tab through the flyout; only close once focus actually
+// leaves the <li>/<div>, not when it moves between links inside it.
+function onNavFocusOut(event: FocusEvent, name: string) {
+  const related = event.relatedTarget as Node | null
+  const container = event.currentTarget as HTMLElement
+  if (!related || !container.contains(related)) {
+    if (openMenu.value === name) openMenu.value = null
+  }
+}
+function onSubmenuFocusOut(event: FocusEvent, name: string) {
+  const related = event.relatedTarget as Node | null
+  const container = event.currentTarget as HTMLElement
+  if (!related || !container.contains(related)) {
+    if (openSubmenu.value === name) openSubmenu.value = null
+  }
+}
 </script>
 
 <style scoped>

@@ -42,6 +42,7 @@ export function useNav() {
       ],
     },
     { name: t('nav.about'), href: localePath('/about'), icon: 'lucide:user' },
+    { name: t('nav.approach'), href: localePath('/approach'), icon: 'lucide:compass' },
     { name: t('nav.contact'), href: localePath('/contact'), icon: 'lucide:mail' },
   ])
 

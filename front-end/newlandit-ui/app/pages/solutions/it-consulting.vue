@@ -122,7 +122,7 @@ const subSections = computed(() =>
 .offer-list li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 8px; height: 8px; border-radius: 50%; background: #4ade80; }
 
 /* ── Card-style sub-sections (auto-fill) ── */
-.sub-sections { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; align-items: start; }
+.sub-sections { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
 .sub-section {
   display: flex; flex-direction: column;
   border-radius: 1.25rem; overflow: hidden;
@@ -139,7 +139,8 @@ const subSections = computed(() =>
   display: flex; align-items: flex-end; padding: 1rem;
 }
 .banner-number { font-size: 2.5rem; font-weight: 900; color: rgba(74,222,128,0.4); line-height: 1; letter-spacing: -0.05em; }
-.sub-card { padding: 1.5rem; flex: 1; }
+.sub-card { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+.sub-card .btn-secondary11 { margin-top: auto; }
 .sub-title { font-size: 1.1rem; font-weight: 700; color: #fbf6da; margin-bottom: 0.75rem; line-height: 1.3; }
 .sub-para { font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 0.75rem; }
 
@@ -174,12 +175,13 @@ const subSections = computed(() =>
 .btn-secondary11 {
   display: inline-block;
   padding: 0.75rem 1rem;
-  border: 1px solid rgba(255,255,255,0.4); color: #25d366;; font-weight: 600;
+  border: 1.5px solid rgba(74,222,128,0.4); color: #4ade80; font-weight: 600;
   border-radius: 0.75rem;
   transition: background 0.2s, border-color 0.2s;
   text-decoration: none;
   margin-top: 10px;
 }
+.btn-secondary11:hover { background: rgba(74,222,128,0.1); border-color: rgba(74,222,128,0.7); }
 
 @media (max-width: 768px) { .sub-sections { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .blob { animation: none; } }
