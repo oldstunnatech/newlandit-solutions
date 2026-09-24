@@ -14,23 +14,24 @@
 ✅ **Phases 1–3 archived** — see [`tickets-archive.md`](./tickets-archive.md).
 
 <details open>
-<summary><strong>📋 Phase 4 — Trust, conversion & UX · IN PROGRESS (2/4)</strong></summary>
+<summary><strong>📋 Phase 4 — Trust, conversion & UX · IN PROGRESS (2/4 done, archived)</strong></summary>
+
+> NWL-005, NWL-006 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-005 | 🟠 P1 | ✅ Done | `ClientLogo.vue` implemented; wired into customers marquee via controlled props/events |
-| NWL-006 | 🟠 P1 | ✅ Done | `TestimonialCard.vue` component added; section live with i18n (nl + en) |
 | NWL-008 | 🟡 P2 | 📋 Todo | About timeline — verify years/events are real, not fabricated |
 | NWL-009 | 🟡 P2 | 📋 Todo | Solution-subpage `<img>` assets — replace placeholders with real imagery + alt text |
 
 </details>
 
 <details open>
-<summary><strong>📋 Phase 5 — Launch (cutover) · IN PROGRESS (1/2)</strong></summary>
+<summary><strong>📋 Phase 5 — Launch (cutover) · IN PROGRESS (1/2 done, archived)</strong></summary>
+
+> NWL-010 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-010 | 🔴 P0 | ✅ Done | 301 redirects old→new (`/oplossingen`→`/solutions`, `/over-ons`→`/about`) |
 | NWL-011 | 🟠 P1 | 🟡 In progress | `@nuxtjs/sitemap` added; robots.txt correct. NAP audit done (see SEO-007). Search Console property created (URL prefix, `www.newlandit-solutions.com`); verification meta tag added in PR #19 (feat/NWL-011-search-console). Remaining after merge+deploy: click Verify, then submit `sitemap.xml`, confirm `/nl/` + `/en/` locales appear. |
 
 </details>
@@ -44,12 +45,12 @@
 
 **Content & trust**
 
+> NWL-012, NWL-015 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
+
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-012 | 🟡 P2 | ✅ Done | Case studies — `/cases` + `/cases/[slug]` routing + page/layout scaffold [ideas #3] |
 | NWL-013 | 🟡 P2 | 📋 Todo | Case studies — content model + first 2 real cases (problem→solution→result). Depends NWL-012 [ideas #3] |
 | NWL-014 | 🟡 P2 | 📋 Todo | "Onze aanpak" dedicated page — expand Discovery/Plan/Build/Support [ideas #4] |
-| NWL-015 | 🟡 P2 | ✅ Done | Reusable FAQ accordion component + i18n structure + `FAQPage` JSON-LD [ideas #5] |
 | NWL-016 | 🟡 P2 | 📋 Todo | FAQ content per service (5 pages). Depends NWL-015 [ideas #5] |
 
 **Content engine**
@@ -64,11 +65,10 @@
 
 **SEO & local**
 
+> SEO-005, SEO-006, SEO-007 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
+
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| SEO-005 | 🟡 P2 | ✅ Done | Per-page `Service` JSON-LD on solution pages [ideas #8] |
-| SEO-006 | 🟡 P2 | ✅ Done | `BreadcrumbList` JSON-LD site-wide [ideas #8] |
-| SEO-007 | 🟠 P1 | ✅ Done | NAP consistency audit + Google Business Profile alignment [ideas #9] |
 | SEO-008 | 🟡 P2 | 📋 Todo | Per-service OG images (replace shared hero) [ideas #10] |
 | SEO-009 | 🟡 P2 | 📋 Todo | Local landing-page template (i18n, schema, internal links) [ideas #11] |
 | SEO-010 | 🟡 P2 | 📋 Todo | Publish neighbourhood/niche local pages (content). Depends SEO-009 [ideas #11] |
