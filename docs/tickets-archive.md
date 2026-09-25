@@ -123,7 +123,7 @@
 
 ## SEO-007 — NAP consistency audit (2026-09-24)
 
-- Doc: [`nwl-011-seo-007-checklist.md`](./nwl-011-seo-007-checklist.md) (full findings log)
+- Doc: [`seo-007-nap-audit-archive.md`](./seo-007-nap-audit-archive.md) (full findings log)
 - Delivered: audited Google Business Profile, Bing Places, KVK register, and Dutch directories against site NAP source of truth (`shared/utils/contact.ts`).
 - **Root cause found:** KVK trade register (KVK 83541934) has wrong handelsnaam (`Newland IT Solution's`) and wrong address (`Meibergdreef 466, 1105AX Amsterdam` vs actual `Hessenbergweg 8, 1101 BT Amsterdam`). Every stale/wrong third-party listing found (telefoonboek.nl, amsterdam-020.nl, adhocdata.nl) traces back to this — they scrape KVK data.
 - Fixed directly: Google Business Profile website field corrected (`newlandit-solutions.com` → `www.newlandit-solutions.com`), pending Google review.
