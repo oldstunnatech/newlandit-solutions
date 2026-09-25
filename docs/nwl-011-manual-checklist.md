@@ -1,7 +1,7 @@
 # NWL-011 — Manual Checklist
 
 > SEO-007 (NAP consistency audit) is fully done — full findings archived in
-> [`nwl-011-seo-007-checklist-archive.md`](./nwl-011-seo-007-checklist-archive.md).
+> [`seo-007-nap-audit-archive.md`](./seo-007-nap-audit-archive.md).
 
 ## Sitemap submission
 
