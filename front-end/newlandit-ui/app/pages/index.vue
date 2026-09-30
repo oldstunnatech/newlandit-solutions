@@ -6,25 +6,7 @@
     ============================================================ -->
     <section class="hero-section relative min-h-screen flex flex-col justify-center items-center text-white overflow-hidden">
 
-  <!-- Animated grid background -->
-  <!-- <div class="hero-grid" aria-hidden="true"></div> -->
-
-  <!-- Glowing orbs -->
-  <!-- <div class="orb orb-1" aria-hidden="true"></div>
-  <div class="orb orb-2" aria-hidden="true"></div>
-  <div class="orb orb-3" aria-hidden="true"></div> -->
-
-  <!-- Floating particles -->
-  <!-- <div class="particles" aria-hidden="true">
-    <span v-for="i in 20" :key="i" class="particle" :style="`--i:${i}`"></span>
-  </div> -->
-
-  <!-- Scanning line -->
-  <!-- <div class="scan-line" aria-hidden="true"></div> -->
-
-  <!-- Cursor follower -->
-<!-- <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
-<div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div> -->
+  
 
   <!-- Content -->
   <div class="relative z-10 text-center px-6 max-w-5xl mx-auto hero-content">
@@ -65,13 +47,7 @@
     
   </div>
 
-  <!-- Scroll indicator -->
-  <!-- <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 text-xs scroll-hint">
-    <span>Scroll</span>
-    <div class="scroll-mouse">
-      <div class="scroll-wheel"></div>
-    </div>
-  </div> -->
+ 
 </section>
 
     <!-- ============================================================
@@ -261,7 +237,7 @@
         <p class="eyebrow-pill7 mb-3">{{ t('home.contact.eyebrow') }}</p>
         <h2 class="text-3xl6 md:text-5xl font-extrabold mb-6 mt-3">{{ t('home.contact.heading') }}</h2>
         <p class="text-white/70 mb-14">{{ t('home.contact.text') }}</p>
-        <NuxtLink :to="localePath('/contact')" class="btn-primary text-lg px-10 py-4 mt-2">{{ t('common.cta.intro') }}</NuxtLink>
+        <NuxtLink :to="localePath('/contact')" class="btn-primary3 text-lg px-10 py-4 mt-2">{{ t('common.cta.intro') }}</NuxtLink>
       </div>
     </section>
 
@@ -556,13 +532,6 @@ onMounted(() => {
   min-height: 100vh;
 }
 
-/* overflow-x:hidden here would implicitly compute overflow-y to auto
-   (CSS overflow spec), turning this element into its own scroll
-   container — a second scrollbar alongside the window's. Horizontal
-   clipping instead lives on .hero-section, which is what actually
-   holds the overflowing decorative elements (orbs, particles). */
-
-/* ── Hero content — large screen centering ── */
 
  .hero-section {
   background:
@@ -1141,6 +1110,18 @@ onMounted(() => {
 }
 .btn-primary1:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
 
+.btn-primary3 {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #FBF6DA; color: #0d4226; font-weight: 700;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+.btn-primary3:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
+
+
 
 .btn-secondary {
   display: inline-block;
@@ -1366,8 +1347,21 @@ onMounted(() => {
   box-shadow: 0 4px 24px rgba(0,0,0,0.2);
   transition: transform 0.2s, box-shadow 0.2s;
   text-decoration: none;
+  margin-left: 48px;
 }
 .btn-primary:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
+
+.btn-primary3 {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #FBF6DA; color: #0d4226; font-weight: 700;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  font-size: 14px;
+}
+.btn-primary3:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
 
 }
 
