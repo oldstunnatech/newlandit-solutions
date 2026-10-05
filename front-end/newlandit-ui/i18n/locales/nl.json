@@ -27,7 +27,8 @@
     "contact": "Contact",
     "privacy": "Privacyverklaring",
     "cookies": "Cookiebeleid",
-    "terms": "Algemene voorwaarden"
+    "terms": "Algemene voorwaarden",
+    "areas": "Werkgebied"
   },
   "seo": {
     "home": {
@@ -73,6 +74,16 @@
     "cases": {
       "title": "Cases — Newland IT-Solutions Amsterdam",
       "description": "Echte klantcases van Newland IT-Solutions: softwareontwikkeling, IT-support en digitale-strategieprojecten voor organisaties in Amsterdam en Noord-Holland."
+    },
+    "areas": {
+      "index": {
+        "title": "Werkgebied — IT-diensten in Amsterdam",
+        "description": "Newland IT-Solutions helpt zzp’ers en mkb in Amsterdam met IT-support, softwareontwikkeling en websites. Bekijk wat we in jouw wijk voor je doen."
+      },
+      "amsterdam-zuidoost": {
+        "title": "IT-support & websites in Amsterdam Zuidoost",
+        "description": "IT-support, softwareontwikkeling en websites voor zzp’ers en mkb in Amsterdam Zuidoost. Lokaal IT-bedrijf aan de {street}, remote en on-site."
+      }
     },
     "privacy": {
       "title": "Privacyverklaring — Newland IT-Solutions",
@@ -511,6 +522,33 @@
     "accept": "Toestemming geven",
     "decline": "Alleen functioneel",
     "learnMore": "Cookiebeleid"
+  },
+  "areas": {
+    "index": {
+      "eyebrow": "Werkgebied",
+      "heading": "Jouw IT-partner in de buurt",
+      "intro": "Newland IT-Solutions werkt vanuit Amsterdam Zuidoost voor zzp’ers en mkb in heel Amsterdam. Bekijk wat we in jouw wijk voor je kunnen doen."
+    },
+    "template": {
+      "eyebrow": "IT-diensten in de buurt",
+      "backToAreas": "← Alle werkgebieden",
+      "servicesHeading": "Onze diensten in {area}",
+      "nearbyHeading": "Ook actief in de buurt",
+      "ctaHeading": "Kennismaken in {area}?",
+      "ctaText": "Vertel ons waar je tegenaan loopt. We denken vrijblijvend mee, remote of bij jou op locatie.",
+      "viewArea": "Bekijk {area} →"
+    },
+    "items": {
+      "amsterdam-zuidoost": {
+        "name": "Amsterdam Zuidoost",
+        "intro": "IT-support, softwareontwikkeling en websites voor ondernemers in Amsterdam Zuidoost — vanuit ons kantoor aan de {street}, gewoon om de hoek.",
+        "body": [
+          "Of je nu in de Bijlmer, op Amstel III of in Gaasperdam zit: Newland IT-Solutions helpt zzp’ers en mkb-bedrijven in Zuidoost met betrouwbare IT. We helpen remote als het snel moet en komen op locatie langs als dat nodig is.",
+          "Omdat we zelf in Zuidoost gevestigd zijn, kennen we de buurt. Geen callcenter, maar een vast aanspreekpunt dat met je meedenkt over je systemen, je website of een applicatie op maat."
+        ],
+        "usp": "Gevestigd in Zuidoost: korte lijnen en een vast aanspreekpunt."
+      }
+    }
   },
   "legal": {
     "lastUpdated": "Augustus 2026",

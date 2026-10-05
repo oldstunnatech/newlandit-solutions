@@ -40,6 +40,7 @@
 
             <div class="mt-6 text-slate-300">© {{ yearRange }} Newland IT-Solution's</div>
             <div class="mt-4 flex flex-wrap gap-4">
+              <NuxtLink :to="localePath('/areas')" class="legal-link">{{ t('nav.areas') }}</NuxtLink>
               <NuxtLink :to="localePath('/privacy')" class="legal-link">{{ t('nav.privacy') }}</NuxtLink>
               <NuxtLink :to="localePath('/cookies')" class="legal-link">{{ t('nav.cookies') }}</NuxtLink>
               <NuxtLink :to="localePath('/terms')" class="legal-link">{{ t('nav.terms') }}</NuxtLink>

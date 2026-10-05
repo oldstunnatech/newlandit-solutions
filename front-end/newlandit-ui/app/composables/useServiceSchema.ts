@@ -9,6 +9,8 @@ export interface ServiceSchemaOptions {
   path?: string
   /** Optional schema.org serviceType value. */
   serviceType?: string
+  /** Optional schema.org areaServed override. Defaults to the City of Amsterdam. */
+  areaServed?: Record<string, unknown>
 }
 
 const PROVIDER = {
@@ -47,7 +49,7 @@ export function useServiceSchema(opts: ServiceSchemaOptions) {
     description: opts.description,
     url,
     provider: PROVIDER,
-    areaServed: AREA_SERVED,
+    areaServed: opts.areaServed ?? AREA_SERVED,
   }
 
   if (opts.serviceType) {
