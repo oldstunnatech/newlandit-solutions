@@ -1,6 +1,6 @@
 # 🎫 Newland IT-Solutions — Engineering Tickets
 
-> Last updated: 2026-09-24 (evening) · Source: `report.md` · Roadmap: `roadmap.md`
+> Last updated: 2026-10-05 · Source: `report.md` · Roadmap: `roadmap.md`
 >
 > **Legend:** 🔴 P0 launch-blocking · 🟠 P1 high · 🟡 P2 medium · ✅ Done · 🟡 In progress · 📋 Todo
 >
@@ -45,12 +45,11 @@
 
 **Content & trust**
 
-> NWL-012, NWL-015 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
+> NWL-012, NWL-014, NWL-015 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
 | NWL-013 | 🟡 P2 | 📋 Todo | Case studies — content model + first 2 real cases (problem→solution→result). Depends NWL-012 [ideas #3] |
-| NWL-014 | 🟡 P2 | 🟡 In progress | "Onze aanpak" dedicated page — expand Discovery/Plan/Build/Support. New `/approach` page, PR #27 (feat/NWL-014-approach-page) [ideas #4] |
 | NWL-016 | 🟡 P2 | 📋 Todo | FAQ content per service (5 pages). Depends NWL-015 [ideas #5] |
 
 **Content engine**
@@ -83,12 +82,7 @@
 
 **UX polish**
 
-| ID | Priority | Status | Notes |
-| --- | --- | --- | --- |
-| NWL-025 | 🟡 P2 | ✅ Done | Count-up animation for stats — already implemented as part of NWL-001 (IntersectionObserver in `index.vue`), verified live 2026-09-24. Depends NWL-001 [ideas #16] |
-| NWL-026 | 🟡 P2 | 🟡 In progress | A11y — image alt-text policy + audit all imagery. Audit done: all live pages already had alt text, one gap fixed on unused `/index-v1` route. PR #28 [ideas #17] |
-| NWL-027 | 🟡 P2 | 🟡 In progress | A11y — visible focus states across interactive elements. Site-wide `:focus-visible` outline added. PR #28 [ideas #17] |
-| NWL-028 | 🟡 P2 | 🟡 In progress | A11y — keyboard nav (nav, mobile drawer, forms, FAB). Real bug found + fixed: SideNav submenu was mouse-only, unreachable by keyboard. PR #28 (feat/NWL-026-027-028-a11y) [ideas #17] |
+> NWL-025, NWL-026, NWL-027, NWL-028 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
 
 </details>
 
@@ -129,7 +123,7 @@
 - **Decision-gated:** NWL-020 (CMS vs i18n), NWL-023 (Stripe) — resolve in PRD §10 before pulling in.
 - **Shipped v1.1.0 (2026-09-14):** NWL-012, NWL-015, SEO-005, SEO-006 — archived below.
 - **Shipped 2026-09-24:** SEO-007 (NAP audit) — archived below; found KVK register root cause, needs manual legal correction.
-- **In review 2026-09-24:** NWL-014 (PR #27), NWL-026/027/028 (PR #28).
-- **NWL-025** turned out already done (built alongside NWL-001) — no PR needed, just verified and flipped to Done.
+- **Shipped 2026-09-24 (release PR #29):** NWL-014 (PR #27), NWL-026/027/028 (PR #28), NWL-025 (already built with NWL-001) — archived.
 - **Blocked, needs your input (not code-doable):** NWL-008 (verify real timeline facts), NWL-009 (real company photos), NWL-011's Search Console click-through (needs production deploy + Search Console access).
-- **Suggested next:** merge PR #27/#28, KVK register correction (blocks full SEO-007 cleanup), NWL-013 (case study content), NWL-016 (FAQ per service).
+- **In review 2026-10-05:** SEO-009 (PR #39), follow-up tickets I18N-004/NWL-029/SEO-011 (PR #40), SEO-011 (PR #41).
+- **Suggested next:** get PR #39–#41 reviewed and merged, KVK register correction (blocks full SEO-007 cleanup), NWL-013 (case study content), NWL-016 (FAQ per service).
