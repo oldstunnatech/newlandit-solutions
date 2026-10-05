@@ -1,3 +1,5 @@
+import { SITEMAP_EXCLUDE } from './shared/utils/sitemap'
+
 export default defineNuxtConfig({
   compatibilityDate: '2026-06-17',
   modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/i18n', '@nuxtjs/sitemap'],
@@ -8,9 +10,9 @@ export default defineNuxtConfig({
   },
 
   sitemap: {
-    // i18n routes auto-discovered via @nuxtjs/i18n integration
-    // excludes admin/api paths; includes both NL (default) + EN (prefixed)
-    exclude: ['/admin/**'],
+    // Single sitemap source: served as /sitemap_index.xml with one sitemap per
+    // locale (nl-NL, en-US). i18n routes auto-discovered via @nuxtjs/i18n.
+    exclude: SITEMAP_EXCLUDE,
   },
 
   i18n: {

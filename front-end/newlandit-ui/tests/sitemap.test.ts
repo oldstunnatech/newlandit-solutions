@@ -1,67 +1,42 @@
 import { describe, it, expect } from 'vitest'
-import { NL_ROUTES, buildUrlBlock } from '../server/utils/sitemap-routes'
+import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs'
+import { join, relative, resolve } from 'node:path'
+import { SITEMAP_EXCLUDE } from '../shared/utils/sitemap'
 
-const BASE = 'https://newlandit-solutions.com'
-const LASTMOD = '2026-08-27'
+const ROOT = resolve(__dirname, '..')
+const PAGES = join(ROOT, 'app/pages')
 
-describe('sitemap routes config', () => {
-  it('contains all three legal pages', () => {
-    const paths = NL_ROUTES.map((r) => r.path)
-    expect(paths).toContain('/privacy')
-    expect(paths).toContain('/cookies')
-    expect(paths).toContain('/terms')
+function listPages(dir: string): string[] {
+  return readdirSync(dir).flatMap((name) => {
+    const full = join(dir, name)
+    return statSync(full).isDirectory() ? listPages(full) : name.endsWith('.vue') ? [full] : []
+  })
+}
+
+/** app/pages/foo/index.vue → /foo, app/pages/index-v1.vue → /index-v1 */
+function routeOf(file: string): string {
+  const path = '/' + relative(PAGES, file).replace(/\.vue$/, '').replace(/(^|\/)index$/, '')
+  return path.replace(/\/$/, '') || '/'
+}
+
+describe('sitemap config', () => {
+  it('every noindex page is excluded from the sitemap', () => {
+    const noindexRoutes = listPages(PAGES)
+      .filter((f) => /noindex:\s*true/.test(readFileSync(f, 'utf8')))
+      .map(routeOf)
+    noindexRoutes.forEach((r) => expect(SITEMAP_EXCLUDE, r).toContain(r))
   })
 
-  it('legal pages have priority 0.3', () => {
-    const legal = NL_ROUTES.filter((r) => ['/privacy', '/cookies', '/terms'].includes(r.path))
-    legal.forEach((r) => expect(r.priority).toBe(0.3))
+  it('excludes admin paths', () => {
+    expect(SITEMAP_EXCLUDE).toContain('/admin/**')
   })
 
-  it('root has highest priority (1.0)', () => {
-    const root = NL_ROUTES.find((r) => r.path === '/')
-    expect(root?.priority).toBe(1.0)
-  })
-})
-
-describe('buildUrlBlock', () => {
-  it('root path: EN href is /en (not /en/)', () => {
-    const root = NL_ROUTES.find((r) => r.path === '/')!
-    const block = buildUrlBlock(BASE, root, LASTMOD)
-    expect(block).toContain(`<loc>${BASE}/en</loc>`)
-    expect(block).not.toContain(`<loc>${BASE}/en/</loc>`)
+  it('robots.txt points at the module sitemap index', () => {
+    const robots = readFileSync(join(ROOT, 'public/robots.txt'), 'utf8')
+    expect(robots).toMatch(/^Sitemap: https:\/\/www\.newlandit-solutions\.com\/sitemap_index\.xml$/m)
   })
 
-  it('non-root path: EN href is /en/<path>', () => {
-    const privacy = NL_ROUTES.find((r) => r.path === '/privacy')!
-    const block = buildUrlBlock(BASE, privacy, LASTMOD)
-    expect(block).toContain(`<loc>${BASE}/en/privacy</loc>`)
-  })
-
-  it('each block emits two <url> entries (nl + en)', () => {
-    const solutions = NL_ROUTES.find((r) => r.path === '/solutions')!
-    const block = buildUrlBlock(BASE, solutions, LASTMOD)
-    const locCount = (block.match(/<loc>/g) || []).length
-    expect(locCount).toBe(2)
-  })
-
-  it('includes hreflang nl, en, and x-default', () => {
-    const contact = NL_ROUTES.find((r) => r.path === '/contact')!
-    const block = buildUrlBlock(BASE, contact, LASTMOD)
-    expect(block).toContain('hreflang="nl"')
-    expect(block).toContain('hreflang="en"')
-    expect(block).toContain('hreflang="x-default"')
-  })
-
-  it('trailing slash on base URL is stripped', () => {
-    const root = NL_ROUTES.find((r) => r.path === '/')!
-    const block = buildUrlBlock(`${BASE}/`, root, LASTMOD)
-    // protocol // is fine; double slash in path is not
-    expect(block).not.toMatch(/https?:\/\/[^/]+\/\//)
-  })
-
-  it('lastmod appears in output', () => {
-    const root = NL_ROUTES.find((r) => r.path === '/')!
-    const block = buildUrlBlock(BASE, root, LASTMOD)
-    expect(block).toContain(`<lastmod>${LASTMOD}</lastmod>`)
+  it('no custom sitemap route shadows the module', () => {
+    expect(existsSync(join(ROOT, 'server/routes/sitemap.xml.ts'))).toBe(false)
   })
 })
