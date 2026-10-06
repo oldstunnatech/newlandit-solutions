@@ -51,7 +51,7 @@
 | --- | --- | --- | --- |
 | NWL-013 | 🟡 P2 | 📋 Todo | Case studies — content model + first 2 real cases (problem→solution→result). Depends NWL-012 [ideas #3] |
 | NWL-014 | 🟡 P2 | 🟡 In progress | "Onze aanpak" dedicated page — expand Discovery/Plan/Build/Support. New `/approach` page, PR #27 (feat/NWL-014-approach-page) [ideas #4] |
-| NWL-016 | 🟡 P2 | 📋 Todo | FAQ content per service (5 pages). Depends NWL-015 [ideas #5] |
+| NWL-016 | 🟡 P2 | 🟡 In progress | FAQ content per service (5 pages). Depends NWL-015 ✅. Branch `feat/NWL-016-service-faqs` [ideas #5] |
 
 **Content engine**
 
@@ -114,6 +114,47 @@
 - Problem: Stripe keys are wired but no commerce flow exists (PRD non-goal). Either remove the unused
   config to reduce surface, or scope a real paid flow as its own epic.
 - DoD: keys removed **or** a commerce epic filed; decision recorded in PRD.
+
+</details>
+
+<details open>
+<summary><strong>NWL-016 — FAQ content per service 🟡 P2 (in progress)</strong></summary>
+
+Goal: each of the 5 solution pages answers the questions prospects actually ask before contacting us,
+using the existing `FaqAccordion` (NWL-015). Note: the component is built but **not used on any page yet**,
+and `faq.general` is unused too.
+
+**Content (truth rule)**
+- [x] 4–6 Q&A pairs per service under `faq.<service>.items` (`software`, `cms`, `consulting`, `support`,
+      `strategy`, matching the `detail.*` namespaces), in **both** `nl.json` and `en.json`, same count per locale.
+- [x] Every answer is grounded in what the site already states (`detail.<service>.*` copy, the
+      `it-support.vue` plans/prices, `faq.general`). **No new factual claims**: no invented response
+      times, SLAs, guarantees, tool lists or prices.
+- [x] Questions are prospect-phrased (cost, timeline, what's included, who it's for, how to start),
+      no duplicates of `faq.general`.
+- [x] Copy flagged in the PR for business-owner review before merge (no reviewer available yet,
+      so answers kept conservative: only facts already on the site).
+
+**Placement**
+- [x] `<FaqAccordion>` on all 5 pages (`solutions/{software-development,cms-websites,it-consulting,it-support,digital-strategy}.vue`),
+      placed just above the closing CTA band, with a `faq.heading` section title.
+- [x] Items read via `tm()` / `rt()`; no hard-coded display text added. Done via a self-contained
+      `ServiceFaq` wrapper (heading + accordion + page URL), so `it-support.vue` needed no `useI18n`;
+      the rest of that page's copy stays with I18N-004.
+- [x] Locale-correct absolute `page-url` passed so `FAQPage` JSON-LD is emitted (one `FAQPage` per page).
+
+**SEO**
+- [x] Rendered page contains valid `FAQPage` JSON-LD alongside the existing `Service` + `BreadcrumbList`.
+      Note: since 2023 Google shows FAQ rich results mainly for gov/health sites, so the gain is content
+      depth + long-tail matching, not guaranteed snippets.
+
+**Tests & gate**
+- [x] Vitest: every service has `faq.<service>.items` in both locales, equal length, non-empty
+      `question`/`answer` strings.
+- [x] `npm test` + `npm run build` green; `/check` introduces no new failures.
+
+**Out of scope:** other hard-coded strings / `wa.me` links on these pages (I18N-004, NWL-029);
+placing `faq.general` (homepage or contact). File separately if wanted.
 
 </details>
 

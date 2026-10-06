@@ -49,6 +49,8 @@
         </div>
       </div>
 
+      <ServiceFaq service="cms" />
+
       <!-- CTA -->
       <div class="cta-band mt-20">
         <p class="text-white/80 text-lg mb-6">{{ t('detail.cms.ctaText') }}</p>

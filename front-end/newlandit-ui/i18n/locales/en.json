@@ -479,6 +479,126 @@
   "faq": {
     "eyebrow": "FAQ",
     "heading": "Frequently Asked Questions",
+    "software": {
+      "items": [
+        {
+          "question": "What kind of software do you build?",
+          "answer": "We build custom web and mobile applications, from internal tools to customer-facing platforms, and develop software platforms and API integrations that support your business processes."
+        },
+        {
+          "question": "Can you connect our existing systems?",
+          "answer": "Yes. With API integrations we connect systems, external tools and data sources, so data flows smoothly and workflows speed up."
+        },
+        {
+          "question": "How much does custom software cost?",
+          "answer": "That depends on the size and complexity of your project. After a free introductory call you receive a quote with scope, timeline and price, with no hidden costs."
+        },
+        {
+          "question": "How does a software project start?",
+          "answer": "With an intake call where we map out your processes and goals. Based on that we draw up a proposal fully tailored to how your organisation works."
+        },
+        {
+          "question": "Can you maintain the software after delivery?",
+          "answer": "Yes. After delivery you can continue with one of our support packages, from on-demand remote help to a custom SLA."
+        }
+      ]
+    },
+    "cms": {
+      "items": [
+        {
+          "question": "Which platform suits me: Wix, WordPress or Shopify?",
+          "answer": "Wix is ideal for freelancers, small businesses and portfolios. WordPress is flexible, extendable with plugins and a good fit for growing businesses. Shopify is the choice if you want to sell products online. Not sure? We are happy to advise."
+        },
+        {
+          "question": "Can I manage the website myself afterwards?",
+          "answer": "Yes. We build websites on an easy-to-manage CMS, so you can update the content yourself."
+        },
+        {
+          "question": "Can you build an online shop?",
+          "answer": "Yes. With Shopify we build a professional online shop, optimised for conversion with payment and shipping modules included, fully manageable from the dashboard."
+        },
+        {
+          "question": "Will my new website be findable on Google?",
+          "answer": "We build with speed, clarity and usability in mind, and WordPress websites are set up SEO-friendly. That gives your online visibility a solid foundation."
+        },
+        {
+          "question": "How much does a new website cost?",
+          "answer": "That depends on the platform, design and functionality you need. After a free introductory call you receive a tailored quote that fits your goals and budget."
+        }
+      ]
+    },
+    "consulting": {
+      "items": [
+        {
+          "question": "How does IT consulting help my organisation?",
+          "answer": "We give expert advice on choosing IT solutions that fit your organisation and ambitions, and make sure systems, processes and support work well, now and in the future."
+        },
+        {
+          "question": "Do you also manage networks, servers and cloud environments?",
+          "answer": "Yes. We install and manage networks and servers and support on-premise, hybrid and cloud environments (Azure, AWS), including monitoring, patch management and a backup strategy."
+        },
+        {
+          "question": "Can you guide us through digital transformation?",
+          "answer": "Yes. We guide transformation and integration projects from strategy to implementation, with cloud, on-premise or hybrid solutions."
+        },
+        {
+          "question": "What is the difference between IT consulting and IT support?",
+          "answer": "Consulting is about making the right choices and plans for your IT. Support is day-to-day help with questions and outages; for that we offer fixed support packages."
+        },
+        {
+          "question": "How does a consulting engagement start?",
+          "answer": "With a no-obligation advisory call about your current situation and plans. After that you receive a proposal with scope, timeline and price."
+        }
+      ]
+    },
+    "support": {
+      "items": [
+        {
+          "question": "Which IT support packages do you offer?",
+          "answer": "There are three packages: Basic Support Remote for freelancers and small organisations, Pro Support Remote for SMEs with 5–25 workstations, and Premium Support – DevOps & Cloud SLA for complex IT environments."
+        },
+        {
+          "question": "How much does IT support cost?",
+          "answer": "Basic costs €80 per hour on demand or €45 per month per workstation. Pro starts from €55 per month per workstation. Premium starts from €750 per month, based on a custom SLA. Rates exclude VAT, as set out in our terms and conditions."
+        },
+        {
+          "question": "Do you also help on-site?",
+          "answer": "Basic and Pro are remote packages. Premium offers hybrid support, remote and on-site. We also come on-site in and around Amsterdam when the situation calls for it."
+        },
+        {
+          "question": "When is support available?",
+          "answer": "Basic and Pro provide remote support during office hours; with Pro it is unlimited. With Premium, availability and response times are set in a custom SLA."
+        },
+        {
+          "question": "Am I tied to a contract?",
+          "answer": "Basic Support Remote is meant for those who mainly need reactive help, without fixed obligations. Terms for Pro and Premium are agreed in your quote."
+        }
+      ]
+    },
+    "strategy": {
+      "items": [
+        {
+          "question": "Do you also manage projects outside IT?",
+          "answer": "Yes. We guide both technical and non-technical projects, from IT implementations to internal process improvements."
+        },
+        {
+          "question": "What does your project management include?",
+          "answer": "We bring structure, realistic planning and progress tracking, with clear communication and alignment with your internal processes and teams, from kick-off to delivery."
+        },
+        {
+          "question": "Can you design a logo and brand identity?",
+          "answer": "Yes. We design unique logos and branding that strengthen your brand identity."
+        },
+        {
+          "question": "Do you also do UX/UI design?",
+          "answer": "Yes. We design thoughtful user experiences and interfaces with consistent branding and a focus on usability."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Book an intake or introductory call. We discuss your goals and then send a proposal with scope, timeline and price."
+        }
+      ]
+    },
     "general": {
       "items": [
         {
