@@ -59,7 +59,7 @@
                     <Icon
                       v-if="child.children"
                       name="lucide:chevron-right"
-                      class="w-3 h-3 text-slate-400 transition-transform"
+                      class="submenu-chevron w-3 h-3 text-slate-400 transition-transform"
                       :class="{ 'rotate-90': openSubmenu === child.name }"
                     />
                   </NuxtLink>
@@ -141,12 +141,12 @@ function onSubmenuFocusOut(event: FocusEvent, name: string) {
 .submenu {
   list-style: none;
   margin-top: 0.4rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   border-left: 2px solid rgba(6, 78, 59, 0.15);
-  padding-left: 0.85rem;
+  padding-left: 0.6rem;
 }
 .submenu--nested {
   margin-top: 0.3rem;
@@ -155,7 +155,9 @@ function onSubmenuFocusOut(event: FocusEvent, name: string) {
   padding-left: 0.65rem;
 }
 .submenu-link {
+  position: relative;
   display: block;
+  padding-right: 1rem;
   font-size: 0.85rem;
   font-weight: 500;
   color: rgba(30, 41, 59, 0.75);
@@ -163,6 +165,12 @@ function onSubmenuFocusOut(event: FocusEvent, name: string) {
   transition: color 0.15s;
 }
 .submenu-link:hover { color: #065f46; }
+/* Pinned to the right edge so every chevron lines up, whatever the label width */
+.submenu-chevron {
+  position: absolute;
+  right: 0;
+  top: 0.35rem;
+}
 .submenu-link--small { font-size: 0.78rem; color: rgba(30, 41, 59, 0.6); }
 .submenu-link--small:hover { color: #065f46; }
 </style>
