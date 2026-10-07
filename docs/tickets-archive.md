@@ -2,7 +2,7 @@
 
 > Completed-ticket detail. The live status overview and active-ticket detail live in
 > [`tickets.md`](./tickets.md). Move a ticket here once it is ✅ Done.
-> Last updated: 2026-09-24
+> Last updated: 2026-10-05
 
 ---
 
@@ -133,3 +133,26 @@
   - File official KVK trade-name + address correction via `mijn.kvk.nl` (eHerkenning/DigiD)
   - Claim Bing Places listing and set NAP
   - Once KVK is corrected, claim-and-fix telefoonboek.nl and adhocdata.nl listings (low priority — adhocdata.nl is a B2B data broker, not consumer-facing)
+
+---
+
+## Backlog batch — shipped 2026-09-24 (release PR #29)
+
+### NWL-014 — "Onze aanpak" dedicated page
+- Files: `app/pages/approach.vue`, `app/composables/useNav.ts`, `i18n/locales/{nl,en}.json`
+- Delivered: new `/approach` page expanding Discovery/Plan/Build/Support; added to navigation; nl + en copy. PR #27.
+
+### NWL-025 — Count-up animation for stats
+- Files: `app/pages/index.vue`
+- Delivered: already implemented as part of NWL-001 (IntersectionObserver-triggered count-up); verified live 2026-09-24, no PR needed.
+
+### NWL-026 — Image alt-text policy + audit
+- Delivered: audit of all imagery; every live page already had alt text. One gap fixed on the unused `/index-v1` route. PR #28.
+
+### NWL-027 — Visible focus states
+- Files: `app/assets/css/main.css`
+- Delivered: site-wide `:focus-visible` outline across interactive elements. PR #28.
+
+### NWL-028 — Keyboard navigation
+- Files: `app/components/SideNav.vue`, `app/layouts/default.vue`
+- Delivered: fixed real bug: the SideNav submenu was mouse-only and unreachable by keyboard. PR #28 (`feat/NWL-026-027-028-a11y`).

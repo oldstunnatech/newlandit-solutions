@@ -133,9 +133,9 @@
     "services": {
       "eyebrow": "What we do",
       "heading": "Our services",
-      "intro": "We offer a wide range of specialized IT services, tailored to your unique situation — always focused on sustainable digital growth.",
+      "intro": "We offer a wide range of specialized IT services, tailored to your unique situation always focused on sustainable digital growth.",
       "items": [
-        { "title": "Software & Automation", "description": "Smart tools that accelerate and simplify processes. We build solutions that really work — from data management to workflow optimization.", "button": "More about Development" },
+        { "title": "Software & Automation", "description": "Smart tools that accelerate and simplify processes. We build solutions that really work, from data management to workflow optimization.", "button": "More about Development" },
         { "title": "IT Support & Management", "description": "Immediate assistance with malfunctions, maintenance and security. Remote or on-site, we keep your systems stable and secure.", "button": "More about IT Support" },
         { "title": "Consultancy & Strategy", "description": "Strategic advice for digital transformation and scalable growth. We make sure your technology supports your ambitions.", "button": "More about Strategy" }
       ]
@@ -150,7 +150,7 @@
           "company": "Agape Joy Care"
         },
         {
-          "quote": "From strategy to implementation — they guided us every step of the way. Highly recommended.",
+          "quote": "From strategy to implementation, they guided us every step of the way. Highly recommended.",
           "name": "Mark Janssen",
           "company": "BZVJ"
         },
@@ -210,7 +210,7 @@
     },
     "mvs": [
       { "title": "Mission", "body": "At Newland IT-Solutions, the customer is central. We help companies and individuals in Amsterdam and the surrounding area with smart IT solutions that accelerate digitization and simplify processes. Our approach is personal and accessible: technology must work for the customer." },
-      { "title": "Vision", "body": "We make technology understandable and applicable — not only for large organizations, but also for freelancers, schools and teams in Amsterdam and North Holland. With knowledge sharing and customization, we help customers work faster, grow more efficiently and be ready for the digital future." },
+      { "title": "Vision", "body": "We make technology understandable and applicable not only for large organizations, but also for freelancers, schools and teams in Amsterdam and North Holland. With knowledge sharing and customization, we help customers work faster, grow more efficiently and be ready for the digital future." },
       { "title": "Strategy", "body": "As an IT agency in Amsterdam, we develop customized IT solutions that are scalable and user-friendly. In addition, we help organizations refine their digital strategy by clearly mapping complex issues and realizing efficient solutions." }
     ],
     "timeline": [
@@ -230,13 +230,13 @@
   "approach": {
     "eyebrow": "Our approach",
     "heading": "How we work together",
-    "intro": "From first introduction to ongoing support — here's what a project with Newland IT-Solutions looks like, step by step.",
+    "intro": "From first introduction to ongoing support here's what a project with Newland IT-Solutions looks like, step by step.",
     "steps": [
       {
         "number": "01",
         "title": "Discover",
         "paragraphs": [
-          "We start every project by listening. In a no-obligation introductory call, we map out your current situation, challenges and goals — no assumptions, no jargon.",
+          "We start every project by listening. In a no-obligation introductory call, we map out your current situation, challenges and goals no assumptions, no jargon.",
           "From there, we figure out together what's actually needed, so we don't waste time on solutions that don't fit your organization."
         ],
         "bullets": ["No-obligation introductory call", "Analysis of current systems and processes", "A clear problem statement"]
@@ -245,8 +245,8 @@
         "number": "02",
         "title": "Plan",
         "paragraphs": [
-          "We translate the outcomes of the discovery phase into a concrete, tailored plan — with clear steps, a timeline and expectations.",
-          "You know exactly what you're getting, when, and at what cost, up front — no surprises later."
+          "We translate the outcomes of the discovery phase into a concrete, tailored plan with clear steps, a timeline and expectations.",
+          "You know exactly what you're getting, when, and at what cost, up front no surprises later."
         ],
         "bullets": ["Concrete step-by-step plan", "Timeline & milestones", "Transparent budget"]
       },
@@ -255,7 +255,7 @@
         "title": "Build",
         "paragraphs": [
           "We develop and implement the solution with precision, with short feedback loops so you stay in control of progress.",
-          "Whether it's software, a website or IT infrastructure — we work to best practices and keep you informed every step of the way."
+          "Whether it's software, a website or IT infrastructure we work to best practices and keep you informed every step of the way."
         ],
         "bullets": ["Iterative development", "Regular check-ins", "Quality control before delivery"]
       },
@@ -272,7 +272,7 @@
     "cta": {
       "eyebrow": "Ready to get started?",
       "heading": "Let's talk about your project",
-      "text": "Schedule a no-obligation introduction — step one starts with a conversation, not a commitment."
+      "text": "Schedule a no-obligation introduction step one starts with a conversation, not a commitment."
     }
   },
   "contact": {
@@ -300,7 +300,7 @@
       "direct": "Direct contact",
       "responseTime": "Response time",
       "typicalReply": "typical reply",
-      "responseNote": "We read every message personally — no ticket queues, no bots.",
+      "responseNote": "We read every message personally, no ticket queues, no bots.",
       "preferChat": "Prefer chat?",
       "whatsappBtn": "Message us on WhatsApp"
     },
@@ -326,7 +326,7 @@
     "software": {
       "eyebrow": "Software Development",
       "h1": "Software development for every business",
-      "intro": "Welcome to the Software Development department of Newland IT-Solutions. We develop customized solutions for web and mobile applications, CMS platforms, API integrations and complete digital systems — especially for companies in Amsterdam and the Amsterdam Metropolitan Region.",
+      "intro": "Welcome to the Software Development department of Newland IT-Solutions. We develop customized solutions for web and mobile applications, CMS platforms, API integrations and complete digital systems especially for companies in Amsterdam and the Amsterdam Metropolitan Region.",
       "moreBtn": "More about Development",
       "offers": [
         "Custom web and mobile applications",
@@ -457,7 +457,7 @@
   "cases": {
     "eyebrow": "Case Studies",
     "heading": "Our Work",
-    "intro": "Real challenges, real solutions. See how we've helped organisations in Amsterdam and beyond with software development, IT support and digital strategy.",
+    "intro": "Real challenges, real solutions. See how we've helped organizations in Amsterdam and beyond with software development, IT support and digital strategy.",
     "readMore": "Read case study",
     "backToCases": "← All case studies",
     "challenge": "The challenge",
@@ -483,7 +483,7 @@
       "items": [
         {
           "question": "What types of businesses do you work with?",
-          "answer": "We work with freelancers, SMEs, schools and non-profit organisations in Amsterdam and the broader North Holland area. Our solutions scale with your organisation — from a single-person business to a team of 50."
+          "answer": "We work with freelancers, SMEs, schools and non-profit organizations in Amsterdam and the broader North Holland area. Our solutions scale with your organization — from a single-person business to a team of 50."
         },
         {
           "question": "How quickly can you start on a new project?",
@@ -491,11 +491,11 @@
         },
         {
           "question": "Do you offer ongoing IT support after a project is delivered?",
-          "answer": "Yes. We offer flexible support packages — from remote helpdesk on demand to a dedicated Pro or Premium SLA. Support continues seamlessly after delivery at whatever level suits your organisation."
+          "answer": "Yes. We offer flexible support packages from remote help desk on demand to a dedicated Pro or Premium SLA. Support continues seamlessly after delivery at whatever level suits your organizations."
         },
         {
           "question": "What does the onboarding process look like?",
-          "answer": "We start with a free introductory call to understand your situation and goals. After that we send a clear proposal with scope, timeline and pricing — no hidden costs, no surprises."
+          "answer": "We start with a free introductory call to understand your situation and goals. After that we send a clear proposal with scope, timeline and pricing no hidden costs, no surprises."
         },
         {
           "question": "Do you work on-site in Amsterdam?",
@@ -567,7 +567,7 @@
         {
           "heading": "7. Security",
           "paras": [
-            "We implement appropriate technical and organisational measures to protect your personal data against loss, unauthorised access or unlawful processing."
+            "We implement appropriate technical and organizational measures to protect your personal data against loss, unauthorized access or unlawful processing."
           ]
         },
         {
@@ -667,7 +667,7 @@
         {
           "heading": "Article 6 — Intellectual property",
           "paras": [
-            "6.1 All works developed by Newland IT-Solutions — including software, designs, documentation and graphics — remain the property of Newland IT-Solutions until the client has fulfilled all obligations in full.",
+            "6.1 All works developed by Newland IT-Solutions including software, designs, documentation and graphics remain the property of Newland IT-Solutions until the client has fulfilled all obligations in full.",
             "6.2 Upon full payment, Newland IT-Solutions transfers the agreed rights to the client in accordance with the agreed terms."
           ]
         },
