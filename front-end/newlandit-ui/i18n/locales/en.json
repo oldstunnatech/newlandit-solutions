@@ -511,6 +511,17 @@
     "decline": "Functional only",
     "learnMore": "Cookie policy"
   },
+  "error": {
+    "backHome": "Back to the homepage",
+    "notFound": {
+      "heading": "This page doesn’t exist",
+      "text": "The page you are looking for has moved or no longer exists. Choose where you would like to go next."
+    },
+    "generic": {
+      "heading": "Something went wrong",
+      "text": "An unexpected error occurred. Please try again later or go back to the homepage."
+    }
+  },
   "legal": {
     "lastUpdated": "August 2026",
     "privacy": {
