@@ -82,7 +82,7 @@
 
 **UX polish**
 
-> NWL-025, NWL-026, NWL-027, NWL-028 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
+> NWL-025, NWL-026, NWL-027, NWL-028, NWL-031, NWL-032 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
 
 **Code health — from `/check` run 2026-10-05**
 
@@ -98,26 +98,6 @@
 ---
 
 ## 🔨 Active Ticket Detail
-
-<details>
-<summary><strong>NWL-031 — Slide page transition 🟡 P2</strong></summary>
-
-- Files: `nuxt.config.ts` (`app.pageTransition`), `app/middleware/page-transition.global.ts`, `app/assets/css/main.css`.
-- Problem: page changes were instant and abrupt. View Transitions API tried and rejected (rough result); Vue `<Transition>` via Nuxt chosen.
-- Tasks: slide left-to-right when navigating deeper (child/grandchild), right-to-left when going up or sideways; `/en` prefix ignored; sidebar/layout stay mounted; disabled for `prefers-reduced-motion`.
-- DoD: transition verified manually in NL + EN; `npm test` + `npm run build` green; PR merged to `development`.
-
-</details>
-
-<details>
-<summary><strong>NWL-032 — Desktop sidebar animation & submenu polish 🟡 P2</strong></summary>
-
-- Files: `app/components/SideNav.vue`.
-- Problem: sidebar animation/width needed polish; submenu chevron wrapped under long labels (scoped `display:block` overrode the flex utility) and chevrons did not line up.
-- Tasks: sidebar animation + reduced width; pin submenu chevrons to the right edge; tighten submenu indent.
-- DoD: chevrons aligned for all submenu labels in NL + EN; `npm run build` green; PR merged to `development`.
-
-</details>
 
 <details>
 <summary><strong>NWL-020 — Sanity fetch layer + schemas 🟡 P2 (decision-gated)</strong></summary>

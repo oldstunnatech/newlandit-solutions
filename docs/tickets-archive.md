@@ -156,3 +156,24 @@
 ### NWL-028 — Keyboard navigation
 - Files: `app/components/SideNav.vue`, `app/layouts/default.vue`
 - Delivered: fixed real bug: the SideNav submenu was mouse-only and unreachable by keyboard. PR #28 (`feat/NWL-026-027-028-a11y`).
+
+## Shipped 2026-10-07 — UX polish (PRs #48, #49 → development)
+
+### NWL-031 — Slide page transition
+
+- Files: `nuxt.config.ts` (`app.pageTransition`), `app/middleware/page-transition.global.ts`, `app/assets/css/main.css`.
+- Problem: page changes were instant and abrupt. View Transitions API tried and rejected (rough result); Vue `<Transition>` via Nuxt chosen.
+- Tasks: slide left-to-right when navigating deeper (child/grandchild), right-to-left when going up or sideways; `/en` prefix ignored; sidebar/layout stay mounted; disabled for `prefers-reduced-motion`.
+- DoD: transition verified manually in NL + EN; `npm test` + `npm run build` green; PR merged to `development`.
+
+- Verification: merged to `development` 2026-10-07; manual NL/EN browser check still to do.
+
+### NWL-032 — Desktop sidebar animation & submenu polish
+
+- Files: `app/components/SideNav.vue`.
+- Problem: sidebar animation/width needed polish; submenu chevron wrapped under long labels (scoped `display:block` overrode the flex utility) and chevrons did not line up.
+- Tasks: sidebar animation + reduced width; pin submenu chevrons to the right edge; tighten submenu indent.
+- DoD: chevrons aligned for all submenu labels in NL + EN; `npm run build` green; PR merged to `development`.
+
+- Verification: merged to `development` 2026-10-07; manual NL/EN browser check still to do.
+
