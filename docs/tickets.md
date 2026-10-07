@@ -1,6 +1,6 @@
 # 🎫 Newland IT-Solutions — Engineering Tickets
 
-> Last updated: 2026-09-24 (evening) · Source: `report.md` · Roadmap: `roadmap.md`
+> Last updated: 2026-10-07 · Source: `report.md` · Roadmap: `roadmap.md`
 >
 > **Legend:** 🔴 P0 launch-blocking · 🟠 P1 high · 🟡 P2 medium · ✅ Done · 🟡 In progress · 📋 Todo
 >
@@ -89,12 +89,34 @@
 | NWL-026 | 🟡 P2 | 🟡 In progress | A11y — image alt-text policy + audit all imagery. Audit done: all live pages already had alt text, one gap fixed on unused `/index-v1` route. PR #28 [ideas #17] |
 | NWL-027 | 🟡 P2 | 🟡 In progress | A11y — visible focus states across interactive elements. Site-wide `:focus-visible` outline added. PR #28 [ideas #17] |
 | NWL-028 | 🟡 P2 | 🟡 In progress | A11y — keyboard nav (nav, mobile drawer, forms, FAB). Real bug found + fixed: SideNav submenu was mouse-only, unreachable by keyboard. PR #28 (feat/NWL-026-027-028-a11y) [ideas #17] |
+| NWL-031 | 🟡 P2 | 🟡 In progress | Direction-aware slide page transition (Nuxt `app.pageTransition` + route middleware). PR #48 (feat/NWL-031-page-transition) |
+| NWL-032 | 🟡 P2 | 🟡 In progress | Desktop sidebar animation, narrower width, aligned submenu chevrons. PR #49 (feat/NWL-032-desktop-sidebar-animation) |
 
 </details>
 
 ---
 
 ## 🔨 Active Ticket Detail
+
+<details>
+<summary><strong>NWL-031 — Slide page transition 🟡 P2</strong></summary>
+
+- Files: `nuxt.config.ts` (`app.pageTransition`), `app/middleware/page-transition.global.ts`, `app/assets/css/main.css`.
+- Problem: page changes were instant and abrupt. View Transitions API tried and rejected (rough result); Vue `<Transition>` via Nuxt chosen.
+- Tasks: slide left-to-right when navigating deeper (child/grandchild), right-to-left when going up or sideways; `/en` prefix ignored; sidebar/layout stay mounted; disabled for `prefers-reduced-motion`.
+- DoD: transition verified manually in NL + EN; `npm test` + `npm run build` green; PR merged to `development`.
+
+</details>
+
+<details>
+<summary><strong>NWL-032 — Desktop sidebar animation & submenu polish 🟡 P2</strong></summary>
+
+- Files: `app/components/SideNav.vue`.
+- Problem: sidebar animation/width needed polish; submenu chevron wrapped under long labels (scoped `display:block` overrode the flex utility) and chevrons did not line up.
+- Tasks: sidebar animation + reduced width; pin submenu chevrons to the right edge; tighten submenu indent.
+- DoD: chevrons aligned for all submenu labels in NL + EN; `npm run build` green; PR merged to `development`.
+
+</details>
 
 <details>
 <summary><strong>NWL-020 — Sanity fetch layer + schemas 🟡 P2 (decision-gated)</strong></summary>
