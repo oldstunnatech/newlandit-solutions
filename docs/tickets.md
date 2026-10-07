@@ -1,6 +1,6 @@
 # 🎫 Newland IT-Solutions — Engineering Tickets
 
-> Last updated: 2026-10-05 · Source: `report.md` · Roadmap: `roadmap.md`
+> Last updated: 2026-10-07 · Source: `report.md` · Roadmap: `roadmap.md`
 >
 > **Legend:** 🔴 P0 launch-blocking · 🟠 P1 high · 🟡 P2 medium · ✅ Done · 🟡 In progress · 📋 Todo
 >
@@ -89,6 +89,26 @@
 ---
 
 ## 🔨 Active Ticket Detail
+
+<details>
+<summary><strong>NWL-031 — Slide page transition 🟡 P2</strong></summary>
+
+- Files: `nuxt.config.ts` (`app.pageTransition`), `app/middleware/page-transition.global.ts`, `app/assets/css/main.css`.
+- Problem: page changes were instant and abrupt. View Transitions API tried and rejected (rough result); Vue `<Transition>` via Nuxt chosen.
+- Tasks: slide left-to-right when navigating deeper (child/grandchild), right-to-left when going up or sideways; `/en` prefix ignored; sidebar/layout stay mounted; disabled for `prefers-reduced-motion`.
+- DoD: transition verified manually in NL + EN; `npm test` + `npm run build` green; PR merged to `development`.
+
+</details>
+
+<details>
+<summary><strong>NWL-032 — Desktop sidebar animation & submenu polish 🟡 P2</strong></summary>
+
+- Files: `app/components/SideNav.vue`.
+- Problem: sidebar animation/width needed polish; submenu chevron wrapped under long labels (scoped `display:block` overrode the flex utility) and chevrons did not line up.
+- Tasks: sidebar animation + reduced width; pin submenu chevrons to the right edge; tighten submenu indent.
+- DoD: chevrons aligned for all submenu labels in NL + EN; `npm run build` green; PR merged to `development`.
+
+</details>
 
 <details>
 <summary><strong>NWL-020 — Sanity fetch layer + schemas 🟡 P2 (decision-gated)</strong></summary>
