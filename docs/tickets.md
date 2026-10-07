@@ -84,6 +84,14 @@
 
 > NWL-025, NWL-026, NWL-027, NWL-028 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
 
+**Code health — from `/check` run 2026-10-05**
+
+| ID | Priority | Status | Notes |
+| --- | --- | --- | --- |
+| I18N-004 | 🟡 P2 | 📋 Todo | Externalise remaining hard-coded template strings (Footer labels, WhatsApp FAB titles, `it-support.vue` plans, nav/hero bits) |
+| NWL-029 | 🟡 P2 | 📋 Todo | NAP single-source — `useServiceSchema` provider + `wa.me` links read from `CONTACT`, add `whatsappHref` |
+| SEO-011 | 🟡 P2 | 📋 Todo | Remove shadowed custom sitemap route (`server/routes/sitemap.xml.ts` + `NL_ROUTES`); module sitemap is the live one |
+
 </details>
 
 ---
@@ -128,6 +136,60 @@
 - Problem: Stripe keys are wired but no commerce flow exists (PRD non-goal). Either remove the unused
   config to reduce surface, or scope a real paid flow as its own epic.
 - DoD: keys removed **or** a commerce epic filed; decision recorded in PRD.
+
+</details>
+
+<details>
+<summary><strong>I18N-004 — Externalise remaining hard-coded strings 🟡 P2</strong></summary>
+
+- Files: `app/components/Footer.vue`, `app/components/{MobileNav,HeroSection,Header,SideNav,TestimonialCard}.vue`,
+  `app/pages/solutions/*.vue` (esp. `it-support.vue`), `app/pages/{about,contact,index}.vue`, `app/pages/cases/*.vue`,
+  `i18n/locales/{nl,en}.json`.
+- Problem: `/check` (2026-10-05) found literal display text outside `t()`. English visitors see Dutch footer
+  labels ("Telefoonnummer:", "Adres:", "BTW-nummer:"); most pages carry an English-only WhatsApp FAB
+  `title="Chat with us on WhatsApp"`; `it-support.vue` plan cards (titles, targets, features, prices copy) are English-only.
+- Tasks:
+  - Footer labels → `footer.*` keys; `aria-label`s ("Site footer", "LinkedIn", "WhatsApp") translated too.
+  - FAB `title` → `:title="t('common.whatsapp')"` everywhere (pattern already used in `index.vue`, `approach.vue`, `areas/*`).
+  - `it-support.vue` plans → `detail.itSupport.plans` array via `tm()`/`rt()`.
+  - Remaining component hits (MobileNav, HeroSection, Header, SideNav, TestimonialCard, contact, index).
+  - Decide `index-v1.vue` (unused `noindex` draft, ~280 hits): delete it, or formally exclude from `/check`.
+- DoD: `/check` hard-coded-string scan clean for live pages; nl + en parity; `npm test` + `npm run build` green.
+
+</details>
+
+<details>
+<summary><strong>NWL-029 — NAP single-source cleanup 🟡 P2</strong></summary>
+
+- Files: `shared/utils/contact.ts`, `shared/types/company.ts`, `app/composables/useServiceSchema.ts`,
+  every page/component with `https://wa.me/31648364450`, `app/pages/index-v1.vue`, `i18n/locales/{nl,en}.json` (legal).
+- Problem: `/check` found phone/email/address literals outside `CONTACT`. `useServiceSchema` duplicates the full
+  provider NAP; `wa.me/31648364450` is hard-coded in ~13 places; `index-v1.vue` uses stale `info@newlandit.nl`;
+  legal texts hard-code KVK/BTW/address. A phone or address change today would need edits in many files.
+- Tasks:
+  - Add `whatsappHref` to `ContactInfo` / `CONTACT`; replace all `wa.me` literals.
+  - Build `useServiceSchema` provider from `CONTACT` (keep `tests/service-schema.test.ts` green / update it).
+  - Legal copy: interpolate NAP (`{kvk}`, `{btw}`, `{address}`) from `CONTACT`, **or** record that legal text stays verbatim (confirm with owner).
+  - Fix or remove `index-v1.vue` stale email (ties into I18N-004 decision).
+- DoD: `/check` NAP scan clean (or documented legal exception); `npm test` + `npm run build` green.
+
+</details>
+
+<details>
+<summary><strong>SEO-011 — Remove shadowed custom sitemap route 🟡 P2</strong></summary>
+
+- Files: `server/routes/sitemap.xml.ts`, `server/utils/sitemap-routes.ts`, `tests/sitemap.test.ts`, `nuxt.config.ts`.
+- Problem: found during SEO-009. `/sitemap.xml` is answered by `@nuxtjs/sitemap` (307 → `/sitemap_index.xml`,
+  per-locale `__sitemap__/nl-NL.xml` / `en-US.xml`); the custom route never serves. Its `NL_ROUTES` list is stale
+  (missing `/approach`, `/cases`, `/areas`) and its tests give false confidence. Module output also includes the
+  `noindex` draft `/index-v1`.
+- Tasks:
+  - Delete the custom route + `sitemap-routes.ts`; replace `tests/sitemap.test.ts` with tests of what the module is fed.
+  - Exclude `/index-v1` (and its `/en` twin) via `sitemap.exclude` (or delete the page per I18N-004).
+  - Optional: set priority/changefreq via `routeRules` `sitemap` if still wanted.
+  - After deploy: confirm Search Console reads `sitemap_index.xml` (ties into NWL-011).
+- DoD: one sitemap source; built `/sitemap_index.xml` lists all live pages in both locales, no `noindex` pages;
+  `npm test` + `npm run build` green.
 
 </details>
 
