@@ -89,8 +89,8 @@
 | NWL-026 | 🟡 P2 | 🟡 In progress | A11y — image alt-text policy + audit all imagery. Audit done: all live pages already had alt text, one gap fixed on unused `/index-v1` route. PR #28 [ideas #17] |
 | NWL-027 | 🟡 P2 | 🟡 In progress | A11y — visible focus states across interactive elements. Site-wide `:focus-visible` outline added. PR #28 [ideas #17] |
 | NWL-028 | 🟡 P2 | 🟡 In progress | A11y — keyboard nav (nav, mobile drawer, forms, FAB). Real bug found + fixed: SideNav submenu was mouse-only, unreachable by keyboard. PR #28 (feat/NWL-026-027-028-a11y) [ideas #17] |
-| NWL-031 | 🟡 P2 | 🟡 In progress | Direction-aware slide page transition (Nuxt `app.pageTransition` + route middleware). PR #48 (feat/NWL-031-page-transition) |
-| NWL-032 | 🟡 P2 | 🟡 In progress | Desktop sidebar animation, narrower width, aligned submenu chevrons. PR #49 (feat/NWL-032-desktop-sidebar-animation) |
+| NWL-031 | 🟡 P2 | ✅ Done | Direction-aware slide page transition (Nuxt `app.pageTransition` + route middleware). PR #48 merged to `development` 2026-10-07; manual NL/EN check still to do |
+| NWL-032 | 🟡 P2 | ✅ Done | Desktop sidebar animation, narrower width, aligned submenu chevrons. PR #49 merged to `development` 2026-10-07; manual chevron check still to do |
 
 </details>
 
