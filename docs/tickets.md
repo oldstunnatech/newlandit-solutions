@@ -91,6 +91,7 @@
 | I18N-004 | 🟡 P2 | 📋 Todo | Externalise remaining hard-coded template strings (Footer labels, WhatsApp FAB titles, `it-support.vue` plans, nav/hero bits) |
 | NWL-029 | 🟡 P2 | 📋 Todo | NAP single-source — `useServiceSchema` provider + `wa.me` links read from `CONTACT`, add `whatsappHref` |
 | SEO-011 | 🟡 P2 | 📋 Todo | Remove shadowed custom sitemap route (`server/routes/sitemap.xml.ts` + `NL_ROUTES`); module sitemap is the live one |
+| NWL-030 | 🟡 P2 | 📋 Todo | Branded, translated error page (`app/error.vue`) — 404 + 500 currently show Nuxt's default dark page in English |
 
 </details>
 
@@ -137,6 +138,26 @@
   config to reduce surface, or scope a real paid flow as its own epic.
 - DoD: keys removed **or** a commerce epic filed; decision recorded in PRD.
 
+</details>
+
+<details>
+<summary><strong>NWL-030 — Branded, translated error page 🟡 P2</strong></summary>
+
+- Files: new `app/error.vue`, `i18n/locales/{nl,en}.json` (`error.*`), optionally `app/layouts/default.vue`.
+- Problem: found in the 2026-10-07 browser check. The site has no `app/error.vue`, so every missing page
+  (and any server error) renders Nuxt's built-in dark error screen: off-brand, no navigation, English-only
+  text such as "Area not found" / "Go back home" even on Dutch URLs. Visitors who mistype a URL or follow
+  a stale link hit a dead end.
+- Tasks:
+  - Add `app/error.vue` in the site's green/cream style, using the normal header/nav so visitors can continue.
+  - Copy under `error.notFound.*` and `error.generic.*` in **both** locales; pick the locale from the URL
+    (`/en/...` → English).
+  - 404: friendly heading, short text, links to home, `/solutions` and `/contact` via `localePath()`.
+  - 500 / other: generic apology + home link; never show the raw error message or stack to visitors.
+  - Keep the real status code (404 stays 404; no soft-404) and add `noindex`.
+  - Use `clearError({ redirect })` for the home link so the error state resets.
+- DoD: unknown URLs on nl and en show the branded page with a 404 status; a thrown 500 shows the generic
+  variant; nl + en parity; `npm test` + `npm run build` green; `/check` adds no new failures.
 </details>
 
 <details>
