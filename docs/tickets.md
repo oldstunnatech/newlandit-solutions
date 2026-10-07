@@ -1,6 +1,6 @@
 # 🎫 Newland IT-Solutions — Engineering Tickets
 
-> Last updated: 2026-09-24 (evening) · Source: `report.md` · Roadmap: `roadmap.md`
+> Last updated: 2026-10-07 · Source: `report.md` · Roadmap: `roadmap.md`
 >
 > **Legend:** 🔴 P0 launch-blocking · 🟠 P1 high · 🟡 P2 medium · ✅ Done · 🟡 In progress · 📋 Todo
 >
@@ -89,6 +89,7 @@
 | NWL-026 | 🟡 P2 | 🟡 In progress | A11y — image alt-text policy + audit all imagery. Audit done: all live pages already had alt text, one gap fixed on unused `/index-v1` route. PR #28 [ideas #17] |
 | NWL-027 | 🟡 P2 | 🟡 In progress | A11y — visible focus states across interactive elements. Site-wide `:focus-visible` outline added. PR #28 [ideas #17] |
 | NWL-028 | 🟡 P2 | 🟡 In progress | A11y — keyboard nav (nav, mobile drawer, forms, FAB). Real bug found + fixed: SideNav submenu was mouse-only, unreachable by keyboard. PR #28 (feat/NWL-026-027-028-a11y) [ideas #17] |
+| NWL-030 | 🟡 P2 | 📋 Todo | Branded, translated error page (`app/error.vue`) — 404 + 500 currently show Nuxt's default dark page in English |
 
 </details>
 
@@ -114,6 +115,27 @@
 - Problem: Stripe keys are wired but no commerce flow exists (PRD non-goal). Either remove the unused
   config to reduce surface, or scope a real paid flow as its own epic.
 - DoD: keys removed **or** a commerce epic filed; decision recorded in PRD.
+
+</details>
+
+<details>
+<summary><strong>NWL-030 — Branded, translated error page 🟡 P2</strong></summary>
+
+- Files: new `app/error.vue`, `i18n/locales/{nl,en}.json` (`error.*`), optionally `app/layouts/default.vue`.
+- Problem: found in the 2026-10-07 browser check. The site has no `app/error.vue`, so every missing page
+  (and any server error) renders Nuxt's built-in dark error screen: off-brand, no navigation, English-only
+  text such as "Area not found" / "Go back home" even on Dutch URLs. Visitors who mistype a URL or follow
+  a stale link hit a dead end.
+- Tasks:
+  - Add `app/error.vue` in the site's green/cream style, using the normal header/nav so visitors can continue.
+  - Copy under `error.notFound.*` and `error.generic.*` in **both** locales; pick the locale from the URL
+    (`/en/...` → English).
+  - 404: friendly heading, short text, links to home, `/solutions` and `/contact` via `localePath()`.
+  - 500 / other: generic apology + home link; never show the raw error message or stack to visitors.
+  - Keep the real status code (404 stays 404; no soft-404) and add `noindex`.
+  - Use `clearError({ redirect })` for the home link so the error state resets.
+- DoD: unknown URLs on nl and en show the branded page with a 404 status; a thrown 500 shows the generic
+  variant; nl + en parity; `npm test` + `npm run build` green; `/check` adds no new failures.
 
 </details>
 
