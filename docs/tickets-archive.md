@@ -2,7 +2,7 @@
 
 > Completed-ticket detail. The live status overview and active-ticket detail live in
 > [`tickets.md`](./tickets.md). Move a ticket here once it is ✅ Done.
-> Last updated: 2026-09-24
+> Last updated: 2026-10-05
 
 ---
 
@@ -133,3 +133,47 @@
   - File official KVK trade-name + address correction via `mijn.kvk.nl` (eHerkenning/DigiD)
   - Claim Bing Places listing and set NAP
   - Once KVK is corrected, claim-and-fix telefoonboek.nl and adhocdata.nl listings (low priority — adhocdata.nl is a B2B data broker, not consumer-facing)
+
+---
+
+## Backlog batch — shipped 2026-09-24 (release PR #29)
+
+### NWL-014 — "Onze aanpak" dedicated page
+- Files: `app/pages/approach.vue`, `app/composables/useNav.ts`, `i18n/locales/{nl,en}.json`
+- Delivered: new `/approach` page expanding Discovery/Plan/Build/Support; added to navigation; nl + en copy. PR #27.
+
+### NWL-025 — Count-up animation for stats
+- Files: `app/pages/index.vue`
+- Delivered: already implemented as part of NWL-001 (IntersectionObserver-triggered count-up); verified live 2026-09-24, no PR needed.
+
+### NWL-026 — Image alt-text policy + audit
+- Delivered: audit of all imagery; every live page already had alt text. One gap fixed on the unused `/index-v1` route. PR #28.
+
+### NWL-027 — Visible focus states
+- Files: `app/assets/css/main.css`
+- Delivered: site-wide `:focus-visible` outline across interactive elements. PR #28.
+
+### NWL-028 — Keyboard navigation
+- Files: `app/components/SideNav.vue`, `app/layouts/default.vue`
+- Delivered: fixed real bug: the SideNav submenu was mouse-only and unreachable by keyboard. PR #28 (`feat/NWL-026-027-028-a11y`).
+
+## Shipped 2026-10-07 — UX polish (PRs #48, #49 → development)
+
+### NWL-031 — Slide page transition
+
+- Files: `nuxt.config.ts` (`app.pageTransition`), `app/middleware/page-transition.global.ts`, `app/assets/css/main.css`.
+- Problem: page changes were instant and abrupt. View Transitions API tried and rejected (rough result); Vue `<Transition>` via Nuxt chosen.
+- Tasks: slide left-to-right when navigating deeper (child/grandchild), right-to-left when going up or sideways; `/en` prefix ignored; sidebar/layout stay mounted; disabled for `prefers-reduced-motion`.
+- DoD: transition verified manually in NL + EN; `npm test` + `npm run build` green; PR merged to `development`.
+
+- Verification: merged to `development` 2026-10-07; manual NL/EN browser check still to do.
+
+### NWL-032 — Desktop sidebar animation & submenu polish
+
+- Files: `app/components/SideNav.vue`.
+- Problem: sidebar animation/width needed polish; submenu chevron wrapped under long labels (scoped `display:block` overrode the flex utility) and chevrons did not line up.
+- Tasks: sidebar animation + reduced width; pin submenu chevrons to the right edge; tighten submenu indent.
+- DoD: chevrons aligned for all submenu labels in NL + EN; `npm run build` green; PR merged to `development`.
+
+- Verification: merged to `development` 2026-10-07; manual NL/EN browser check still to do.
+

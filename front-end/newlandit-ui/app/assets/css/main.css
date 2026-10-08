@@ -24,3 +24,30 @@ select:focus-visible,
 
 
 
+
+/* Page transition — slider feel. Direction is chosen per navigation in
+   middleware/page-transition.global.ts:
+   slide-ltr = going deeper (child/grandchild): old exits right, new enters from the left
+   slide-rtl = going up / sideways: old exits left, new enters from the right
+   Only the page swaps; sidebar/layout stay mounted. */
+main {
+  overflow-x: clip; /* hide the off-screen part while sliding */
+}
+.slide-ltr-enter-active,
+.slide-rtl-enter-active {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.slide-ltr-leave-active,
+.slide-rtl-leave-active {
+  transition: transform 0.25s cubic-bezier(0.55, 0, 1, 0.45);
+}
+.slide-ltr-enter-from { transform: translateX(-100%); }
+.slide-ltr-leave-to   { transform: translateX(100%); }
+.slide-rtl-enter-from { transform: translateX(100%); }
+.slide-rtl-leave-to   { transform: translateX(-100%); }
+@media (prefers-reduced-motion: reduce) {
+  .slide-ltr-enter-active, .slide-ltr-leave-active,
+  .slide-rtl-enter-active, .slide-rtl-leave-active {
+    transition: none;
+  }
+}
