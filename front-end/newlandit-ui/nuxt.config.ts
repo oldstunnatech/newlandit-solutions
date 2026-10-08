@@ -26,6 +26,8 @@ export default defineNuxtConfig({
   },
 
   app: {
+    // Default only; direction is set per navigation in middleware/page-transition.global.ts
+    pageTransition: { name: 'slide-rtl', mode: 'out-in' },
     head: {
       // Locale <html lang> + hreflang are set per-request via useLocaleHead
       // in the default layout. This is the no-JS/first-paint fallback.
