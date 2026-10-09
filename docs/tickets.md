@@ -69,7 +69,7 @@
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
 | SEO-008 | 🟡 P2 | 📋 Todo | Per-service OG images (replace shared hero) [ideas #10] |
-| SEO-009 | 🟡 P2 | 🟡 In progress | Local landing-page template (i18n, schema, internal links). Branch `feat/SEO-009-local-landing-template` [ideas #11] |
+| SEO-009 | 🟡 P2 | ✅ Done | Local landing-page template (i18n, schema, internal links). PR #39 merged to `development`. [ideas #11] |
 | SEO-010 | 🟡 P2 | 📋 Todo | Publish neighbourhood/niche local pages (content). Depends SEO-009 [ideas #11] |
 
 **Product & conversion**
@@ -121,7 +121,7 @@
 </details>
 
 <details open>
-<summary><strong>SEO-009 — Local landing-page template 🟡 P2 (in progress)</strong></summary>
+<summary><strong>SEO-009 — Local landing-page template 🟡 P2 (✅ Done)</strong></summary>
 
 Goal: a reusable, data-driven template for Amsterdam neighbourhood/niche pages so SEO-010 is
 content-only (add a data entry + copy, no new code). Ships with **one** pilot page to prove it end-to-end.
@@ -159,6 +159,10 @@ content-only (add a data entry + copy, no new code). Ships with **one** pilot pa
 - [x] Vitest: registry integrity — unique slugs, every `relatedServices` maps to an existing
       solution page, every `nearby` slug exists, every area has its i18n keys in both locales.
 - [x] `npm test` and `npm run build` green; `/check` passes.
+
+**Review (2026-10-10):** manually reviewed by the owner, who made follow-up changes during review: provider NAP in
+`useServiceSchema` now read from `CONTACT`, footer/contact labels moved to i18n (`footer.*`, both locales),
+contact phone placeholder uses `CONTACT.phone`. Gate green (53 tests, build). Merged via PR #39.
 
 **Out of scope:** further area pages (SEO-010), per-area OG images (SEO-008).
 
