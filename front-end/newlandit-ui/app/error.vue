@@ -5,7 +5,7 @@
       <div class="blob blob-2"></div>
 
       <div class="relative z-10 max-w-2xl mx-auto px-6 pt-32 pb-24 text-center">
-        <p class="eyebrow-pill mb-6">{{ statusCode }}</p>
+        <p class="status-code mb-4">{{ statusCode }}</p>
         <h1 class="text-3xl sm:text-4xl font-extrabold text-cream mb-4">{{ t(`${copyKey}.heading`) }}</h1>
         <p class="text-white/70 text-lg leading-relaxed mb-10">{{ t(`${copyKey}.text`) }}</p>
 
@@ -70,11 +70,10 @@ function leave(path: string) {
 
 .text-cream { color: #fbf6da; }
 
-.eyebrow-pill {
-  display: inline-block; letter-spacing: 0.15em;
-  font-size: 0.95rem; font-weight: 700; color: #4ade80;
-  background: rgba(34, 197, 94, 0.12); border: 1px solid rgba(34, 197, 94, 0.3);
-  border-radius: 9999px; padding: 0.4rem 1.1rem;
+.status-code {
+  font-size: clamp(6rem, 22vw, 14rem); line-height: 1;
+  font-weight: 800; letter-spacing: 0.04em; color: #4ade80;
+  text-shadow: 0 0 60px rgba(74, 222, 128, 0.35);
 }
 
 .btn-primary {
