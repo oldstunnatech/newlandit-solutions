@@ -1,3 +1,5 @@
+import { areaSitemapUrls } from './shared/data/areas'
+
 export default defineNuxtConfig({
   compatibilityDate: '2026-06-17',
   modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/i18n', '@nuxtjs/sitemap'],
@@ -11,6 +13,8 @@ export default defineNuxtConfig({
     // i18n routes auto-discovered via @nuxtjs/i18n integration
     // excludes admin/api paths; includes both NL (default) + EN (prefixed)
     exclude: ['/admin/**'],
+    // dynamic routes (pages/areas/[slug].vue) must be listed explicitly
+    urls: areaSitemapUrls(),
   },
 
   i18n: {
