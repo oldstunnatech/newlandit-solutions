@@ -8,32 +8,32 @@
           <div class="flex-1">
             <div class="space-y-3 text-slate-200">
               <p>
-                <span class="font-semibold">Telefoonnummer:</span>
+                <span class="font-semibold">{{ t('footer.phone') }}:</span>
                 <a :href="contact.phoneHref" class="font-semibold text-slate-100 ml-2 hover:underline">{{ contact.phone }}</a>
               </p>
 
               <p>
-                <span class="font-semibold">E-mail:</span>
+                <span class="font-semibold">{{ t('footer.email') }}:</span>
                 <a :href="contact.emailHref" class="font-semibold text-slate-100 ml-2 hover:underline">{{ contact.email }}</a>
               </p>
 
               <p>
-                <span class="font-semibold">Website:</span>
+                <span class="font-semibold">{{ t('footer.website') }}:</span>
                 <a :href="contact.website" target="_blank" rel="noopener noreferrer" class="font-semibold text-slate-100 ml-2 hover:underline">{{ contact.websiteDisplay || contact.website }}</a>
               </p>
 
               <p>
-                <span class="font-semibold">Adres:</span>
+                <span class="font-semibold">{{ t('footer.address') }}:</span>
                 <span class="ml-2 font-semibold text-slate-100">{{ contact.address.street }}, {{ contact.address.postalCode }} {{ contact.address.city }}</span>
               </p>
 
               <p>
-                <span class="font-semibold">KVK:</span>
+                <span class="font-semibold">{{ t('footer.kvk') }}:</span>
                 <span class="ml-2 font-semibold text-slate-100">{{ contact.kvk }}</span>
               </p>
 
               <p>
-                <span class="font-semibold">BTW-nummer:</span>
+                <span class="font-semibold">{{ t('footer.vat') }}:</span>
                 <span class="ml-2 font-semibold text-slate-100">{{ contact.btw }}</span>
               </p>
             </div>

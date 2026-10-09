@@ -30,6 +30,14 @@
     "terms": "Terms & Conditions",
     "areas": "Service areas"
   },
+  "footer": {
+    "phone": "Phone",
+    "email": "Email",
+    "website": "Website",
+    "address": "Address",
+    "kvk": "KVK",
+    "vat": "VAT number"
+  },
   "seo": {
     "home": {
       "title": "IT Support, Custom Software & Websites in Amsterdam",

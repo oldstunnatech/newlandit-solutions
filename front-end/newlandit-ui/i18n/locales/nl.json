@@ -30,6 +30,14 @@
     "terms": "Algemene voorwaarden",
     "areas": "Werkgebied"
   },
+  "footer": {
+    "phone": "Telefoonnummer",
+    "email": "E-mail",
+    "website": "Website",
+    "address": "Adres",
+    "kvk": "KVK",
+    "vat": "BTW-nummer"
+  },
   "seo": {
     "home": {
       "title": "IT-support, maatwerksoftware & websites in Amsterdam",
