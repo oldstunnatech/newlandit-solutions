@@ -11,10 +11,15 @@
       "scheduleIntake": "Plan een intakegesprek"
     },
     "whatsapp": "Chat met ons",
+    "rating5": "5 van de 5 sterren",
     "langSwitch": "Taal"
   },
   "nav": {
     "primary": "Hoofdnavigatie",
+    "mobile": "Mobiele navigatie",
+    "openMenu": "Navigatie openen",
+    "closeMenu": "Navigatie sluiten",
+    "toggleSubmenu": "Submenu {name} openen of sluiten",
     "home": "Home",
     "solutions": "Diensten",
     "softwareDevelopment": "Softwareontwikkeling",
@@ -31,6 +36,7 @@
     "areas": "Werkgebied"
   },
   "footer": {
+    "label": "Voettekst website",
     "phone": "Telefoonnummer",
     "email": "E-mail",
     "website": "Website",
@@ -313,12 +319,20 @@
       "send": "Verstuur bericht",
       "sending": "Versturen…",
       "sentHeading": "Bericht verzonden",
-      "sendAnother": "Nog een bericht sturen"
+      "sendAnother": "Nog een bericht sturen",
+      "placeholders": {
+        "name": "Jan Jansen",
+        "email": "jan{'@'}bedrijf.nl",
+        "company": "Bedrijf B.V.",
+        "address": "Damstraat 1, Amsterdam",
+        "message": "Vertel kort waarmee we je kunnen helpen…"
+      }
     },
     "info": {
       "direct": "Direct contact",
       "responseTime": "Reactietijd",
       "typicalReply": "gemiddelde reactie",
+      "responseValue": "72 uur",
       "responseNote": "We lezen elk bericht persoonlijk geen wachtrijen, geen bots.",
       "preferChat": "Liever chatten?",
       "whatsappBtn": "Stuur ons een WhatsApp"
@@ -436,9 +450,9 @@
       "ctaHeading": "Niet zeker welk pakket past?",
       "ctaText": "Neem contact op voor een vrijblijvend adviesgesprek samen vinden we het juiste plan.",
       "plans": [
-        { "title": "Basic Support Remote", "target": "Gericht op zzp’ers en kleine organisaties die vooral reactieve remote hulp nodig hebben, zonder vaste verplichtingen.", "description": "€80 per uur (op aanvraag) of €45/maand per werkplek", "features": ["Remote support tijdens kantooruren", "Basismonitoring (optioneel via remote-agent)", "10% korting op meerwerk (zoals kleine projecten of upgrades)"], "note": "" },
-        { "title": "Pro Support Remote", "target": "Voor groeiende bedrijven die behoefte hebben aan continuïteit, monitoring en optimalisatie.", "description": "Vanaf €55 p/m per werkplek voor het mkb met 5–25 werkplekken.", "features": ["Onbeperkte remote support tijdens kantooruren", "Periodieke health checks", "Patchbeheer", "Advies over back-up en opslag"], "note": "" },
-        { "title": "Premium Support – DevOps & Cloud SLA", "target": "Voor agencies, ontwikkelteams en bedrijven met complexe IT-omgevingen, CI/CD-processen of hybride cloudstructuren.", "description": "Vanaf €750 p/m op basis van een SLA op maat, afhankelijk van projectomvang en uitrol.", "features": ["Hybride support (remote & on-site)", "SLA-gebaseerde aanpak met snelle reactietijden", "Cloud- en infrastructuurbeheer (Azure, AWS, CI/CD)"], "note": "Dit pakket wordt volledig afgestemd op jouw specifieke situatie. Vraag een gratis offerte aan voor een voorstel op maat." }
+        { "title": "Basic Support Remote", "priceSuffix": "/maand per werkplek", "target": "Gericht op zzp’ers en kleine organisaties die vooral reactieve remote hulp nodig hebben, zonder vaste verplichtingen.", "description": "€80 per uur (op aanvraag) of €45/maand per werkplek", "features": ["Remote support tijdens kantooruren", "Basismonitoring (optioneel via remote-agent)", "10% korting op meerwerk (zoals kleine projecten of upgrades)"], "note": "" },
+        { "title": "Pro Support Remote", "priceSuffix": "/maand per werkplek", "target": "Voor groeiende bedrijven die behoefte hebben aan continuïteit, monitoring en optimalisatie.", "description": "Vanaf €55 p/m per werkplek voor het mkb met 5–25 werkplekken.", "features": ["Onbeperkte remote support tijdens kantooruren", "Periodieke health checks", "Patchbeheer", "Advies over back-up en opslag"], "note": "" },
+        { "title": "Premium Support – DevOps & Cloud SLA", "priceSuffix": "/maand (SLA op maat)", "target": "Voor agencies, ontwikkelteams en bedrijven met complexe IT-omgevingen, CI/CD-processen of hybride cloudstructuren.", "description": "Vanaf €750 p/m op basis van een SLA op maat, afhankelijk van projectomvang en uitrol.", "features": ["Hybride support (remote & on-site)", "SLA-gebaseerde aanpak met snelle reactietijden", "Cloud- en infrastructuurbeheer (Azure, AWS, CI/CD)"], "note": "Dit pakket wordt volledig afgestemd op jouw specifieke situatie. Vraag een gratis offerte aan voor een voorstel op maat." }
       ]
     },
     "strategy": {
@@ -568,7 +582,7 @@
           "heading": "1. Verwerkingsverantwoordelijke",
           "paras": [
             "Newland IT-Solutions is de verwerkingsverantwoordelijke voor de verwerking van uw persoonsgegevens.",
-            "Newland IT-Solutions, Hessenbergweg 8, 1101 BT Amsterdam • KVK: 83541934 • BTW: NL003835137B29 • info{'@'}newlandit-solutions.com • +31 648 364 450"
+            "Newland IT-Solutions, {street}, {postalCode} {city} • KVK: {kvk} • BTW: {btw} • {email} • {phone}"
           ]
         },
         {
@@ -607,7 +621,7 @@
           "heading": "6. Uw rechten",
           "paras": [
             "Op grond van de AVG heeft u de volgende rechten: inzage in uw persoonsgegevens, rectificatie van onjuiste gegevens, wissing ('recht op vergetelheid'), beperking van de verwerking, gegevensoverdraagbaarheid en bezwaar tegen verwerking op grond van gerechtvaardigd belang.",
-            "U kunt uw rechten uitoefenen door contact op te nemen via info{'@'}newlandit-solutions.com. Wij reageren binnen 30 dagen.",
+            "U kunt uw rechten uitoefenen door contact op te nemen via {email}. Wij reageren binnen 30 dagen.",
             "U heeft tevens het recht een klacht in te dienen bij de Autoriteit Persoonsgegevens (autoriteitpersoonsgegevens.nl)."
           ]
         },
@@ -673,7 +687,7 @@
     },
     "terms": {
       "title": "Algemene Voorwaarden",
-      "intro": "Deze algemene voorwaarden zijn van toepassing op alle aanbiedingen, offertes en overeenkomsten van Newland IT-Solutions (KVK: 83541934), gevestigd te Hessenbergweg 8, 1101 BT Amsterdam.",
+      "intro": "Deze algemene voorwaarden zijn van toepassing op alle aanbiedingen, offertes en overeenkomsten van Newland IT-Solutions (KVK: {kvk}), gevestigd te {street}, {postalCode} {city}.",
       "sections": [
         {
           "heading": "Artikel 1 — Toepasselijkheid",

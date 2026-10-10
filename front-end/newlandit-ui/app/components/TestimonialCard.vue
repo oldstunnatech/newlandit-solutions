@@ -1,6 +1,6 @@
 <template>
   <div class="testimonial-card scroll-child" :style="`transition-delay: ${delay}s`">
-    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+    <div class="stars" role="img" :aria-label="t('common.rating5')">★★★★★</div>
     <p class="quote">"{{ quote }}"</p>
     <div class="author-row">
       <div class="avatar" aria-hidden="true">{{ name[0] }}</div>
@@ -13,6 +13,10 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from '#imports'
+
+const { t } = useI18n()
+
 interface Props {
   quote: string
   name: string

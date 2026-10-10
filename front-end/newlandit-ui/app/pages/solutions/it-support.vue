@@ -4,14 +4,14 @@
     <div class="blob blob-2"></div>
 
     <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-24">
-      <NuxtLink to="/solutions/it-consulting" class="back-link mb-8">← IT Consulting</NuxtLink>
+      <NuxtLink :to="localePath('/solutions/it-consulting')" class="back-link mb-8">{{ t('detail.support.backConsulting') }}</NuxtLink>
 
       <!-- Hero -->
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <p class="eyebrow-pill mb-4">IT Support Services</p>
-        <h1 class="text-4xl sm:text-4xl font-extrabold mb-6">Smart IT support, wherever and whenever you need it</h1>
+        <p class="eyebrow-pill mb-4">{{ t('detail.support.eyebrow') }}</p>
+        <h1 class="text-4xl sm:text-4xl font-extrabold mb-6">{{ t('detail.support.h1') }}</h1>
         <p class="text-white/70 text-lg leading-relaxed">
-          At Newland IT-Solutions we keep your business running in Amsterdam and North Holland. Whether you are self-employed or managing a growing team we offer reliable support remotely and on site. From quick help desk questions to proactive system management: you choose the package that suits your organization.
+          {{ t('detail.support.intro') }}
         </p>
       </div>
 
@@ -24,7 +24,7 @@
           :class="{ 'plan-card--featured': plan.featured }"
         >
           <!-- Featured badge -->
-          <div v-if="plan.featured" class="featured-badge">Most popular</div>
+          <div v-if="plan.featured" class="featured-badge">{{ t('detail.support.mostPopular') }}</div>
 
           <!-- Image -->
           <div class="plan-image-wrap">
@@ -48,7 +48,7 @@
             <p class="plan-desc">{{ plan.description }}</p>
 
             <div class="plan-includes">
-              <p class="includes-label"> Includes:</p>
+              <p class="includes-label">{{ t('detail.includes') }}</p>
               <ul class="feature-list">
                 <li v-for="feature in plan.features" :key="feature">
                   <span class="feature-check">✓</span>
@@ -61,10 +61,10 @@
 
             <div class="plan-actions">
               <a :href="plan.link" target="_blank" rel="noopener" class="btn-primary">
-                {{ plan.featured ? 'Get started' : 'View details' }}
+                {{ plan.featured ? t('detail.getStarted') : t('detail.viewDetails') }}
               </a>
               <a :href="plan.link" target="_blank" rel="noopener" class="btn-secondary">
-                Order from {{ plan.price }}
+                {{ t('detail.orderFrom') }} {{ plan.price }}
               </a>
             </div>
           </div>
@@ -73,94 +73,81 @@
 
       <!-- CTA -->
       <div class="cta-band mt-20">
-        <h2 class="text-2xl font-bold mb-3">Not sure which package fits?</h2>
-        <p class="text-white/70 mb-6">Contact us for a no obligation consultation we'll find the right plan together.</p>
-        <a href="/contact" class="btn-primary">Plan a free consultation</a>
+        <h2 class="text-2xl font-bold mb-3">{{ t('detail.support.ctaHeading') }}</h2>
+        <p class="text-white/70 mb-6">{{ t('detail.support.ctaText') }}</p>
+        <NuxtLink :to="localePath('/contact')" class="btn-primary">{{ t('detail.freeConsult') }}</NuxtLink>
       </div>
     </div>
 
     <!-- WhatsApp FAB -->
-    <a href="https://wa.me/31648364450" target="_blank" class="whatsapp-fab">
+    <a :href="CONTACT.whatsappHref" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" :title="t('common.whatsapp')">
       <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
       </svg>
-      <span class="whatsapp-label">Chat with us</span>
+      <span class="whatsapp-label">{{ t('common.whatsapp') }}</span>
     </a>
   </section>
 </template>
 
 <script setup lang="ts">
+import { CONTACT } from '#shared/utils/contact'
+import { computed } from 'vue'
+import { useI18n, useLocalePath } from '#imports'
+
 definePageMeta({ layout: 'default' })
 
+const { t, tm, rt } = useI18n()
+const localePath = useLocalePath()
+
 useSeo({
-  title: 'IT Support in Amsterdam — Remote & On-site',
-  description:
-    'Reliable IT support in Amsterdam: helpdesk, remote and on-site assistance with clear SLAs. Keep your systems stable and secure with Newland IT-Solutions.',
+  title: t('seo.itSupport.title'),
+  description: t('seo.itSupport.description'),
   path: '/solutions/it-support',
 })
 
 useServiceSchema({
-  name: 'IT Support in Amsterdam — Remote & On-site',
-  description:
-    'Reliable IT support in Amsterdam: helpdesk, remote and on-site assistance with clear SLAs. Keep your systems stable and secure with Newland IT-Solutions.',
+  name: t('seo.itSupport.title'),
+  description: t('seo.itSupport.description'),
   path: '/solutions/it-support',
   serviceType: 'IT Support',
 })
 
-const plans = [
+// Non-translatable plan data; copy lives in detail.support.plans (same order).
+const planMeta = [
   {
-    title: 'Basic Support Remote',
     tier: 'Basic',
     image: '/images/Different-Types-of-IT-Support-Services.jpg',
     price: '€45',
-    priceSuffix: '/month per workplace',
     featured: false,
-    target: 'Aimed at sole proprietorships and small organizations that mainly need reactive remote help, without fixed obligations.',
-    description: '€80 per hour (on demand) or €45/month per workplace',
-    features: [
-      'Remote support during office hours',
-      'Basic monitoring (optional via remote-agent)',
-      '10% discount on extra work (such as small projects or upgrades)',
-    ],
-    note: null,
     link: 'https://www.newlandit-solutions.com/product/19328983/basic-support-remote-voor-zzp-ers-en-kleine-bedrijven',
   },
   {
-    title: 'Pro Support Remote',
     tier: 'Pro',
     image: '/images/employees-looking-financial-statistics-computer.jpg',
     price: '€55',
-    priceSuffix: '/month per workplace',
     featured: true,
-    target: 'For growing companies in need of continuity, monitoring and optimization.',
-    description: 'From €55 p/m per workplace for SMEs with 5–25 workplaces.',
-    features: [
-      'Unlimited remote support during office hours',
-      'Periodic health checks',
-      'Patch management',
-      'Backup and storage advice',
-    ],
-    note: null,
     link: 'https://www.newlandit-solutions.com/product/19329122/pro-support-remote-voor-het-mkb-5-25-werkplekken',
   },
   {
-    title: 'Premium Support – DevOps & Cloud SLA',
     tier: 'Premium',
     image: '/images/itsupport-1551434678-e076c223a692.avif',
     price: '€750',
-    priceSuffix: '/month (custom SLA)',
     featured: false,
-    target: 'For agencies, development teams and companies with complex IT environments, CI/CD processes or hybrid cloud structures.',
-    description: 'From €750 p/m based on custom SLA depending on project scope and deployment.',
-    features: [
-      'Hybrid support (remote & on-site)',
-      'SLA-based approach with fast response times',
-      'Cloud and infrastructure management (Azure, AWS, CI/CD)',
-    ],
-    note: 'This package is fully tailored to your specific situation. Request a free quote for a tailor-made proposal.',
     link: 'https://www.newlandit-solutions.com/product/19329360/premium-support-devops-cloud-sla-vanaf',
   },
 ]
+
+const plans = computed(() =>
+  (tm('detail.support.plans') as any[]).map((p, i) => ({
+    ...planMeta[i],
+    title: rt(p.title),
+    priceSuffix: rt(p.priceSuffix),
+    target: rt(p.target),
+    description: rt(p.description),
+    features: (p.features as any[]).map((f) => rt(f)),
+    note: rt(p.note) || null,
+  })),
+)
 </script>
 
 <style scoped>
