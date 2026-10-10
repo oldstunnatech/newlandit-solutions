@@ -245,6 +245,40 @@
         </div>
 
       <!-- ============================================================
+           BOOKING — Calendly inline calendar (consent-gated)
+      ============================================================ -->
+      <div class="mt-16">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <p class="uppercase tracking-widest text-green-300 text-sm font-semibold mb-3">{{ t('contact.booking.eyebrow') }}</p>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">{{ t('contact.booking.heading') }}</h2>
+          <p class="text-white/70">{{ t('contact.booking.intro') }}</p>
+        </div>
+
+        <div class="map-card">
+          <iframe
+            v-if="consentAccepted"
+            :src="bookingEmbedUrl"
+            class="w-full h-[700px] rounded-2xl"
+            style="border: 0"
+            loading="lazy"
+            :title="t('contact.booking.iframeTitle')"
+          />
+          <div v-else class="map-blocked">
+            <CalendarDaysIcon :size="32" class="map-blocked-icon" />
+            <p class="map-blocked-text">{{ t('contact.booking.blocked') }}</p>
+            <div class="flex flex-wrap justify-center gap-3">
+              <button type="button" class="btn-secondary text-sm" @click="openBanner">
+                {{ t('contact.booking.manageCookies') }}
+              </button>
+              <a :href="CONTACT.bookingUrl" target="_blank" rel="noopener noreferrer" class="btn-secondary text-sm">
+                {{ t('contact.booking.openExternal') }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================
            VISIT US — map, address, opening hours
       ============================================================ -->
       <div class="mt-16">
@@ -309,7 +343,7 @@
 <script setup lang="ts">
 import { CONTACT } from '~~/shared/utils/contact'
 import { useI18n } from '#imports'
-import { PaperclipIcon, XIcon, CheckIcon, PhoneIcon, MailIcon, GlobeIcon, MapPinIcon } from '@lucide/vue'
+import { PaperclipIcon, XIcon, CheckIcon, PhoneIcon, MailIcon, GlobeIcon, MapPinIcon, CalendarDaysIcon } from '@lucide/vue'
 
 definePageMeta({
   layout: 'default',
@@ -330,6 +364,9 @@ const {
 } = useContactForm()
 
 const { consentAccepted, openBanner } = useConsent()
+
+// Calendly inline embed, themed to match the page. Loaded only after consent.
+const bookingEmbedUrl = `${CONTACT.bookingUrl}?hide_gdpr_banner=1&background_color=0d4226&text_color=ffffff&primary_color=4ade80`
 </script>
 
 <style scoped>

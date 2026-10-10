@@ -332,6 +332,15 @@
       "openingHours": "Opening hours",
       "mapBlocked": "Enable cookies to view the map.",
       "enableMaps": "Manage cookies"
+    },
+    "booking": {
+      "eyebrow": "Book a call",
+      "heading": "Schedule an introduction",
+      "intro": "Prefer to talk? Pick a time in our calendar for an introduction.",
+      "iframeTitle": "Booking calendar",
+      "blocked": "Enable cookies to view the booking calendar.",
+      "manageCookies": "Manage cookies",
+      "openExternal": "Open on Calendly"
     }
   },
   "detail": {
@@ -525,7 +534,7 @@
   },
   "consent": {
     "title": "Your privacy",
-    "text": "We use functional cookies and local storage for basic functionality. With your consent we also load Google Maps. No tracking or marketing cookies.",
+    "text": "We use functional cookies and local storage for basic functionality. With your consent we also load Google Maps and the Calendly booking calendar. No tracking or marketing cookies.",
     "accept": "Give consent",
     "decline": "Functional only",
     "learnMore": "Cookie policy"
@@ -593,6 +602,7 @@
             "• Resend Inc. (US) — sends email notifications from our contact form.",
             "• Sanity AS (Norway/US) — CMS platform for content management, where applicable.",
             "• Google LLC (US) — Google Maps embed on the contact page, only with your explicit consent.",
+            "• Calendly LLC (US) — booking calendar on the contact page, only with your explicit consent. Data you enter when booking an appointment is processed by Calendly.",
             "We never sell your personal data or share it for commercial purposes."
           ]
         },
@@ -651,6 +661,7 @@
           "heading": "4. Third parties after consent",
           "paras": [
             "Google Maps (Google LLC, US): when you give consent via our cookie banner, a Google Maps embed is loaded on the contact page. Google may process data in accordance with their privacy policy (policies.google.com/privacy).",
+            "Calendly (Calendly LLC, US): when you give consent, the Calendly booking calendar is loaded on the contact page. Calendly may set cookies and processes the data you enter when booking, in accordance with their privacy policy (calendly.com/privacy).",
             "WhatsApp: clicking a WhatsApp button takes you to the WhatsApp app or website. We do not load WhatsApp automatically; you initiate this contact yourself."
           ]
         },
@@ -658,14 +669,15 @@
           "heading": "5. Managing consent",
           "paras": [
             "You can give or withdraw consent for non-functional cookies via the cookie banner at the bottom of the page. You can change your choice at any time by clearing your browser's local storage.",
-            "Without consent, Google Maps is not loaded and no data is sent to Google."
+            "Without consent, Google Maps and Calendly are not loaded and no data is sent to Google or Calendly."
           ]
         },
         {
           "heading": "6. More information",
           "paras": [
             "More information about cookies and your rights is available from the Dutch Data Protection Authority: autoriteitpersoonsgegevens.nl",
-            "Google's privacy policy: policies.google.com/privacy"
+            "Google's privacy policy: policies.google.com/privacy",
+            "Calendly's privacy policy: calendly.com/privacy"
           ]
         }
       ]
