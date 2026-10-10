@@ -6,7 +6,9 @@
     <div class="flex flex-col flex-1">
       <!-- logo / brand area -->
       <div class="mb-6">
-        <img :src="logo" alt="NewHeaven IT-Solutions" class="w-full object-contain">
+        <NuxtLink :to="localePath('/')" aria-label="Newland IT-Solutions" class="block">
+          <img :src="logo" alt="Newland IT-Solutions" class="w-full object-contain">
+        </NuxtLink>
       </div>
 
       <!-- navigation -->
@@ -93,11 +95,12 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useI18n } from '#imports'
+import { useI18n, useLocalePath } from '#imports'
 import { useNav } from '~/composables/useNav'
 import logo from '~/assets/company_logo.png'
 
 const { t } = useI18n()
+const localePath = useLocalePath()
 const { navItems, isActive } = useNav()
 const openMenu    = ref<string | null>(null)
 const openSubmenu = ref<string | null>(null)

@@ -69,7 +69,7 @@
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
 | SEO-008 | 🟡 P2 | 📋 Todo | Per-service OG images (replace shared hero) [ideas #10] |
-| SEO-009 | 🟡 P2 | 📋 Todo | Local landing-page template (i18n, schema, internal links) [ideas #11] |
+| SEO-009 | 🟡 P2 | ✅ Done | Local landing-page template (i18n, schema, internal links). PR #39 merged to `development`. [ideas #11] |
 | SEO-010 | 🟡 P2 | 📋 Todo | Publish neighbourhood/niche local pages (content). Depends SEO-009 [ideas #11] |
 
 **Product & conversion**
@@ -92,6 +92,7 @@
 | NWL-029 | 🟡 P2 | 📋 Todo | NAP single-source — `useServiceSchema` provider + `wa.me` links read from `CONTACT`, add `whatsappHref` |
 | SEO-011 | 🟡 P2 | 📋 Todo | Remove shadowed custom sitemap route (`server/routes/sitemap.xml.ts` + `NL_ROUTES`); module sitemap is the live one |
 | NWL-030 | 🟡 P2 | 🟡 In progress | Branded, translated error page (`app/error.vue`) — 404 + 500 currently show Nuxt's default dark page in English Branch `feat/NWL-030-error-page` |
+| NWL-033 | 🟡 P2 | 🟡 In progress | Favicon from logo globe (ico/png/apple-touch) + logo links to home in Header, SideNav, MobileNav; fix "NewHeaven" alt text. Branch `feat/NWL-033-favicon-logo-home` |
 
 </details>
 
@@ -117,6 +118,54 @@
 - Problem: Stripe keys are wired but no commerce flow exists (PRD non-goal). Either remove the unused
   config to reduce surface, or scope a real paid flow as its own epic.
 - DoD: keys removed **or** a commerce epic filed; decision recorded in PRD.
+
+</details>
+
+<details open>
+<summary><strong>SEO-009 — Local landing-page template 🟡 P2 (✅ Done)</strong></summary>
+
+Goal: a reusable, data-driven template for Amsterdam neighbourhood/niche pages so SEO-010 is
+content-only (add a data entry + copy, no new code). Ships with **one** pilot page to prove it end-to-end.
+
+**Routing & data**
+- [x] Dynamic route `app/pages/areas/[slug].vue` → `/areas/<slug>` (nl) and `/en/areas/<slug>` (en).
+- [x] Index route `app/pages/areas/index.vue` listing all areas (prevents orphan pages).
+- [x] Typed registry `shared/data/areas.ts` + `shared/types/area.ts` (mirrors `shared/data/cases.ts`):
+  `slug`, `schemaType` (`City` | `Place`), `relatedServices` (solution slugs), `nearby` (area slugs).
+- [x] Unknown slug → real 404 via `createError({ statusCode: 404 })`, not a soft "not found" page.
+- [x] Pilot entry: **Amsterdam Zuidoost** (office is at Hessenbergweg 8, 1101 BT, so the claim is real).
+
+**i18n**
+- [x] All copy under `areas.<slug>.*` (name, intro, body paragraphs, local USP) + shared template
+      strings under `areas.template.*`, in **both** `nl.json` and `en.json`.
+- [x] SEO copy under `seo.areas.<slug>.title|description` and `seo.areas.index.*`.
+- [x] No hard-coded display text in the template.
+
+**SEO & structured data**
+- [x] `useSeo()` on both pages with unique title/description per area.
+- [x] `Service` JSON-LD per area page: extend `useServiceSchema` with an optional `areaServed`
+      override (`Place` with `containedInPlace: Amsterdam`) instead of a new composable.
+- [x] Breadcrumbs: add `areas` to `useBreadcrumbSchema` segment names; area segment uses the area name.
+- [x] Sitemap: dynamic routes are not auto-discovered — feed `/areas/<slug>` URLs (both locales)
+      from the registry into `@nuxtjs/sitemap` (`sitemap.urls` via `areaSitemapUrls()`). Note: the live
+      sitemap is the module's `/sitemap_index.xml`; the custom `server/routes/sitemap.xml.ts` is shadowed.
+
+**Internal links**
+- [x] Area page links to each `relatedServices` solution page, to `/contact`, and to `nearby` areas
+      (nearby section hidden while the pilot has no neighbours).
+- [x] `/areas` index is linked from the footer so pages are crawlable.
+- [x] All links via `localePath()`.
+
+**Tests & gate**
+- [x] Vitest: registry integrity — unique slugs, every `relatedServices` maps to an existing
+      solution page, every `nearby` slug exists, every area has its i18n keys in both locales.
+- [x] `npm test` and `npm run build` green; `/check` passes.
+
+**Review (2026-10-10):** manually reviewed by the owner, who made follow-up changes during review: provider NAP in
+`useServiceSchema` now read from `CONTACT`, footer/contact labels moved to i18n (`footer.*`, both locales),
+contact phone placeholder uses `CONTACT.phone`. Gate green (53 tests, build). Merged via PR #39.
+
+**Out of scope:** further area pages (SEO-010), per-area OG images (SEO-008).
 
 </details>
 
