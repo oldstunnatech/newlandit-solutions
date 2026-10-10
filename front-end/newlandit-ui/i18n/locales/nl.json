@@ -499,6 +499,126 @@
   "faq": {
     "eyebrow": "FAQ",
     "heading": "Veelgestelde vragen",
+    "software": {
+      "items": [
+        {
+          "question": "Wat voor software ontwikkelen jullie?",
+          "answer": "We bouwen web- en mobiele applicaties op maat, van interne tools tot klantgerichte platforms, en ontwikkelen softwareplatforms en API-integraties die je bedrijfsprocessen ondersteunen."
+        },
+        {
+          "question": "Kunnen jullie onze bestaande systemen aan elkaar koppelen?",
+          "answer": "Ja. Met API-integraties koppelen we systemen, externe tools en databronnen, zodat data-uitwisseling soepel verloopt en workflows sneller gaan."
+        },
+        {
+          "question": "Wat kost software op maat?",
+          "answer": "Dat hangt af van de omvang en complexiteit van je project. Na een gratis kennismakingsgesprek ontvang je een offerte met scope, planning en prijs, zonder verborgen kosten."
+        },
+        {
+          "question": "Hoe begint een softwareproject?",
+          "answer": "Met een intakegesprek waarin we je processen en doelen in kaart brengen. Op basis daarvan stellen we een voorstel op dat volledig is afgestemd op hoe jouw organisatie werkt."
+        },
+        {
+          "question": "Kunnen jullie de software na oplevering ook onderhouden?",
+          "answer": "Ja. Na oplevering kun je doorgaan met een van onze supportpakketten, van remote hulp op aanvraag tot een SLA op maat."
+        }
+      ]
+    },
+    "cms": {
+      "items": [
+        {
+          "question": "Welk platform past bij mij: Wix, WordPress of Shopify?",
+          "answer": "Wix is ideaal voor zzp’ers, kleine bedrijven en portfolio’s. WordPress is flexibel en uit te breiden met plugins, en past goed bij groeiende bedrijven. Shopify is de keuze als je producten online wilt verkopen. Twijfel je? We adviseren je graag."
+        },
+        {
+          "question": "Kan ik mijn website daarna zelf beheren?",
+          "answer": "Ja. We bouwen websites op een eenvoudig te beheren CMS, zodat je de inhoud zelf kunt aanpassen."
+        },
+        {
+          "question": "Kunnen jullie ook een webshop bouwen?",
+          "answer": "Ja. Met Shopify bouwen we een professionele webshop, geoptimaliseerd voor conversie en met betaal- en verzendmodules inbegrepen, volledig te beheren via het dashboard."
+        },
+        {
+          "question": "Is mijn nieuwe website vindbaar in Google?",
+          "answer": "We bouwen met oog voor snelheid, helderheid en gebruiksgemak, en WordPress-websites zijn SEO-vriendelijk opgezet. Zo leggen we een goede basis voor je online zichtbaarheid."
+        },
+        {
+          "question": "Wat kost een nieuwe website?",
+          "answer": "Dat hangt af van het platform, het ontwerp en de functionaliteit die je nodig hebt. Na een gratis kennismakingsgesprek ontvang je een offerte op maat, afgestemd op je doelen en budget."
+        }
+      ]
+    },
+    "consulting": {
+      "items": [
+        {
+          "question": "Waarmee helpt IT-consultancy mijn organisatie?",
+          "answer": "We geven deskundig advies bij het kiezen van IT-oplossingen die passen bij je organisatie en ambities, en zorgen dat systemen, processen en support goed functioneren, nu en in de toekomst."
+        },
+        {
+          "question": "Beheren jullie ook netwerken, servers en cloudomgevingen?",
+          "answer": "Ja. We installeren en beheren netwerken en servers en ondersteunen on-premise, hybride en cloudomgevingen (Azure, AWS), inclusief monitoring, patchbeheer en een back-upstrategie."
+        },
+        {
+          "question": "Kunnen jullie ons begeleiden bij digitale transformatie?",
+          "answer": "Ja. We begeleiden transformatie- en integratieprojecten van strategie tot implementatie, met cloud-, on-premise of hybride oplossingen."
+        },
+        {
+          "question": "Wat is het verschil tussen IT-consultancy en IT-support?",
+          "answer": "Consultancy draait om de juiste keuzes en plannen maken voor je IT. Support is de dagelijkse hulp bij vragen en storingen; daarvoor hebben we vaste supportpakketten."
+        },
+        {
+          "question": "Hoe start een adviestraject?",
+          "answer": "Met een vrijblijvend adviesgesprek over je huidige situatie en plannen. Daarna ontvang je een voorstel met scope, planning en prijs."
+        }
+      ]
+    },
+    "support": {
+      "items": [
+        {
+          "question": "Welke IT-supportpakketten bieden jullie?",
+          "answer": "Er zijn drie pakketten: Basic Support Remote voor zzp’ers en kleine organisaties, Pro Support Remote voor het mkb met 5–25 werkplekken, en Premium Support – DevOps & Cloud SLA voor complexe IT-omgevingen."
+        },
+        {
+          "question": "Wat kost IT-support?",
+          "answer": "Basic kost €80 per uur op aanvraag of €45 per maand per werkplek. Pro is er vanaf €55 per maand per werkplek. Premium start vanaf €750 per maand, op basis van een SLA op maat. Tarieven zijn exclusief btw, conform onze algemene voorwaarden."
+        },
+        {
+          "question": "Helpen jullie ook op locatie?",
+          "answer": "Basic en Pro zijn remote pakketten. Premium biedt hybride support, remote en on-site. Daarnaast komen we in Amsterdam en omgeving op locatie wanneer de situatie dat vraagt."
+        },
+        {
+          "question": "Wanneer is de support beschikbaar?",
+          "answer": "Basic en Pro bieden remote support tijdens kantooruren; bij Pro is die onbeperkt. Bij Premium leggen we beschikbaarheid en reactietijden vast in een SLA op maat."
+        },
+        {
+          "question": "Zit ik vast aan een contract?",
+          "answer": "Basic Support Remote is bedoeld voor wie vooral reactieve hulp nodig heeft, zonder vaste verplichtingen. De voorwaarden voor Pro en Premium stemmen we af in je offerte."
+        }
+      ]
+    },
+    "strategy": {
+      "items": [
+        {
+          "question": "Begeleiden jullie ook projecten buiten IT?",
+          "answer": "Ja. We begeleiden zowel technische als niet-technische projecten, van IT-implementaties tot interne procesverbeteringen."
+        },
+        {
+          "question": "Wat houdt jullie projectbegeleiding in?",
+          "answer": "We brengen structuur, een realistische planning en voortgangsbewaking, met heldere communicatie en afstemming op je interne processen en teams, van start tot oplevering."
+        },
+        {
+          "question": "Kunnen jullie een logo en huisstijl ontwerpen?",
+          "answer": "Ja. We ontwerpen unieke logo’s en brandingmaterialen die je merkidentiteit versterken."
+        },
+        {
+          "question": "Doen jullie ook UX/UI-design?",
+          "answer": "Ja. We ontwerpen doordachte gebruikerservaringen en interfaces met consistente branding en aandacht voor gebruiksgemak."
+        },
+        {
+          "question": "Hoe beginnen we?",
+          "answer": "Plan een intake of kennismakingsgesprek. We bespreken je doelen en sturen daarna een voorstel met scope, planning en prijs."
+        }
+      ]
+    },
     "general": {
       "items": [
         {

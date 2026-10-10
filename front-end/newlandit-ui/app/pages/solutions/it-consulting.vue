@@ -42,6 +42,8 @@
           </div>
         </div>
       </div>
+
+      <ServiceFaq service="consulting" />
     </div>
 
     <a href="https://wa.me/31648364450" target="_blank" class="whatsapp-fab" title="Chat with us on WhatsApp">
