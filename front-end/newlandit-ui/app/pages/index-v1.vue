@@ -197,7 +197,7 @@
         <p class="uppercase tracking-widest text-green-300 text-sm font-semibold mb-3">Get in touch</p>
         <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Ready to grow your business?</h2>
         <p class="text-white/70 mb-10">Let's talk about how we can help you with IT support, software, or strategy.</p>
-        <a href="mailto:info@newlandit.nl" class="btn-primary text-lg px-10 py-4">Plan een kennismaking</a>
+        <a :href="CONTACT.emailHref" class="btn-primary text-lg px-10 py-4">Plan een kennismaking</a>
       </div>
     </section>
 
@@ -205,7 +205,7 @@
          FLOATING WHATSAPP BUTTON
     ============================================================ -->
     <a
-      href="https://wa.me/31600000000"
+      :href="CONTACT.whatsappHref"
       target="_blank"
       class="whatsapp-fab"
       title="Chat with us on WhatsApp"
@@ -222,6 +222,7 @@
 </template>
 
 <script setup lang="ts">
+import { CONTACT } from '#shared/utils/contact'
 definePageMeta({
   layout: 'default',
 })
