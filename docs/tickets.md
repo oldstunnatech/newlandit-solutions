@@ -258,4 +258,4 @@ contact phone placeholder uses `CONTACT.phone`. Gate green (53 tests, build). Me
 - **Shipped 2026-09-24 (release PR #29):** NWL-014 (PR #27), NWL-026/027/028 (PR #28), NWL-025 (already built with NWL-001) — archived.
 - **Blocked, needs your input (not code-doable):** NWL-008 (verify real timeline facts), NWL-009 (real company photos), NWL-011's Search Console click-through (needs production deploy + Search Console access).
 - **In review 2026-10-05:** SEO-009 (PR #39), follow-up tickets I18N-004/NWL-029/SEO-011 (PR #40), SEO-011 (PR #41).
-- **Suggested next:** get PR #39–#41 reviewed and merged, KVK register correction (blocks full SEO-007 cleanup), NWL-013 (case study content), NWL-016 (FAQ per service).
+- **Suggested next (2026-10-10):** get the 7 open PRs reviewed and merged, oldest first: SEO-011 (#41), NWL-016 (#43), SEO-008 (#44), NWL-030 (#46), NWL-033 done (#55), NWL-029 (#56), NWL-022 (#57); owner to confirm legal/consent wording in #56 and #57. Then I18N-004 (after #56, same files). Still needs owner input: KVK register correction (blocks full SEO-007 cleanup), NWL-013 (real case studies).
