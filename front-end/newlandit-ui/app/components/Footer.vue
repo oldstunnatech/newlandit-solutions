@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-[#04271f] text-slate-100 py-12 mt-250" role="contentinfo" aria-label="Site footer">
+  <footer class="bg-[#04271f] text-slate-100 py-12 mt-250" role="contentinfo" :aria-label="t('footer.label')">
     <div class="max-w-6xl mx-auto px-6">
       <!-- inset panel similar to screenshot -->
       <div class="bg-[#103826] p-8 rounded-sm shadow-inner border border-black/10">
@@ -38,7 +38,7 @@
               </p>
             </div>
 
-            <div class="mt-6 text-slate-300">© {{ yearRange }} Newland IT-Solution's</div>
+            <div class="mt-6 text-slate-300">© {{ yearRange }} Newland IT-Solutions</div>
             <div class="mt-4 flex flex-wrap gap-4">
               <NuxtLink :to="localePath('/areas')" class="legal-link">{{ t('nav.areas') }}</NuxtLink>
               <NuxtLink :to="localePath('/privacy')" class="legal-link">{{ t('nav.privacy') }}</NuxtLink>

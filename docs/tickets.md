@@ -88,7 +88,7 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| I18N-004 | 🟡 P2 | 📋 Todo | Externalise remaining hard-coded template strings (Footer labels, WhatsApp FAB titles, `it-support.vue` plans, nav/hero bits) |
+| I18N-004 | 🟡 P2 | 🟡 In progress | Externalise remaining hard-coded template strings (Footer labels, WhatsApp FAB titles, `it-support.vue` plans, nav/hero bits). Branch `feat/I18N-004-externalise-strings` (stacked on NWL-029) |
 | NWL-029 | 🟡 P2 | 🟡 In progress | NAP single-source — `useServiceSchema` provider + `wa.me` links read from `CONTACT`, add `whatsappHref` Branch `feat/NWL-029-nap-single-source` |
 | SEO-011 | 🟡 P2 | 📋 Todo | Remove shadowed custom sitemap route (`server/routes/sitemap.xml.ts` + `NL_ROUTES`); module sitemap is the live one |
 | NWL-030 | 🟡 P2 | 📋 Todo | Branded, translated error page (`app/error.vue`) — 404 + 500 currently show Nuxt's default dark page in English |

@@ -1,7 +1,7 @@
 <template>
   <aside
     :class="['w-48 h-full bg-[#fbf6da] border-r border-slate-200 p-4 flex flex-col overflow-y-auto', isClosing ? 'mobile-slide-out' : 'mobile-slide']"
-    aria-label="Mobile navigatie"
+    :aria-label="t('nav.mobile')"
   >
     <div class="flex flex-col flex-1">
       <!-- header: logo + close -->
@@ -12,13 +12,13 @@
         <button
           @click="handleClose"
           class="p-1 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors"
-          aria-label="Close navigation"
+          :aria-label="t('nav.closeMenu')"
         >
           <Icon name="lucide:x" class="w-4 h-4" />
         </button>
       </div>
 
-      <nav class="flex-1" aria-label="Mobile primary">
+      <nav class="flex-1" :aria-label="t('nav.primary')">
         <ul class="space-y-3">
           <li v-for="nav in navItems" :key="nav.name" class="nav-item">
 
@@ -41,7 +41,7 @@
                   class="p-1 rounded-lg hover:bg-slate-100 transition-colors"
                   @click.stop="openMenu = openMenu === nav.name ? null : nav.name"
                   :aria-expanded="openMenu === nav.name"
-                  :aria-label="`Toggle ${nav.name} submenu`"
+                  :aria-label="t('nav.toggleSubmenu', { name: nav.name })"
                 >
                   <Icon
                     name="lucide:chevron-right"
@@ -69,7 +69,7 @@
                       <button
                         class="p-1 rounded hover:bg-slate-100 transition-colors"
                         @click.stop="openSubmenu = openSubmenu === child.name ? null : child.name"
-                        :aria-label="`Toggle ${child.name} submenu`"
+                        :aria-label="t('nav.toggleSubmenu', { name: child.name })"
                       >
                         <Icon
                           name="lucide:chevron-right"
