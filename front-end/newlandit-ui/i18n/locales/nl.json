@@ -332,6 +332,15 @@
       "openingHours": "Openingstijden",
       "mapBlocked": "Schakel cookies in om de kaart te bekijken.",
       "enableMaps": "Cookies beheren"
+    },
+    "booking": {
+      "eyebrow": "Afspraak maken",
+      "heading": "Plan een kennismaking",
+      "intro": "Liever even praten? Kies een moment in onze agenda voor een kennismaking.",
+      "iframeTitle": "Afsprakenagenda",
+      "blocked": "Schakel cookies in om de afsprakenagenda te bekijken.",
+      "manageCookies": "Cookies beheren",
+      "openExternal": "Openen op Calendly"
     }
   },
   "detail": {
@@ -526,7 +535,7 @@
   },
   "consent": {
     "title": "Uw privacy",
-    "text": "We gebruiken functionele cookies en lokale opslag voor basisfunctionaliteit. Met uw toestemming laden we ook Google Maps in. Geen tracking of marketingcookies.",
+    "text": "We gebruiken functionele cookies en lokale opslag voor basisfunctionaliteit. Met uw toestemming laden we ook Google Maps en de Calendly-afsprakenagenda in. Geen tracking of marketingcookies.",
     "accept": "Toestemming geven",
     "decline": "Alleen functioneel",
     "learnMore": "Cookiebeleid"
@@ -594,6 +603,7 @@
             "• Resend Inc. (VS) — verzorgt het versturen van e-mailnotificaties vanuit ons contactformulier.",
             "• Sanity AS (Noorwegen/VS) — CMS-platform voor contentbeheer, indien in gebruik.",
             "• Google LLC (VS) — Google Maps-embed op de contactpagina, uitsluitend na uw uitdrukkelijke toestemming.",
+            "• Calendly LLC (VS) — afsprakenagenda op de contactpagina, uitsluitend na uw uitdrukkelijke toestemming. Gegevens die u invult bij het plannen van een afspraak worden door Calendly verwerkt.",
             "Wij verkopen uw persoonsgegevens nooit aan derden en verstrekken deze niet voor commerciële doeleinden."
           ]
         },
@@ -652,6 +662,7 @@
           "heading": "4. Derde partijen na toestemming",
           "paras": [
             "Google Maps (Google LLC, VS): wanneer u via onze cookiebanner toestemming geeft, wordt op de contactpagina een Google Maps-kaart ingeladen. Google kan hierbij gegevens verwerken conform hun privacybeleid (policies.google.com/privacy).",
+            "Calendly (Calendly LLC, VS): wanneer u toestemming geeft, wordt op de contactpagina de Calendly-afsprakenagenda ingeladen. Calendly kan cookies plaatsen en verwerkt de gegevens die u invult bij het plannen, conform hun privacybeleid (calendly.com/privacy).",
             "WhatsApp: klikken op een WhatsApp-knop leidt u door naar de WhatsApp-app of website. Wij laden WhatsApp niet automatisch in; u initieert dit contact zelf."
           ]
         },
@@ -659,14 +670,15 @@
           "heading": "5. Toestemming beheren",
           "paras": [
             "Via de cookiebanner onderaan de pagina kunt u toestemming geven of weigeren voor niet-functionele cookies. U kunt uw keuze op elk moment herzien door de lokale opslag van uw browser te wissen of de banner opnieuw te activeren.",
-            "Zonder toestemming wordt Google Maps niet geladen en worden geen gegevens naar Google verzonden."
+            "Zonder toestemming worden Google Maps en Calendly niet geladen en worden geen gegevens naar Google of Calendly verzonden."
           ]
         },
         {
           "heading": "6. Meer informatie",
           "paras": [
             "Meer informatie over cookies en uw rechten vindt u op de website van de Autoriteit Persoonsgegevens: autoriteitpersoonsgegevens.nl",
-            "Privacybeleid Google: policies.google.com/privacy"
+            "Privacybeleid Google: policies.google.com/privacy",
+            "Privacybeleid Calendly: calendly.com/privacy"
           ]
         }
       ]
