@@ -531,6 +531,17 @@
     "decline": "Alleen functioneel",
     "learnMore": "Cookiebeleid"
   },
+  "error": {
+    "backHome": "Naar de homepage",
+    "notFound": {
+      "heading": "Deze pagina bestaat niet",
+      "text": "De pagina die je zoekt is verplaatst of bestaat niet (meer). Kies hieronder waar je verder wilt."
+    },
+    "generic": {
+      "heading": "Er ging iets mis",
+      "text": "Er is een onverwachte fout opgetreden. Probeer het later opnieuw of ga terug naar de homepage."
+    }
+  },
   "areas": {
     "index": {
       "eyebrow": "Werkgebied",
