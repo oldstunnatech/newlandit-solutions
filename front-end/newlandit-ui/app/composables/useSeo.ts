@@ -1,4 +1,5 @@
 import { useSeoMeta, useRuntimeConfig, useRoute } from '#imports'
+import { OG_DEFAULT_IMAGE, OG_IMAGE_SIZE } from '#shared/utils/og-images'
 
 export interface SeoOptions {
   /** Page title (without the "| Newland IT-Solutions" suffix — that is added by titleTemplate). */
@@ -7,7 +8,7 @@ export interface SeoOptions {
   description: string
   /** Canonical path, e.g. "/solutions". Defaults to the current route path. Always lowercased. */
   path?: string
-  /** OG image path or absolute URL. Defaults to the site hero image. */
+  /** OG image path or absolute URL. Defaults to the resized site hero (OG_DEFAULT_IMAGE). */
   image?: string
   /** OG type. "website" (default) or "article". */
   type?: 'website' | 'article'
@@ -33,8 +34,10 @@ export function useSeo(opts: SeoOptions) {
   const path = (opts.path ?? route.path).replace(/\/+$/, '') || '/'
   const url = base + path
 
-  const rawImage = opts.image ?? '/images/IMG_8959.jpg'
+  const rawImage = opts.image ?? OG_DEFAULT_IMAGE
   const image = rawImage.startsWith('http') ? rawImage : base + rawImage
+  // Dimensions are only known for our generated images (public/images/og/).
+  const isGenerated = rawImage.startsWith('/images/og/')
 
   useSeoMeta({
     title: opts.title,
@@ -44,6 +47,8 @@ export function useSeo(opts: SeoOptions) {
     ogType: opts.type ?? 'website',
     ogUrl: url,
     ogImage: image,
+    ogImageWidth: isGenerated ? OG_IMAGE_SIZE.width : undefined,
+    ogImageHeight: isGenerated ? OG_IMAGE_SIZE.height : undefined,
     ogSiteName: 'Newland IT-Solutions',
     twitterCard: 'summary_large_image',
     twitterTitle: opts.title,

@@ -64,6 +64,7 @@
 </template>
 
 <script setup lang="ts">
+import { SERVICE_OG_IMAGES } from '#shared/utils/og-images'
 import { computed } from 'vue'
 import { useI18n, useLocalePath } from '#imports'
 
@@ -78,6 +79,7 @@ useSeo({
   title: t('seo.softwareDevelopment.title'),
   description: t('seo.softwareDevelopment.description'),
   path: '/solutions/software-development',
+  image: SERVICE_OG_IMAGES['software-development'].image,
 })
 
 useServiceSchema({

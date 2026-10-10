@@ -68,7 +68,7 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| SEO-008 | 🟡 P2 | 📋 Todo | Per-service OG images (replace shared hero) [ideas #10] |
+| SEO-008 | 🟡 P2 | 🟡 In progress | Per-service OG images (replace shared hero). Branch `feat/SEO-008-service-og-images` [ideas #10] |
 | SEO-009 | 🟡 P2 | ✅ Done | Local landing-page template (i18n, schema, internal links). PR #39 merged to `development`. [ideas #11] |
 | SEO-010 | 🟡 P2 | 📋 Todo | Publish neighbourhood/niche local pages (content). Depends SEO-009 [ideas #11] |
 
@@ -122,6 +122,31 @@
 </details>
 
 <details open>
+<summary><strong>SEO-008 — Per-service OG images 🟡 P2 (in progress)</strong></summary>
+
+Problem: every page shared one OG image, `/images/IMG_8959.jpg`, a 6000×4000 camera original
+(far above OG size, cropped unpredictably by LinkedIn/WhatsApp/Slack).
+
+Decision (2026-10-06): static images generated once and committed, **Dutch text only** (primary market).
+No runtime image generation (`nuxt-og-image` considered and rejected: runtime dependency for 5 fixed images).
+
+- [x] `scripts/generate-og-images.ts` (`npm run og:generate`, `sharp` devDependency) renders a branded
+      1200×630 PNG per service: logo, `detail.<service>.eyebrow` + `detail.<service>.h1` from `nl.json`,
+      website from `CONTACT`. No new copy.
+- [x] Output committed to `public/images/og/<service-slug>.png`; config in `shared/utils/og-images.ts`.
+- [x] Fallback `public/images/og/default.jpg`: the site hero cropped to 1200×630 (~90 KB); `useSeo` default.
+- [x] Each solution page passes its image via `useSeo({ image })`; generated images also emit
+      `og:image:width/height`.
+- [x] Tests: every image exists, is 1200×630 and < 300 KB; each service page passes its image;
+      nl text keys exist.
+- [x] `npm test` + `npm run build` green; rendered `og:image` verified on nl + en service pages and default pages.
+
+**Follow-ups (not in scope):** English-text variants; real photography (NWL-009). Note: the company logo
+artwork reads "TOMORROW STECHNOLOGY" (typo in the source file `app/assets/company_logo.png`).
+
+</details>
+
+<details>
 <summary><strong>SEO-009 — Local landing-page template 🟡 P2 (✅ Done)</strong></summary>
 
 Goal: a reusable, data-driven template for Amsterdam neighbourhood/niche pages so SEO-010 is
