@@ -6,7 +6,9 @@
     <div class="flex flex-col flex-1">
       <!-- header: logo + close -->
       <div class="flex items-center justify-between mb-5">
-        <img :src="logo" alt="NewHeaven IT-Solutions" class="h-8 object-contain" />
+        <NuxtLink :to="localePath('/')" aria-label="Newland IT-Solutions" @click="handleClose">
+          <img :src="logo" alt="Newland IT-Solutions" class="h-8 object-contain" />
+        </NuxtLink>
         <button
           @click="handleClose"
           class="p-1 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors"
@@ -134,7 +136,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useI18n } from '#imports'
+import { useI18n, useLocalePath } from '#imports'
 import { useNav, type NavItem } from '~/composables/useNav'
 import logo from '~/assets/company_logo.png'
 
@@ -143,6 +145,7 @@ defineProps<{ navItems: NavItem[] }>()
 const emit = defineEmits<{ close: [] }>()
 
 const { t } = useI18n()
+const localePath = useLocalePath()
 const { isActive } = useNav()
 const openMenu    = ref<string | null>(null)
 const openSubmenu = ref<string | null>(null)

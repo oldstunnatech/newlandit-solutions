@@ -1,6 +1,8 @@
 <template>
   <header class="md:hidden sticky top-0 z-40 bg-[#fbf6da] border-b border-slate-200 px-4 py-3 flex items-center justify-between">
-    <img :src="logo" alt="Newland IT-Solutions" class="h-10 object-contain" />
+    <NuxtLink :to="localePath('/')" aria-label="Newland IT-Solutions">
+      <img :src="logo" alt="Newland IT-Solutions" class="h-10 object-contain" />
+    </NuxtLink>
     <div class="flex items-center gap-2">
       <LanguageSwitcher />
       <button
@@ -16,5 +18,7 @@
 
 <script setup lang="ts">
 import logo from '~/assets/company_logo.png'
+import { useLocalePath } from '#imports'
+const localePath = useLocalePath()
 defineEmits<{ 'toggle-nav': [] }>()
 </script>

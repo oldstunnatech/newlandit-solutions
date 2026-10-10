@@ -1,4 +1,5 @@
 import { useHead, useRuntimeConfig, useRoute, useI18n } from '#imports'
+import { areas } from '#shared/data/areas'
 
 export function useBreadcrumbSchema() {
   const config = useRuntimeConfig()
@@ -30,6 +31,8 @@ export function useBreadcrumbSchema() {
     cookies: t('nav.cookies'),
     terms: t('nav.terms'),
     cases: 'Cases',
+    areas: t('nav.areas'),
+    ...Object.fromEntries(areas.map((a) => [a.slug, t(`areas.items.${a.slug}.name`)])),
   }
 
   const items: Array<{ name: string; url: string }> = [
