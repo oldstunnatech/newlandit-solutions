@@ -59,7 +59,7 @@
                   type="tel"
                   autocomplete="tel"
                   :class="{ 'has-error': errors.phone }"
-                  placeholder="+31 6 12 34 56 78"
+                  :placeholder="CONTACT.phone"
                 />
                 <span v-if="errors.phone" class="field-error">{{ errors.phone }}</span>
               </div>
@@ -206,8 +206,8 @@
             <div class="info-divider" />
 
             <div class="text-xs text-white/40 space-y-1">
-              <p>KvK {{ CONTACT.kvk }}</p>
-              <p>BTW {{ CONTACT.btw }}</p>
+              <p>{{ t('footer.kvk') }} {{ CONTACT.kvk }}</p>
+              <p>{{ t('footer.vat') }} {{ CONTACT.btw }}</p>
             </div>
           </div>
 
