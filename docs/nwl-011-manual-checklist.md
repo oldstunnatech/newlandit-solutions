@@ -8,7 +8,7 @@
 - [ ] Go to [Google Search Console](https://search.google.com/search-console)
 - [ ] Select property `https://www.newlandit-solutions.com`
 - [ ] Click **Verify** — verification meta tag is live on production (`main`) as of the v1.2.0 promote (2026-09-24)
-- [ ] Sitemaps → submit `https://www.newlandit-solutions.com/sitemap.xml`
+- [ ] Sitemaps → submit `https://www.newlandit-solutions.com/sitemap_index.xml`
 - [ ] Confirm both locales appear (`/nl/` and `/en/`)
 
 ## Follow-up from SEO-007 (not blocking NWL-011, but still open)

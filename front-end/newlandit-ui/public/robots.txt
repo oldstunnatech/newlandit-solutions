@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.newlandit-solutions.com/sitemap.xml
+Sitemap: https://www.newlandit-solutions.com/sitemap_index.xml
