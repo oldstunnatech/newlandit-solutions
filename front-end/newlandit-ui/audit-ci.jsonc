@@ -1,0 +1,23 @@
+{
+  // CI gate: fail on any high/critical advisory EXCEPT the ones allowlisted below.
+  // Every entry has no patched version we can install today. Review on each dependency
+  // bump and delete entries as soon as `npm audit` stops reporting them.
+  // Last reviewed: 2026-10-13.
+  "high": true,
+  "package-manager": "npm",
+  "allowlist": [
+    // braces <=3.0.3 (DoS on deeply nested patterns). 3.0.3 is the latest release.
+    // Pulled in by the tailwind / i18n build tooling, never by request handling.
+    "GHSA-vfj7-8cjw-p6xm",
+
+    // node-forge <=1.4.0 (RSA PKCS#1 signature check). 1.4.0 is the latest release.
+    // Pulled in via listhen (nitro dev/preview server), not used for signature verification here.
+    "GHSA-86w9-cpqp-85rv",
+
+    // simple-git 3.x (3 advisories). Fixed only in 4.x, but @nuxt/devtools 3.4.2 needs 3.x
+    // (4.x dropped the default export and breaks `nuxt prepare`). Dev tooling only.
+    "GHSA-x6jw-m9v5-85vh",
+    "GHSA-g4wm-2vf7-vfgr",
+    "GHSA-858h-whjf-mvg5"
+  ]
+}
