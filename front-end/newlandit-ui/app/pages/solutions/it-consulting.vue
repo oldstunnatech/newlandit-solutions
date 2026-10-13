@@ -42,6 +42,8 @@
           </div>
         </div>
       </div>
+
+      <ServiceFaq service="consulting" />
     </div>
 
     <a :href="CONTACT.whatsappHref" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" :title="t('common.whatsapp')">
