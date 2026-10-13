@@ -57,6 +57,7 @@
 
 <script setup lang="ts">
 import { CONTACT } from '#shared/utils/contact'
+import { SERVICE_OG_IMAGES } from '#shared/utils/og-images'
 import { computed } from 'vue'
 import { useI18n, useLocalePath } from '#imports'
 
@@ -69,6 +70,7 @@ useSeo({
   title: t('seo.itConsulting.title'),
   description: t('seo.itConsulting.description'),
   path: '/solutions/it-consulting',
+  image: SERVICE_OG_IMAGES['it-consulting'].image,
 })
 
 useServiceSchema({

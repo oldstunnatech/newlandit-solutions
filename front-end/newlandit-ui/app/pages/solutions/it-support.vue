@@ -93,6 +93,7 @@
 
 <script setup lang="ts">
 import { CONTACT } from '#shared/utils/contact'
+import { SERVICE_OG_IMAGES } from '#shared/utils/og-images'
 definePageMeta({ layout: 'default' })
 
 useSeo({
@@ -100,6 +101,7 @@ useSeo({
   description:
     'Reliable IT support in Amsterdam: helpdesk, remote and on-site assistance with clear SLAs. Keep your systems stable and secure with Newland IT-Solutions.',
   path: '/solutions/it-support',
+  image: SERVICE_OG_IMAGES['it-support'].image,
 })
 
 useServiceSchema({
