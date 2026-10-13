@@ -68,7 +68,7 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| SEO-008 | 🟡 P2 | 📋 Todo | Per-service OG images (replace shared hero) [ideas #10] |
+| SEO-008 | 🟡 P2 | 🟡 In progress | Per-service OG images (replace shared hero). Branch `feat/SEO-008-service-og-images` [ideas #10] |
 | SEO-009 | 🟡 P2 | ✅ Done | Local landing-page template (i18n, schema, internal links). PR #39 merged to `development`. [ideas #11] |
 | SEO-010 | 🟡 P2 | 📋 Todo | Publish neighbourhood/niche local pages (content). Depends SEO-009 [ideas #11] |
 
@@ -88,9 +88,9 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| I18N-004 | 🟡 P2 | 📋 Todo | Externalise remaining hard-coded template strings (Footer labels, WhatsApp FAB titles, `it-support.vue` plans, nav/hero bits) |
-| NWL-029 | 🟡 P2 | 📋 Todo | NAP single-source — `useServiceSchema` provider + `wa.me` links read from `CONTACT`, add `whatsappHref` |
-| SEO-011 | 🟡 P2 | 🟡 In progress | Remove shadowed custom sitemap route (`server/routes/sitemap.xml.ts` + `NL_ROUTES`); module sitemap is the live one Branch `feat/SEO-011-sitemap-cleanup` |
+| I18N-004 | 🟡 P2 | 🟡 In progress | Externalise remaining hard-coded template strings (Footer labels, WhatsApp FAB titles, `it-support.vue` plans, nav/hero bits). Branch `feat/I18N-004-externalise-strings` (stacked on NWL-029) |
+| NWL-029 | 🟡 P2 | 🟡 In progress | NAP single-source — `useServiceSchema` provider + `wa.me` links read from `CONTACT`, add `whatsappHref`. Branch `feat/NWL-029-nap-single-source` |
+| SEO-011 | 🟡 P2 | ✅ Done | Remove shadowed custom sitemap route (`server/routes/sitemap.xml.ts` + `NL_ROUTES`); module sitemap is the live one. PR #41 merged to `development`. |
 | NWL-030 | 🟡 P2 | 📋 Todo | Branded, translated error page (`app/error.vue`) — 404 + 500 currently show Nuxt's default dark page in English |
 | NWL-033 | 🟡 P2 | ✅ Done | Favicon from logo globe (ico/png/apple-touch) + logo links to home in Header, SideNav, MobileNav; fix "NewHeaven" alt text. PR #54 merged to `development`. |
 
@@ -118,6 +118,31 @@
 - Problem: Stripe keys are wired but no commerce flow exists (PRD non-goal). Either remove the unused
   config to reduce surface, or scope a real paid flow as its own epic.
 - DoD: keys removed **or** a commerce epic filed; decision recorded in PRD.
+
+</details>
+
+<details open>
+<summary><strong>SEO-008 — Per-service OG images 🟡 P2 (in progress)</strong></summary>
+
+Problem: every page shared one OG image, `/images/IMG_8959.jpg`, a 6000×4000 camera original
+(far above OG size, cropped unpredictably by LinkedIn/WhatsApp/Slack).
+
+Decision (2026-10-06): static images generated once and committed, **Dutch text only** (primary market).
+No runtime image generation (`nuxt-og-image` considered and rejected: runtime dependency for 5 fixed images).
+
+- [x] `scripts/generate-og-images.ts` (`npm run og:generate`, `sharp` devDependency) renders a branded
+      1200×630 PNG per service: logo, `detail.<service>.eyebrow` + `detail.<service>.h1` from `nl.json`,
+      website from `CONTACT`. No new copy.
+- [x] Output committed to `public/images/og/<service-slug>.png`; config in `shared/utils/og-images.ts`.
+- [x] Fallback `public/images/og/default.jpg`: the site hero cropped to 1200×630 (~90 KB); `useSeo` default.
+- [x] Each solution page passes its image via `useSeo({ image })`; generated images also emit
+      `og:image:width/height`.
+- [x] Tests: every image exists, is 1200×630 and < 300 KB; each service page passes its image;
+      nl text keys exist.
+- [x] `npm test` + `npm run build` green; rendered `og:image` verified on nl + en service pages and default pages.
+
+**Follow-ups (not in scope):** English-text variants; real photography (NWL-009). Note: the company logo
+artwork reads "TOMORROW STECHNOLOGY" (typo in the source file `app/assets/company_logo.png`).
 
 </details>
 

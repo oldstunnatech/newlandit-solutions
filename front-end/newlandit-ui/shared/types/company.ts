@@ -3,6 +3,7 @@ export interface ContactInfo {
   phoneHref: string
   email: string
   emailHref: string
+  whatsappHref: string
   bookingUrl: string
   website: string
   websiteDisplay?: string

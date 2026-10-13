@@ -5,6 +5,7 @@ export const CONTACT: ContactInfo = {
   phoneHref: 'tel:+31648364450',
   email: 'info@newlandit-solutions.com',
   emailHref: 'mailto:info@newlandit-solutions.com',
+  whatsappHref: 'https://wa.me/31648364450',
   bookingUrl: 'https://calendly.com/newlandit-solutions-info',
   website: 'https://www.newlandit-solutions.com',
   websiteDisplay: 'www.newlandit-solutions.com',
@@ -26,4 +27,15 @@ export const CONTACT: ContactInfo = {
   ],
   closedHolidays:
     "New Year's Day, Good Friday, Christmas Day and Boxing Day (December 25 & 26)",
+}
+
+/** NAP values for i18n interpolation in legal copy (`{kvk}`, `{street}`, …). */
+export const CONTACT_I18N_PARAMS = {
+  street: CONTACT.address.street,
+  postalCode: CONTACT.address.postalCode,
+  city: CONTACT.address.city,
+  kvk: CONTACT.kvk,
+  btw: CONTACT.btw,
+  email: CONTACT.email,
+  phone: CONTACT.phone,
 }
