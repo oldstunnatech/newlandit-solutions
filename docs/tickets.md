@@ -50,7 +50,7 @@
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
 | NWL-013 | 🟡 P2 | 📋 Todo | Case studies — content model + first 2 real cases (problem→solution→result). Depends NWL-012 [ideas #3] |
-| NWL-016 | 🟡 P2 | 📋 Todo | FAQ content per service (5 pages). Depends NWL-015 [ideas #5] |
+| NWL-016 | 🟡 P2 | 🟡 In progress | FAQ content per service (5 pages). Depends NWL-015 ✅. Branch `feat/NWL-016-service-faqs` [ideas #5] |
 
 **Content engine**
 
@@ -89,10 +89,10 @@
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
 | I18N-004 | 🟡 P2 | 📋 Todo | Externalise remaining hard-coded template strings (Footer labels, WhatsApp FAB titles, `it-support.vue` plans, nav/hero bits) |
-| NWL-029 | 🟡 P2 | 🟡 In progress | NAP single-source — `useServiceSchema` provider + `wa.me` links read from `CONTACT`, add `whatsappHref` Branch `feat/NWL-029-nap-single-source` |
-| SEO-011 | 🟡 P2 | 📋 Todo | Remove shadowed custom sitemap route (`server/routes/sitemap.xml.ts` + `NL_ROUTES`); module sitemap is the live one |
+| NWL-029 | 🟡 P2 | 🟡 In progress | NAP single-source — `useServiceSchema` provider + `wa.me` links read from `CONTACT`, add `whatsappHref`. Branch `feat/NWL-029-nap-single-source` |
+| SEO-011 | 🟡 P2 | ✅ Done | Remove shadowed custom sitemap route (`server/routes/sitemap.xml.ts` + `NL_ROUTES`); module sitemap is the live one. PR #41 merged to `development`. |
 | NWL-030 | 🟡 P2 | 📋 Todo | Branded, translated error page (`app/error.vue`) — 404 + 500 currently show Nuxt's default dark page in English |
-| NWL-033 | 🟡 P2 | 🟡 In progress | Favicon from logo globe (ico/png/apple-touch) + logo links to home in Header, SideNav, MobileNav; fix "NewHeaven" alt text. Branch `feat/NWL-033-favicon-logo-home` |
+| NWL-033 | 🟡 P2 | ✅ Done | Favicon from logo globe (ico/png/apple-touch) + logo links to home in Header, SideNav, MobileNav; fix "NewHeaven" alt text. PR #54 merged to `development`. |
 
 </details>
 
@@ -122,6 +122,47 @@
 </details>
 
 <details open>
+<summary><strong>NWL-016 — FAQ content per service 🟡 P2 (in progress)</strong></summary>
+
+Goal: each of the 5 solution pages answers the questions prospects actually ask before contacting us,
+using the existing `FaqAccordion` (NWL-015). Note: the component is built but **not used on any page yet**,
+and `faq.general` is unused too.
+
+**Content (truth rule)**
+- [x] 4–6 Q&A pairs per service under `faq.<service>.items` (`software`, `cms`, `consulting`, `support`,
+      `strategy`, matching the `detail.*` namespaces), in **both** `nl.json` and `en.json`, same count per locale.
+- [x] Every answer is grounded in what the site already states (`detail.<service>.*` copy, the
+      `it-support.vue` plans/prices, `faq.general`). **No new factual claims**: no invented response
+      times, SLAs, guarantees, tool lists or prices.
+- [x] Questions are prospect-phrased (cost, timeline, what's included, who it's for, how to start),
+      no duplicates of `faq.general`.
+- [x] Copy flagged in the PR for business-owner review before merge (no reviewer available yet,
+      so answers kept conservative: only facts already on the site).
+
+**Placement**
+- [x] `<FaqAccordion>` on all 5 pages (`solutions/{software-development,cms-websites,it-consulting,it-support,digital-strategy}.vue`),
+      placed just above the closing CTA band, with a `faq.heading` section title.
+- [x] Items read via `tm()` / `rt()`; no hard-coded display text added. Done via a self-contained
+      `ServiceFaq` wrapper (heading + accordion + page URL), so `it-support.vue` needed no `useI18n`;
+      the rest of that page's copy stays with I18N-004.
+- [x] Locale-correct absolute `page-url` passed so `FAQPage` JSON-LD is emitted (one `FAQPage` per page).
+
+**SEO**
+- [x] Rendered page contains valid `FAQPage` JSON-LD alongside the existing `Service` + `BreadcrumbList`.
+      Note: since 2023 Google shows FAQ rich results mainly for gov/health sites, so the gain is content
+      depth + long-tail matching, not guaranteed snippets.
+
+**Tests & gate**
+- [x] Vitest: every service has `faq.<service>.items` in both locales, equal length, non-empty
+      `question`/`answer` strings.
+- [x] `npm test` + `npm run build` green; `/check` introduces no new failures.
+
+**Out of scope:** other hard-coded strings / `wa.me` links on these pages (I18N-004, NWL-029);
+placing `faq.general` (homepage or contact). File separately if wanted.
+
+</details>
+
+<details>
 <summary><strong>SEO-009 — Local landing-page template 🟡 P2 (✅ Done)</strong></summary>
 
 Goal: a reusable, data-driven template for Amsterdam neighbourhood/niche pages so SEO-010 is
@@ -257,5 +298,5 @@ contact phone placeholder uses `CONTACT.phone`. Gate green (53 tests, build). Me
 - **Shipped 2026-09-24:** SEO-007 (NAP audit) — archived below; found KVK register root cause, needs manual legal correction.
 - **Shipped 2026-09-24 (release PR #29):** NWL-014 (PR #27), NWL-026/027/028 (PR #28), NWL-025 (already built with NWL-001) — archived.
 - **Blocked, needs your input (not code-doable):** NWL-008 (verify real timeline facts), NWL-009 (real company photos), NWL-011's Search Console click-through (needs production deploy + Search Console access).
-- **In review 2026-10-05:** SEO-009 (PR #39), follow-up tickets I18N-004/NWL-029/SEO-011 (PR #40), SEO-011 (PR #41).
-- **Suggested next:** get PR #39–#41 reviewed and merged, KVK register correction (blocks full SEO-007 cleanup), NWL-013 (case study content), NWL-016 (FAQ per service).
+- **In review 2026-10-12:** NWL-016 (PR #43), SEO-008 (PR #44), NWL-030 (PR #46), NWL-029 (PR #56), NWL-022 (PR #57), docs refresh (PR #58), I18N-004 (PR #59, stacked on #56). Merged since last refresh: SEO-011 (PR #41), NWL-033 (PRs #54, #55).
+- **Suggested next (2026-10-12):** review and merge the open PRs, oldest first: NWL-016 (#43), SEO-008 (#44), NWL-030 (#46), NWL-029 (#56), NWL-022 (#57), I18N-004 (#59, only after #56); owner to confirm legal/consent wording in #56 and #57 and the new Dutch copy in #59. Still needs owner input: KVK register correction (blocks full SEO-007 cleanup), NWL-013 (real case studies).
