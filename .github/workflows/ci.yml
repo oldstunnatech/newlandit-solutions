@@ -38,8 +38,9 @@ jobs:
       - name: Type check
         run: ./node_modules/.bin/vue-tsc --noEmit
 
+      # Fails on any high/critical advisory except the reviewed, unfixable ones in audit-ci.jsonc.
       - name: Security audit (high/critical)
-        run: npm audit --audit-level=high
+        run: npx --yes audit-ci@^7 --config audit-ci.jsonc
 
       - name: Build
         run: npm run build
