@@ -7,6 +7,7 @@
       :class="{ 'faq-item--open': openIndex === i }"
     >
       <button
+        :id="`faq-question-${i}`"
         class="faq-question"
         :aria-expanded="String(openIndex === i)"
         :aria-controls="`faq-answer-${i}`"
@@ -33,8 +34,14 @@
         :id="`faq-answer-${i}`"
         class="faq-body"
         role="region"
+        :aria-labelledby="`faq-question-${i}`"
+        :inert="openIndex !== i || undefined"
       >
-        <p class="faq-answer-text">{{ item.answer }}</p>
+        <!-- Inner wrapper is the grid item: padding must live inside it, or the
+             0fr row still shows the answer's padding box (first line leaks). -->
+        <div class="faq-answer-inner">
+          <p class="faq-answer-text">{{ item.answer }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -153,13 +160,16 @@ useHead(
   grid-template-rows: 1fr;
 }
 
-.faq-answer-text {
+.faq-answer-inner {
   min-height: 0;
+  overflow: hidden;
+}
+
+.faq-answer-text {
   padding: 0 1.5rem 1.25rem;
   color: rgba(251, 246, 218, 0.75);
   font-size: 0.9375rem;
   line-height: 1.75;
   margin: 0;
-  overflow: hidden;
 }
 </style>

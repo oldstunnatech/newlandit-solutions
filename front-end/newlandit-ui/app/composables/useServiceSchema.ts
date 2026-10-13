@@ -1,4 +1,5 @@
 import { useHead, useRuntimeConfig, useRoute } from '#imports'
+import { CONTACT } from '#shared/utils/contact'
 
 export interface ServiceSchemaOptions {
   /** Display name of the service. */
@@ -9,19 +10,21 @@ export interface ServiceSchemaOptions {
   path?: string
   /** Optional schema.org serviceType value. */
   serviceType?: string
+  /** Optional schema.org areaServed override. Defaults to the City of Amsterdam. */
+  areaServed?: Record<string, unknown>
 }
 
 const PROVIDER = {
   '@type': 'Organization',
   name: 'Newland IT-Solutions',
-  url: 'https://www.newlandit-solutions.com',
-  telephone: '+31648364450',
-  email: 'info@newlandit-solutions.com',
+  url: CONTACT.website,
+  telephone: CONTACT.phoneHref.replace(/^tel:/, ''),
+  email: CONTACT.email,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Hessenbergweg 8',
-    postalCode: '1101 BT',
-    addressLocality: 'Amsterdam',
+    streetAddress: CONTACT.address.street,
+    postalCode: CONTACT.address.postalCode,
+    addressLocality: CONTACT.address.city,
     addressCountry: 'NL',
   },
 }
@@ -47,7 +50,7 @@ export function useServiceSchema(opts: ServiceSchemaOptions) {
     description: opts.description,
     url,
     provider: PROVIDER,
-    areaServed: AREA_SERVED,
+    areaServed: opts.areaServed ?? AREA_SERVED,
   }
 
   if (opts.serviceType) {

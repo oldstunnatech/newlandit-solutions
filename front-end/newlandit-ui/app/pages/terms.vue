@@ -4,7 +4,7 @@
       <NuxtLink :to="localePath('/privacy')" class="back-link mb-8">← {{ t('nav.privacy') }}</NuxtLink>
       <h1 class="text-3xl sm:text-4xl font-extrabold mb-2 mt-8">{{ t('legal.terms.title') }}</h1>
       <p class="text-white/40 text-sm mb-10">{{ t('legal.lastUpdated') }}</p>
-      <p class="text-white/80 leading-relaxed mb-12 text-lg">{{ t('legal.terms.intro') }}</p>
+      <p class="text-white/80 leading-relaxed mb-12 text-lg">{{ t('legal.terms.intro', CONTACT_I18N_PARAMS) }}</p>
       <div
         v-for="section in (tm('legal.terms.sections') as any[])"
         :key="rt(section.heading)"
@@ -22,6 +22,7 @@
 </template>
 
 <script setup lang="ts">
+import { CONTACT_I18N_PARAMS } from '#shared/utils/contact'
 import { useI18n, useLocalePath } from '#imports'
 
 definePageMeta({ layout: 'default' })

@@ -11,10 +11,15 @@
       "scheduleIntake": "Schedule an intake interview"
     },
     "whatsapp": "Chat with us",
+    "rating5": "5 out of 5 stars",
     "langSwitch": "Language"
   },
   "nav": {
     "primary": "Primary navigation",
+    "mobile": "Mobile navigation",
+    "openMenu": "Open navigation",
+    "closeMenu": "Close navigation",
+    "toggleSubmenu": "Toggle {name} submenu",
     "home": "Home",
     "solutions": "Solutions",
     "softwareDevelopment": "Software Development",
@@ -27,7 +32,17 @@
     "contact": "Contact",
     "privacy": "Privacy Statement",
     "cookies": "Cookie Policy",
-    "terms": "Terms & Conditions"
+    "terms": "Terms & Conditions",
+    "areas": "Service areas"
+  },
+  "footer": {
+    "label": "Site footer",
+    "phone": "Phone",
+    "email": "Email",
+    "website": "Website",
+    "address": "Address",
+    "kvk": "KVK",
+    "vat": "VAT number"
   },
   "seo": {
     "home": {
@@ -73,6 +88,16 @@
     "cases": {
       "title": "Case Studies — Newland IT-Solutions Amsterdam",
       "description": "Real client stories from Newland IT-Solutions: software development, IT support and digital strategy projects for organisations in Amsterdam and North Holland."
+    },
+    "areas": {
+      "index": {
+        "title": "Service areas — IT services in Amsterdam",
+        "description": "Newland IT-Solutions helps freelancers and SMEs across Amsterdam with IT support, software development and websites. See what we do in your area."
+      },
+      "amsterdam-zuidoost": {
+        "title": "IT support & websites in Amsterdam Zuidoost",
+        "description": "IT support, software development and websites for freelancers and SMEs in Amsterdam Zuidoost. Local IT company on {street}, remote and on-site."
+      }
     },
     "privacy": {
       "title": "Privacy Statement — Newland IT-Solutions",
@@ -133,9 +158,9 @@
     "services": {
       "eyebrow": "What we do",
       "heading": "Our services",
-      "intro": "We offer a wide range of specialized IT services, tailored to your unique situation — always focused on sustainable digital growth.",
+      "intro": "We offer a wide range of specialized IT services, tailored to your unique situation always focused on sustainable digital growth.",
       "items": [
-        { "title": "Software & Automation", "description": "Smart tools that accelerate and simplify processes. We build solutions that really work — from data management to workflow optimization.", "button": "More about Development" },
+        { "title": "Software & Automation", "description": "Smart tools that accelerate and simplify processes. We build solutions that really work, from data management to workflow optimization.", "button": "More about Development" },
         { "title": "IT Support & Management", "description": "Immediate assistance with malfunctions, maintenance and security. Remote or on-site, we keep your systems stable and secure.", "button": "More about IT Support" },
         { "title": "Consultancy & Strategy", "description": "Strategic advice for digital transformation and scalable growth. We make sure your technology supports your ambitions.", "button": "More about Strategy" }
       ]
@@ -150,7 +175,7 @@
           "company": "Agape Joy Care"
         },
         {
-          "quote": "From strategy to implementation — they guided us every step of the way. Highly recommended.",
+          "quote": "From strategy to implementation, they guided us every step of the way. Highly recommended.",
           "name": "Mark Janssen",
           "company": "BZVJ"
         },
@@ -210,7 +235,7 @@
     },
     "mvs": [
       { "title": "Mission", "body": "At Newland IT-Solutions, the customer is central. We help companies and individuals in Amsterdam and the surrounding area with smart IT solutions that accelerate digitization and simplify processes. Our approach is personal and accessible: technology must work for the customer." },
-      { "title": "Vision", "body": "We make technology understandable and applicable — not only for large organizations, but also for freelancers, schools and teams in Amsterdam and North Holland. With knowledge sharing and customization, we help customers work faster, grow more efficiently and be ready for the digital future." },
+      { "title": "Vision", "body": "We make technology understandable and applicable not only for large organizations, but also for freelancers, schools and teams in Amsterdam and North Holland. With knowledge sharing and customization, we help customers work faster, grow more efficiently and be ready for the digital future." },
       { "title": "Strategy", "body": "As an IT agency in Amsterdam, we develop customized IT solutions that are scalable and user-friendly. In addition, we help organizations refine their digital strategy by clearly mapping complex issues and realizing efficient solutions." }
     ],
     "timeline": [
@@ -230,13 +255,13 @@
   "approach": {
     "eyebrow": "Our approach",
     "heading": "How we work together",
-    "intro": "From first introduction to ongoing support — here's what a project with Newland IT-Solutions looks like, step by step.",
+    "intro": "From first introduction to ongoing support here's what a project with Newland IT-Solutions looks like, step by step.",
     "steps": [
       {
         "number": "01",
         "title": "Discover",
         "paragraphs": [
-          "We start every project by listening. In a no-obligation introductory call, we map out your current situation, challenges and goals — no assumptions, no jargon.",
+          "We start every project by listening. In a no-obligation introductory call, we map out your current situation, challenges and goals no assumptions, no jargon.",
           "From there, we figure out together what's actually needed, so we don't waste time on solutions that don't fit your organization."
         ],
         "bullets": ["No-obligation introductory call", "Analysis of current systems and processes", "A clear problem statement"]
@@ -245,8 +270,8 @@
         "number": "02",
         "title": "Plan",
         "paragraphs": [
-          "We translate the outcomes of the discovery phase into a concrete, tailored plan — with clear steps, a timeline and expectations.",
-          "You know exactly what you're getting, when, and at what cost, up front — no surprises later."
+          "We translate the outcomes of the discovery phase into a concrete, tailored plan with clear steps, a timeline and expectations.",
+          "You know exactly what you're getting, when, and at what cost, up front no surprises later."
         ],
         "bullets": ["Concrete step-by-step plan", "Timeline & milestones", "Transparent budget"]
       },
@@ -255,7 +280,7 @@
         "title": "Build",
         "paragraphs": [
           "We develop and implement the solution with precision, with short feedback loops so you stay in control of progress.",
-          "Whether it's software, a website or IT infrastructure — we work to best practices and keep you informed every step of the way."
+          "Whether it's software, a website or IT infrastructure we work to best practices and keep you informed every step of the way."
         ],
         "bullets": ["Iterative development", "Regular check-ins", "Quality control before delivery"]
       },
@@ -272,7 +297,7 @@
     "cta": {
       "eyebrow": "Ready to get started?",
       "heading": "Let's talk about your project",
-      "text": "Schedule a no-obligation introduction — step one starts with a conversation, not a commitment."
+      "text": "Schedule a no-obligation introduction step one starts with a conversation, not a commitment."
     }
   },
   "contact": {
@@ -294,13 +319,21 @@
       "send": "Send message",
       "sending": "Sending…",
       "sentHeading": "Message sent",
-      "sendAnother": "Send another message"
+      "sendAnother": "Send another message",
+      "placeholders": {
+        "name": "Jane Doe",
+        "email": "jane{'@'}company.com",
+        "company": "Acme B.V.",
+        "address": "123 Main St, Amsterdam",
+        "message": "Tell us a bit about what you need help with…"
+      }
     },
     "info": {
       "direct": "Direct contact",
       "responseTime": "Response time",
       "typicalReply": "typical reply",
-      "responseNote": "We read every message personally — no ticket queues, no bots.",
+      "responseValue": "72hr",
+      "responseNote": "We read every message personally, no ticket queues, no bots.",
       "preferChat": "Prefer chat?",
       "whatsappBtn": "Message us on WhatsApp"
     },
@@ -313,6 +346,15 @@
       "openingHours": "Opening hours",
       "mapBlocked": "Enable cookies to view the map.",
       "enableMaps": "Manage cookies"
+    },
+    "booking": {
+      "eyebrow": "Book a call",
+      "heading": "Schedule an introduction",
+      "intro": "Prefer to talk? Pick a time in our calendar for an introduction.",
+      "iframeTitle": "Booking calendar",
+      "blocked": "Enable cookies to view the booking calendar.",
+      "manageCookies": "Manage cookies",
+      "openExternal": "Open on Calendly"
     }
   },
   "detail": {
@@ -326,7 +368,7 @@
     "software": {
       "eyebrow": "Software Development",
       "h1": "Software development for every business",
-      "intro": "Welcome to the Software Development department of Newland IT-Solutions. We develop customized solutions for web and mobile applications, CMS platforms, API integrations and complete digital systems — especially for companies in Amsterdam and the Amsterdam Metropolitan Region.",
+      "intro": "Welcome to the Software Development department of Newland IT-Solutions. We develop customized solutions for web and mobile applications, CMS platforms, API integrations and complete digital systems especially for companies in Amsterdam and the Amsterdam Metropolitan Region.",
       "moreBtn": "More about Development",
       "offers": [
         "Custom web and mobile applications",
@@ -417,9 +459,9 @@
       "ctaHeading": "Not sure which package fits?",
       "ctaText": "Contact us for a no-obligation consultation, we'll find the right plan together.",
       "plans": [
-        { "title": "Basic Support Remote", "target": "Aimed at sole proprietorships and small organizations that mainly need reactive remote help, without fixed obligations.", "description": "€80 per hour (on demand) or €45/month per workplace", "features": ["Remote support during office hours", "Basic monitoring (optional via remote-agent)", "10% discount on extra work (such as small projects or upgrades)"], "note": "" },
-        { "title": "Pro Support Remote", "target": "For growing companies in need of continuity, monitoring and optimization.", "description": "From €55 p/m per workplace for SMEs with 5–25 workplaces.", "features": ["Unlimited remote support during office hours", "Periodic health checks", "Patch management", "Backup and storage advice"], "note": "" },
-        { "title": "Premium Support – DevOps & Cloud SLA", "target": "For agencies, development teams and companies with complex IT environments, CI/CD processes or hybrid cloud structures.", "description": "From €750 p/m based on a custom SLA depending on project scope and deployment.", "features": ["Hybrid support (remote & on-site)", "SLA-based approach with fast response times", "Cloud and infrastructure management (Azure, AWS, CI/CD)"], "note": "This package is fully tailored to your specific situation. Request a free quote for a tailor-made proposal." }
+        { "title": "Basic Support Remote", "priceSuffix": "/month per workplace", "target": "Aimed at sole proprietorships and small organizations that mainly need reactive remote help, without fixed obligations.", "description": "€80 per hour (on demand) or €45/month per workplace", "features": ["Remote support during office hours", "Basic monitoring (optional via remote-agent)", "10% discount on extra work (such as small projects or upgrades)"], "note": "" },
+        { "title": "Pro Support Remote", "priceSuffix": "/month per workplace", "target": "For growing companies in need of continuity, monitoring and optimization.", "description": "From €55 p/m per workplace for SMEs with 5–25 workplaces.", "features": ["Unlimited remote support during office hours", "Periodic health checks", "Patch management", "Backup and storage advice"], "note": "" },
+        { "title": "Premium Support – DevOps & Cloud SLA", "priceSuffix": "/month (custom SLA)", "target": "For agencies, development teams and companies with complex IT environments, CI/CD processes or hybrid cloud structures.", "description": "From €750 p/m based on a custom SLA depending on project scope and deployment.", "features": ["Hybrid support (remote & on-site)", "SLA-based approach with fast response times", "Cloud and infrastructure management (Azure, AWS, CI/CD)"], "note": "This package is fully tailored to your specific situation. Request a free quote for a tailor-made proposal." }
       ]
     },
     "strategy": {
@@ -457,7 +499,7 @@
   "cases": {
     "eyebrow": "Case Studies",
     "heading": "Our Work",
-    "intro": "Real challenges, real solutions. See how we've helped organisations in Amsterdam and beyond with software development, IT support and digital strategy.",
+    "intro": "Real challenges, real solutions. See how we've helped organizations in Amsterdam and beyond with software development, IT support and digital strategy.",
     "readMore": "Read case study",
     "backToCases": "← All case studies",
     "challenge": "The challenge",
@@ -479,11 +521,131 @@
   "faq": {
     "eyebrow": "FAQ",
     "heading": "Frequently Asked Questions",
+    "software": {
+      "items": [
+        {
+          "question": "What kind of software do you build?",
+          "answer": "We build custom web and mobile applications, from internal tools to customer-facing platforms, and develop software platforms and API integrations that support your business processes."
+        },
+        {
+          "question": "Can you connect our existing systems?",
+          "answer": "Yes. With API integrations we connect systems, external tools and data sources, so data flows smoothly and workflows speed up."
+        },
+        {
+          "question": "How much does custom software cost?",
+          "answer": "That depends on the size and complexity of your project. After a free introductory call you receive a quote with scope, timeline and price, with no hidden costs."
+        },
+        {
+          "question": "How does a software project start?",
+          "answer": "With an intake call where we map out your processes and goals. Based on that we draw up a proposal fully tailored to how your organisation works."
+        },
+        {
+          "question": "Can you maintain the software after delivery?",
+          "answer": "Yes. After delivery you can continue with one of our support packages, from on-demand remote help to a custom SLA."
+        }
+      ]
+    },
+    "cms": {
+      "items": [
+        {
+          "question": "Which platform suits me: Wix, WordPress or Shopify?",
+          "answer": "Wix is ideal for freelancers, small businesses and portfolios. WordPress is flexible, extendable with plugins and a good fit for growing businesses. Shopify is the choice if you want to sell products online. Not sure? We are happy to advise."
+        },
+        {
+          "question": "Can I manage the website myself afterwards?",
+          "answer": "Yes. We build websites on an easy-to-manage CMS, so you can update the content yourself."
+        },
+        {
+          "question": "Can you build an online shop?",
+          "answer": "Yes. With Shopify we build a professional online shop, optimised for conversion with payment and shipping modules included, fully manageable from the dashboard."
+        },
+        {
+          "question": "Will my new website be findable on Google?",
+          "answer": "We build with speed, clarity and usability in mind, and WordPress websites are set up SEO-friendly. That gives your online visibility a solid foundation."
+        },
+        {
+          "question": "How much does a new website cost?",
+          "answer": "That depends on the platform, design and functionality you need. After a free introductory call you receive a tailored quote that fits your goals and budget."
+        }
+      ]
+    },
+    "consulting": {
+      "items": [
+        {
+          "question": "How does IT consulting help my organisation?",
+          "answer": "We give expert advice on choosing IT solutions that fit your organisation and ambitions, and make sure systems, processes and support work well, now and in the future."
+        },
+        {
+          "question": "Do you also manage networks, servers and cloud environments?",
+          "answer": "Yes. We install and manage networks and servers and support on-premise, hybrid and cloud environments (Azure, AWS), including monitoring, patch management and a backup strategy."
+        },
+        {
+          "question": "Can you guide us through digital transformation?",
+          "answer": "Yes. We guide transformation and integration projects from strategy to implementation, with cloud, on-premise or hybrid solutions."
+        },
+        {
+          "question": "What is the difference between IT consulting and IT support?",
+          "answer": "Consulting is about making the right choices and plans for your IT. Support is day-to-day help with questions and outages; for that we offer fixed support packages."
+        },
+        {
+          "question": "How does a consulting engagement start?",
+          "answer": "With a no-obligation advisory call about your current situation and plans. After that you receive a proposal with scope, timeline and price."
+        }
+      ]
+    },
+    "support": {
+      "items": [
+        {
+          "question": "Which IT support packages do you offer?",
+          "answer": "There are three packages: Basic Support Remote for freelancers and small organisations, Pro Support Remote for SMEs with 5–25 workstations, and Premium Support – DevOps & Cloud SLA for complex IT environments."
+        },
+        {
+          "question": "How much does IT support cost?",
+          "answer": "Basic costs €80 per hour on demand or €45 per month per workstation. Pro starts from €55 per month per workstation. Premium starts from €750 per month, based on a custom SLA. Rates exclude VAT, as set out in our terms and conditions."
+        },
+        {
+          "question": "Do you also help on-site?",
+          "answer": "Basic and Pro are remote packages. Premium offers hybrid support, remote and on-site. We also come on-site in and around Amsterdam when the situation calls for it."
+        },
+        {
+          "question": "When is support available?",
+          "answer": "Basic and Pro provide remote support during office hours; with Pro it is unlimited. With Premium, availability and response times are set in a custom SLA."
+        },
+        {
+          "question": "Am I tied to a contract?",
+          "answer": "Basic Support Remote is meant for those who mainly need reactive help, without fixed obligations. Terms for Pro and Premium are agreed in your quote."
+        }
+      ]
+    },
+    "strategy": {
+      "items": [
+        {
+          "question": "Do you also manage projects outside IT?",
+          "answer": "Yes. We guide both technical and non-technical projects, from IT implementations to internal process improvements."
+        },
+        {
+          "question": "What does your project management include?",
+          "answer": "We bring structure, realistic planning and progress tracking, with clear communication and alignment with your internal processes and teams, from kick-off to delivery."
+        },
+        {
+          "question": "Can you design a logo and brand identity?",
+          "answer": "Yes. We design unique logos and branding that strengthen your brand identity."
+        },
+        {
+          "question": "Do you also do UX/UI design?",
+          "answer": "Yes. We design thoughtful user experiences and interfaces with consistent branding and a focus on usability."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Book an intake or introductory call. We discuss your goals and then send a proposal with scope, timeline and price."
+        }
+      ]
+    },
     "general": {
       "items": [
         {
           "question": "What types of businesses do you work with?",
-          "answer": "We work with freelancers, SMEs, schools and non-profit organisations in Amsterdam and the broader North Holland area. Our solutions scale with your organisation — from a single-person business to a team of 50."
+          "answer": "We work with freelancers, SMEs, schools and non-profit organizations in Amsterdam and the broader North Holland area. Our solutions scale with your organization — from a single-person business to a team of 50."
         },
         {
           "question": "How quickly can you start on a new project?",
@@ -491,11 +653,11 @@
         },
         {
           "question": "Do you offer ongoing IT support after a project is delivered?",
-          "answer": "Yes. We offer flexible support packages — from remote helpdesk on demand to a dedicated Pro or Premium SLA. Support continues seamlessly after delivery at whatever level suits your organisation."
+          "answer": "Yes. We offer flexible support packages from remote help desk on demand to a dedicated Pro or Premium SLA. Support continues seamlessly after delivery at whatever level suits your organizations."
         },
         {
           "question": "What does the onboarding process look like?",
-          "answer": "We start with a free introductory call to understand your situation and goals. After that we send a clear proposal with scope, timeline and pricing — no hidden costs, no surprises."
+          "answer": "We start with a free introductory call to understand your situation and goals. After that we send a clear proposal with scope, timeline and pricing no hidden costs, no surprises."
         },
         {
           "question": "Do you work on-site in Amsterdam?",
@@ -506,10 +668,48 @@
   },
   "consent": {
     "title": "Your privacy",
-    "text": "We use functional cookies and local storage for basic functionality. With your consent we also load Google Maps. No tracking or marketing cookies.",
+    "text": "We use functional cookies and local storage for basic functionality. With your consent we also load Google Maps and the Calendly booking calendar. No tracking or marketing cookies.",
     "accept": "Give consent",
     "decline": "Functional only",
     "learnMore": "Cookie policy"
+  },
+  "error": {
+    "backHome": "Back to the homepage",
+    "notFound": {
+      "heading": "This page doesn’t exist",
+      "text": "The page you are looking for has moved or no longer exists. Choose where you would like to go next."
+    },
+    "generic": {
+      "heading": "Something went wrong",
+      "text": "An unexpected error occurred. Please try again later or go back to the homepage."
+    }
+  },
+  "areas": {
+    "index": {
+      "eyebrow": "Service areas",
+      "heading": "Your IT partner around the corner",
+      "intro": "Newland IT-Solutions works from Amsterdam Zuidoost for freelancers and SMEs across Amsterdam. See what we can do for you in your area."
+    },
+    "template": {
+      "eyebrow": "Local IT services",
+      "backToAreas": "← All service areas",
+      "servicesHeading": "Our services in {area}",
+      "nearbyHeading": "Also active nearby",
+      "ctaHeading": "Want to meet in {area}?",
+      "ctaText": "Tell us what you are running into. We are happy to think along, remotely or at your location.",
+      "viewArea": "View {area} →"
+    },
+    "items": {
+      "amsterdam-zuidoost": {
+        "name": "Amsterdam Zuidoost",
+        "intro": "IT support, software development and websites for businesses in Amsterdam Zuidoost — from our office on {street}, right around the corner.",
+        "body": [
+          "Whether you are based in the Bijlmer, on Amstel III or in Gaasperdam: Newland IT-Solutions helps freelancers and SMEs in Zuidoost with reliable IT. We help remotely when speed matters and come on-site when needed.",
+          "Because we are based in Zuidoost ourselves, we know the area. No call centre, but one fixed point of contact who thinks along about your systems, your website or a custom application."
+        ],
+        "usp": "Based in Zuidoost: short lines and one fixed point of contact."
+      }
+    }
   },
   "legal": {
     "lastUpdated": "August 2026",
@@ -521,7 +721,7 @@
           "heading": "1. Data controller",
           "paras": [
             "Newland IT-Solutions is the data controller for the processing of your personal data.",
-            "Newland IT-Solutions, Hessenbergweg 8, 1101 BT Amsterdam • KVK: 83541934 • VAT: NL003835137B29 • info{'@'}newlandit-solutions.com • +31 648 364 450"
+            "Newland IT-Solutions, {street}, {postalCode} {city} • KVK: {kvk} • VAT: {btw} • {email} • {phone}"
           ]
         },
         {
@@ -547,6 +747,7 @@
             "• Resend Inc. (US) — sends email notifications from our contact form.",
             "• Sanity AS (Norway/US) — CMS platform for content management, where applicable.",
             "• Google LLC (US) — Google Maps embed on the contact page, only with your explicit consent.",
+            "• Calendly LLC (US) — booking calendar on the contact page, only with your explicit consent. Data you enter when booking an appointment is processed by Calendly.",
             "We never sell your personal data or share it for commercial purposes."
           ]
         },
@@ -560,14 +761,14 @@
           "heading": "6. Your rights",
           "paras": [
             "Under the GDPR you have the following rights: access to your personal data, rectification of inaccurate data, erasure ('right to be forgotten'), restriction of processing, data portability and the right to object to processing based on legitimate interests.",
-            "You may exercise your rights by contacting us at info{'@'}newlandit-solutions.com. We will respond within 30 days.",
+            "You may exercise your rights by contacting us at {email}. We will respond within 30 days.",
             "You also have the right to lodge a complaint with the Dutch Data Protection Authority (autoriteitpersoonsgegevens.nl)."
           ]
         },
         {
           "heading": "7. Security",
           "paras": [
-            "We implement appropriate technical and organisational measures to protect your personal data against loss, unauthorised access or unlawful processing."
+            "We implement appropriate technical and organizational measures to protect your personal data against loss, unauthorized access or unlawful processing."
           ]
         },
         {
@@ -605,6 +806,7 @@
           "heading": "4. Third parties after consent",
           "paras": [
             "Google Maps (Google LLC, US): when you give consent via our cookie banner, a Google Maps embed is loaded on the contact page. Google may process data in accordance with their privacy policy (policies.google.com/privacy).",
+            "Calendly (Calendly LLC, US): when you give consent, the Calendly booking calendar is loaded on the contact page. Calendly may set cookies and processes the data you enter when booking, in accordance with their privacy policy (calendly.com/privacy).",
             "WhatsApp: clicking a WhatsApp button takes you to the WhatsApp app or website. We do not load WhatsApp automatically; you initiate this contact yourself."
           ]
         },
@@ -612,21 +814,22 @@
           "heading": "5. Managing consent",
           "paras": [
             "You can give or withdraw consent for non-functional cookies via the cookie banner at the bottom of the page. You can change your choice at any time by clearing your browser's local storage.",
-            "Without consent, Google Maps is not loaded and no data is sent to Google."
+            "Without consent, Google Maps and Calendly are not loaded and no data is sent to Google or Calendly."
           ]
         },
         {
           "heading": "6. More information",
           "paras": [
             "More information about cookies and your rights is available from the Dutch Data Protection Authority: autoriteitpersoonsgegevens.nl",
-            "Google's privacy policy: policies.google.com/privacy"
+            "Google's privacy policy: policies.google.com/privacy",
+            "Calendly's privacy policy: calendly.com/privacy"
           ]
         }
       ]
     },
     "terms": {
       "title": "Terms & Conditions",
-      "intro": "These terms and conditions apply to all offers, quotations and agreements of Newland IT-Solutions (KVK: 83541934), registered at Hessenbergweg 8, 1101 BT Amsterdam, the Netherlands.",
+      "intro": "These terms and conditions apply to all offers, quotations and agreements of Newland IT-Solutions (KVK: {kvk}), registered at {street}, {postalCode} {city}, the Netherlands.",
       "sections": [
         {
           "heading": "Article 1 — Applicability",
@@ -667,7 +870,7 @@
         {
           "heading": "Article 6 — Intellectual property",
           "paras": [
-            "6.1 All works developed by Newland IT-Solutions — including software, designs, documentation and graphics — remain the property of Newland IT-Solutions until the client has fulfilled all obligations in full.",
+            "6.1 All works developed by Newland IT-Solutions including software, designs, documentation and graphics remain the property of Newland IT-Solutions until the client has fulfilled all obligations in full.",
             "6.2 Upon full payment, Newland IT-Solutions transfers the agreed rights to the client in accordance with the agreed terms."
           ]
         },

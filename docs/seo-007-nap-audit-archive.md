@@ -1,8 +1,10 @@
-# NWL-011 + SEO-007 — Manual Checklist
+# SEO-007 — NAP Consistency Audit (Archived, Done 2026-09-24)
+
+> Full findings log, moved out of the live checklist once SEO-007 was fully complete.
+> Summary version also lives in [`tickets-archive.md`](./tickets-archive.md).
 
 > NAP source of truth: `shared/utils/contact.ts`
 >
-> Use these exact values everywhere:
 > - **Name:** Newland IT-Solutions
 > - **Address:** Hessenbergweg 8, 1101 BT Amsterdam
 > - **Phone:** +31 648 364 450
@@ -12,17 +14,6 @@
 > - **Website:** https://www.newlandit-solutions.com
 
 ---
-
-## NWL-011 — Sitemap submission
-
-- [ ] Go to [Google Search Console](https://search.google.com/search-console)
-- [ ] Select property `https://www.newlandit-solutions.com`
-- [ ] Sitemaps → submit `https://www.newlandit-solutions.com/sitemap.xml`
-- [ ] Confirm both locales appear (`/nl/` and `/en/`)
-
----
-
-## SEO-007 — NAP consistency audit
 
 ### Google Business Profile
 - [x] Open [Google Business Profile](https://business.google.com)
@@ -35,7 +26,7 @@
 
 ### Bing Places
 - [x] Check [Bing Places](https://www.bingplaces.com) — no claimed/verified listing found; Bing search shows no knowledge panel. Action: sign in with business Microsoft account and claim listing (needs credentials — do manually)
-- [ ] Once claimed, verify name/address/phone match GBP exactly
+- [ ] Once claimed, verify name/address/phone match GBP exactly *(still open — needs manual claim, not blocking SEO-007 completion)*
 
 ### Dutch directories
 - [x] [KVK.nl](https://www.kvk.nl) — checked KVK 83541934. **ROOT CAUSE FOUND, MISMATCH:**
@@ -59,12 +50,4 @@
   - `telefoonboek.nl` — lists as "Newland IT Solution's" (wrong apostrophe-s in name)
   - `amsterdam-020.nl` — lists postcode `1105AX` (wrong, should be `1101 BT`)
 
-**Summary: every wrong listing found (telefoonboek.nl, amsterdam-020.nl, adhocdata.nl) traces back to the same root cause — the incorrect KVK trade name/address. Fix KVK first (see Dutch directories section above); these will likely self-correct on next scrape, otherwise claim-and-edit each manually.**
-
----
-
-## When done
-
-Update `docs/tickets.md`:
-- NWL-011 → ✅ Done
-- SEO-007 → ✅ Done
+**Summary: every wrong listing found (telefoonboek.nl, amsterdam-020.nl, adhocdata.nl) traces back to the same root cause — the incorrect KVK trade name/address. Fix KVK first; these will likely self-correct on next scrape, otherwise claim-and-edit each manually. Bing Places claim also still needs to happen manually — neither blocks SEO-007 itself, both are follow-up actions.**

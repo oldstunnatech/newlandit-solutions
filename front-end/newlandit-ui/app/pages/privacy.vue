@@ -15,13 +15,14 @@
           v-for="(para, i) in (section.paras as string[])"
           :key="i"
           class="text-white/75 leading-relaxed mb-3"
-        >{{ rt(para) }}</p>
+        >{{ rt(para, CONTACT_I18N_PARAMS) }}</p>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { CONTACT_I18N_PARAMS } from '#shared/utils/contact'
 import { useI18n, useLocalePath } from '#imports'
 
 definePageMeta({ layout: 'default' })

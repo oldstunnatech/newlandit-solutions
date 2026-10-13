@@ -11,10 +11,15 @@
       "scheduleIntake": "Plan een intakegesprek"
     },
     "whatsapp": "Chat met ons",
+    "rating5": "5 van de 5 sterren",
     "langSwitch": "Taal"
   },
   "nav": {
     "primary": "Hoofdnavigatie",
+    "mobile": "Mobiele navigatie",
+    "openMenu": "Navigatie openen",
+    "closeMenu": "Navigatie sluiten",
+    "toggleSubmenu": "Submenu {name} openen of sluiten",
     "home": "Home",
     "solutions": "Diensten",
     "softwareDevelopment": "Softwareontwikkeling",
@@ -27,12 +32,22 @@
     "contact": "Contact",
     "privacy": "Privacyverklaring",
     "cookies": "Cookiebeleid",
-    "terms": "Algemene voorwaarden"
+    "terms": "Algemene voorwaarden",
+    "areas": "Werkgebied"
+  },
+  "footer": {
+    "label": "Voettekst website",
+    "phone": "Telefoonnummer",
+    "email": "E-mail",
+    "website": "Website",
+    "address": "Adres",
+    "kvk": "KVK",
+    "vat": "BTW-nummer"
   },
   "seo": {
     "home": {
       "title": "IT-support, maatwerksoftware & websites in Amsterdam",
-      "description": "Newland IT-Solutions is jouw IT-partner in Amsterdam: betrouwbare IT-support, maatwerksoftware en professionele websites voor zzp’ers en het mkb — zonder jargon."
+      "description": "Newland IT-Solutions is jouw IT-partner in Amsterdam: betrouwbare IT-support, maatwerksoftware en professionele websites voor zzp’ers en het mkb zonder jargon."
     },
     "solutions": {
       "title": "IT-diensten & oplossingen in Amsterdam",
@@ -74,6 +89,16 @@
       "title": "Cases — Newland IT-Solutions Amsterdam",
       "description": "Echte klantcases van Newland IT-Solutions: softwareontwikkeling, IT-support en digitale-strategieprojecten voor organisaties in Amsterdam en Noord-Holland."
     },
+    "areas": {
+      "index": {
+        "title": "Werkgebied — IT-diensten in Amsterdam",
+        "description": "Newland IT-Solutions helpt zzp’ers en mkb in Amsterdam met IT-support, softwareontwikkeling en websites. Bekijk wat we in jouw wijk voor je doen."
+      },
+      "amsterdam-zuidoost": {
+        "title": "IT-support & websites in Amsterdam Zuidoost",
+        "description": "IT-support, softwareontwikkeling en websites voor zzp’ers en mkb in Amsterdam Zuidoost. Lokaal IT-bedrijf aan de {street}, remote en on-site."
+      }
+    },
     "privacy": {
       "title": "Privacyverklaring — Newland IT-Solutions",
       "description": "Lees hoe Newland IT-Solutions persoonsgegevens verwerkt conform de AVG en welke rechten u heeft als betrokkene."
@@ -89,7 +114,7 @@
   },
   "home": {
     "badge": "Slimme IT-oplossingen voor groeiende bedrijven in Amsterdam",
-    "subtitle": "Wij helpen zzp’ers en het mkb in Amsterdam en omstreken met betrouwbare IT-support, maatwerksoftware en professionele websites — zonder ingewikkelde technische taal.",
+    "subtitle": "Wij helpen zzp’ers en het mkb in Amsterdam en omstreken met betrouwbare IT-support, maatwerksoftware en professionele websites zonder ingewikkelde technische taal.",
     "stats": {
       "clients": "Klanten geholpen",
       "experience": "Jaar ervaring",
@@ -99,7 +124,7 @@
     "customers": {
       "eyebrow": "Vertrouwd door",
       "heading": "Onze klanten",
-      "intro": "Van lokale organisaties tot landelijke instellingen — deze klanten vertrouwen op onze expertise in softwareontwikkeling, IT-strategie en projectmanagement."
+      "intro": "Van lokale organisaties tot landelijke instellingen deze klanten vertrouwen op onze expertise in softwareontwikkeling, IT-strategie en projectmanagement."
     },
     "why": {
       "eyebrow": "Onze waarden",
@@ -108,7 +133,7 @@
         { "title": "Duidelijke communicatie & transparantie", "description": "Heldere afspraken, duidelijke taal, geen verrassingen." },
         { "title": "Maatwerk, geen one-size-fits-all oplossingen", "description": "Oplossingen afgestemd op jouw processen en doelen." },
         { "title": "Snelle support, remote of on-site", "description": "Snel geholpen remote of op locatie." },
-        { "title": "Ervaren in web, software én IT-strategieën", "description": "Van implementatie tot strategie — één partner." }
+        { "title": "Ervaren in web, software én IT-strategieën", "description": "Van implementatie tot strategie één partner." }
       ]
     },
     "offer": {
@@ -117,7 +142,7 @@
       "steps": [
         { "title": "Persoonlijke aanpak", "description": "Wij geloven in korte lijnen en heldere communicatie. We leren jouw uitdagingen kennen en helpen oplossingen te vinden die werken." },
         { "title": "Ervaring & expertise", "description": "Met jarenlange ervaring in webdevelopment, consultancy en IT-support helpen we organisaties groeien in efficiëntie en stabiliteit." },
-        { "title": "Flexibele oplossingen", "description": "Van kleine opdrachten tot doorlopende support — onze aanpak past zich aan jouw organisatie aan." },
+        { "title": "Flexibele oplossingen", "description": "Van kleine opdrachten tot doorlopende support onze aanpak past zich aan jouw organisatie aan." },
         { "title": "Klantgericht & betrouwbaar", "description": "Jouw succes is onze prioriteit. Wij zorgen dat onze oplossingen aantoonbaar bijdragen aan je processen en bedrijfsdoelen." }
       ]
     },
@@ -133,9 +158,9 @@
     "services": {
       "eyebrow": "Wat wij doen",
       "heading": "Onze diensten",
-      "intro": "We bieden een breed scala aan gespecialiseerde IT-diensten, afgestemd op jouw unieke situatie — altijd gericht op duurzame digitale groei.",
+      "intro": "We bieden een breed scala aan gespecialiseerde IT-diensten, afgestemd op jouw unieke situatie altijd gericht op duurzame digitale groei.",
       "items": [
-        { "title": "Software & automatisering", "description": "Slimme tools die processen versnellen en vereenvoudigen. We bouwen oplossingen die écht werken — van databeheer tot workflow-optimalisatie.", "button": "Meer over ontwikkeling" },
+        { "title": "Software & automatisering", "description": "Slimme tools die processen versnellen en vereenvoudigen. We bouwen oplossingen die écht werken van databeheer tot workflow-optimalisatie.", "button": "Meer over ontwikkeling" },
         { "title": "IT-support & beheer", "description": "Directe hulp bij storingen, onderhoud en beveiliging. Remote of op locatie zorgen we dat je systemen stabiel en veilig blijven.", "button": "Meer over IT-support" },
         { "title": "Consultancy & strategie", "description": "Strategisch advies voor digitale transformatie en schaalbare groei. Wij zorgen dat je technologie je ambities ondersteunt.", "button": "Meer over strategie" }
       ]
@@ -210,33 +235,33 @@
     },
     "mvs": [
       { "title": "Missie", "body": "Bij Newland IT-Solutions staat de klant centraal. We helpen bedrijven en particulieren in Amsterdam en omstreken met slimme IT-oplossingen die digitalisering versnellen en processen vereenvoudigen. Onze aanpak is persoonlijk en toegankelijk: technologie moet voor de klant werken." },
-      { "title": "Visie", "body": "We maken technologie begrijpelijk en toepasbaar — niet alleen voor grote organisaties, maar ook voor zzp’ers, scholen en teams in Amsterdam en Noord-Holland. Met kennisdeling en maatwerk helpen we klanten sneller te werken, efficiënter te groeien en klaar te zijn voor de digitale toekomst." },
+      { "title": "Visie", "body": "We maken technologie begrijpelijk en toepasbaar niet alleen voor grote organisaties, maar ook voor zzp’ers, scholen en teams in Amsterdam en Noord-Holland. Met kennisdeling en maatwerk helpen we klanten sneller te werken, efficiënter te groeien en klaar te zijn voor de digitale toekomst." },
       { "title": "Strategie", "body": "Als IT-bureau in Amsterdam ontwikkelen we IT-oplossingen op maat die schaalbaar en gebruiksvriendelijk zijn. Daarnaast helpen we organisaties hun digitale strategie aan te scherpen door complexe vraagstukken helder in kaart te brengen en efficiënte oplossingen te realiseren." }
     ],
     "timeline": [
       { "year": "2025", "title": "Team & platform laten groeien", "description": "We investeren in ons eigen platform en tooling om sneller en consistenter resultaten te leveren voor klanten binnen al onze diensten." },
-      { "year": "2024", "title": "Vertrouwd door 25+ klanten", "description": "Mijlpaal van 25+ actieve klanten bereikt — van zzp’ers en scholen tot landelijke instellingen, met een tevredenheid van 98%." },
+      { "year": "2024", "title": "Vertrouwd door 25+ klanten", "description": "Mijlpaal van 25+ actieve klanten bereikt van zzp’ers en scholen tot landelijke instellingen, met een tevredenheid van 98%." },
       { "year": "2023", "title": "Dienstenaanbod uitgebreid", "description": "Softwareontwikkeling en consultancy toegevoegd, waardoor we klanten van strategie tot implementatie kunnen begeleiden." },
-      { "year": "2022", "title": "Eerste grote klanten", "description": "Ons portfolio uitgebreid met lokale organisaties en mkb in Amsterdam en Noord-Holland — IT-support, automatisering en strategie." },
+      { "year": "2022", "title": "Eerste grote klanten", "description": "Ons portfolio uitgebreid met lokale organisaties en mkb in Amsterdam en Noord-Holland IT-support, automatisering en strategie." },
       { "year": "2021", "title": "Opgericht in Amsterdam", "description": "Newland IT-Solutions opgericht met een heldere missie: technologie persoonlijk, toegankelijk en effectief maken voor bedrijven van elke omvang." }
     ],
     "values": [
       { "title": "Transparantie", "description": "Duidelijke afspraken, begrijpelijke taal, geen verrassingen. Je weet altijd wat we doen en waarom." },
       { "title": "Maatwerk", "description": "Geen standaardoplossingen. Elke oplossing is afgestemd op jouw specifieke processen en doelen." },
-      { "title": "Responsiviteit", "description": "Snelle, betrouwbare support — remote of op locatie. We zijn er wanneer het ertoe doet." },
+      { "title": "Responsiviteit", "description": "Snelle, betrouwbare support remote of op locatie. We zijn er wanneer het ertoe doet." },
       { "title": "Expertise", "description": "Van praktische implementatie tot strategie op hoog niveau — één partner over de volle breedte." }
     ]
   },
   "approach": {
     "eyebrow": "Onze aanpak",
     "heading": "Zo werken we samen",
-    "intro": "Van eerste kennismaking tot doorlopende support — dit is hoe een traject bij Newland IT-Solutions eruitziet, stap voor stap.",
+    "intro": "Van eerste kennismaking tot doorlopende support dit is hoe een traject bij Newland IT-Solutions eruitziet, stap voor stap.",
     "steps": [
       {
         "number": "01",
         "title": "Ontdekken",
         "paragraphs": [
-          "We beginnen elk traject met luisteren. In een vrijblijvend kennismakingsgesprek brengen we je huidige situatie, uitdagingen en doelen in kaart — zonder aannames, zonder jargon.",
+          "We beginnen elk traject met luisteren. In een vrijblijvend kennismakingsgesprek brengen we je huidige situatie, uitdagingen en doelen in kaart zonder aannames, zonder jargon.",
           "Op basis daarvan bepalen we samen wat er écht nodig is, zodat we geen tijd verspillen aan oplossingen die niet aansluiten bij jouw organisatie."
         ],
         "bullets": ["Vrijblijvend kennismakingsgesprek", "Analyse van huidige systemen en processen", "Heldere probleemstelling"]
@@ -245,8 +270,8 @@
         "number": "02",
         "title": "Plannen",
         "paragraphs": [
-          "We vertalen de uitkomsten van de discovery-fase naar een concreet, op maat gemaakt plan — met duidelijke stappen, tijdlijn en verwachtingen.",
-          "Jij weet vooraf precies wat je krijgt, wanneer, en tegen welke investering — geen verrassingen achteraf."
+          "We vertalen de uitkomsten van de discovery-fase naar een concreet, op maat gemaakt plan met duidelijke stappen, tijdlijn en verwachtingen.",
+          "Jij weet vooraf precies wat je krijgt, wanneer, en tegen welke investering geen verrassingen achteraf."
         ],
         "bullets": ["Concreet stappenplan", "Tijdlijn & mijlpalen", "Transparante begroting"]
       },
@@ -255,7 +280,7 @@
         "title": "Bouwen",
         "paragraphs": [
           "We ontwikkelen en implementeren de oplossing met precisie, met korte feedback-cycli zodat je grip houdt op de voortgang.",
-          "Of het nu gaat om software, een website of IT-infrastructuur — we werken volgens best practices en houden je steeds op de hoogte."
+          "Of het nu gaat om software, een website of IT-infrastructuur we werken volgens best practices en houden je steeds op de hoogte."
         ],
         "bullets": ["Iteratieve ontwikkeling", "Regelmatige check-ins", "Kwaliteitscontrole voor oplevering"]
       },
@@ -272,7 +297,7 @@
     "cta": {
       "eyebrow": "Klaar om te starten?",
       "heading": "Laten we je traject bespreken",
-      "text": "Plan een vrijblijvend kennismakingsgesprek — stap 1 begint met een gesprek, niet met een verplichting."
+      "text": "Plan een vrijblijvend kennismakingsgesprek stap 1 begint met een gesprek, niet met een verplichting."
     }
   },
   "contact": {
@@ -289,18 +314,26 @@
       "attachment": "Bijlage (optioneel)",
       "dropActive": "Zet je bestand hier neer",
       "dropIdle": "Klik of sleep om toe te voegen",
-      "fileHint": "PDF, Word of afbeelding — tot 5 MB",
+      "fileHint": "PDF, Word of afbeelding tot 5 MB",
       "removeAttachment": "Bijlage verwijderen",
       "send": "Verstuur bericht",
       "sending": "Versturen…",
       "sentHeading": "Bericht verzonden",
-      "sendAnother": "Nog een bericht sturen"
+      "sendAnother": "Nog een bericht sturen",
+      "placeholders": {
+        "name": "Jan Jansen",
+        "email": "jan{'@'}bedrijf.nl",
+        "company": "Bedrijf B.V.",
+        "address": "Damstraat 1, Amsterdam",
+        "message": "Vertel kort waarmee we je kunnen helpen…"
+      }
     },
     "info": {
       "direct": "Direct contact",
       "responseTime": "Reactietijd",
       "typicalReply": "gemiddelde reactie",
-      "responseNote": "We lezen elk bericht persoonlijk — geen wachtrijen, geen bots.",
+      "responseValue": "72 uur",
+      "responseNote": "We lezen elk bericht persoonlijk geen wachtrijen, geen bots.",
       "preferChat": "Liever chatten?",
       "whatsappBtn": "Stuur ons een WhatsApp"
     },
@@ -313,6 +346,15 @@
       "openingHours": "Openingstijden",
       "mapBlocked": "Schakel cookies in om de kaart te bekijken.",
       "enableMaps": "Cookies beheren"
+    },
+    "booking": {
+      "eyebrow": "Afspraak maken",
+      "heading": "Plan een kennismaking",
+      "intro": "Liever even praten? Kies een moment in onze agenda voor een kennismaking.",
+      "iframeTitle": "Afsprakenagenda",
+      "blocked": "Schakel cookies in om de afsprakenagenda te bekijken.",
+      "manageCookies": "Cookies beheren",
+      "openExternal": "Openen op Calendly"
     }
   },
   "detail": {
@@ -326,7 +368,7 @@
     "software": {
       "eyebrow": "Softwareontwikkeling",
       "h1": "Softwareontwikkeling voor elk bedrijf",
-      "intro": "Welkom bij de afdeling Softwareontwikkeling van Newland IT-Solutions. We ontwikkelen oplossingen op maat voor web- en mobiele applicaties, CMS-platforms, API-integraties en complete digitale systemen — speciaal voor bedrijven in Amsterdam en de Metropoolregio Amsterdam.",
+      "intro": "Welkom bij de afdeling Softwareontwikkeling van Newland IT-Solutions. We ontwikkelen oplossingen op maat voor web en mobiele applicaties, CMS-platforms, API-integraties en complete digitale systemen speciaal voor bedrijven in Amsterdam en de Metropoolregio Amsterdam.",
       "moreBtn": "Meer over ontwikkeling",
       "offers": [
         "Web- en mobiele applicaties op maat",
@@ -335,9 +377,9 @@
       ],
       "sub": [
         {
-          "title": "Web- en mobiele applicaties op maat",
+          "title": "Web en mobiele applicaties op maat",
           "paragraphs": [
-            "We bouwen applicaties afgestemd op je dagelijkse praktijk. Van interne tools tot klantgerichte platforms — onze oplossingen combineren technologie met gebruiksgemak en schaalbaarheid. Zo leveren we oplossingen die niet alleen technisch robuust zijn, maar ook intuïtief en toekomstbestendig.",
+            "We bouwen applicaties afgestemd op je dagelijkse praktijk. Van interne tools tot klantgerichte platforms onze oplossingen combineren technologie met gebruiksgemak en schaalbaarheid. Zo leveren we oplossingen die niet alleen technisch robuust zijn, maar ook intuïtief en toekomstbestendig.",
             "Kies voor onze maatwerkoplossingen en profiteer van efficiëntie en klantgerichte service."
           ],
           "points": ["Volledig afgestemd op je processen", "Toepassing van de nieuwste technologieën", "Gericht op gebruiksgemak en resultaat"],
@@ -346,8 +388,8 @@
         {
           "title": "CMS-websites (waaronder WordPress, Wix, Shopify)",
           "paragraphs": [
-            "Of je nu kiest voor WordPress, Wix of Shopify — we bouwen intuïtieve, schaalbare en beheersbare CMS-websites die je online zichtbaarheid versterken en bijdragen aan groei.",
-            "We ontwerpen en bouwen CMS-websites die niet alleen mooi zijn, maar ook meetbaar resultaat leveren. Of je nu een portfolio, webshop of zakelijke site nodig hebt — we zorgen voor snelheid, helderheid en gebruiksgemak."
+            "Of je nu kiest voor WordPress, Wix of Shopify we bouwen intuïtieve, schaalbare en beheersbare CMS-websites die je online zichtbaarheid versterken en bijdragen aan groei.",
+            "We ontwerpen en bouwen CMS-websites die niet alleen mooi zijn, maar ook meetbaar resultaat leveren. Of je nu een portfolio, webshop of zakelijke site nodig hebt we zorgen voor snelheid, helderheid en gebruiksgemak."
           ],
           "points": ["Professioneel ontwerp & technische uitvoering", "Eenvoudig te beheren CMS", "Optimalisatie van je online aanwezigheid"],
           "link": "Lees meer"
@@ -367,7 +409,7 @@
       "backSoftware": "← Softwareontwikkeling",
       "eyebrow": "CMS-websites",
       "h1": "CMS-websites voor bedrijfsgroei",
-      "intro": "Bij Newland IT-Solutions bouwen we intuïtieve, schaalbare en gebruiksvriendelijke websites die je online zichtbaarheid vergroten. Of je nu een persoonlijke site, een zakelijke website of een webshop nodig hebt — we bieden oplossingen voor bedrijven in Amsterdam en omstreken, afgestemd op je doelen, budget en stijl.",
+      "intro": "Bij Newland IT-Solutions bouwen we intuïtieve, schaalbare en gebruiksvriendelijke websites die je online zichtbaarheid vergroten. Of je nu een persoonlijke site, een zakelijke website of een webshop nodig hebt we bieden oplossingen voor bedrijven in Amsterdam en omstreken, afgestemd op je doelen, budget en stijl.",
       "ctaText": "Niet zeker welk platform bij jouw situatie past?",
       "products": [
         { "title": "Wix-website", "description": "Een snelle, moderne website op basis van een gebruiksvriendelijke drag-and-drop-editor. Ideaal voor zzp’ers, kleine bedrijven of portfolio’s.", "features": ["Pixel-perfect ontwerp", "Meer vrijheid in design", "Betere performance & schaalbaarheid"] },
@@ -378,31 +420,31 @@
     "consulting": {
       "eyebrow": "IT-consultancy",
       "h1": "IT-consultancy & support",
-      "intro": "We helpen je slimme IT-keuzes te maken en zorgen dat systemen, processen en support optimaal functioneren — vandaag en in de toekomst.",
+      "intro": "We helpen je slimme IT-keuzes te maken en zorgen dat systemen, processen en support optimaal functioneren vandaag en in de toekomst.",
       "moreBtn": "Meer over IT-consultancy",
       "offers": ["IT-consultancy & systeemselectie", "Netwerk-, server- & cloudbeheer", "Digitale transformatie & integratie", "IT-support (helpdesk, remote & on-site)"],
       "sub": [
         {
           "title": "IT-consultancy & systeemselectie",
-          "paragraphs": ["Met onze IT-consultancy en systeemselectie bieden we deskundig advies en begeleiding bij het kiezen van de juiste IT-oplossingen die passen bij je organisatie en ambities — speciaal voor bedrijven in Amsterdam en de Metropoolregio.", "Kies voor onze IT-consultancy en systeemselectie om de juiste IT-oplossingen te kiezen die passen bij je bedrijfsbehoeften en toekomstplannen."],
+          "paragraphs": ["Met onze IT-consultancy en systeemselectie bieden we deskundig advies en begeleiding bij het kiezen van de juiste IT-oplossingen die passen bij je organisatie en ambities speciaal voor bedrijven in Amsterdam en de Metropoolregio.", "Kies voor onze IT-consultancy en systeemselectie om de juiste IT-oplossingen te kiezen die passen bij je bedrijfsbehoeften en toekomstplannen."],
           "points": ["Deskundig advies", "Oplossingen op maat", "Toekomstgericht"],
           "link": "Plan een adviesgesprek"
         },
         {
-          "title": "Netwerk-, server- & cloudbeheer",
-          "paragraphs": ["Van lokale netwerken tot cloudinfrastructuur — wij beheren, monitoren en optimaliseren je IT-omgeving zodat jij je kunt focussen op je bedrijf.", "Of het nu gaat om een on-premise server, een hybride cloud of een volledig cloudgebaseerde omgeving (Azure, AWS) — we zorgen voor uptime, veiligheid en prestaties."],
+          "title": "Netwerk-, server & cloudbeheer",
+          "paragraphs": ["Van lokale netwerken tot cloudinfrastructuur wij beheren, monitoren en optimaliseren je IT-omgeving zodat jij je kunt focussen op je bedrijf.", "Of het nu gaat om een on-premise server, een hybride cloud of een volledig cloudgebaseerde omgeving (Azure, AWS) we zorgen voor uptime, veiligheid en prestaties."],
           "points": ["Netwerk- en serverinstallatie & -beheer", "Cloud-infrastructuur (Azure, AWS, hybride)", "Monitoring, patchbeheer & back-upstrategie"],
           "link": "Vraag een infrastructuurgesprek aan"
         },
         {
           "title": "Digitale transformatie & integratie",
-          "paragraphs": ["Bij Newland IT-Solutions ondersteunen we organisaties bij het realiseren van digitale transformatie- en integratieprojecten. We zorgen dat je klaar bent voor de toekomst — van strategie tot implementatie.", "Vertrouw op onze expertise om je organisatie te versterken met slimme, schaalbare en toekomstbestendige IT-oplossingen. Of het nu gaat om cloudoplossingen, on-premise systemen of hybride integraties — we helpen je je concurrentiepositie te verbeteren."],
+          "paragraphs": ["Bij Newland IT-Solutions ondersteunen we organisaties bij het realiseren van digitale transformatie en integratieprojecten. We zorgen dat je klaar bent voor de toekomst van strategie tot implementatie.", "Vertrouw op onze expertise om je organisatie te versterken met slimme, schaalbare en toekomstbestendige IT-oplossingen. Of het nu gaat om cloudoplossingen, on-premise systemen of hybride integraties we helpen je je concurrentiepositie te verbeteren."],
           "points": ["Strategiebepaling en implementatie", "Innovatieve cloud- en on-premise oplossingen", "Efficiëntieverbetering in processen en systemen"],
           "link": "Vraag een strategiesessie aan"
         },
         {
           "title": "IT-support (helpdesk, remote & on-site)",
-          "paragraphs": ["Onze IT-supportdiensten bieden remote of on-site ondersteuning — altijd snel en betrouwbaar, precies wanneer je het nodig hebt.", "Met Newland IT-Solutions ben je verzekerd van professionele support voor een breed scala aan IT-uitdagingen, van dagelijkse helpdeskvragen tot kritieke systeemstoringen."],
+          "paragraphs": ["Onze IT-supportdiensten bieden remote of on-site ondersteuning altijd snel en betrouwbaar, precies wanneer je het nodig hebt.", "Met Newland IT-Solutions ben je verzekerd van professionele support voor een breed scala aan IT-uitdagingen, van dagelijkse helpdeskvragen tot kritieke systeemstoringen."],
           "points": ["Snelle reactietijden", "Proactief beheer", "Support op aanvraag"],
           "link": "Vraag support aan"
         }
@@ -412,20 +454,20 @@
       "backConsulting": "← IT-consultancy",
       "eyebrow": "IT-supportdiensten",
       "h1": "Slimme IT-support, waar en wanneer je die nodig hebt",
-      "intro": "Bij Newland IT-Solutions houden we je bedrijf draaiend in Amsterdam en Noord-Holland. Of je nu zzp’er bent of een groeiend team aanstuurt — we bieden betrouwbare support, remote en op locatie. Van snelle helpdeskvragen tot proactief systeembeheer: jij kiest het pakket dat bij je organisatie past.",
+      "intro": "Bij Newland IT-Solutions houden we je bedrijf draaiend in Amsterdam en Noord-Holland. Of je nu zzp’er bent of een groeiend team aanstuurt we bieden betrouwbare support, remote en op locatie. Van snelle helpdeskvragen tot proactief systeembeheer: jij kiest het pakket dat bij je organisatie past.",
       "mostPopular": "Meest gekozen",
       "ctaHeading": "Niet zeker welk pakket past?",
-      "ctaText": "Neem contact op voor een vrijblijvend adviesgesprek — samen vinden we het juiste plan.",
+      "ctaText": "Neem contact op voor een vrijblijvend adviesgesprek samen vinden we het juiste plan.",
       "plans": [
-        { "title": "Basic Support Remote", "target": "Gericht op zzp’ers en kleine organisaties die vooral reactieve remote hulp nodig hebben, zonder vaste verplichtingen.", "description": "€80 per uur (op aanvraag) of €45/maand per werkplek", "features": ["Remote support tijdens kantooruren", "Basismonitoring (optioneel via remote-agent)", "10% korting op meerwerk (zoals kleine projecten of upgrades)"], "note": "" },
-        { "title": "Pro Support Remote", "target": "Voor groeiende bedrijven die behoefte hebben aan continuïteit, monitoring en optimalisatie.", "description": "Vanaf €55 p/m per werkplek voor het mkb met 5–25 werkplekken.", "features": ["Onbeperkte remote support tijdens kantooruren", "Periodieke health checks", "Patchbeheer", "Advies over back-up en opslag"], "note": "" },
-        { "title": "Premium Support – DevOps & Cloud SLA", "target": "Voor agencies, ontwikkelteams en bedrijven met complexe IT-omgevingen, CI/CD-processen of hybride cloudstructuren.", "description": "Vanaf €750 p/m op basis van een SLA op maat, afhankelijk van projectomvang en uitrol.", "features": ["Hybride support (remote & on-site)", "SLA-gebaseerde aanpak met snelle reactietijden", "Cloud- en infrastructuurbeheer (Azure, AWS, CI/CD)"], "note": "Dit pakket wordt volledig afgestemd op jouw specifieke situatie. Vraag een gratis offerte aan voor een voorstel op maat." }
+        { "title": "Basic Support Remote", "priceSuffix": "/maand per werkplek", "target": "Gericht op zzp’ers en kleine organisaties die vooral reactieve remote hulp nodig hebben, zonder vaste verplichtingen.", "description": "€80 per uur (op aanvraag) of €45/maand per werkplek", "features": ["Remote support tijdens kantooruren", "Basismonitoring (optioneel via remote-agent)", "10% korting op meerwerk (zoals kleine projecten of upgrades)"], "note": "" },
+        { "title": "Pro Support Remote", "priceSuffix": "/maand per werkplek", "target": "Voor groeiende bedrijven die behoefte hebben aan continuïteit, monitoring en optimalisatie.", "description": "Vanaf €55 p/m per werkplek voor het mkb met 5–25 werkplekken.", "features": ["Onbeperkte remote support tijdens kantooruren", "Periodieke health checks", "Patchbeheer", "Advies over back-up en opslag"], "note": "" },
+        { "title": "Premium Support – DevOps & Cloud SLA", "priceSuffix": "/maand (SLA op maat)", "target": "Voor agencies, ontwikkelteams en bedrijven met complexe IT-omgevingen, CI/CD-processen of hybride cloudstructuren.", "description": "Vanaf €750 p/m op basis van een SLA op maat, afhankelijk van projectomvang en uitrol.", "features": ["Hybride support (remote & on-site)", "SLA-gebaseerde aanpak met snelle reactietijden", "Cloud- en infrastructuurbeheer (Azure, AWS, CI/CD)"], "note": "Dit pakket wordt volledig afgestemd op jouw specifieke situatie. Vraag een gratis offerte aan voor een voorstel op maat." }
       ]
     },
     "strategy": {
       "eyebrow": "Digitale strategie",
       "h1": "Digitale strategie & enablement",
-      "intro": "We begeleiden zowel IT- als niet-IT-projecten met een gestructureerde aanpak. Daarnaast versterken we je organisatie met digitale strategieën voor merkontwikkeling — van projectmanagement tot branding en design.",
+      "intro": "We begeleiden zowel IT- als niet-IT-projecten met een gestructureerde aanpak. Daarnaast versterken we je organisatie met digitale strategieën voor merkontwikkeling van projectmanagement tot branding en design.",
       "moreBtn": "Meer over enablement",
       "ctaText": "Klaar om je merk en digitale aanwezigheid te versterken?",
       "offers": ["Projectmanagement (ook buiten IT)", "Digitale strategie, branding & visueel design", "UI/UX-design"],
@@ -434,14 +476,14 @@
         {
           "title": "Projectmanagement",
           "badge": "Planning",
-          "paragraphs": ["Of het nu gaat om een IT-implementatie, digitale transformatie of interne procesverbetering — goed projectmanagement maakt het verschil. Bij Newland IT-Solutions begeleiden we bedrijven in Amsterdam van start tot oplevering, met structuur, realistische planning en heldere communicatie."],
+          "paragraphs": ["Of het nu gaat om een IT-implementatie, digitale transformatie of interne procesverbetering goed projectmanagement maakt het verschil. Bij Newland IT-Solutions begeleiden we bedrijven in Amsterdam van start tot oplevering, met structuur, realistische planning en heldere communicatie."],
           "points": ["Begeleiding van technische én niet-technische projecten", "Structuur, planning en voortgangsbewaking", "Afstemming op je interne processen en teams"],
           "link": "Vraag projectbegeleiding aan"
         },
         {
           "title": "Branding & logo-ontwerp",
           "badge": "Identiteit",
-          "paragraphs": ["Ons team van experts versterkt je merkidentiteit met uniek logo- en brandingontwerp.", "Onze creatieve aanpak zorgt voor een unieke uitstraling die klanten aantrekt en behoudt."],
+          "paragraphs": ["Ons team van experts versterkt je merkidentiteit met uniek logo en brandingontwerp.", "Onze creatieve aanpak zorgt voor een unieke uitstraling die klanten aantrekt en behoudt."],
           "points": ["Uniek logo- en brandingontwerp", "Optimale gebruikerservaring", "Effectieve strategieën"],
           "link": "Plan een designintake"
         },
@@ -480,11 +522,131 @@
   "faq": {
     "eyebrow": "FAQ",
     "heading": "Veelgestelde vragen",
+    "software": {
+      "items": [
+        {
+          "question": "Wat voor software ontwikkelen jullie?",
+          "answer": "We bouwen web- en mobiele applicaties op maat, van interne tools tot klantgerichte platforms, en ontwikkelen softwareplatforms en API-integraties die je bedrijfsprocessen ondersteunen."
+        },
+        {
+          "question": "Kunnen jullie onze bestaande systemen aan elkaar koppelen?",
+          "answer": "Ja. Met API-integraties koppelen we systemen, externe tools en databronnen, zodat data-uitwisseling soepel verloopt en workflows sneller gaan."
+        },
+        {
+          "question": "Wat kost software op maat?",
+          "answer": "Dat hangt af van de omvang en complexiteit van je project. Na een gratis kennismakingsgesprek ontvang je een offerte met scope, planning en prijs, zonder verborgen kosten."
+        },
+        {
+          "question": "Hoe begint een softwareproject?",
+          "answer": "Met een intakegesprek waarin we je processen en doelen in kaart brengen. Op basis daarvan stellen we een voorstel op dat volledig is afgestemd op hoe jouw organisatie werkt."
+        },
+        {
+          "question": "Kunnen jullie de software na oplevering ook onderhouden?",
+          "answer": "Ja. Na oplevering kun je doorgaan met een van onze supportpakketten, van remote hulp op aanvraag tot een SLA op maat."
+        }
+      ]
+    },
+    "cms": {
+      "items": [
+        {
+          "question": "Welk platform past bij mij: Wix, WordPress of Shopify?",
+          "answer": "Wix is ideaal voor zzp’ers, kleine bedrijven en portfolio’s. WordPress is flexibel en uit te breiden met plugins, en past goed bij groeiende bedrijven. Shopify is de keuze als je producten online wilt verkopen. Twijfel je? We adviseren je graag."
+        },
+        {
+          "question": "Kan ik mijn website daarna zelf beheren?",
+          "answer": "Ja. We bouwen websites op een eenvoudig te beheren CMS, zodat je de inhoud zelf kunt aanpassen."
+        },
+        {
+          "question": "Kunnen jullie ook een webshop bouwen?",
+          "answer": "Ja. Met Shopify bouwen we een professionele webshop, geoptimaliseerd voor conversie en met betaal- en verzendmodules inbegrepen, volledig te beheren via het dashboard."
+        },
+        {
+          "question": "Is mijn nieuwe website vindbaar in Google?",
+          "answer": "We bouwen met oog voor snelheid, helderheid en gebruiksgemak, en WordPress-websites zijn SEO-vriendelijk opgezet. Zo leggen we een goede basis voor je online zichtbaarheid."
+        },
+        {
+          "question": "Wat kost een nieuwe website?",
+          "answer": "Dat hangt af van het platform, het ontwerp en de functionaliteit die je nodig hebt. Na een gratis kennismakingsgesprek ontvang je een offerte op maat, afgestemd op je doelen en budget."
+        }
+      ]
+    },
+    "consulting": {
+      "items": [
+        {
+          "question": "Waarmee helpt IT-consultancy mijn organisatie?",
+          "answer": "We geven deskundig advies bij het kiezen van IT-oplossingen die passen bij je organisatie en ambities, en zorgen dat systemen, processen en support goed functioneren, nu en in de toekomst."
+        },
+        {
+          "question": "Beheren jullie ook netwerken, servers en cloudomgevingen?",
+          "answer": "Ja. We installeren en beheren netwerken en servers en ondersteunen on-premise, hybride en cloudomgevingen (Azure, AWS), inclusief monitoring, patchbeheer en een back-upstrategie."
+        },
+        {
+          "question": "Kunnen jullie ons begeleiden bij digitale transformatie?",
+          "answer": "Ja. We begeleiden transformatie- en integratieprojecten van strategie tot implementatie, met cloud-, on-premise of hybride oplossingen."
+        },
+        {
+          "question": "Wat is het verschil tussen IT-consultancy en IT-support?",
+          "answer": "Consultancy draait om de juiste keuzes en plannen maken voor je IT. Support is de dagelijkse hulp bij vragen en storingen; daarvoor hebben we vaste supportpakketten."
+        },
+        {
+          "question": "Hoe start een adviestraject?",
+          "answer": "Met een vrijblijvend adviesgesprek over je huidige situatie en plannen. Daarna ontvang je een voorstel met scope, planning en prijs."
+        }
+      ]
+    },
+    "support": {
+      "items": [
+        {
+          "question": "Welke IT-supportpakketten bieden jullie?",
+          "answer": "Er zijn drie pakketten: Basic Support Remote voor zzp’ers en kleine organisaties, Pro Support Remote voor het mkb met 5–25 werkplekken, en Premium Support – DevOps & Cloud SLA voor complexe IT-omgevingen."
+        },
+        {
+          "question": "Wat kost IT-support?",
+          "answer": "Basic kost €80 per uur op aanvraag of €45 per maand per werkplek. Pro is er vanaf €55 per maand per werkplek. Premium start vanaf €750 per maand, op basis van een SLA op maat. Tarieven zijn exclusief btw, conform onze algemene voorwaarden."
+        },
+        {
+          "question": "Helpen jullie ook op locatie?",
+          "answer": "Basic en Pro zijn remote pakketten. Premium biedt hybride support, remote en on-site. Daarnaast komen we in Amsterdam en omgeving op locatie wanneer de situatie dat vraagt."
+        },
+        {
+          "question": "Wanneer is de support beschikbaar?",
+          "answer": "Basic en Pro bieden remote support tijdens kantooruren; bij Pro is die onbeperkt. Bij Premium leggen we beschikbaarheid en reactietijden vast in een SLA op maat."
+        },
+        {
+          "question": "Zit ik vast aan een contract?",
+          "answer": "Basic Support Remote is bedoeld voor wie vooral reactieve hulp nodig heeft, zonder vaste verplichtingen. De voorwaarden voor Pro en Premium stemmen we af in je offerte."
+        }
+      ]
+    },
+    "strategy": {
+      "items": [
+        {
+          "question": "Begeleiden jullie ook projecten buiten IT?",
+          "answer": "Ja. We begeleiden zowel technische als niet-technische projecten, van IT-implementaties tot interne procesverbeteringen."
+        },
+        {
+          "question": "Wat houdt jullie projectbegeleiding in?",
+          "answer": "We brengen structuur, een realistische planning en voortgangsbewaking, met heldere communicatie en afstemming op je interne processen en teams, van start tot oplevering."
+        },
+        {
+          "question": "Kunnen jullie een logo en huisstijl ontwerpen?",
+          "answer": "Ja. We ontwerpen unieke logo’s en brandingmaterialen die je merkidentiteit versterken."
+        },
+        {
+          "question": "Doen jullie ook UX/UI-design?",
+          "answer": "Ja. We ontwerpen doordachte gebruikerservaringen en interfaces met consistente branding en aandacht voor gebruiksgemak."
+        },
+        {
+          "question": "Hoe beginnen we?",
+          "answer": "Plan een intake of kennismakingsgesprek. We bespreken je doelen en sturen daarna een voorstel met scope, planning en prijs."
+        }
+      ]
+    },
     "general": {
       "items": [
         {
           "question": "Voor welke soorten bedrijven werken jullie?",
-          "answer": "We werken voor zzp'ers, het mkb, scholen en non-profitorganisaties in Amsterdam en de bredere regio Noord-Holland. Onze oplossingen groeien mee met je organisatie — van een eenmanszaak tot een team van 50 personen."
+          "answer": "We werken voor zzp'ers, het mkb, scholen en non-profitorganisaties in Amsterdam en de bredere regio Noord-Holland. Onze oplossingen groeien mee met je organisatie van een eenmanszaak tot een team van 50 personen."
         },
         {
           "question": "Hoe snel kunnen jullie starten met een nieuw project?",
@@ -496,7 +658,7 @@
         },
         {
           "question": "Hoe verloopt het onboardingproces?",
-          "answer": "We beginnen met een gratis kennismakingsgesprek om jouw situatie en doelen te begrijpen. Daarna sturen we een heldere offerte met scope, planning en prijs — zonder verborgen kosten of verrassingen."
+          "answer": "We beginnen met een gratis kennismakingsgesprek om jouw situatie en doelen te begrijpen. Daarna sturen we een heldere offerte met scope, planning en prijs zonder verborgen kosten of verrassingen."
         },
         {
           "question": "Werken jullie ook on-site in Amsterdam?",
@@ -507,10 +669,48 @@
   },
   "consent": {
     "title": "Uw privacy",
-    "text": "We gebruiken functionele cookies en lokale opslag voor basisfunctionaliteit. Met uw toestemming laden we ook Google Maps in. Geen tracking- of marketingcookies.",
+    "text": "We gebruiken functionele cookies en lokale opslag voor basisfunctionaliteit. Met uw toestemming laden we ook Google Maps en de Calendly-afsprakenagenda in. Geen tracking of marketingcookies.",
     "accept": "Toestemming geven",
     "decline": "Alleen functioneel",
     "learnMore": "Cookiebeleid"
+  },
+  "error": {
+    "backHome": "Naar de homepage",
+    "notFound": {
+      "heading": "Deze pagina bestaat niet",
+      "text": "De pagina die je zoekt is verplaatst of bestaat niet (meer). Kies hieronder waar je verder wilt."
+    },
+    "generic": {
+      "heading": "Er ging iets mis",
+      "text": "Er is een onverwachte fout opgetreden. Probeer het later opnieuw of ga terug naar de homepage."
+    }
+  },
+  "areas": {
+    "index": {
+      "eyebrow": "Werkgebied",
+      "heading": "Jouw IT-partner in de buurt",
+      "intro": "Newland IT-Solutions werkt vanuit Amsterdam Zuidoost voor zzp’ers en mkb in heel Amsterdam. Bekijk wat we in jouw wijk voor je kunnen doen."
+    },
+    "template": {
+      "eyebrow": "IT-diensten in de buurt",
+      "backToAreas": "← Alle werkgebieden",
+      "servicesHeading": "Onze diensten in {area}",
+      "nearbyHeading": "Ook actief in de buurt",
+      "ctaHeading": "Kennismaken in {area}?",
+      "ctaText": "Vertel ons waar je tegenaan loopt. We denken vrijblijvend mee, remote of bij jou op locatie.",
+      "viewArea": "Bekijk {area} →"
+    },
+    "items": {
+      "amsterdam-zuidoost": {
+        "name": "Amsterdam Zuidoost",
+        "intro": "IT-support, softwareontwikkeling en websites voor ondernemers in Amsterdam Zuidoost — vanuit ons kantoor aan de {street}, gewoon om de hoek.",
+        "body": [
+          "Of je nu in de Bijlmer, op Amstel III of in Gaasperdam zit: Newland IT-Solutions helpt zzp’ers en mkb-bedrijven in Zuidoost met betrouwbare IT. We helpen remote als het snel moet en komen op locatie langs als dat nodig is.",
+          "Omdat we zelf in Zuidoost gevestigd zijn, kennen we de buurt. Geen callcenter, maar een vast aanspreekpunt dat met je meedenkt over je systemen, je website of een applicatie op maat."
+        ],
+        "usp": "Gevestigd in Zuidoost: korte lijnen en een vast aanspreekpunt."
+      }
+    }
   },
   "legal": {
     "lastUpdated": "Augustus 2026",
@@ -522,7 +722,7 @@
           "heading": "1. Verwerkingsverantwoordelijke",
           "paras": [
             "Newland IT-Solutions is de verwerkingsverantwoordelijke voor de verwerking van uw persoonsgegevens.",
-            "Newland IT-Solutions, Hessenbergweg 8, 1101 BT Amsterdam • KVK: 83541934 • BTW: NL003835137B29 • info{'@'}newlandit-solutions.com • +31 648 364 450"
+            "Newland IT-Solutions, {street}, {postalCode} {city} • KVK: {kvk} • BTW: {btw} • {email} • {phone}"
           ]
         },
         {
@@ -548,6 +748,7 @@
             "• Resend Inc. (VS) — verzorgt het versturen van e-mailnotificaties vanuit ons contactformulier.",
             "• Sanity AS (Noorwegen/VS) — CMS-platform voor contentbeheer, indien in gebruik.",
             "• Google LLC (VS) — Google Maps-embed op de contactpagina, uitsluitend na uw uitdrukkelijke toestemming.",
+            "• Calendly LLC (VS) — afsprakenagenda op de contactpagina, uitsluitend na uw uitdrukkelijke toestemming. Gegevens die u invult bij het plannen van een afspraak worden door Calendly verwerkt.",
             "Wij verkopen uw persoonsgegevens nooit aan derden en verstrekken deze niet voor commerciële doeleinden."
           ]
         },
@@ -561,7 +762,7 @@
           "heading": "6. Uw rechten",
           "paras": [
             "Op grond van de AVG heeft u de volgende rechten: inzage in uw persoonsgegevens, rectificatie van onjuiste gegevens, wissing ('recht op vergetelheid'), beperking van de verwerking, gegevensoverdraagbaarheid en bezwaar tegen verwerking op grond van gerechtvaardigd belang.",
-            "U kunt uw rechten uitoefenen door contact op te nemen via info{'@'}newlandit-solutions.com. Wij reageren binnen 30 dagen.",
+            "U kunt uw rechten uitoefenen door contact op te nemen via {email}. Wij reageren binnen 30 dagen.",
             "U heeft tevens het recht een klacht in te dienen bij de Autoriteit Persoonsgegevens (autoriteitpersoonsgegevens.nl)."
           ]
         },
@@ -606,28 +807,30 @@
           "heading": "4. Derde partijen na toestemming",
           "paras": [
             "Google Maps (Google LLC, VS): wanneer u via onze cookiebanner toestemming geeft, wordt op de contactpagina een Google Maps-kaart ingeladen. Google kan hierbij gegevens verwerken conform hun privacybeleid (policies.google.com/privacy).",
-            "WhatsApp: klikken op een WhatsApp-knop leidt u door naar de WhatsApp-app of -website. Wij laden WhatsApp niet automatisch in; u initieert dit contact zelf."
+            "Calendly (Calendly LLC, VS): wanneer u toestemming geeft, wordt op de contactpagina de Calendly-afsprakenagenda ingeladen. Calendly kan cookies plaatsen en verwerkt de gegevens die u invult bij het plannen, conform hun privacybeleid (calendly.com/privacy).",
+            "WhatsApp: klikken op een WhatsApp-knop leidt u door naar de WhatsApp-app of website. Wij laden WhatsApp niet automatisch in; u initieert dit contact zelf."
           ]
         },
         {
           "heading": "5. Toestemming beheren",
           "paras": [
             "Via de cookiebanner onderaan de pagina kunt u toestemming geven of weigeren voor niet-functionele cookies. U kunt uw keuze op elk moment herzien door de lokale opslag van uw browser te wissen of de banner opnieuw te activeren.",
-            "Zonder toestemming wordt Google Maps niet geladen en worden geen gegevens naar Google verzonden."
+            "Zonder toestemming worden Google Maps en Calendly niet geladen en worden geen gegevens naar Google of Calendly verzonden."
           ]
         },
         {
           "heading": "6. Meer informatie",
           "paras": [
             "Meer informatie over cookies en uw rechten vindt u op de website van de Autoriteit Persoonsgegevens: autoriteitpersoonsgegevens.nl",
-            "Privacybeleid Google: policies.google.com/privacy"
+            "Privacybeleid Google: policies.google.com/privacy",
+            "Privacybeleid Calendly: calendly.com/privacy"
           ]
         }
       ]
     },
     "terms": {
       "title": "Algemene Voorwaarden",
-      "intro": "Deze algemene voorwaarden zijn van toepassing op alle aanbiedingen, offertes en overeenkomsten van Newland IT-Solutions (KVK: 83541934), gevestigd te Hessenbergweg 8, 1101 BT Amsterdam.",
+      "intro": "Deze algemene voorwaarden zijn van toepassing op alle aanbiedingen, offertes en overeenkomsten van Newland IT-Solutions (KVK: {kvk}), gevestigd te {street}, {postalCode} {city}.",
       "sections": [
         {
           "heading": "Artikel 1 — Toepasselijkheid",
@@ -668,7 +871,7 @@
         {
           "heading": "Artikel 6 — Intellectueel eigendom",
           "paras": [
-            "6.1 Alle door Newland IT-Solutions ontwikkelde werken — waaronder software, ontwerpen, documentatie en grafische uitingen — blijven eigendom van Newland IT-Solutions totdat de opdrachtgever alle verplichtingen volledig heeft voldaan.",
+            "6.1 Alle door Newland IT-Solutions ontwikkelde werken waaronder software, ontwerpen, documentatie en grafische uitingen blijven eigendom van Newland IT-Solutions totdat de opdrachtgever alle verplichtingen volledig heeft voldaan.",
             "6.2 Na volledige betaling draagt Newland IT-Solutions de overeengekomen rechten over aan de opdrachtgever conform de gemaakte afspraken."
           ]
         },

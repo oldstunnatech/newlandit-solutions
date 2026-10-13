@@ -6,7 +6,7 @@ Run project verification. All checks are static/build-based (no test runner is c
 
 1. **Build** — from `front-end/newlandit-ui/`: `npm run build`. Report pass/fail; on failure name the file/line.
 2. **i18n key parity** — `i18n/locales/nl.json` and `en.json` must have the **same key set**. Report any key present in one locale but missing in the other (missing-key = runtime fallback bug).
-3. **No hardcoded user-facing strings** — scan `app/pages/**` and `app/components/**` for literal display text in templates that is not wrapped in `t()`/`tm()`. Flag `file:line` for each (allow attributes like class names, hrefs, icon names).
+3. **No hardcoded user-facing strings** — scan `app/pages/**` and `app/components/**` for literal display text in templates that is not wrapped in `t()`/`tm()`. Flag `file:line` for each (allow attributes like class names, hrefs, icon names; proper names such as the brand "Newland IT-Solutions", "LinkedIn", "WhatsApp"; and the hidden contact-form honeypot label). Skip `app/pages/index-v1.vue`: an unused `noindex` legacy draft kept for reference (I18N-004 decision).
 4. **SEO coverage** — every page in `app/pages/**` (except dead drafts marked `noindex`) calls `useSeo(...)`. Flag pages missing it.
 5. **NAP single-source** — no hardcoded phone/email/address/KvK/BTW outside `shared/utils/contact.ts`; all reads go through `CONTACT`.
 

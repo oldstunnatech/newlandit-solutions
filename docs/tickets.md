@@ -1,6 +1,6 @@
 # 🎫 Newland IT-Solutions — Engineering Tickets
 
-> Last updated: 2026-09-24 (evening) · Source: `report.md` · Roadmap: `roadmap.md`
+> Last updated: 2026-10-07 · Source: `report.md` · Roadmap: `roadmap.md`
 >
 > **Legend:** 🔴 P0 launch-blocking · 🟠 P1 high · 🟡 P2 medium · ✅ Done · 🟡 In progress · 📋 Todo
 >
@@ -45,13 +45,12 @@
 
 **Content & trust**
 
-> NWL-012, NWL-015 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
+> NWL-012, NWL-014, NWL-015 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
 | NWL-013 | 🟡 P2 | 📋 Todo | Case studies — content model + first 2 real cases (problem→solution→result). Depends NWL-012 [ideas #3] |
-| NWL-014 | 🟡 P2 | 🟡 In progress | "Onze aanpak" dedicated page — expand Discovery/Plan/Build/Support. New `/approach` page, PR #27 (feat/NWL-014-approach-page) [ideas #4] |
-| NWL-016 | 🟡 P2 | 📋 Todo | FAQ content per service (5 pages). Depends NWL-015 [ideas #5] |
+| NWL-016 | 🟡 P2 | ✅ Done | FAQ content per service (5 pages). Depends NWL-015 ✅. PR #43 merged to `development`. Owner to proofread the FAQ copy. [ideas #5] |
 
 **Content engine**
 
@@ -69,26 +68,31 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| SEO-008 | 🟡 P2 | 📋 Todo | Per-service OG images (replace shared hero) [ideas #10] |
-| SEO-009 | 🟡 P2 | 📋 Todo | Local landing-page template (i18n, schema, internal links) [ideas #11] |
+| SEO-008 | 🟡 P2 | ✅ Done | Per-service OG images (replace shared hero). PR #44 merged to `development`. After deploy: check a service URL in the LinkedIn/WhatsApp preview. [ideas #10] |
+| SEO-009 | 🟡 P2 | ✅ Done | Local landing-page template (i18n, schema, internal links). PR #39 merged to `development`. [ideas #11] |
 | SEO-010 | 🟡 P2 | 📋 Todo | Publish neighbourhood/niche local pages (content). Depends SEO-009 [ideas #11] |
 
 **Product & conversion**
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-022 | 🟡 P2 | 📋 Todo | Inline "plan een kennismaking" booking (Calendly/Cal.com), consent-gated [ideas #12] |
+| NWL-022 | 🟡 P2 | ✅ Done | Inline "plan een kennismaking" booking (Calendly/Cal.com), consent-gated [ideas #12]. PR #57 merged to `development`. Owner to confirm the Calendly link. |
 | NWL-023 | 🟡 P2 | 📋 Todo | Decision — remove Stripe keys or scope a real commerce flow [ideas #13] |
 | NWL-024 | 🟡 P2 | 📋 Todo | Newsletter signup via Resend audiences (double opt-in + privacy) [ideas #14] |
 
 **UX polish**
 
+> NWL-025, NWL-026, NWL-027, NWL-028, NWL-031, NWL-032 ✅ Done — detail archived in [`tickets-archive.md`](./tickets-archive.md).
+
+**Code health — from `/check` run 2026-10-05**
+
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-025 | 🟡 P2 | ✅ Done | Count-up animation for stats — already implemented as part of NWL-001 (IntersectionObserver in `index.vue`), verified live 2026-09-24. Depends NWL-001 [ideas #16] |
-| NWL-026 | 🟡 P2 | 🟡 In progress | A11y — image alt-text policy + audit all imagery. Audit done: all live pages already had alt text, one gap fixed on unused `/index-v1` route. PR #28 [ideas #17] |
-| NWL-027 | 🟡 P2 | 🟡 In progress | A11y — visible focus states across interactive elements. Site-wide `:focus-visible` outline added. PR #28 [ideas #17] |
-| NWL-028 | 🟡 P2 | 🟡 In progress | A11y — keyboard nav (nav, mobile drawer, forms, FAB). Real bug found + fixed: SideNav submenu was mouse-only, unreachable by keyboard. PR #28 (feat/NWL-026-027-028-a11y) [ideas #17] |
+| I18N-004 | 🟡 P2 | ✅ Done | Externalise remaining hard-coded template strings (Footer labels, WhatsApp FAB titles, `it-support.vue` plans, nav/hero bits). PR #59 merged to `development`. |
+| NWL-029 | 🟡 P2 | ✅ Done | NAP single-source — `useServiceSchema` provider + `wa.me` links read from `CONTACT`, add `whatsappHref`. PR #56 merged to `development`. |
+| SEO-011 | 🟡 P2 | ✅ Done | Remove shadowed custom sitemap route (`server/routes/sitemap.xml.ts` + `NL_ROUTES`); module sitemap is the live one. PR #41 merged to `development`. |
+| NWL-030 | 🟡 P2 | ✅ Done | Branded, translated error page (`app/error.vue`) — 404 + 500 previously showed Nuxt's default dark page in English. PR #46 merged to `development`. |
+| NWL-033 | 🟡 P2 | ✅ Done | Favicon from logo globe (ico/png/apple-touch) + logo links to home in Header, SideNav, MobileNav; fix "NewHeaven" alt text. PR #54 merged to `development`. |
 
 </details>
 
@@ -117,6 +121,194 @@
 
 </details>
 
+<details open>
+<summary><strong>SEO-008 — Per-service OG images 🟡 P2 (in progress)</strong></summary>
+
+Problem: every page shared one OG image, `/images/IMG_8959.jpg`, a 6000×4000 camera original
+(far above OG size, cropped unpredictably by LinkedIn/WhatsApp/Slack).
+
+Decision (2026-10-06): static images generated once and committed, **Dutch text only** (primary market).
+No runtime image generation (`nuxt-og-image` considered and rejected: runtime dependency for 5 fixed images).
+
+- [x] `scripts/generate-og-images.ts` (`npm run og:generate`, `sharp` devDependency) renders a branded
+      1200×630 PNG per service: logo, `detail.<service>.eyebrow` + `detail.<service>.h1` from `nl.json`,
+      website from `CONTACT`. No new copy.
+- [x] Output committed to `public/images/og/<service-slug>.png`; config in `shared/utils/og-images.ts`.
+- [x] Fallback `public/images/og/default.jpg`: the site hero cropped to 1200×630 (~90 KB); `useSeo` default.
+- [x] Each solution page passes its image via `useSeo({ image })`; generated images also emit
+      `og:image:width/height`.
+- [x] Tests: every image exists, is 1200×630 and < 300 KB; each service page passes its image;
+      nl text keys exist.
+- [x] `npm test` + `npm run build` green; rendered `og:image` verified on nl + en service pages and default pages.
+
+**Follow-ups (not in scope):** English-text variants; real photography (NWL-009). Note: the company logo
+artwork reads "TOMORROW STECHNOLOGY" (typo in the source file `app/assets/company_logo.png`).
+
+</details>
+
+<details open>
+<summary><strong>NWL-016 — FAQ content per service 🟡 P2 (in progress)</strong></summary>
+
+Goal: each of the 5 solution pages answers the questions prospects actually ask before contacting us,
+using the existing `FaqAccordion` (NWL-015). Note: the component is built but **not used on any page yet**,
+and `faq.general` is unused too.
+
+**Content (truth rule)**
+- [x] 4–6 Q&A pairs per service under `faq.<service>.items` (`software`, `cms`, `consulting`, `support`,
+      `strategy`, matching the `detail.*` namespaces), in **both** `nl.json` and `en.json`, same count per locale.
+- [x] Every answer is grounded in what the site already states (`detail.<service>.*` copy, the
+      `it-support.vue` plans/prices, `faq.general`). **No new factual claims**: no invented response
+      times, SLAs, guarantees, tool lists or prices.
+- [x] Questions are prospect-phrased (cost, timeline, what's included, who it's for, how to start),
+      no duplicates of `faq.general`.
+- [x] Copy flagged in the PR for business-owner review before merge (no reviewer available yet,
+      so answers kept conservative: only facts already on the site).
+
+**Placement**
+- [x] `<FaqAccordion>` on all 5 pages (`solutions/{software-development,cms-websites,it-consulting,it-support,digital-strategy}.vue`),
+      placed just above the closing CTA band, with a `faq.heading` section title.
+- [x] Items read via `tm()` / `rt()`; no hard-coded display text added. Done via a self-contained
+      `ServiceFaq` wrapper (heading + accordion + page URL), so `it-support.vue` needed no `useI18n`;
+      the rest of that page's copy stays with I18N-004.
+- [x] Locale-correct absolute `page-url` passed so `FAQPage` JSON-LD is emitted (one `FAQPage` per page).
+
+**SEO**
+- [x] Rendered page contains valid `FAQPage` JSON-LD alongside the existing `Service` + `BreadcrumbList`.
+      Note: since 2023 Google shows FAQ rich results mainly for gov/health sites, so the gain is content
+      depth + long-tail matching, not guaranteed snippets.
+
+**Tests & gate**
+- [x] Vitest: every service has `faq.<service>.items` in both locales, equal length, non-empty
+      `question`/`answer` strings.
+- [x] `npm test` + `npm run build` green; `/check` introduces no new failures.
+
+**Out of scope:** other hard-coded strings / `wa.me` links on these pages (I18N-004, NWL-029);
+placing `faq.general` (homepage or contact). File separately if wanted.
+
+</details>
+
+<details>
+<summary><strong>SEO-009 — Local landing-page template 🟡 P2 (✅ Done)</strong></summary>
+
+Goal: a reusable, data-driven template for Amsterdam neighbourhood/niche pages so SEO-010 is
+content-only (add a data entry + copy, no new code). Ships with **one** pilot page to prove it end-to-end.
+
+**Routing & data**
+- [x] Dynamic route `app/pages/areas/[slug].vue` → `/areas/<slug>` (nl) and `/en/areas/<slug>` (en).
+- [x] Index route `app/pages/areas/index.vue` listing all areas (prevents orphan pages).
+- [x] Typed registry `shared/data/areas.ts` + `shared/types/area.ts` (mirrors `shared/data/cases.ts`):
+  `slug`, `schemaType` (`City` | `Place`), `relatedServices` (solution slugs), `nearby` (area slugs).
+- [x] Unknown slug → real 404 via `createError({ statusCode: 404 })`, not a soft "not found" page.
+- [x] Pilot entry: **Amsterdam Zuidoost** (office is at Hessenbergweg 8, 1101 BT, so the claim is real).
+
+**i18n**
+- [x] All copy under `areas.<slug>.*` (name, intro, body paragraphs, local USP) + shared template
+      strings under `areas.template.*`, in **both** `nl.json` and `en.json`.
+- [x] SEO copy under `seo.areas.<slug>.title|description` and `seo.areas.index.*`.
+- [x] No hard-coded display text in the template.
+
+**SEO & structured data**
+- [x] `useSeo()` on both pages with unique title/description per area.
+- [x] `Service` JSON-LD per area page: extend `useServiceSchema` with an optional `areaServed`
+      override (`Place` with `containedInPlace: Amsterdam`) instead of a new composable.
+- [x] Breadcrumbs: add `areas` to `useBreadcrumbSchema` segment names; area segment uses the area name.
+- [x] Sitemap: dynamic routes are not auto-discovered — feed `/areas/<slug>` URLs (both locales)
+      from the registry into `@nuxtjs/sitemap` (`sitemap.urls` via `areaSitemapUrls()`). Note: the live
+      sitemap is the module's `/sitemap_index.xml`; the custom `server/routes/sitemap.xml.ts` is shadowed.
+
+**Internal links**
+- [x] Area page links to each `relatedServices` solution page, to `/contact`, and to `nearby` areas
+      (nearby section hidden while the pilot has no neighbours).
+- [x] `/areas` index is linked from the footer so pages are crawlable.
+- [x] All links via `localePath()`.
+
+**Tests & gate**
+- [x] Vitest: registry integrity — unique slugs, every `relatedServices` maps to an existing
+      solution page, every `nearby` slug exists, every area has its i18n keys in both locales.
+- [x] `npm test` and `npm run build` green; `/check` passes.
+
+**Review (2026-10-10):** manually reviewed by the owner, who made follow-up changes during review: provider NAP in
+`useServiceSchema` now read from `CONTACT`, footer/contact labels moved to i18n (`footer.*`, both locales),
+contact phone placeholder uses `CONTACT.phone`. Gate green (53 tests, build). Merged via PR #39.
+
+**Out of scope:** further area pages (SEO-010), per-area OG images (SEO-008).
+
+</details>
+
+<details>
+<summary><strong>NWL-030 — Branded, translated error page 🟡 P2</strong></summary>
+
+- Files: new `app/error.vue`, `i18n/locales/{nl,en}.json` (`error.*`), optionally `app/layouts/default.vue`.
+- Problem: found in the 2026-10-07 browser check. The site has no `app/error.vue`, so every missing page
+  (and any server error) renders Nuxt's built-in dark error screen: off-brand, no navigation, English-only
+  text such as "Area not found" / "Go back home" even on Dutch URLs. Visitors who mistype a URL or follow
+  a stale link hit a dead end.
+- Tasks:
+  - Add `app/error.vue` in the site's green/cream style, using the normal header/nav so visitors can continue.
+  - Copy under `error.notFound.*` and `error.generic.*` in **both** locales; pick the locale from the URL
+    (`/en/...` → English).
+  - 404: friendly heading, short text, links to home, `/solutions` and `/contact` via `localePath()`.
+  - 500 / other: generic apology + home link; never show the raw error message or stack to visitors.
+  - Keep the real status code (404 stays 404; no soft-404) and add `noindex`.
+  - Use `clearError({ redirect })` for the home link so the error state resets.
+- DoD: unknown URLs on nl and en show the branded page with a 404 status; a thrown 500 shows the generic
+  variant; nl + en parity; `npm test` + `npm run build` green; `/check` adds no new failures.
+</details>
+
+<details>
+<summary><strong>I18N-004 — Externalise remaining hard-coded strings 🟡 P2</strong></summary>
+
+- Files: `app/components/Footer.vue`, `app/components/{MobileNav,HeroSection,Header,SideNav,TestimonialCard}.vue`,
+  `app/pages/solutions/*.vue` (esp. `it-support.vue`), `app/pages/{about,contact,index}.vue`, `app/pages/cases/*.vue`,
+  `i18n/locales/{nl,en}.json`.
+- Problem: `/check` (2026-10-05) found literal display text outside `t()`. English visitors see Dutch footer
+  labels ("Telefoonnummer:", "Adres:", "BTW-nummer:"); most pages carry an English-only WhatsApp FAB
+  `title="Chat with us on WhatsApp"`; `it-support.vue` plan cards (titles, targets, features, prices copy) are English-only.
+- Tasks:
+  - Footer labels → `footer.*` keys; `aria-label`s ("Site footer", "LinkedIn", "WhatsApp") translated too.
+  - FAB `title` → `:title="t('common.whatsapp')"` everywhere (pattern already used in `index.vue`, `approach.vue`, `areas/*`).
+  - `it-support.vue` plans → `detail.itSupport.plans` array via `tm()`/`rt()`.
+  - Remaining component hits (MobileNav, HeroSection, Header, SideNav, TestimonialCard, contact, index).
+  - Decide `index-v1.vue` (unused `noindex` draft, ~280 hits): delete it, or formally exclude from `/check`.
+- DoD: `/check` hard-coded-string scan clean for live pages; nl + en parity; `npm test` + `npm run build` green.
+
+</details>
+
+<details>
+<summary><strong>NWL-029 — NAP single-source cleanup 🟡 P2</strong></summary>
+
+- Files: `shared/utils/contact.ts`, `shared/types/company.ts`, `app/composables/useServiceSchema.ts`,
+  every page/component with `https://wa.me/31648364450`, `app/pages/index-v1.vue`, `i18n/locales/{nl,en}.json` (legal).
+- Problem: `/check` found phone/email/address literals outside `CONTACT`. `useServiceSchema` duplicates the full
+  provider NAP; `wa.me/31648364450` is hard-coded in ~13 places; `index-v1.vue` uses stale `info@newlandit.nl`;
+  legal texts hard-code KVK/BTW/address. A phone or address change today would need edits in many files.
+- Tasks:
+  - Add `whatsappHref` to `ContactInfo` / `CONTACT`; replace all `wa.me` literals.
+  - Build `useServiceSchema` provider from `CONTACT` (keep `tests/service-schema.test.ts` green / update it).
+  - Legal copy: interpolate NAP (`{kvk}`, `{btw}`, `{address}`) from `CONTACT`, **or** record that legal text stays verbatim (confirm with owner).
+  - Fix or remove `index-v1.vue` stale email (ties into I18N-004 decision).
+- DoD: `/check` NAP scan clean (or documented legal exception); `npm test` + `npm run build` green.
+
+</details>
+
+<details>
+<summary><strong>SEO-011 — Remove shadowed custom sitemap route 🟡 P2</strong></summary>
+
+- Files: `server/routes/sitemap.xml.ts`, `server/utils/sitemap-routes.ts`, `tests/sitemap.test.ts`, `nuxt.config.ts`.
+- Problem: found during SEO-009. `/sitemap.xml` is answered by `@nuxtjs/sitemap` (307 → `/sitemap_index.xml`,
+  per-locale `__sitemap__/nl-NL.xml` / `en-US.xml`); the custom route never serves. Its `NL_ROUTES` list is stale
+  (missing `/approach`, `/cases`, `/areas`) and its tests give false confidence. Module output also includes the
+  `noindex` draft `/index-v1`.
+- Tasks:
+  - Delete the custom route + `sitemap-routes.ts`; replace `tests/sitemap.test.ts` with tests of what the module is fed.
+  - Exclude `/index-v1` (and its `/en` twin) via `sitemap.exclude` (or delete the page per I18N-004).
+  - Optional: set priority/changefreq via `routeRules` `sitemap` if still wanted.
+  - After deploy: confirm Search Console reads `sitemap_index.xml` (ties into NWL-011).
+- DoD: one sitemap source; built `/sitemap_index.xml` lists all live pages in both locales, no `noindex` pages;
+  `npm test` + `npm run build` green.
+
+</details>
+
 ---
 
 ## 🔗 Dependencies & next steps
@@ -129,7 +321,7 @@
 - **Decision-gated:** NWL-020 (CMS vs i18n), NWL-023 (Stripe) — resolve in PRD §10 before pulling in.
 - **Shipped v1.1.0 (2026-09-14):** NWL-012, NWL-015, SEO-005, SEO-006 — archived below.
 - **Shipped 2026-09-24:** SEO-007 (NAP audit) — archived below; found KVK register root cause, needs manual legal correction.
-- **In review 2026-09-24:** NWL-014 (PR #27), NWL-026/027/028 (PR #28).
-- **NWL-025** turned out already done (built alongside NWL-001) — no PR needed, just verified and flipped to Done.
+- **Shipped 2026-09-24 (release PR #29):** NWL-014 (PR #27), NWL-026/027/028 (PR #28), NWL-025 (already built with NWL-001) — archived.
 - **Blocked, needs your input (not code-doable):** NWL-008 (verify real timeline facts), NWL-009 (real company photos), NWL-011's Search Console click-through (needs production deploy + Search Console access).
-- **Suggested next:** merge PR #27/#28, KVK register correction (blocks full SEO-007 cleanup), NWL-013 (case study content), NWL-016 (FAQ per service).
+- **In review 2026-10-13:** none; all feature PRs merged to `development`. Merged since last refresh: NWL-016 (#43), SEO-008 (#44), NWL-029 (#56), I18N-004 (#59), NWL-022 (#57), NWL-030 (#46), docs refresh (#58), SEO-011 (#41), NWL-033 (#54, #55).
+- **Suggested next (2026-10-13):** promote `development` → `main` (release PR), then Search Console: submit `sitemap_index.xml` (NWL-011). Owner input still needed: confirm the Calendly link, proofread the FAQ copy (NWL-016) and new Dutch copy (I18N-004), fix the logo typo "TOMORROW STECHNOLOGY", KVK register correction (SEO-007), real case studies (NWL-013).
