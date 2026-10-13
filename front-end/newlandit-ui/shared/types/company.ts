@@ -4,6 +4,7 @@ export interface ContactInfo {
   email: string
   emailHref: string
   whatsappHref: string
+  bookingUrl: string
   website: string
   websiteDisplay?: string
   kvk: string

@@ -76,7 +76,7 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-022 | 🟡 P2 | 📋 Todo | Inline "plan een kennismaking" booking (Calendly/Cal.com), consent-gated [ideas #12] |
+| NWL-022 | 🟡 P2 | 🟡 In progress | Inline "plan een kennismaking" booking (Calendly/Cal.com), consent-gated [ideas #12]. Branch `feat/NWL-022-calendly-booking` |
 | NWL-023 | 🟡 P2 | 📋 Todo | Decision — remove Stripe keys or scope a real commerce flow [ideas #13] |
 | NWL-024 | 🟡 P2 | 📋 Todo | Newsletter signup via Resend audiences (double opt-in + privacy) [ideas #14] |
 

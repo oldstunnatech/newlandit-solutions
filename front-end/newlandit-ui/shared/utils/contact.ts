@@ -6,6 +6,7 @@ export const CONTACT: ContactInfo = {
   email: 'info@newlandit-solutions.com',
   emailHref: 'mailto:info@newlandit-solutions.com',
   whatsappHref: 'https://wa.me/31648364450',
+  bookingUrl: 'https://calendly.com/newlandit-solutions-info',
   website: 'https://www.newlandit-solutions.com',
   websiteDisplay: 'www.newlandit-solutions.com',
   kvk: '83541934',
