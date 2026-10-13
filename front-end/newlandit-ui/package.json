@@ -37,6 +37,8 @@
     "vue-tsc": "^2.2.12"
   },
   "overrides": {
-    "@tiptap/core": "^3.31.3"
+    "@tiptap/core": "^3.31.3",
+    "esbuild": "^0.28.2",
+    "@simple-git/argv-parser": "^2.0.1"
   }
 }
