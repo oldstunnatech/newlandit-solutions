@@ -62,6 +62,8 @@
           </div>
         </div>
       </div>
+
+      <ServiceFaq service="strategy" />
     </div>
 
     <!-- CTA band -->

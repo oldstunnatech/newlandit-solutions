@@ -71,6 +71,8 @@
         </div>
       </div>
 
+      <ServiceFaq service="support" />
+
       <!-- CTA -->
       <div class="cta-band mt-20">
         <h2 class="text-2xl font-bold mb-3">Not sure which package fits?</h2>
