@@ -41,3 +41,22 @@ describe('i18n key parity (en ↔ nl)', () => {
     })
   })
 })
+
+function collectStrings(obj: unknown, prefix = ''): [string, string][] {
+  if (typeof obj === 'string') return [[prefix, obj]]
+  if (typeof obj !== 'object' || obj === null) return []
+  return Object.entries(obj as Record<string, unknown>).flatMap(([k, v]) =>
+    collectStrings(v, prefix ? `${prefix}.${k}` : k),
+  )
+}
+
+describe('i18n message syntax', () => {
+  // A bare "@" is vue-i18n linked-message syntax and crashes SSR at render
+  // time (e.g. an email address). Write it as {'@'} instead.
+  it.each([['en', en], ['nl', nl]])('%s has no unescaped @', (_locale, messages) => {
+    const bad = collectStrings(messages)
+      .filter(([, v]) => v.replace(/\{'@'\}/g, '').includes('@'))
+      .map(([k]) => k)
+    expect(bad, `Unescaped @ in: ${bad.join(', ')}`).toHaveLength(0)
+  })
+})

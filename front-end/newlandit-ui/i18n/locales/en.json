@@ -11,10 +11,15 @@
       "scheduleIntake": "Schedule an intake interview"
     },
     "whatsapp": "Chat with us",
+    "rating5": "5 out of 5 stars",
     "langSwitch": "Language"
   },
   "nav": {
     "primary": "Primary navigation",
+    "mobile": "Mobile navigation",
+    "openMenu": "Open navigation",
+    "closeMenu": "Close navigation",
+    "toggleSubmenu": "Toggle {name} submenu",
     "home": "Home",
     "solutions": "Solutions",
     "softwareDevelopment": "Software Development",
@@ -31,6 +36,7 @@
     "areas": "Service areas"
   },
   "footer": {
+    "label": "Site footer",
     "phone": "Phone",
     "email": "Email",
     "website": "Website",
@@ -313,12 +319,20 @@
       "send": "Send message",
       "sending": "Sending…",
       "sentHeading": "Message sent",
-      "sendAnother": "Send another message"
+      "sendAnother": "Send another message",
+      "placeholders": {
+        "name": "Jane Doe",
+        "email": "jane{'@'}company.com",
+        "company": "Acme B.V.",
+        "address": "123 Main St, Amsterdam",
+        "message": "Tell us a bit about what you need help with…"
+      }
     },
     "info": {
       "direct": "Direct contact",
       "responseTime": "Response time",
       "typicalReply": "typical reply",
+      "responseValue": "72hr",
       "responseNote": "We read every message personally, no ticket queues, no bots.",
       "preferChat": "Prefer chat?",
       "whatsappBtn": "Message us on WhatsApp"
@@ -436,9 +450,9 @@
       "ctaHeading": "Not sure which package fits?",
       "ctaText": "Contact us for a no-obligation consultation, we'll find the right plan together.",
       "plans": [
-        { "title": "Basic Support Remote", "target": "Aimed at sole proprietorships and small organizations that mainly need reactive remote help, without fixed obligations.", "description": "€80 per hour (on demand) or €45/month per workplace", "features": ["Remote support during office hours", "Basic monitoring (optional via remote-agent)", "10% discount on extra work (such as small projects or upgrades)"], "note": "" },
-        { "title": "Pro Support Remote", "target": "For growing companies in need of continuity, monitoring and optimization.", "description": "From €55 p/m per workplace for SMEs with 5–25 workplaces.", "features": ["Unlimited remote support during office hours", "Periodic health checks", "Patch management", "Backup and storage advice"], "note": "" },
-        { "title": "Premium Support – DevOps & Cloud SLA", "target": "For agencies, development teams and companies with complex IT environments, CI/CD processes or hybrid cloud structures.", "description": "From €750 p/m based on a custom SLA depending on project scope and deployment.", "features": ["Hybrid support (remote & on-site)", "SLA-based approach with fast response times", "Cloud and infrastructure management (Azure, AWS, CI/CD)"], "note": "This package is fully tailored to your specific situation. Request a free quote for a tailor-made proposal." }
+        { "title": "Basic Support Remote", "priceSuffix": "/month per workplace", "target": "Aimed at sole proprietorships and small organizations that mainly need reactive remote help, without fixed obligations.", "description": "€80 per hour (on demand) or €45/month per workplace", "features": ["Remote support during office hours", "Basic monitoring (optional via remote-agent)", "10% discount on extra work (such as small projects or upgrades)"], "note": "" },
+        { "title": "Pro Support Remote", "priceSuffix": "/month per workplace", "target": "For growing companies in need of continuity, monitoring and optimization.", "description": "From €55 p/m per workplace for SMEs with 5–25 workplaces.", "features": ["Unlimited remote support during office hours", "Periodic health checks", "Patch management", "Backup and storage advice"], "note": "" },
+        { "title": "Premium Support – DevOps & Cloud SLA", "priceSuffix": "/month (custom SLA)", "target": "For agencies, development teams and companies with complex IT environments, CI/CD processes or hybrid cloud structures.", "description": "From €750 p/m based on a custom SLA depending on project scope and deployment.", "features": ["Hybrid support (remote & on-site)", "SLA-based approach with fast response times", "Cloud and infrastructure management (Azure, AWS, CI/CD)"], "note": "This package is fully tailored to your specific situation. Request a free quote for a tailor-made proposal." }
       ]
     },
     "strategy": {

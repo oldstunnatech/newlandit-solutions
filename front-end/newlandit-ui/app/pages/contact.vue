@@ -33,7 +33,7 @@
                   type="text"
                   autocomplete="name"
                   :class="{ 'has-error': errors.name }"
-                  placeholder="Jane Doe"
+                  :placeholder="t('contact.form.placeholders.name')"
                 />
                 <span v-if="errors.name" class="field-error">{{ errors.name }}</span>
               </div>
@@ -46,7 +46,7 @@
                   type="email"
                   autocomplete="email"
                   :class="{ 'has-error': errors.email }"
-                  placeholder="jane@company.com"
+                  :placeholder="t('contact.form.placeholders.email')"
                 />
                 <span v-if="errors.email" class="field-error">{{ errors.email }}</span>
               </div>
@@ -72,7 +72,7 @@
                   type="text"
                   autocomplete="organization"
                   :class="{ 'has-error': errors.company }"
-                  placeholder="Acme B.V."
+                  :placeholder="t('contact.form.placeholders.company')"
                 />
                 <span v-if="errors.company" class="field-error">{{
                   errors.company
@@ -88,7 +88,7 @@
                 type="text"
                 autocomplete="street-address"
                 :class="{ 'has-error': errors.address }"
-                placeholder="123 Main St, Amsterdam"
+                :placeholder="t('contact.form.placeholders.address')"
               />
               <span v-if="errors.address" class="field-error">{{ errors.address }}</span>
             </div>
@@ -100,7 +100,7 @@
                 v-model="form.message"
                 rows="5"
                 :class="{ 'has-error': errors.message }"
-                placeholder="Tell us a bit about what you need help with…"
+                :placeholder="t('contact.form.placeholders.message')"
               />
               <span v-if="errors.message" class="field-error">{{ errors.message }}</span>
             </div>
@@ -218,7 +218,7 @@
               {{ t('contact.info.responseTime') }}
             </p>
             <div class="flex items-baseline gap-2 mb-1">
-              <span class="text-3xl font-extrabold">72hr</span>
+              <span class="text-3xl font-extrabold">{{ t('contact.info.responseValue') }}</span>
               <span class="text-white/60 text-sm">{{ t('contact.info.typicalReply') }}</span>
             </div>
             <p class="text-white/60 text-sm mt-2">
