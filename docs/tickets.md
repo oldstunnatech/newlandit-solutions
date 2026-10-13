@@ -88,10 +88,10 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| I18N-004 | 🟡 P2 | 🟡 In progress | Externalise remaining hard-coded template strings (Footer labels, WhatsApp FAB titles, `it-support.vue` plans, nav/hero bits). Branch `feat/I18N-004-externalise-strings` (stacked on NWL-029) |
-| NWL-029 | 🟡 P2 | 🟡 In progress | NAP single-source — `useServiceSchema` provider + `wa.me` links read from `CONTACT`, add `whatsappHref`. Branch `feat/NWL-029-nap-single-source` |
+| I18N-004 | 🟡 P2 | ✅ Done | Externalise remaining hard-coded template strings (Footer labels, WhatsApp FAB titles, `it-support.vue` plans, nav/hero bits). PR #59 merged to `development`. |
+| NWL-029 | 🟡 P2 | ✅ Done | NAP single-source — `useServiceSchema` provider + `wa.me` links read from `CONTACT`, add `whatsappHref`. PR #56 merged to `development`. |
 | SEO-011 | 🟡 P2 | ✅ Done | Remove shadowed custom sitemap route (`server/routes/sitemap.xml.ts` + `NL_ROUTES`); module sitemap is the live one. PR #41 merged to `development`. |
-| NWL-030 | 🟡 P2 | 📋 Todo | Branded, translated error page (`app/error.vue`) — 404 + 500 currently show Nuxt's default dark page in English |
+| NWL-030 | 🟡 P2 | ✅ Done | Branded, translated error page (`app/error.vue`) — 404 + 500 previously showed Nuxt's default dark page in English. PR #46 merged to `development`. |
 | NWL-033 | 🟡 P2 | ✅ Done | Favicon from logo globe (ico/png/apple-touch) + logo links to home in Header, SideNav, MobileNav; fix "NewHeaven" alt text. PR #54 merged to `development`. |
 
 </details>
