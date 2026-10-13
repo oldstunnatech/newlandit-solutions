@@ -8,7 +8,7 @@
       <button
         @click="$emit('toggle-nav')"
         class="p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
-        aria-label="Open navigation"
+        :aria-label="t('nav.openMenu')"
       >
         <Icon name="lucide:menu" class="w-6 h-6" />
       </button>
@@ -18,7 +18,8 @@
 
 <script setup lang="ts">
 import logo from '~/assets/company_logo.png'
-import { useLocalePath } from '#imports'
+import { useI18n, useLocalePath } from '#imports'
+const { t } = useI18n()
 const localePath = useLocalePath()
 defineEmits<{ 'toggle-nav': [] }>()
 </script>

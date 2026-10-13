@@ -12,7 +12,7 @@
       </div>
 
       <!-- navigation -->
-      <nav class="flex-1" aria-label="Primary">
+      <nav class="flex-1" :aria-label="t('nav.primary')">
         <ul class="space-y-5">
           <li
             v-for="nav in navItems"
