@@ -95,7 +95,7 @@
 import { CONTACT } from '#shared/utils/contact'
 import { computed } from 'vue'
 import { useI18n, useLocalePath } from '#imports'
-
+import { SERVICE_OG_IMAGES } from '#shared/utils/og-images'
 definePageMeta({ layout: 'default' })
 
 const { t, tm, rt } = useI18n()
@@ -105,6 +105,7 @@ useSeo({
   title: t('seo.itSupport.title'),
   description: t('seo.itSupport.description'),
   path: '/solutions/it-support',
+  image: SERVICE_OG_IMAGES['it-support'].image,
 })
 
 useServiceSchema({
