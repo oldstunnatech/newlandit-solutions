@@ -50,7 +50,7 @@
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
 | NWL-013 | 🟡 P2 | 📋 Todo | Case studies — content model + first 2 real cases (problem→solution→result). Depends NWL-012 [ideas #3] |
-| NWL-016 | 🟡 P2 | 🟡 In progress | FAQ content per service (5 pages). Depends NWL-015 ✅. Branch `feat/NWL-016-service-faqs` [ideas #5] |
+| NWL-016 | 🟡 P2 | ✅ Done | FAQ content per service (5 pages). Depends NWL-015 ✅. PR #43 merged to `development`. Owner to proofread the FAQ copy. [ideas #5] |
 
 **Content engine**
 
@@ -68,7 +68,7 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| SEO-008 | 🟡 P2 | 🟡 In progress | Per-service OG images (replace shared hero). Branch `feat/SEO-008-service-og-images` [ideas #10] |
+| SEO-008 | 🟡 P2 | ✅ Done | Per-service OG images (replace shared hero). PR #44 merged to `development`. After deploy: check a service URL in the LinkedIn/WhatsApp preview. [ideas #10] |
 | SEO-009 | 🟡 P2 | ✅ Done | Local landing-page template (i18n, schema, internal links). PR #39 merged to `development`. [ideas #11] |
 | SEO-010 | 🟡 P2 | 📋 Todo | Publish neighbourhood/niche local pages (content). Depends SEO-009 [ideas #11] |
 
@@ -76,7 +76,7 @@
 
 | ID | Priority | Status | Notes |
 | --- | --- | --- | --- |
-| NWL-022 | 🟡 P2 | 🟡 In progress | Inline "plan een kennismaking" booking (Calendly/Cal.com), consent-gated [ideas #12]. Branch `feat/NWL-022-calendly-booking` |
+| NWL-022 | 🟡 P2 | ✅ Done | Inline "plan een kennismaking" booking (Calendly/Cal.com), consent-gated [ideas #12]. PR #57 merged to `development`. Owner to confirm the Calendly link. |
 | NWL-023 | 🟡 P2 | 📋 Todo | Decision — remove Stripe keys or scope a real commerce flow [ideas #13] |
 | NWL-024 | 🟡 P2 | 📋 Todo | Newsletter signup via Resend audiences (double opt-in + privacy) [ideas #14] |
 
@@ -323,5 +323,5 @@ contact phone placeholder uses `CONTACT.phone`. Gate green (53 tests, build). Me
 - **Shipped 2026-09-24:** SEO-007 (NAP audit) — archived below; found KVK register root cause, needs manual legal correction.
 - **Shipped 2026-09-24 (release PR #29):** NWL-014 (PR #27), NWL-026/027/028 (PR #28), NWL-025 (already built with NWL-001) — archived.
 - **Blocked, needs your input (not code-doable):** NWL-008 (verify real timeline facts), NWL-009 (real company photos), NWL-011's Search Console click-through (needs production deploy + Search Console access).
-- **In review 2026-10-12:** NWL-016 (PR #43), SEO-008 (PR #44), NWL-030 (PR #46), NWL-029 (PR #56), NWL-022 (PR #57), docs refresh (PR #58), I18N-004 (PR #59, stacked on #56). Merged since last refresh: SEO-011 (PR #41), NWL-033 (PRs #54, #55).
-- **Suggested next (2026-10-12):** review and merge the open PRs, oldest first: NWL-016 (#43), SEO-008 (#44), NWL-030 (#46), NWL-029 (#56), NWL-022 (#57), I18N-004 (#59, only after #56); owner to confirm legal/consent wording in #56 and #57 and the new Dutch copy in #59. Still needs owner input: KVK register correction (blocks full SEO-007 cleanup), NWL-013 (real case studies).
+- **In review 2026-10-13:** none; all feature PRs merged to `development`. Merged since last refresh: NWL-016 (#43), SEO-008 (#44), NWL-029 (#56), I18N-004 (#59), NWL-022 (#57), NWL-030 (#46), docs refresh (#58), SEO-011 (#41), NWL-033 (#54, #55).
+- **Suggested next (2026-10-13):** promote `development` → `main` (release PR), then Search Console: submit `sitemap_index.xml` (NWL-011). Owner input still needed: confirm the Calendly link, proofread the FAQ copy (NWL-016) and new Dutch copy (I18N-004), fix the logo typo "TOMORROW STECHNOLOGY", KVK register correction (SEO-007), real case studies (NWL-013).
